@@ -88,8 +88,8 @@ color: #FFFFFF;
     padding-bottom: 5%;
 }
 .secton-3-intership-text h2{
-    font-family: Montserrat;
-font-weight: 900;
+font-family: Montserrat;
+font-weight: 700;
 font-style: Black;
 font-size: 42px;
 leading-trim: NONE;
@@ -397,7 +397,18 @@ background-color: #076ca3;
 border-radius: 50px;
 }
 
+/* Values Section */
+.values-section {
+  padding: 10px 0;
+}
 
+/* Each card */
+.value-card {
+  height: 290px;
+  border-radius: 22px;
+  background-size: 100% 100%;
+ 
+}
 .support-section-bg {
   background-image: url(../images/SupportLightMode/support-section.png);
   background-size: 100% 100%;
@@ -452,7 +463,7 @@ color:#FFFFFF;
 /* Responsive tweak */
 @media (max-width: 768px) {
   .value-card {
-    height: 240px;
+    height: 290px;
   }
 }
 
@@ -506,42 +517,4 @@ color:#FFFFFF;
   .impact-card-text{
     font-size: 1rem;
   }
-}
-
-.need-help-bg-text{
-background: linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
-  text-align: center
-;
-padding-top: 5%;
-padding-bottom: 5%;
-}
-.need-help-bg-text p {
- font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
-font-size: 37px;
-leading-trim: NONE;
-line-height: 112.00000000000001%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
-padding-left: 6%;
-padding-right: 6%;
-}
-.need-help-bg-text span{
-  font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
-font-size: 37px;
-leading-trim: NONE;
-line-height: 112.00000000000001%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
-padding-left: 6%;
-padding-right: 6%;
-}
-.need-help-text-bg{
-  background-image: url(../images/main-bg-image/main-bg-img.png) !important;
-  background-size: 100% 100% !important;
 }
