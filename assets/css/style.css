@@ -425,3 +425,99 @@ padding-left: 5%;
 background-color: #076ca3;
 border-radius: 50px;
 }
+
+/* Values Section */
+.values-section {
+  padding: 10px 0;
+}
+
+/* Each card */
+.value-card {
+  height: 280px;
+  border-radius: 22px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+/* Hover (optional but nice) */
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Background images */
+.value-1 {
+  background-image: url('../images/why-kot/core1copy.png');
+}
+
+.value-2 {
+  background-image: url('../images/why-kot/core2copy.png');
+}
+
+.value-3 {
+  background-image: url('../images/why-kot/core3copy.png');
+}
+
+.value-4 {
+  background-image: url('../images/why-kot/core4copy.png');
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .value-card {
+    height: 240px;
+  }
+}
+/* Impact Content Section */
+.impact-content-section{
+  /* background-color: #fff; */
+  padding: 100px 0;
+}
+
+.impact-card{
+  /* border: 2px dashed #000; */
+  /* padding: 48px; */
+  height: 100%;
+}
+
+.impact-card-title{
+  font-family: var(--font-main);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #1677c8;
+  margin-bottom: 24px;
+}
+
+.impact-card-text{
+  font-family: var(--font-main);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #111;
+}
+
+/* Tablet */
+@media (max-width: 991px){
+  .impact-content-section{
+    padding: 80px 0;
+  }
+
+  .impact-card{
+    padding: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .impact-content-section{
+    padding: 60px 0;
+  }
+
+  .impact-card{
+    padding: 28px;
+  }
+
+  .impact-card-text{
+    font-size: 1rem;
+  }
+}
