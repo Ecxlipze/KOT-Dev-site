@@ -342,3 +342,77 @@ border-radius: 50px !important;
   }
 
 }
+.why-join-kot-text-heading h2{
+    font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #0C72BA;
+text-align: center;
+padding-right: 5%;
+padding-left: 5%;
+}
+.why-join-kot-text-heading p{
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+padding-right: 5%;
+padding-left: 5%;
+}
+.why-kot-join-wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+}
+
+
+.why-kot-join-track{
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.why-kot-join-card{
+  flex: 0 0 calc(33.333% - 14px);
+}
+
+/* Responsive */
+@media (max-width: 991px){
+  .why-kot-join-card{
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 575px){
+  .why-kot-join-card{
+    flex: 0 0 100%;
+  }
+}
+
+/* Bottom-right buttons */
+.why-kot-join-buttons{
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.why-kot-join-buttons img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+}
