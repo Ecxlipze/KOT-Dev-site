@@ -83,7 +83,33 @@ color: #FFFFFF;
     background-position: center;
     padding: 60px 0;
 }
-
+.secton-3-intership-text{
+    padding-top: 9%;
+    padding-bottom: 5%;
+}
+.secton-3-intership-text h2{
+    font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #0C72BA;
+}
+.secton-3-intership-text p{
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 17px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+padding-top: 2%;
+}
 .career-section-card-first{
     background-color: #EAEAEF;
     width: 100%;
@@ -187,5 +213,59 @@ font-size: 15px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
+
+}
+.career-section-1-btn-3 {
+    background-color: #000000 !important;
+    color:#FFFFFF !important ;
+    font-family: Montserrat !important;
+font-weight: 600 !important;
+font-style: SemiBold !;
+font-size: 17px !important;
+leading-trim: NONE !important;
+line-height: 100% !important;
+letter-spacing: 0% !important;
+text-align: center !important;
+padding: 10px 40px !important;
+border-radius: 50px !important;
+
+}
+.career-section-btn-3{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    margin-bottom: 9%;
+}
+/* <!-- section-4-start --> */
+
+/* why you join kot */
+.why-join-kot-text-heading{
+    /* text-align: center; */
+   
+
+
+}
+.why-join-kot-text-heading h2{
+    font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #0C72BA;
+text-align: center;
+}
+.why-join-kot-text-heading p{
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
 
 }
