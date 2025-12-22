@@ -216,9 +216,84 @@
                 <p>Just like you, we care about where we work and who we work with. Here’s what makes KOT stand out:</p>
             </div>
         
+       
+           <div class="why-kot-join-wrapper">
+
+  <div class="why-kot-join-track">
+
+    <div class="why-kot-join-card why-kot-slider-card-1">
+      <h6>People First Culture</h6>
+      <p>Internal workshops, external certifications, mentorship programs your growth never stops here.</p>
     </div>
+
+    <div class="why-kot-join-card why-kot-slider-card-1">
+      <h6>Flexible Work</h6>
+      <p>Hybrid environment that supports productivity and balance.</p>
+    </div>
+
+    <div class="why-kot-join-card why-kot-slider-card-1">
+      <h6>Career Growth</h6>
+      <p>Continuous learning with real-world exposure.</p>
+    </div>
+
+    <div class="why-kot-join-card why-kot-slider-card-1">
+      <h6>Innovation</h6>
+      <p>Work with modern tools and forward-thinking teams.</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom-right arrow buttons -->
+  <div class="why-kot-join-buttons">
+    <img src="assets/images/career/left-arrow.png" alt="prev" class="why-kot-join-prev">
+    <img src="assets/images/career/right-arrow.png" alt="next" class="why-kot-join-next">
+  </div>
+
 </div>
 
+
+    </div>
+   <!-- main-bg-image -->
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+  const track = document.querySelector(".why-kot-join-track");
+  const cards = document.querySelectorAll(".why-kot-join-card");
+  const prevBtn = document.querySelector(".why-kot-join-prev");
+  const nextBtn = document.querySelector(".why-kot-join-next");
+  let index = 0;
+
+  function getVisibleCards(){
+    if(window.innerWidth <= 575) return 1;
+    if(window.innerWidth <= 991) return 2;
+    return 3;
+  }
+
+  function updateWhyKotJoinSlider(){
+    const visibleCards = getVisibleCards();
+    const cardWidth = cards[0].offsetWidth + 20;
+
+    if(index > cards.length - visibleCards){
+      index = cards.length - visibleCards;
+    }
+    if(index < 0) index = 0;
+
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    index++;
+    updateWhyKotJoinSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index--;
+    updateWhyKotJoinSlider();
+  });
+
+  window.addEventListener("resize", updateWhyKotJoinSlider);
+</script>
+
 </body>
 </html>
