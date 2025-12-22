@@ -392,3 +392,9 @@ border-radius: 50px !important;
   height: 40px;
   cursor: pointer;
 }
+
+/* suppart-page-start */
+.support-section-bg{
+  background-image: url(../images/SupportLightMode/support-section.png);
+  background-size: 100% 100%;
+}
