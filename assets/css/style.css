@@ -447,28 +447,22 @@ color: #000000;
     cursor: pointer;
 }
  /* Mobile */
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .carousel-control-prev {
-    left: 55% !important;
+    left: 20% !important;
   }
 
   .carousel-control-next {
-    right: 10% !important;
+    right: 2% !important;
   }
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    top: 108% !important;
-    width: 48px !important;
-    height: 48px !important;
+ 
+  .carousel-control-prev {
+    left: 40% !important;
   }
 }
 /* Responsive tweaks */
-@media (max-width: 767px) {
-  .carousel-control-prev {
-    left: 60% !important;
-  }
-}
+
 /* Responsive tweaks */
 @media (max-width: 991px) {
   .carousel-control-prev {
