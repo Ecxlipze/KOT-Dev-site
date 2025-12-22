@@ -213,118 +213,106 @@
    <!-- section-3-end -->
   <!-- section-4-start -->
    <!-- Why Join KOT? -->
-   <div class="container-fluid py-5">
-
+<div class="container-fluid why-join-wrapper ">
+  
   <!-- Heading -->
   <div class="why-join-kot-text-heading text-center mb-5">
     <h2>Why Join KOT?</h2>
-    <p>Just like you, we care about where we work and who we work with. Here’s what makes KOT stand out:</p>
+    <p>Just like you, we care about where we work and who we work with.</p>
   </div>
 
   <!-- Carousel -->
   <div id="whyKotCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
+      <!-- Slide -->
       <div class="carousel-item active">
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            <div class="card p-3">
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="why-kot-card">
+              <h6>Learning Always</h6>
+              <p>Internal workshops, external certifications, mentorship programs — your growth never stops here.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-none d-md-block">
+            <div class="why-kot-card">
               <h6>People First Culture</h6>
-              <p>Internal workshops, external certifications, mentorship programs your growth never stops here.</p>
+              <p>Collaborative teams, no rigid hierarchies, just great work.</p>
             </div>
           </div>
-          <div class="col-md-4 d-none d-md-block">
-            <div class="card p-3">
-              <h6>Flexible Work</h6>
-              <p>Hybrid environment that supports productivity and balance.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-none d-lg-block">
-            <div class="card p-3">
-              <h6>Career Growth</h6>
-              <p>Continuous learning with real-world exposure.</p>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="why-kot-card">
+              <h6>Mission that Matters</h6>
+              <p>Products that transform healthcare, education, and commerce.</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="carousel-item active">
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="why-kot-card">
+              <h6>Learning Always</h6>
+              <p>Internal workshops, external certifications, mentorship programs — your growth never stops here.</p>
+            </div>
+          </div>
 
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            <div class="card p-3">
-              <h6>Innovation</h6>
-              <p>Work with modern tools and forward-thinking teams.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-none d-md-block">
-            <div class="card p-3">
+          <div class="col-lg-4 col-md-6 d-none d-md-block">
+            <div class="why-kot-card">
               <h6>People First Culture</h6>
-              <p>Internal workshops, external certifications, mentorship programs your growth never stops here.</p>
+              <p>Collaborative teams, no rigid hierarchies, just great work.</p>
             </div>
           </div>
-          <div class="col-md-4 d-none d-lg-block">
-            <div class="card p-3">
-              <h6>Flexible Work</h6>
-              <p>Hybrid environment that supports productivity and balance.</p>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <div class="why-kot-card">
+              <h6>Mission that Matters</h6>
+              <p>Products that transform healthcare, education, and commerce.</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- Carousel Controls -->
-    <!-- Carousel Controls at Bottom-Right -->
-<button class="carousel-control-prev bottom-right-btn" type="button" data-bs-target="#whyKotCarousel" data-bs-slide="prev">
-  <img src="assets/images/career/left-arrow.png" alt="prev" class="why-kot-join-prev">
-</button>
-<button class="carousel-control-next bottom-right-btn" type="button" data-bs-target="#whyKotCarousel" data-bs-slide="next">
-  <img src="assets/images/career/right-arrow.png" alt="next" class="why-kot-join-next">
-</button>
+    <!-- Controls -->
+    <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#whyKotCarousel" data-bs-slide="prev">
+      <img src="assets/images/career/left-arrow.png" alt="prev">
+    </button>
 
+    <button class="carousel-control-next custom-arrow" type="button" data-bs-target="#whyKotCarousel" data-bs-slide="next">
+      <img src="assets/images/career/right-arrow.png" alt="next">
+    </button>
   </div>
 </div>
+
+
+
+
    <!-- main-bg-image -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
-  const track = document.querySelector(".why-kot-join-track");
-  const cards = document.querySelectorAll(".why-kot-join-card");
-  const prevBtn = document.querySelector(".why-kot-join-prev");
-  const nextBtn = document.querySelector(".why-kot-join-next");
-  let index = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    const carouselElement = document.querySelector('#whyKotCarousel');
 
-  function getVisibleCards(){
-    if(window.innerWidth <= 575) return 1;
-    if(window.innerWidth <= 991) return 2;
-    return 3;
-  }
+    const carousel = new bootstrap.Carousel(carouselElement, {
+      interval: false,   // disable auto slide
+      ride: false,
+      wrap: true,
+      touch: true        // enable swipe on mobile
+    });
 
-  function updateWhyKotJoinSlider(){
-    const visibleCards = getVisibleCards();
-    const cardWidth = cards[0].offsetWidth + 20;
+    document.querySelector('.carousel-control-next')
+      .addEventListener('click', () => carousel.next());
 
-    if(index > cards.length - visibleCards){
-      index = cards.length - visibleCards;
-    }
-    if(index < 0) index = 0;
-
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-  }
-
-  nextBtn.addEventListener("click", () => {
-    index++;
-    updateWhyKotJoinSlider();
+    document.querySelector('.carousel-control-prev')
+      .addEventListener('click', () => carousel.prev());
   });
-
-  prevBtn.addEventListener("click", () => {
-    index--;
-    updateWhyKotJoinSlider();
-  });
-
-  window.addEventListener("resize", updateWhyKotJoinSlider);
 </script>
+
 
 </body>
 </html>
