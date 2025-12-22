@@ -520,12 +520,35 @@ color:#FFFFFF;
 }
 
 .need-help-bg-text{
- 
+background: linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
   text-align: center
 ;
 padding-top: 5%;
 padding-bottom: 5%;
 }
-.need-help-text-bg{
- background-color:linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
+.need-help-bg-text p {
+ font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 37px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
+}
+.need-help-bg-text span{
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 37px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
 }
