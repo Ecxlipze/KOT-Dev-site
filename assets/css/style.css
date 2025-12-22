@@ -392,10 +392,20 @@ border-radius: 50px !important;
   height: 40px;
   cursor: pointer;
 }
+.why-kot-join-prev, .why-kot-join-next{
+background-color: #076ca3;
+border-radius: 50px;
+}
 
-/* suppart-page-start */
-.support-section-bg{
-  background-image: url(../images/SupportLightMode/support-section.png);
+/* Values Section */
+.values-section {
+  padding: 10px 0;
+}
+
+/* Each card */
+.value-card {
+  height: 280px;
+  border-radius: 22px;
   background-size: 100% 100%;
  
 }
