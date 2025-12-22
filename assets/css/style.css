@@ -518,3 +518,14 @@ color:#FFFFFF;
     font-size: 1rem;
   }
 }
+
+.need-help-bg-text{
+ 
+  text-align: center
+;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+.need-help-text-bg{
+ background-color:linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
+}
