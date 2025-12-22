@@ -348,78 +348,49 @@ border-radius: 50px !important;
 
 }
 .why-join-kot-text-heading h2{
-    font-family: Montserrat;
-font-weight: 900;
-font-style: Black;
-font-size: 42px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #0C72BA;
-text-align: center;
-padding-right: 5%;
-padding-left: 5%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 100%;
+    text-align: center;
+    color: #0C72BA;
+    padding: 0 5%;
 }
 .why-join-kot-text-heading p{
-    font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #000000;
-padding-right: 5%;
-padding-left: 5%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    padding: 0 5%;
 }
-.why-kot-join-wrapper{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding: 40px 0;
+.card h6{
+    font-weight: 700;
+    font-size: 18px;
+    color: #076ca3;
 }
-
-
-.why-kot-join-track{
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
+.card p{
+    font-size: 16px;
 }
-
-.why-kot-join-card{
-  flex: 0 0 calc(33.333% - 14px);
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-size: 100%, 100%;
 }
-
-/* Responsive */
-@media (max-width: 991px){
-  .why-kot-join-card{
-    flex: 0 0 calc(50% - 10px);
-  }
-}
-
-@media (max-width: 575px){
-  .why-kot-join-card{
-    flex: 0 0 100%;
-  }
-}
-
-/* Bottom-right buttons */
-.why-kot-join-buttons{
+.bottom-right-btn {
   position: absolute;
   bottom: 10px;
   right: 15px;
-  display: flex;
-  gap: 10px;
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
   z-index: 10;
 }
 
-.why-kot-join-buttons img{
+.bottom-right-btn img {
   width: 40px;
   height: 40px;
   cursor: pointer;
-
 }
 .why-kot-join-prev, .why-kot-join-next{
 background-color: #076ca3;
