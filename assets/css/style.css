@@ -552,3 +552,7 @@ color: #FFFFFF;
 padding-left: 6%;
 padding-right: 6%;
 }
+.need-help-text-bg{
+  background-image: url(../images/main-bg-image/main-bg-img.png) !important;
+  background-size: 100% 100% !important;
+}
