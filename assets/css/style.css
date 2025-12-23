@@ -565,8 +565,9 @@ color: #000000 !important;
 .support-slider {
   width: 100%;
   overflow: hidden;
-  background: #f8fbff;
+ 
   padding: 30px 0;
+  margin-top: 4%;
 }
 
 .support-slider-wrapper {
