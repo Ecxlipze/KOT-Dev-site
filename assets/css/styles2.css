@@ -543,17 +543,20 @@ margin-bottom: 30px;
 }
 
 .hero-btn {
-  padding: 12px 28px;
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #0C72BA;  
-  border-radius: 6px;
+  padding: 12px 22px !important;
+  font-weight: 800 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #0C72BA !important;  
+  border-radius: 6px !important;
+  font-size: 11px !important;
   
 }
 
 .hero-image {
-  /* max-width: 420px; */
+  width: 450px;
   border-radius: 10px;
+  height: 401px !important;
+
 }
 
 
@@ -569,6 +572,13 @@ margin-bottom: 30px;
     font-size: 30px;
   }
 }
+
+
+.solutions-wrapper {
+  background: url('../images/main-bg-image/main-bg-img.png') center/cover no-repeat;
+  padding: 50px 0;
+}
+
 
 /* ---------- CAPABILITIES SECTION ---------- */
 .capabilities-section {
@@ -647,3 +657,48 @@ margin-bottom: 30px;
     font-size: 28px;
   }
 }
+
+.section-title {
+  font-weight: 800;
+  color: #0a6db8;
+  margin-bottom: 10px;
+}
+
+.solution-card {
+  height: 250px;
+  width: 230px;
+  border-radius: 14px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* background images */
+.sol-1 { background-image: url('../images/generativeailight/sol1.png'); }
+.sol-2 { background-image: url('../images/generativeailight/sol2.png'); }
+.sol-3 { background-image: url('../images/generativeailight/sol3.png'); }
+.sol-4 { background-image: url('../images/generativeailight/sol4.png'); }
+.sol-5 { background-image: url('../images/generativeailight/sol5.png'); }
+
+@media (max-width: 768px) {
+  .solution-card {
+    align-items: center !important;
+    margin: auto;
+  }
+}
+
+.support-card {
+  height: 270px;
+  width: 270px;
+  border-radius: 16px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* background images */
+.sup-1 { background-image: url('../images/generativeailight/glowcard.png'); }
+.sup-2 { background-image: url('../images/generativeailight/glowcard.png'); }
+.sup-3 { background-image: url('../images/generativeailight/glowcard.png'); }
+.sup-4 { background-image: url('../images/generativeailight/glowcard.png'); }
+
