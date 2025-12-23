@@ -876,7 +876,7 @@ margin-bottom: 30px;
 .testimonial-card {
   display: flex;
   gap: 40px;
-  padding: 80px 70px;
+  padding: 80px 100px;
   border-radius: 20px;
   background: linear-gradient(90deg, #9bb6c8, #0A71B9);
   color: #fff;
@@ -985,4 +985,113 @@ margin-bottom: 30px;
   .testimonial-text {
     font-size: 14px;
   }
+}
+
+
+.commitment-section {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+.commitment-title {
+  font-weight: 800;
+  color: #0b5ed7;
+  
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.commitment-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.commit-card {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background: linear-gradient(180deg, #1a73b8 0%, #eaf4fb 100%);
+  color: #0a2540;
+  min-height: 260px;
+  border: 2px solid black;
+}
+
+.commit-card:nth-child(even) {
+  background: linear-gradient(180deg, #eaf4fb 0%, #1a73b8 100%);
+}
+
+.commit-card p {
+  font-size: clamp(1.0xrem, 1.1vw, 1.1rem);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* .step {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #0b5ed7;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+} */
+
+@media (max-width: 992px) {
+  .commitment-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (max-width: 576px) {
+  .commitment-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1%;
+  }
+  
+}
+
+.board-message {
+  padding: clamp(2rem, 6vw, 4rem) 0;
+  color: #ffffff;
+}
+
+
+
+.board-content {
+  max-width: 900px;
+  margin: auto;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.99);
+
+  background-image: url("../images/board-of-director/bluebg.png");
+  background-size: 125% 115%;       /* 🔥 FIX */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  color: #ffffff;
+  background-color: #3370a2; /* pick dominant blue from image */
+
+}
+
+.board-content p {
+  font-size: clamp(1.15rem, 1.2vw, 1.45rem);
+  line-height: 1.5;
+}
+
+.signature {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  text-align: right;
+}
+
+.signature strong {
+  display: block;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
 }
