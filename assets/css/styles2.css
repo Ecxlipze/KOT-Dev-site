@@ -606,7 +606,7 @@ margin-bottom: 30px;
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
 }
 
-/* Card backgrounds (replace images) */
+/* Gen-AI Card backgrounds (replace images) */
 .bg-1 {
   background-image: url("../images/generativeailight/gen1copy.png");
 }
@@ -619,6 +619,20 @@ margin-bottom: 30px;
 .bg-4 {
   background-image: url("../images/generativeailight/gen4copy.png");
 }
+/* Data-eng Card backgrounds (replace images) */
+.bg-5 {
+  background-image: url("../images/generativeailight/gen1copy.png");
+}
+.bg-6 {
+  background-image: url("../images/generativeailight/gen2copy.png");
+}
+.bg-7 {
+  background-image: url("../images/generativeailight/gen3copy.png");
+}
+.bg-8 {
+  background-image: url("../images/generativeailight/gen4copy.png");
+}
+
 
 /* Overlay for readability */
 .capability-card::before {
@@ -673,12 +687,18 @@ margin-bottom: 30px;
   background-position: center;
 }
 
-/* background images */
+/* Gen-ai background images */
 .sol-1 { background-image: url('../images/generativeailight/sol1.png'); }
 .sol-2 { background-image: url('../images/generativeailight/sol2.png'); }
 .sol-3 { background-image: url('../images/generativeailight/sol3.png'); }
 .sol-4 { background-image: url('../images/generativeailight/sol4.png'); }
 .sol-5 { background-image: url('../images/generativeailight/sol5.png'); }
+
+/* Data-eng background images */
+.sol-6 { background-image: url('../images/generativeailight/sol1.png'); }
+.sol-7 { background-image: url('../images/generativeailight/sol2.png'); }
+.sol-8 { background-image: url('../images/generativeailight/sol3.png'); }
+.sol-9 { background-image: url('../images/generativeailight/sol4.png'); }
 
 @media (max-width: 768px) {
   .solution-card {
@@ -688,17 +708,103 @@ margin-bottom: 30px;
 }
 
 .support-card {
-  height: 270px;
-  width: 270px;
+  height: 300px;
+  width: 300px;
   border-radius: 16px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0% !important;
+  background-position: center;
+}
+
+/* Gen-ai background images */
+.sup-1 { background-image: url('../images/generativeailight/glowcard1.png'); }
+.sup-2 { background-image: url('../images/generativeailight/glowcard2.png'); }
+.sup-3 { background-image: url('../images/generativeailight/glowcard3.png'); }
+.sup-4 { background-image: url('../images/generativeailight/glowcard4.png'); }
+
+/* Data-eng background images */
+.sup-5 { background-image: url('../images/generativeailight/glowcard1.png'); }
+.sup-6 { background-image: url('../images/generativeailight/glowcard2.png'); }
+.sup-7 { background-image: url('../images/generativeailight/glowcard3.png'); }
+.sup-8 { background-image: url('../images/generativeailight/glowcard4.png'); }
+
+
+@media (max-width: 768px) {
+  .support-card {
+    align-items: center !important;
+    margin: auto;
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.achieve-card {
+  min-width: 300px;
+  height: 150px;
+  border-radius: 12px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* background images */
-.sup-1 { background-image: url('../images/generativeailight/glowcard.png'); }
-.sup-2 { background-image: url('../images/generativeailight/glowcard.png'); }
-.sup-3 { background-image: url('../images/generativeailight/glowcard.png'); }
-.sup-4 { background-image: url('../images/generativeailight/glowcard.png'); }
+/* gen-ai images */
+.ach-1 { background-image: url('../images/generativeailight/line1.png'); }
+.ach-2 { background-image: url('../images/generativeailight/line2.png'); }
+.ach-3 { background-image: url('../images/generativeailight/line3.png'); }
+.ach-4 { background-image: url('../images/generativeailight/line4.png'); }
+
+/* gen-ai images */
+.ach-5 { background-image: url('../images/generativeailight/line1.png'); }
+.ach-6 { background-image: url('../images/generativeailight/line2.png'); }
+.ach-7 { background-image: url('../images/generativeailight/line3.png'); }
+.ach-8 { background-image: url('../images/generativeailight/line4.png'); }
+
+
+/* arrows */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.slider-btn.left { left: -30px; }
+.slider-btn.right { right: -30px; }
+@media (max-width: 768px) {
+  .slider-btn {
+   display:none;  }
+}
+
+.work-card {
+  height: 141px;
+  width: 375px;
+  border-radius: 14px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* images */
+.work-1 { background-image: url('../images/generativeailight/work1.png'); }
+.work-2 { background-image: url('../images/generativeailight/work2.png'); }
+.work-3 { background-image: url('../images/generativeailight/work3.png'); }
+.work-4 { background-image: url('../images/generativeailight/work4.png'); }
+.work-5 { background-image: url('../images/generativeailight/work5.png'); }
 
