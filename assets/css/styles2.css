@@ -1120,7 +1120,7 @@ margin-bottom: 30px;
 /* Top area */
 .episodes-top{
   max-width: 760px;
-  
+
 }
 
 .episodes-brand img{
@@ -1212,5 +1212,98 @@ margin-bottom: 30px;
   .episodes-actions .btn{
     width: 100%;
     text-align: center;
+  }
+}
+
+
+/* Offer Section */
+.offer-section{
+  padding: 100px 0;
+  background: #fff;
+}
+
+.offer-heading{
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #098C52;
+  margin-bottom: 60px;
+}
+
+/* Cards */
+.offer-card{
+  position: relative;
+  height: 230px;
+  border-radius: 22px;
+  background-size: 100% 100%;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-image: url(../images/episodeslight/greencard.png);
+}
+
+.offer-card:hover{
+  transform: translateY(-6px);
+}
+
+/* Overlay */
+.offer-overlay{
+  position: absolute;
+  inset: 0;
+  padding: 28px;
+ 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offer-overlay h3{
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.offer-overlay p{
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.offer-overlay a{
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.offer-overlay a:hover{
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 991px){
+  .offer-section{
+    padding: 80px 0;
+  }
+
+  .offer-card{
+    height: 240px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .offer-heading{
+    margin-bottom: 40px;
+  }
+
+  .offer-card{
+    height: auto;
+    min-height: 240px;
+  }
+
+  .offer-overlay{
+    padding: 22px;
   }
 }
