@@ -567,7 +567,7 @@ color: #000000 !important;
   overflow: hidden;
  
   padding: 30px 0;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .support-slider-wrapper {
@@ -970,4 +970,65 @@ padding-right: 6%;
 }
 .explore-card-btn .explore-btn:hover {
   background: linear-gradient(90deg, #014F85 0%, #0A71B9 100%);
+}
+/* home-page styling */
+.what-we-offer-text{
+    max-width: 896px;      /* design width */
+  margin: 0 auto;        /* center align */
+  padding: 0 16px;       /* mobile safety */
+  text-align: center;
+}
+.what-we-offer-text h2{
+font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: clamp(32px, 3.5vw, 47px);
+
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #0A71B9;
+}
+.what-we-offer-text p{
+font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: clamp(14px, 1.1vw, 17px);
+
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+
+}
+.section-card-1-main{
+  background-color: #EDEDED;
+  /* width: 452px;
+height: 385px; */
+
+border-radius: 15px;
+
+}
+.section-1-card-img-1 img{
+ max-width: 168px;
+max-height: 167px;
+width: 100%;
+height: auto;
+
+}
+.section-1-card-img-2 img{
+  max-width: 168px;
+max-height: 167px;
+width: 100%;
+height: auto;
+
+}
+.section-1-card-img-3 img{
+  max-width: 168px;
+max-height: 167px;
+width: 100%;
+height: auto;
+
 }
