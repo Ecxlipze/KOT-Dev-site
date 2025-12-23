@@ -1184,66 +1184,180 @@ color: #000000;
   }
 }
 
-    .blog-card-1-main{
-     width: 436px;
-     height: 486px;
-   background-color: #171717;
+   /* Card Main */
+.blog-card-1-main{
+  width: 436px;
+  height: 486px;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+/* Image */
+.blog-card-image-1{
+  padding: 4%;
+}
 
-    }
+.blog-card-image-1 img{
+  width: 100%;
+  height: 206px;
+  object-fit: cover;
+}
 
-   .blog-card-image-1 img {
-      max-width: 401px;
-      width: 100%;
-height: 206px;
+/* Padding sections */
+.blog-card-heading,
+.blog-card-paragraph,
+.blog-card-line{
+  padding: 0 4%;
+}
 
-border-width: 2px;
+/* Divider line */
+.blog-card-line p{
+  width: 90px;
+  border: 4px solid #014F85;
+  margin: 10px 0;
+}
 
-    }
-   .blog-card-image-1, .blog-card-heading, .blog-card-paragraph, .blog-card-line {
-    padding-left: 4%;
-    padding-right: 4%;
-    }
-    .blog-card-line{
-      
-    }
-    .blog-card-line p{
-      width: 90px;
-      height: 0px;
+/* Heading */
+.blog-card-heading h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #0A71B9;
+  line-height: 1.2;
+}
 
-      border-width: 4px;
+/* Paragraph */
+.blog-card-paragraph p{
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-top: 12px;
+}
 
-      border: 4px solid #014F85;
-    }
-    .blog-card-heading h2{
+/* Outside Button */
+.blog-outside-button{
+  margin-top: 16px;
+}
+
+.blog-outside-button a{
+  display: inline-flex;
+  align-items: center;
+ 
+  text-decoration: none;
+  width: 165px;
+height: 41px;
+
+border-radius: 10px;
+padding-top: 20px;
+padding-right: 30px;
+padding-bottom: 20px;
+padding-left: 30px;
+gap: 10px;
+background-color: #0A71B9;
+justify-content: center;
+color: #FFFFFF;
 font-family: Montserrat;
 font-weight: 700;
 font-style: Bold;
-font-size: 20px;
-leading-trim: NONE;
-line-height: 112.00000000000001%;
-letter-spacing: 0%;
-color: #0A71B9;
-padding-top: 2%;
-padding-bottom: 2%;
-    }
-    .blog-card-paragraph p{
-font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
 font-size: 16px;
 leading-trim: NONE;
-line-height: 112.00000000000001%;
+line-height: 100%;
 letter-spacing: 0%;
-color: #FFFFFF;
-padding-top: 4%;
+
+}
+
+.blog-outside-button a:hover{
+  background-color: #0A71B9;
+  color: #ffffff;
+}
+
+/* .blog-outside-button a i{
+  transition: transform 0.3s ease;
+}
+
+.blog-outside-button a:hover i{
+  transform: translateX(5px);
+} */
+
+/* Responsive */
+@media (max-width: 991px){
+  .blog-card-1-main{
+    width: 100%;
+    max-width: 436px;
+  }
+}
+
+/* faq-start */
+
+    .home-faq-title {
+     font-family: Montserrat !important;
+font-weight: 700!important;
+font-style: Bold!important;
+font-size: clamp(40px, 4vw, 62px) !important;
+
+leading-trim: NONE!important;
+line-height: 112.00000000000001%!important;
+letter-spacing: 0%!important;
+color: #0A71B9;
+
     }
-    @media (max-width: 991px){
-      .blog-card-1-main{
-        margin-bottom: 40px;
-      }
+ 
+    .home-card-1 {
+      background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%) !important;
+     max-width: 585px !important;
+      width: 100%;
+height: 220px !important;
+   border-radius: 30px;
+     border-width: 1px;
+
+    }
+   .home-card-2, .home-card-3, .home-card-4{
+    background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%) !important;
+      max-width: 585px !important;
+      width: 100%;
+height: 130px !important;
+
+border-radius: 30px;
+border-width: 1px;
+   }
+    .home-search-input {
+      max-width: 545px;
+      width: 100%;
+height: 79px;
+
+border-radius: 20px;
+border-width: 1px;
+
+    }
+    .home-chat-card{
+
+      max-width: 585px !important;
+   width: 100%;
+height: 456px !important;
+
+border-radius: 30px !important;
+border-width: 1px !important;
+  background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%) !important;
+    }
+    .home-card-paragraph {
+      font-family: Montserrat !important;
+font-weight: 500 !important;
+font-style: Medium !important;
+font-size: clamp(10px, 1.2vw, 12px) !important;
+
+leading-trim: NONE !important;
+line-height: 112.00000000000001% !important;
+letter-spacing: 0% !important;
+color: #000000 !important;
+    }
+    .home-card-heading {
+      font-family: Montserrat !important;
+font-weight: 700 !important;
+font-style: Bold !important;
+font-size: clamp(18px, 2.2vw, 22px) !important;
+
+leading-trim: NONE !important;
+line-height: 112.00000000000001% !important;
+letter-spacing: 0% !important;
+color: #000000 !important;
     }
