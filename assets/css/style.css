@@ -1429,11 +1429,11 @@ height: 133px;
 
 /* Animations */
 .move-left .home-slider-track {
-  animation: slideLeft 25s linear infinite;
+  animation: slideLeft 12s linear infinite;
 }
 
 .move-right .home-slider-track {
-  animation: slideRight 25s linear infinite;
+  animation: slideRight 12s linear infinite;
 }
 .home-avatar h6{
   font-family: Montserrat;
