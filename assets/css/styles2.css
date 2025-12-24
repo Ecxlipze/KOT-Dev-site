@@ -1096,130 +1096,11 @@ margin-bottom: 30px;
   font-size: clamp(1rem, 1.4vw, 1.2rem);
 }
 
-/* Episodes Hero */
-.episodes-hero{
-  position: relative;
-  min-height: 100vh;
-  background: url("../images/episodeslight/episodebanner.jpg") center/cover no-repeat;
-  color: #fff;
-  padding-top: 40px;
-}
-
-.episodes-overlay{
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  z-index: 1;
-}
-
-.episodes-hero > *{
-  position: relative;
-  z-index: 2;
-}
-
-/* Top area */
-.episodes-top{
-  max-width: 760px;
-
-}
-
-.episodes-brand img{
-  max-width: 280px;
-  margin-bottom: 20px;
-}
-
-.episodes-heading h1{
-  font-size: clamp(2.6rem, 5vw, 4rem);
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.episodes-heading h2{
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  font-weight: 500;
-  line-height: 1.3;
-}
-
-/* Bottom green section */
-.episodes-bottom{
-  margin-top: 20px;
-}
-
-.episodes-card{
-  background: #0c8b4c;
-  border-radius: 20px;
-  padding: 100px 50px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 60px;
-  align-items: center;
-}
-
-.episodes-text p{
-  margin: 0;
-  font-size: 1.65rem;
-  line-height: 1.7;
-}
-
-/* Buttons */
-.episodes-actions{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.episodes-actions .btn{
-  padding: 12px 26px;
-  font-weight: 600;
-  border-radius: 8px;
-  white-space: nowrap;
-}
-
-/* Tablet */
-@media (max-width: 991px){
-  .episodes-card{
-    grid-template-columns: 1fr;
-  }
-
-  .episodes-actions{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-/* Mobile */
-@media (max-width: 575px){
-  .episodes-hero{
-    padding-top: 60px;
-  }
-
-  .episodes-brand img{
-    max-width: 150px;
-  }
-
-  .episodes-bottom{
-    margin-top: 80px;
-  }
-
-  .episodes-card{
-    padding: 28px;
-  }
-
-  .episodes-actions{
-    flex-direction: column;
-  }
-
-  .episodes-actions .btn{
-    width: 100%;
-    text-align: center;
-  }
-}
-
 
 /* Offer Section */
 .offer-section{
   padding: 100px 0;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .offer-heading{
@@ -1309,49 +1190,224 @@ margin-bottom: 30px;
   padding: clamp(2rem, 5vw, 5rem) 0;
 }
 
+
+
+.episodes-card{
+  background: #0c8b4c;
+  border-radius: 20px;
+  padding: 100px 50px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+}
+
+
 .episodes-card {
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
 
-  background-image: url("../images/episodeslight/epcardg.png"); /* replace */
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("../images/episodeslight/epcardg.png");
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: clamp(2rem, 4vw, 4rem);
-  border-radius: 18px;
 
   text-align: center;
   color: #0b2e2b;
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95);
 }
 
 /* Typography */
 .episodes-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 800;
   color: #0c9c6d;
-  margin-bottom: 0.75rem;
+  /* margin-bottom: 0.75rem; */
 }
 
 .episodes-subtitle {
   font-size: clamp(0.75rem, 1.2vw, 0.9rem);
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .episodes-text {
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
   line-height: 1.6;
-  max-width: 720px;
+   /* max-width: 720px; */
   margin: 0 auto 1.5rem;
+  font-weight: 600;
 }
 
 .episodes-heading {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-weight: 700;
+  font-weight: 800;
   color: #ffffff;
   margin: 2rem 0 1rem;
+}
+.episodes-card {
+  display: flex;
+  flex-direction: column;   /* 🔥 forces stacking */
+  align-items: center;
+  text-align: center;
+}
+
+/* Purpose Section */
+.purpose-section{
+  padding: 100px 0;
+  background-color: #0b4c8c; /* dark blue background matching image */
+  color: #fff;
+}
+
+.purpose-title{
+  font-family: var(--font-main);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.purpose-subtitle{
+  font-family: var(--font-main);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  margin-bottom: 20px;
+   text-align: start;
+}
+
+.purpose-image img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+/* Tablet */
+@media (max-width: 991px){
+  .purpose-section{
+    padding: 80px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .purpose-section{
+    padding: 60px 20px;
+  }
+
+  .purpose-title{
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  .purpose-subtitle{
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+}
+
+
+
+#episodes-difference, #accelerator-programs {
+  padding: 50px 0;
+  /* background-color: #f4f4f4; */
+}
+
+.card {
+  background-size: 100% 100%;
+  background-position: center;
+  height: 150px !important;
+  /* max-width: 330px; */
+  border: none !important;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-2 {
+  height: 250px !important;
+  
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+   font-family: 'Montserrat', sans-serif;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 767px) {
+  .card {
+    height: 250px;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Section base */
+.info-section {
+  padding: 90px 0;
+}
+
+
+/* Background colors */
+.bg-blue {
+  background-color: #014F85;
+  opacity: 90%;
+}
+
+.bg-green {
+   background: linear-gradient(90deg, #22c55e, #16a34a);
+   opacity: 90%;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  opacity: 90%;
+}
+
+.text-green {
+  color: #0a8f4e;
+}
+
+/* Contact Episodes */
+.contact-episodes {
+  padding: 100px 0;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.contact-icon {
+  width: 48px;
+  margin-bottom: 15px;
+  
+}
+
+.contact-episodes h5 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact-episodes p {
+  margin: 0;
+  /* opacity: 0.9; */
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .info-section,
+  .contact-episodes {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
 }
