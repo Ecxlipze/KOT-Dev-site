@@ -1530,6 +1530,9 @@ margin-bottom: 15px;
     width: 90vw;
     height: auto;
   }
+   .graphoria-our-text-strip{
+    gap: 40px !important;
+  }
 }
 @media (max-width: 767px) {
 
@@ -1794,6 +1797,10 @@ text-transform: uppercase;
 @media (max-width: 768px){
   .graphoria-card{ width: 170px; border-radius: 14px; }
   .graphoria-card__img{ height: 110px; }
+  .graphoria-our-text-strip{
+    gap: 15px !important;
+  }
+  
 }
 
 /* seamless loop animation (works because we duplicate cards via JS) */
@@ -1809,6 +1816,125 @@ text-transform: uppercase;
 
 /* section-what-we */
 .what-we-do-bg-img{
-  background-image: url(../images/graph.png);
-  background-size: 100% 100%;
+  background-image: url("../images/Graphoria/graphoria-main-image.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 2%;
+}
+.what-we-do-img img{
+  width: 100%;
+}
+.our-purpoos-heading{
+  padding-top: 10%;
+  padding-left: 8%;
+}
+.our-purpoos-heading-2{
+font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #0C72BA;
+
+
+}
+.our-purpoos-heading-1{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 48px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #96C049;
+}
+.our-purpose-we-create{
+  background-image: url(../images/Graphoria/blue-vectoer.png);
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.graphoria-our-text-strip{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  padding:40px 20px;
+  flex-wrap:nowrap;
+  padding-left: 0%;
+}
+
+.graphoria-our-text-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  line-height:1.1;
+}
+
+.graphoria-our-small{
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: clamp(10px, 3.2vw, 40px);
+
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+}
+
+.graphoria-our-big{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: clamp(13px, 3.5vw, 60px);
+
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+/* COLORS */
+.graphoria-our-design{ color:#FAC000; 
+}
+.graphoria-our-connect{ color:#08D5A3; }
+.graphoria-our-move{ color:#0976C2; }
+.graphoria-our-build{ color:#C0494B; }
+
+/* DOT */
+.graphoria-our-dot{
+  font-size: clamp(13px, 3.6vw, 46px);
+
+  font-weight:700;
+  color:#ffffff;
+  line-height:0.5;
+}
+.our-purpose-bottom{
+  background-image: url(../images/Graphoria/green-color.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1%;
+  backdrop-filter: blur(4px);
+  /* margin-bottom: 5%; */
+
+}
+
+.our-purpose-text p{
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: clamp(22px, 2.8vw, 30px);
+
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+
 }
