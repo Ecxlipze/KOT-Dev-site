@@ -1361,3 +1361,129 @@ line-height: 112.00000000000001% !important;
 letter-spacing: 0% !important;
 color: #000000 !important;
     }
+/* card-slider */
+.home-slider-row {
+  overflow: hidden;
+}
+
+.home-slider-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+/* Card */
+.home-card-slider {
+  width: 781px;
+  height: 337px;
+  flex-shrink: 0;
+  padding: 30px;
+
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(40px);
+
+  background: linear-gradient(
+    90deg,
+    #83CCFF 2.11%,
+    #0A71B9 100%
+  );
+}
+
+/* Card Content */
+.home-card-content {
+ display: flex;
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Avatar */
+.home-avatar img {
+ width: 133.85806274414062px;
+height: 133px;
+
+
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+
+
+
+
+.home-user-role {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Stars */
+.home-stars {
+  color: #FFD700;
+  font-size: 20px;
+  margin-top: 6px;
+  text-align: end;
+}
+
+/* Animations */
+.move-left .home-slider-track {
+  animation: slideLeft 25s linear infinite;
+}
+
+.move-right .home-slider-track {
+  animation: slideRight 25s linear infinite;
+}
+.home-avatar h6{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 20.71px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+    width: 144px;
+}
+.home-avatar p{
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 13.81px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+width: 155px;
+}
+.home-card-text p{
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: #FFFFFF;
+margin-bottom: 15px;
+}
+@keyframes slideLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .home-card-slider {
+    width: 90vw;
+    height: auto;
+  }
+}
