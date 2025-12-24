@@ -1806,3 +1806,9 @@ text-transform: uppercase;
 @media (prefers-reduced-motion: reduce){
   .graphoria-marquee__track{ animation: none; }
 }
+
+/* section-what-we */
+.what-we-do-bg-img{
+  background-image: url(../images/graph.png);
+  background-size: 100% 100%;
+}
