@@ -1638,3 +1638,171 @@ border-width: 1px !important;
 
 }
 }
+/* graphoria-section-start */
+.graphoria-hero{
+  background-image: url("../images/Graphoria/graphoria\ main-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* content padding */
+.graphoria-hero__content{
+  padding-left: clamp(10px, 2vw, 50px);
+  padding-right: clamp(10px, 2vw, 25px);
+  padding-bottom: 7%;
+}
+
+/* Typography */
+.graphoria-heading-1{
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.6vw, 40px);
+  line-height: 1.1;
+  color: #96C049;
+  padding-top: 4%;
+}
+.graphoria-heading-2{
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: clamp(20px, 3vw, 48px);
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+.graphoria-heading-3{
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 48px);
+  line-height: 1.1;
+  color: #0A71B9;
+}
+
+.graphoria-hero__para p{
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: clamp(11px, 1.4vw, 16px);
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin-top: 10px;
+  max-width: 572px;
+  width: 100%;
+
+}
+
+/* Buttons */
+.graphoria-hero__buttons{
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.graphoria-btn{
+  height: 40px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: clamp(11px, 1.2vw, 14px);
+  white-space: nowrap;
+}
+
+.graphoria-btn--primary{ background:#96C049; color:#fff; }
+.graphoria-btn--secondary{ background:#B9B9B9; color:#000; }
+
+
+
+
+
+
+
+/* slider-graphoria */
+.graphoria-marquee{
+  padding: 18px 0;
+}
+
+.graphoria-marquee__viewport{
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.graphoria-marquee__track{
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  width: max-content;
+  will-change: transform;
+  animation: graphoriaMarquee 22s linear infinite; /* speed */
+}
+
+/* pause on hover */
+.graphoria-marquee__viewport:hover .graphoria-marquee__track{
+  animation-play-state: paused;
+}
+
+/* card */
+.graphoria-card{
+  flex: 0 0 auto;
+  width: 349px;
+  height: auto;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  margin-top: 1%;
+  margin-bottom:1%;
+}
+
+.graphoria-card__img{
+
+ 
+   display: block;
+  width: 100%;
+max-width: 349px;
+height: auto;
+
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+  
+}
+
+.graphoria-card__label{
+  padding: 45px 12px 45px;
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+
+  color: #111;
+  
+}
+
+/* mobile sizing */
+@media (max-width: 768px){
+  .graphoria-card{ width: 170px; border-radius: 14px; }
+  .graphoria-card__img{ height: 110px; }
+}
+
+/* seamless loop animation (works because we duplicate cards via JS) */
+@keyframes graphoriaMarquee{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce){
+  .graphoria-marquee__track{ animation: none; }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="assets/images/cardslight/fav.png">
+
+</head>
+<body>
+ <!-- graphoria-section-start -->
+<div class="graphoria-hero">
+  <div class="container-fluid">
+    
+
+      <!-- section-1 -->
+      
+        <div class="graphoria-hero__content">
+          <div class="graphoria-hero__text">
+            <h2 class="graphoria-heading-1">Visualize your</h2>
+            <h2 class="graphoria-heading-2">IDENTITY</h2>
+            <h2 class="graphoria-heading-3">with us</h2>
+          </div>
+
+          <div class="graphoria-hero__para">
+            <p>
+             At Graphiora, design is not decoration — it is the soul of a brand. It is how people recognize you, remember you, and emotionally connect with you. We believe great design speaks before words are spoken. It builds trust before conversations begin. It creates belonging before loyalty is earned. Whether you are taking your first step as a startup or redefining years of legacy, Graphiora exists to help you express who you truly are — clearly, confidently, and beautifully. We transform vision into visual stories that live longer than trends.
+            </p>
+          </div>
+
+          <div class="graphoria-hero__buttons">
+            <a class="graphoria-btn graphoria-btn--primary" href="">EXPLORE OUR WORK</a>
+            <a class="graphoria-btn graphoria-btn--secondary" href="">REQUEST CONSULTATION</a>
+          </div>
+        
+      </div>
+
+     
+
+    
+  </div>
+</div>
+ <!-- slider -->
+
+ <section class="graphoria-marquee">
+  <div class="graphoria-marquee__viewport">
+    <div class="graphoria-marquee__track" id="graphoriaMarqueeTrack">
+
+      <!-- 10 cards (set 1) -->
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Mask group (4).png" alt="Branding & Identity">
+        <div class="graphoria-card__label">BRANDING &amp; IDENTITY</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Rectangle 1171.png" alt="Digital & Multimedia Design">
+        <div class="graphoria-card__label">DIGITAL &amp; MULTIMEDIA DESIGN</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Rectangle 1173.png" alt="UI/UX & Web Graphics">
+        <div class="graphoria-card__label">UI/UX &amp; WEB GRAPHICS</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/graphoria-slider.png" alt="Branding & Identity">
+        <div class="graphoria-card__label">SOCIAL MEDIA CREATIVES</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Mask group (4).png" alt="Packaging Design">
+        <div class="graphoria-card__label">PACKAGING DESIGN</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Rectangle 1171.png" alt="Logo Design">
+        <div class="graphoria-card__label">LOGO DESIGN</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Rectangle 1173.png" alt="Motion Graphics">
+        <div class="graphoria-card__label">MOTION GRAPHICS</div>
+      </article>
+
+      <article class="graphoria-card">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/graphoria-slider.png" alt="Presentation Design">
+        <div class="graphoria-card__label">PRESENTATION DESIGN</div>
+      </article>
+
+      <article class="graphoria-card  ">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/Rectangle 1171.png" alt="Print Design">
+        <div class="graphoria-card__label">PRINT DESIGN</div>
+      </article>
+
+      <article class="graphoria-card ">
+        <img class="graphoria-card__img" src="assets/images/Graphoria/graphoria-slider.png" alt="Illustrations">
+        <div class="graphoria-card__label">ILLUSTRATIONS</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+   <script>
+  (function () {
+    const track = document.getElementById("graphoriaMarqueeTrack");
+    if (!track) return;
+
+    // Clone the full set once so the track has 2 identical halves
+    const cards = Array.from(track.children);
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    });
+  })();
+</script>
+
+    </body>  
+    </html>
