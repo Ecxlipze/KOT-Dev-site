@@ -6,6 +6,42 @@ body{
 /* .container-fluid{
     padding: 0% !important;
 } */
+/* MAIN BANNER */
+.home-page-banner {
+  
+  width: 100%;
+  height: auto;
+
+  background-image: url("../images/homepage/Frame57.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ 
+}
+
+/* FOREGROUND IMAGE */
+.home-banner-front-image {
+ 
+  max-width: 1440px;
+  width: 100%;
+
+  height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .home-page-banner {
+    height: 60vh;
+  }
+
+  .home-banner-front-image {
+    
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 /* career-page-section-start */
 .career-section-bg-image{
@@ -1309,7 +1345,7 @@ color: #0A71B9;
 height: 220px !important;
    border-radius: 30px;
      border-width: 1px;
-
+padding: 5%
     }
    .home-card-2, .home-card-3, .home-card-4{
     background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%) !important;
@@ -1319,6 +1355,7 @@ height: 130px !important;
 
 border-radius: 30px;
 border-width: 1px;
+padding: 5%
    }
     .home-search-input {
       max-width: 545px;
@@ -1557,5 +1594,47 @@ display: block;
 }
 .home-stars{
   display: none;
+}
+/* mobile-view faq */
+
+.home-card-2, .home-card-3, .home-card-4, .home-card-1{
+  background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important;
+
+    width: 115px !important;
+height: 43px !important;
+
+    border-radius: 8px !important;
+    border-width: 1px;
+    border: 1px solid !important;
+
+border-image-source: linear-gradient(75.68deg, #000000 1.67%, rgba(24, 24, 24, 0) 100%) !important;
+backdrop-filter: blur(40px)  !important;
+padding: 5% !important;
+
+}
+.home-card-paragraph{
+  display: none;
+}
+.home-card-heading {
+  font-family: Montserrat !important;
+        font-weight: 700 !important;
+        font-style: normal !important;
+        font-size: clamp(8px, 2.5vw, 9px) !important;
+        line-height: 112% !important;
+        letter-spacing: 0% !important;
+}
+.home-card{
+  width: 227px !important;
+height: 176px !important;
+border-radius: 10px !important;
+border-width: 1px !important;
+
+}
+.home-search-input{
+  width: 204px !important;
+height: 30px !important;
+border-radius: 10px !important;
+border-width: 1px !important;
+
 }
 }
