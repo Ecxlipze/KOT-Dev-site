@@ -1713,3 +1713,140 @@ margin-bottom: 30px;
     display: none;
   }
 }
+
+/* E-commerce Section */
+
+.ecommerce-title{
+  font-family: var(--font-main);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #fbbc04; /* yellow */
+}
+
+.ecommerce-text{
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #111;
+}
+
+.btn-ecommerce{
+  background-color: #fbbc04 !important;
+  color: white !important;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 8px; 
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-ecommerce:hover{
+  background-color: #3c3c3c !important;
+  color: #ffffff !important;
+}
+
+/* Image */
+.ecommerce-section img{
+  max-width: 100%;
+  height: 450px;
+  width: 950px;
+  display: inline-block;
+}
+
+
+/* Tablet */
+@media(max-width: 991px){
+  .ecommerce-title{
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+  }
+
+  .ecommerce-text{
+     width: 340px;
+  
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media(max-width: 575px){
+  .ecommerce-title{
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+   width: 240px;
+
+  }
+
+  .ecommerce-text{
+    font-size: 0.7rem;
+    width: 240px;
+  }
+  .ecommerce-section img{
+    height: 240px;
+    width: 400px !important;
+  }
+  .btn-ecommerce{
+    text-align: center;
+    width: 150px;
+  }
+  
+}
+
+/* Offer Ecommerce Section */
+.offer-ecommerce-section{
+  background: #fff;
+  color: #111;
+}
+
+.offer-ecommerce-title{
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #fbbc04; /* yellow */
+}
+
+.offer-ecommerce-subtitle{
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Feature Cards */
+.feature-card{
+  text-align: center;
+  padding: 10px;
+}
+
+.feature-card img{
+  max-width: 75px;
+}
+
+.feature-card p{
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Tablet & Mobile Adjustments */
+@media(max-width: 991px){
+  .feature-card img{
+    max-width: 60px;
+  }
+
+  .feature-card p{
+    font-size: 0.85rem;
+  }
+}
+
+@media(max-width: 575px){
+  .feature-card img{
+    max-width: 55px;
+  }
+
+  .feature-card p{
+    font-size: 0.8rem;
+  }
+}
+
+
