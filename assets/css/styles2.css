@@ -1411,3 +1411,137 @@ margin-bottom: 30px;
     font-size: 1.4rem;
   }
 }
+
+
+#what-we-do {
+    padding: 50px 0;
+}
+
+#what-we-do h2 {
+    font-size: 42px;
+    color: #1DAE90;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#what-we-do p {
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+}
+
+.card {
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    display: flex;
+    border: none !important;
+    align-items: flex-end;
+  ;
+}
+.card3 {
+  height: 350px !important;
+
+}
+
+.card-body {
+    /* background: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card h5 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    #what-we-do h2 {
+        font-size: 28px;
+    }
+
+    .card h5 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
+
+
+.slider-title{
+  font-family: var(--font-main);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #098C52;
+
+}
+
+.card-slide .card{
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card-slide .card:hover{
+  transform: translateY(-5px);
+}
+
+.card-slide .card-body{
+  text-align: center;
+  padding: 12px;
+}
+
+.card-slide .card-text{
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111;
+}
+.card4 {
+  height: 400px !important;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+
+/* Mobile */
+@media(max-width: 575px){
+
+  .card-slide .card-text{
+    font-size: 0.9rem;
+  }
+}
+
+/* Adjust desktop cards to sit inline */
+.d-md-flex .card-slide{
+  flex: 1 1 22%;
+  max-width: 22%;
+}
+
+/* Keep existing card styling */
+.card-slide .card{
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card-slide .card:hover{
+  transform: translateY(-5px);
+}
+
