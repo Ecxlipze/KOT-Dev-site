@@ -1939,3 +1939,378 @@ text-align: center;
 color: #FFFFFF;
 
 }
+/* new section-design */
+.design-bg-image{
+  background-image: url("../images/Graphoria/green-vector.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 767px;
+  width: 100%;
+  position: relative;
+}
+
+/* Heading */
+.why-graphoria-text{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.why-graphoria-text h3{
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Common icon box */
+.graphoria-point{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #0d6efd;
+  padding: 12px 18px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.graphoria-point img{
+  width: 40px;
+  height: auto;
+}
+
+.graphoria-point p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Positioning like reference image */
+.point-1{
+  top: 35%;
+  left: 5%;
+}
+
+.point-2{
+  top: 48%;
+  left: 5%;
+}
+
+.point-3{
+  top: 61%;
+  left: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* websculpture-page-start */
+
+/* websculpture-hero-section */
+.websculpture-hero-section {
+    
+    background-image: url("../images/websculpture/websculpture-baner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+   padding-bottom: 20%;
+}
+
+/* Container */
+.websculpture-hero-container {
+    padding: 0 5%;
+}
+
+/* Content */
+.websculpture-hero-content {
+    color: #ffffff;
+}
+
+/* Logo */
+.websculpture-logo {
+   max-width: 324px;
+height: 324px;
+width: 100%;
+
+}
+
+/* Title */
+.websculpture-title {
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 64px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #3B4197;
+}
+
+/* Subtitle */
+.websculpture-subtitle {
+    font-family: Montserrat;
+font-weight: 300;
+font-style: Light;
+font-size: 48px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+    margin-top: 10px;
+}
+.websculpture-subtitle-2{
+font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+}
+
+
+/* Description */
+.websculpture-description {
+ 
+    max-width: 600px;
+    margin: 20px auto;
+     font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+}
+
+/* Button */
+.websculpture-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    background: #3B4197;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* .websculpture-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+} */
+
+
+
+/* what-we-section-2 */
+/* .what-we-background-image {
+  background-image: url(../images/websculpture/image6.png);
+  
+    background-size: cover;
+    background-position: center;
+} */
+/* websculpture-page-end */
+/* SECTION */
+.what-we-offer-section {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* BACKGROUND */
+.what-we-offer-background-image {
+  background-image: url("../images/websculpture/image6.png");
+  background-size: cover;
+  /* background-position: center; */
+  
+  background-repeat: no-repeat;
+}
+
+/* CONTAINER */
+.what-we-offer-container {
+  padding: 0 5%;
+}
+
+/* TITLE */
+.what-we-offer-title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  color: #0a2540;
+  padding-top: 9%;
+}
+
+/* DESCRIPTION */
+.what-we-offer-description {
+  max-width: 850px;
+  margin: 15px auto 60px;
+  font-size: 16px;
+  color: #5a6c7d;
+  line-height: 1.7;
+}
+
+/* SERVICES ROW */
+.what-we-offer-services-row {
+  row-gap: 40px;
+}
+
+/* CARD WRAPPER */
+.what-we-offer-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.what-we-offer-card {
+  background: #ffffff;
+  border-radius: 14px;
+  max-width: 271px;
+  width: 100%;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* HOVER */
+
+
+/* IMAGE */
+.what-we-offer-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TEXT + BUTTON (SAME DIV) */
+.offer-card-text {
+  background-color: #161838;
+   padding-bottom: 4%;
+ 
+}
+
+/* TITLE */
+.what-we-offer-card-title {
+ font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+  
+   padding-top: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 5%;
+}
+
+/* BUTTON */
+.what-we-explore-btn {
+  display: inline-block;
+  
+
+
+ font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: #FFFFFF;
+  text-decoration: none;
+}
+.explore-btn-offer{
+  background   :#0A71B9;
+  padding: 0%;
+}
+
+.what-we-explore-btn:hover {
+ 
+  color: #000;
+}
+.what-we-offer-text-web h2{
+font-family: Montserrat !important;
+font-weight: 700 !important;
+font-style: Bold !important;
+font-size: 47px !important;
+leading-trim: NONE !important;
+line-height: 112.00000000000001% !important;
+letter-spacing: 0% !important;
+color: #014F85 !important;
+text-align: start;
+}
+
+/* meet-over-developer-team */
+.meet-our-developer {
+  background-image: url(../images/websculpture/Vector\ 67.png);
+  background-size: cover;
+  /* background-position: center; */
+  padding: 10% 5%;  
+}
+
+.meet-our-developer-heading h2{
+  font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 47px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+padding-top: 20%;
+}
+
+.meet-our-developer-heading p{
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+ max-width: 700px;       /* ✅ forces 2 lines */
+  margin: 12px auto 0;   /* ✅ centers paragraph */
+  padding-top: 2%;
+  padding-bottom: 7%;
+}
+
+
+
+
+
+.meet-our-first-developer, .meet-our-second-developer, .meet-our-third-developer, .meet-our-f-developer{
+ max-width: 271px;
+height: 492px;
+width: 100%;
+border-radius: 10px;
+background-color: #D9D9D9;
+
+}
+
