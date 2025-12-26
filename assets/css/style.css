@@ -2056,7 +2056,8 @@ width: 100%;
     font-family: Montserrat;
 font-weight: 700;
 font-style: Bold;
-font-size: 64px;
+font-size: clamp(34px, 4.5vw, 64px);
+
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -2262,6 +2263,8 @@ line-height: 112.00000000000001% !important;
 letter-spacing: 0% !important;
 color: #014F85 !important;
 text-align: start;
+max-width: 294px;
+width: 100%;
 }
 
 /* meet-over-developer-team */
