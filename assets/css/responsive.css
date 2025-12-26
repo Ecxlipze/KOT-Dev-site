@@ -132,6 +132,46 @@ color: #FFFFFF;
     bottom: -18px;
     width: min(260px, 75vw);
   }
+  .home-card-2, .home-card-3, .home-card-4, .home-card-1{
+  background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important;
+
+    width: 115px !important;
+height: 43px !important;
+
+    border-radius: 8px !important;
+    border-width: 1px;
+    border: 1px solid !important;
+
+border-image-source: linear-gradient(75.68deg, #000000 1.67%, rgba(24, 24, 24, 0) 100%) !important;
+backdrop-filter: blur(40px)  !important;
+padding: 5% !important;
+
+}
+.home-card-paragraph{
+  display: none;
+}
+.home-card-heading {
+  font-family: Montserrat !important;
+        font-weight: 700 !important;
+        font-style: normal !important;
+        font-size: clamp(8px, 2.5vw, 9px) !important;
+        line-height: 112% !important;
+        letter-spacing: 0% !important;
+}
+.home-card{
+  width: 351px !important;
+height: 176px !important;
+border-radius: 10px !important;
+border-width: 1px !important;
+
+}
+.home-search-input{
+  width: 204px !important;
+height: 30px !important;
+border-radius: 10px !important;
+border-width: 1px !important;
+
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
