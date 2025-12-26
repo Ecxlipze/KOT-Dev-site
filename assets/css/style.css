@@ -1474,6 +1474,11 @@ display: none;
 .move-right .home-slider-track {
   animation: slideRight 12s linear infinite;
 }
+.move-left:hover .home-slider-track,
+.move-right:hover .home-slider-track {
+  animation-play-state: paused;
+}
+
 .home-avatar h6{
   font-family: Montserrat;
 font-weight: 700;
@@ -2020,104 +2025,110 @@ color: #FFFFFF;
 
 /* websculpture-page-start */
 
-/* websculpture-hero-section */
+/* HERO */
 .websculpture-hero-section {
-    
-    background-image: url("../images/websculpture/websculpture-baner.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-   padding-bottom: 20%;
+  position: relative;
+  
+  overflow: hidden;
+
+  background-image: url("../images/websculpture/websculpture.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5%;
 }
 
-/* Container */
+/* Container content should stay above overlays */
 .websculpture-hero-container {
-    padding: 0 5%;
+  position: relative;
+  z-index: 3;
+  padding: 0 5%;
+  /* padding-top: 40px; */
+  padding-bottom: 140px; /* space so content doesn't overlap triangle */
 }
 
-/* Content */
 .websculpture-hero-content {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* Logo */
 .websculpture-logo {
-   max-width: 324px;
-height: 324px;
-width: 100%;
-
+  width: min(324px, 70vw);
+  height: auto;
 }
 
 /* Title */
 .websculpture-title {
-    font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
-font-size: clamp(34px, 4.5vw, 64px);
-
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #3B4197;
+  font-weight: 700;
+  font-size: clamp(34px, 4.5vw, 64px);
+  line-height: 100%;
+  text-align: center;
+  color: #3b4197;
 }
 
 /* Subtitle */
 .websculpture-subtitle {
-    font-family: Montserrat;
-font-weight: 300;
-font-style: Light;
-font-size: 48px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
-    margin-top: 10px;
-}
-.websculpture-subtitle-2{
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
-font-size: 60px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
+  font-weight: 300;
+  font-size: clamp(22px, 3vw, 48px);
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
 }
 
+.websculpture-subtitle-2 {
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 60px);
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
 
 /* Description */
 .websculpture-description {
- 
-    max-width: 600px;
-    margin: 20px auto;
-     font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
-font-size: 16px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-color: #FFFFFF;
+  max-width: 600px;
+  margin: 20px auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
 }
 
 /* Button */
 .websculpture-btn {
-    display: inline-block;
-    padding: 12px 32px;
-    border-radius: 5px;
-    background: #3B4197;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 5px;
+  background: #3b4197;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
+/* .websculpture-btn:hover {
+  transform: translateY(-2px);
+} */
+
+/* ✅ Triangle GIF overlay */
+.websculpture-triangle {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;              /* thora niche for natural look */
+  transform: translateX(-50%);
+  width: min(320px, 70vw);    /* responsive */
+  height: auto;
+  z-index: 2;                 /* background=0, triangle=2, content=3 */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Mobile fine tune */
+
 
 /* .websculpture-btn:hover {
     transform: translateY(-2px);

@@ -108,7 +108,30 @@ background: linear-gradient(90deg, #EAFF00 0%, #FF2B00 43.28%, #FF8500 100%);
   -webkit-text-fill-color: transparent;
 
 }
+.websculpture-logo {
+    width: 108px;
+height: 108px;
 
+
+}
+.websculpture-description {
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+}
+  .websculpture-hero-container {
+    padding-bottom: 120px;
+  }
+  .websculpture-triangle {
+    bottom: -18px;
+    width: min(260px, 75vw);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
