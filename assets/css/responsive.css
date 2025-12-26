@@ -72,6 +72,43 @@ color: #FFFFFF;
 .mobile-cards{
     display: none;
 }
+.view-profile-link {
+    padding: 7px 23px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: Montserrat;
+    font-size: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.websculpture-subtitle-2{
+    font-family: Montserrat !important; 
+font-weight: 700 !important;
+font-style: Bold !important;
+font-size: 32px !important;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #0A71B9 !important;
+}
+.websculpture-title{
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+background: linear-gradient(90deg, #EAFF00 0%, #FF2B00 43.28%, #FF8500 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
