@@ -7,14 +7,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-/* ===== GLOBAL ===== */
-body{
-    background:#000;
-    font-family:'Segoe UI', sans-serif;
-    color:#fff;
+/* ================= GLOBAL ================= */
+
+
+/* ================= SECTION SPACING ================= */
+.agile-apps-offer{
+    padding-left:5%;
+    padding-right:5%;
 }
 
-/* ===== TITLE ===== */
+/* ================= TITLE ================= */
 .agile-apps-offer-title{
     text-align:center;
     color:#c43fbf;
@@ -23,40 +25,44 @@ body{
     margin-bottom:70px;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD ================= */
 .agile-apps-offer-card{
-    background: linear-gradient(135deg, #b13fa9 0%, #1a3fa3 100%);
-    border-radius:18px;
+    background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%);
+    border-radius:20px;
     padding:32px;
-    height:260px;
+    width:429px;
+    height:230px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    position:relative;
+    margin-left:auto;
+    margin-right:auto;
     transition:transform .3s ease;
 }
 
-.agile-apps-offer-card:hover{
-    transform:translateY(-6px);
-}
-
 .agile-apps-offer-card h5{
-    font-size:20px;
+    font-family:Montserrat;
+    font-size:22px;
     font-weight:700;
-    line-height:1.3;
+    line-height:1.2;
+    width:279px;
+    color:#fff;
 }
 
 .agile-apps-offer-card p{
-    font-size:14px;
-    line-height:1.6;
-    color:#e6e6e6;
+    font-family:Montserrat;
+    font-size:13px;
+    font-weight:400;
+    width:310px;
     margin-top:12px;
+    color:#fff;
 }
 
 .agile-apps-offer-read-more{
-    color:#fff;
+    font-family:Montserrat;
     font-size:13px;
-    font-weight:600;
+    font-weight:700;
+    color:#fff;
     text-decoration:none;
     letter-spacing:.5px;
 }
@@ -65,10 +71,11 @@ body{
     text-decoration:underline;
 }
 
-/* ===== ROW OVERLAP ===== */
+/* ================= OVERLAP ================= */
 .agile-apps-offer-first-row{
     position:relative;
     z-index:1;
+    margin-bottom:2%;
 }
 
 .agile-apps-offer-overlap-row{
@@ -76,31 +83,128 @@ body{
     z-index:2;
 }
 
-/* horizontal overlap desktop only */
-.agile-apps-offer-first-row .col-lg-4:nth-child(2),
-.agile-apps-offer-overlap-row .col-lg-4:nth-child(2){
-    margin-left:-40px;
-}
-
-.agile-apps-offer-first-row .col-lg-4:nth-child(3),
-.agile-apps-offer-overlap-row .col-lg-4:nth-child(3){
-    margin-left:-40px;
-}
-
-/* ===== MOBILE & TABLET ===== */
-@media (max-width:991px){
-
-    /* remove horizontal overlap */
+/* Desktop overlap only */
+@media (min-width:992px){
     .agile-apps-offer-first-row .col-lg-4:nth-child(2),
-    .agile-apps-offer-first-row .col-lg-4:nth-child(3),
-    .agile-apps-offer-overlap-row .col-lg-4:nth-child(2),
-    .agile-apps-offer-overlap-row .col-lg-4:nth-child(3){
-        margin-left:0;
+    .agile-apps-offer-overlap-row .col-lg-4:nth-child(2){
+        margin-left:-40px;
     }
 
-    /* spacing */
-    .agile-apps-offer-overlap-row{
-        margin-top:0;
+    .agile-apps-offer-first-row .col-lg-4:nth-child(3),
+    .agile-apps-offer-overlap-row .col-lg-4:nth-child(3){
+        margin-left:-40px;
+    }
+}
+
+/* ================= MOBILE & TABLET ================= */
+@media (max-width:991px){
+
+    .agile-apps-offer{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .agile-apps-offer-card{
+        width:100%;
+        max-width:429px;
+        height:auto;
+    }
+
+    .agile-apps-offer-card h5,
+    .agile-apps-offer-card p{
+        width:100%;
+    }
+}
+/* ===== ROW ===== */
+.saas-row{
+    display:flex;
+    align-items:center;
+    margin-bottom:22px;
+}
+
+/* ===== LEFT BLUE ===== */
+.saas-left{
+   width: 892px;
+height: 121px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+           border-bottom-left-radius: 5px;
+background: #0A71B9;
+
+
+    position:relative;
+    z-index:2;
+    display: flex;
+    
+    align-items: center;
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 27px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+ padding-left:4%;
+padding-right: 4%;
+}
+
+/* ===== RIGHT IMAGE ===== */
+.saas-right{
+    width: 834px;
+height: 121px;
+
+   
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ padding-left: 6%;
+padding-right: 6%;
+}
+.saas-right p{
+   font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+    margin-bottom: 0%;
+}
+/* ===== NUMBER ===== */
+.saas-number{
+    font-weight:800;
+    margin-right:12px;
+}
+
+/* ===== INDIVIDUAL IMAGES ===== */
+.img-1{ background-image:url("assets/images/Agile/Subtract.png"); }
+.img-2{ background-image:url("assets/images/Agile/Subtract.png"); }
+.img-3{ background-image:url("assets/images/Agile/Subtract.png"); }
+.img-4{ background-image:url("assets/images/Agile/Subtract.png"); }
+.img-5{ background-image:url("assets/images/Agile/Subtract.png"); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .saas-row{
+        flex-direction:column;
+    }
+
+    .saas-left,
+    .saas-right{
+        width:100%;
+        margin-left:0;
+        border-radius:30px;
+    }
+
+    .saas-right{
+        margin-top:12px;
     }
 }
 </style>
@@ -108,14 +212,14 @@ body{
 
 <body>
 
-<div class="container py-5 agile-apps-offer">
+<div class="container-fluid py-5 agile-apps-offer">
 
     <h2 class="agile-apps-offer-title">WHAT WE OFFER</h2>
 
     <!-- FIRST ROW -->
     <div class="row g-4 justify-content-center agile-apps-offer-first-row">
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Custom SaaS Product Development</h5>
@@ -125,7 +229,7 @@ body{
             </div>
         </div>
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Cloud-Based Web & Mobile Apps</h5>
@@ -135,7 +239,7 @@ body{
             </div>
         </div>
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Agile Project Management & Iterative Releases</h5>
@@ -150,7 +254,7 @@ body{
     <!-- SECOND ROW -->
     <div class="row g-4 justify-content-center agile-apps-offer-overlap-row">
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Scalable Architecture & Microservices</h5>
@@ -160,7 +264,7 @@ body{
             </div>
         </div>
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>User-Centric UI/UX Design</h5>
@@ -170,7 +274,7 @@ body{
             </div>
         </div>
 
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Customer Behavior Analytics & Insights</h5>
@@ -184,5 +288,65 @@ body{
 
 </div>
 
+
+<!--  -->
+<div class="container-fluid py-5 px-0">
+
+    <!-- 01 -->
+    <div class="saas-row">
+        <div class="saas-left">
+            <span class="saas-number">01</span>
+            High Market Competition in SaaS?
+        </div>
+        <div class="saas-right img-1">
+           <p> We craft niche-focused platforms with unique value propositions.</p>
+        </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="saas-row">
+        <div class="saas-left">
+            <span class="saas-number">02</span>
+            Subscription Fatigue & Budget Constraints?
+        </div>
+        <div class="saas-right img-2">
+            <p>We offer tiered pricing and modular MVPs for lean launches.</p>
+        </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="saas-row">
+        <div class="saas-left">
+            <span class="saas-number">03</span>
+            Frequent Tech Upgrades?
+        </div>
+        <div class="saas-right img-3">
+           <p> Our R&D ensures your platform evolves with modern frameworks.</p>
+        </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="saas-row">
+        <div class="saas-left">
+            <span class="saas-number">04</span>
+            Data Security Concerns?
+        </div>
+        <div class="saas-right img-4">
+            <p>Security-first design with GDPR, HIPAA & SOC2 readiness.</p>
+        </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="saas-row">
+        <div class="saas-left">
+            <span class="saas-number">05</span>
+            Economic Uncertainty?
+        </div>
+        <div class="saas-right img-5">
+            <p>Cloud cost optimization with pay-as-you-scale models.</p>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
