@@ -494,6 +494,12 @@ color: #000000;
 .emporing-business{
   overflow: hidden;
 }
+  .what-we-do-img{
+      overflow: hidden;
+    }
+    .what-we-do-img img{
+               width: 140% !important;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -788,5 +794,11 @@ height: 265px;
     }
     .mobile-heading-agile{
       display: none;
+    }
+    .what-we-do-img{
+      overflow: hidden;
+    }
+    .what-we-do-img img{
+               width: 140% !important;
     }
 }
