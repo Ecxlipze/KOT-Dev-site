@@ -2427,3 +2427,409 @@ position: relative;
   background-color: #000000;
   color: #ffffff;
 }
+/* agile-app */
+
+
+
+
+.empowering-section-2-bg{
+    background-image: url(../images/Agile/Ellipse969.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.empowering-heading h2{
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #A53692;
+}
+.mobile-heading-agile{
+  display: none;
+}
+.emporing-business {
+    padding-left: 5% !important;
+}
+.empowering-text-paragraph{
+    max-width: 593px;
+height: 176px;
+width: 100%;
+border: 2px solid #A53692;
+border-radius: 20px;
+
+backdrop-filter: blur(25px);
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.empowering-text-paragraph p{
+width: 549px;
+font-family: Montserrat;
+font-weight: 300;
+font-style: Light;
+font-size: 17px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
+
+}
+.empowering-section-2 img{
+  max-width: 629px;
+  width: 100%;
+height: auto;
+
+
+}
+.empowering-btn-agile{
+    margin-top: 4%;
+    background: #A53692;
+  max-width: 236px;
+height: 62px;
+border-radius: 15.73px;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.empowering-btn-agile a{
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 25.17px;
+leading-trim: NONE;
+line-height: 53.49px;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+text-decoration: none;
+}
+ /* ================= SECTION ================= */
+/* ================= MAIN SECTION ================= */
+.sets-agile-apps-section {
+    background-image: url("../images/Agile/agileapps-apart.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================= HEADING ================= */
+.sets-agile-apps-heading {
+    text-align: center;
+    padding-top: 80px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.sets-agile-apps-heading h2 {
+    font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 52px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+    color: #000000;
+}
+
+/* .sets-agile-apps-heading p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #e01212;
+} */
+
+/* ================= MAIN AREA ================= */
+.sets-agile-apps-wrapper {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= PHONE ================= */
+.sets-agile-apps-phone {
+    position: relative;
+    z-index: 5;
+}
+
+.sets-agile-apps-phone img {
+    width: 328.5px;
+    height: 657px;
+}
+
+/* vertical text */
+
+.sets-agile-apps-phone-text h2{
+  position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-weight: 800;
+    font-size: 84px;
+    line-height: 100%;
+    color: #FFA8F0;
+    width: 559px;
+}
+/* ================= FLOATING CARDS ================= */
+.sets-agile-apps-card {
+    position: absolute;
+    color: #000;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 260px;
+    height: 172px;
+    border: 1px solid;
+    backdrop-filter: blur(15px);
+    border-image-source: linear-gradient(180deg, #000000 0%, rgba(117, 86, 86, 0.4) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(153, 153, 153, 0.1) 100%);
+}
+
+.sets-agile-apps-card h4 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.sets-agile-apps-card p {
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
+    margin: 0;
+}
+.sets-agile-apps-card span{
+font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
+}
+
+/* Card positions */
+.sets-agile-apps-card-1 {
+    left: 20%;
+    top: 19%;
+    z-index: 999;
+width: 260px;
+height: 240px;
+}
+
+.sets-agile-apps-card-2 {
+    right: 14%;
+    top: 14%;
+    z-index: 999;
+    width: 353px;
+height: 172px;
+
+
+}
+
+.sets-agile-apps-card-3 {
+    left: 14%;
+    bottom: 5%;
+    z-index: 999;
+width: 353px;
+height: 172px;
+}
+.sets-agile-apps-card-4{
+  right: 20%;
+    bottom: 5%;
+z-index: 999;
+width: 260px;
+height: 240px;
+
+
+}
+/* ================= SECTION SPACING ================= */
+.agile-apps-offer{
+    padding-left:5% !important;
+    padding-right:5% !important;
+}
+
+/* ================= TITLE ================= */
+.agile-apps-offer-title{
+    text-align:center;
+    color:#c43fbf;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:30px;
+}
+.agile-apps-offer-para{
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000;
+padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 2%;
+}
+.saas-main-heading{
+  font-family: Montserrat;
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+padding-bottom: 3%;
+}
+/* ================= CARD ================= */
+.agile-apps-offer-card{
+    background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%);
+    border-radius:20px;
+    padding:32px;
+    width:429px;
+    height:230px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin-left:auto;
+    margin-right:auto;
+    transition:transform .3s ease;
+}
+
+.agile-apps-offer-card h5{
+    font-family:Montserrat;
+    font-size:22px;
+    font-weight:700;
+    line-height:1.2;
+    width:279px;
+    color:#fff;
+}
+
+.agile-apps-offer-card p{
+    font-family:Montserrat;
+    font-size:13px;
+    font-weight:400;
+    width:310px;
+    margin-top:12px;
+    color:#fff;
+}
+
+.agile-apps-offer-read-more{
+    font-family:Montserrat;
+    font-size:13px;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    letter-spacing:.5px;
+}
+
+.agile-apps-offer-read-more:hover{
+    text-decoration:underline;
+}
+
+/* ================= OVERLAP ================= */
+.agile-apps-offer-first-row{
+    position:relative;
+    z-index:1;
+    margin-bottom:2%;
+}
+
+.agile-apps-offer-overlap-row{
+    position:relative;
+    z-index:2;
+}
+/* ===== ROW ===== */
+.saas-row{
+    display:flex;
+    align-items:center;
+    margin-bottom:22px;
+}
+
+/* ===== LEFT BLUE ===== */
+.saas-left{
+   width: 892px;
+height: 121px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+           border-bottom-left-radius: 5px;
+background: #0A71B9;
+
+
+    position:relative;
+    z-index:2;
+    display: flex;
+    
+    align-items: center;
+    font-family: Montserrat;
+font-weight: 700;
+font-style: Bold;
+font-size: 27px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+ padding-left:4%;
+padding-right: 4%;
+}
+
+/* ===== RIGHT IMAGE ===== */
+.saas-right{
+    width: 834px;
+height: 121px;
+
+   
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ padding-left: 6%;
+padding-right: 6%;
+}
+.saas-right p{
+   font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+    margin-bottom: 0%;
+}
+/* ===== NUMBER ===== */
+.saas-number{
+    font-weight:800;
+    margin-right:12px;
+}
+
+/* ===== INDIVIDUAL IMAGES ===== */
+.img-1{ background-image:url("../images/Agile/Subtract.png"); }
+.img-2{ background-image:url("../images/Agile/Subtract.png"); }
+.img-3{ background-image:url("../images/Agile/Subtract.png"); }
+.img-4{ background-image:url("../images/Agile/Subtract.png"); }
+.img-5{ background-image:url("../images/Agile/Subtract.png"); }
