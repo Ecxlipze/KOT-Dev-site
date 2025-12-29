@@ -500,6 +500,22 @@ color: #000000;
     .what-we-do-img img{
                width: 140% !important;
     }
+     .quality-flawless-bg h2{
+   font-family: Montserrat;
+font-weight: 700!important;
+font-style: Bold!important;
+font-size: 80px!important;
+leading-trim: NONE!important;
+line-height: 80px!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+border: 1px solid #FFFFFF!important;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -801,4 +817,27 @@ height: 265px;
     .what-we-do-img img{
                width: 140% !important;
     }
+    .quality-flawless-bg{
+  background-image: url(../images/Flawless/Frame171277067.png) none !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top:8%;
+  padding-bottom: 7%;
+}
+    .quality-flawless-bg h2{
+  font-family: Montserrat!important;
+font-weight: 700 !important;
+font-style: Bold!important;
+font-size: 170px !important;
+leading-trim: NONE;
+line-height: 160px !important;
+letter-spacing: 0%;
+text-align: center!important;
+
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+border: 1px solid #FFFFFF!important;
+}
 }
