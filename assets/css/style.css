@@ -2746,7 +2746,8 @@ padding-bottom: 3%;
 
 /* ===== LEFT BLUE ===== */
 .saas-left{
-   width: 892px;
+   max-width: 892px;
+   width: 100%;
 height: 121px;
 
     border-top-left-radius: 5px;
@@ -2773,7 +2774,8 @@ padding-right: 4%;
 
 /* ===== RIGHT IMAGE ===== */
 .saas-right{
-    width: 834px;
+    max-width: 834px;
+    width: 100%;
 height: 121px;
 
    
