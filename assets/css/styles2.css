@@ -1972,3 +1972,92 @@ margin-bottom: 30px;
   height: auto;
   opacity: 75%;
 }
+
+
+/* SECTION */
+.dgx-growth {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+/* HEADINGS */
+.dgx-growth-title {
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.dgx-growth-desc {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  font-weight: 500;
+  font-family: Montserrat !important;
+  
+}
+
+/* CARDS */
+.dgx-card-inner {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 22px;
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+}
+.dgx-card-inner a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-family: Montserrat !important;
+}
+.dgx-card-inner h4 {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-family: Montserrat !important;
+  margin-bottom: 2px;
+}
+.dgx-card-inner h6 {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700 !important;
+  font-family: Montserrat !important;
+}
+.dgx-card-inner p {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: Montserrat !important;
+}
+
+
+/* BACKGROUNDS */
+.dgx-bg-1 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-2 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-3 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-4 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-5 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-6 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-7 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-8 { background-image: url("../images/digi-light/dcard.png"); }
+
+/* BUTTON */
+.dgx-cta-btn {
+  padding: 12px 30px;
+  border: 2px dashed #f5a623;
+  border-radius: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+    font-family: Montserrat !important;
+
+}
+
+/* RESPONSIVE VISIBILITY */
+@media (max-width: 991px) {
+  .dgx-hide-md {
+    display: none;
+  }
+}
