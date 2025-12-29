@@ -222,6 +222,9 @@ border-width: 0.5px;
 background-color: #F6F6F6;
 
 }
+.career-main-image-section{
+  padding: 0% !important;
+}
 .career-section-card-first-text h4{
     font-family: 'Montserrat-Regular';
 font-size: 15px;
