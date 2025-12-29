@@ -1860,6 +1860,7 @@ margin-bottom: 30px;
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
   color: #fbbc04; /* yellow */
+  text-align: center !important;
 }
 
 .strategic-image img{
@@ -1881,3 +1882,55 @@ margin-bottom: 30px;
     font-size: clamp(1.5rem, 5vw, 2rem);
   }
 }
+
+.challenges-grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .challenges-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Force visual rows */
+  .challenge { grid-row: 1; }
+  .solution  { grid-row: 2; }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 991px) {
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.caard {
+  height: 180px;
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 12px;
+}
+.caard {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.c1 { background-image: url("../images/merc-light/cad1.png"); }
+.s1 { background-image: url("../images/merc-light/cad5.png"); }
+.c2 { background-image: url("../images/merc-light/cad2.png"); }
+.s2 { background-image: url("../images/merc-light/cad6.png"); }
+.c3 { background-image: url("../images/merc-light/cad3.png"); }
+.s3 { background-image: url("../images/merc-light/cad7.png"); }
+.c4 { background-image: url("../images/merc-light/cad4.png"); }
+.s4 { background-image: url("../images/merc-light/cad8.png"); }
+
