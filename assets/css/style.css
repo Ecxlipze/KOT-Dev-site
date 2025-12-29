@@ -3,6 +3,34 @@ body{
     padding: 0% !important;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../Montserrat/static/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+ src: url('../Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+ font-weight: 700;
+}
+
+
 /* .container-fluid{
     padding: 0% !important;
 } */
@@ -103,9 +131,7 @@ height: auto;
 .career-section-2-text h6{
     padding-top: 21%;
     padding-bottom: 21%;
-   font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+   font-family: 'Montserrat-Bold';
 font-size: clamp(22px, 3vw, 37px);
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -129,8 +155,8 @@ color: #FFFFFF;
     padding-bottom: 5%;
 }
 .secton-3-intership-text h2{
-    font-family: Montserrat;
-font-weight: 900;
+    font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
 leading-trim: NONE;
@@ -140,9 +166,7 @@ text-align: center;
 color: #0C72BA;
 }
 .secton-3-intership-text p{
-    font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+    font-family: 'Montserrat-Regular';
 font-size: 17px;
 leading-trim: NONE;
 line-height: 100%;
@@ -199,9 +223,7 @@ background-color: #F6F6F6;
 
 }
 .career-section-card-first-text h4{
-    font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+    font-family: 'Montserrat-Regular';
 font-size: 15px;
 leading-trim: NONE;
 line-height: 100%;
@@ -209,9 +231,7 @@ letter-spacing: 0%;
 color: #0E0E0E;
 }
  .career-section-card-first-text p{
-    font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+    font-family: 'Montserrat-Regular';
 font-size: 12px;
 leading-trim: NONE;
 line-height: 100%;
@@ -430,9 +450,7 @@ border-image-source: linear-gradient(180deg, #C2D6E5 0%, #014F85 33.66%, #44769A
   padding-right: 2% !important;
 }
 .why-kot-card h6 {
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 24px;
 leading-trim: NONE;
 line-height: 100%;
@@ -447,9 +465,7 @@ letter-spacing: 0%;
    
     width: 410px;
     padding-right: 64px;
-    font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+    font-family: 'Montserrat-Regular';
 font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
@@ -518,9 +534,7 @@ color: #000000;
 }
 
 .support-section-heading h2 {
- font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+ font-family: 'Montserrat-Bold';
  font-size: clamp(30px, 3.5vw, 42px);
 leading-trim: NONE;
 line-height: 100%;
@@ -547,8 +561,8 @@ padding-bottom: 5%;
   padding-bottom: 6%;
 }
 .need-hlp-text h2 {
-font-family: Montserrat;
-font-weight: 900;
+font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
 leading-trim: NONE;
@@ -759,9 +773,7 @@ padding-top: 5%;
 padding-bottom: 5%;
 }
 .need-help-bg-text p {
- font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+ font-family: 'Montserrat-Bold';
 font-size: 37px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -772,9 +784,7 @@ padding-left: 6%;
 padding-right: 6%;
 }
 .need-help-bg-text span{
-  font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+  font-family: 'Montserrat-Regular';
 font-size: 37px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -924,8 +934,8 @@ padding-right: 6%;
 }
 
 .explore-heading {
- font-family: Montserrat;
-font-weight: 900;
+ font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 52px;
 leading-trim: NONE;
@@ -936,9 +946,7 @@ color: #0C72BA;
   margin-bottom: 32px;
 }
 .explore-tabs li {
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
 font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1036,9 +1044,8 @@ color: #000000;
   text-align: center;
 }
 .what-we-offer-text h2{
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
+
 font-size: clamp(32px, 3.5vw, 47px);
 
 leading-trim: NONE;
@@ -1049,9 +1056,8 @@ color: #0A71B9;
 padding-top: 6%;
 }
 .what-we-offer-text p{
-font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+font-family: 'Montserrat-Regular';
+
 font-size: clamp(14px, 1.1vw, 17px);
 
 leading-trim: NONE;
@@ -1074,11 +1080,10 @@ background-repeat: no-repeat;
   padding-top: 3%;
 }
 .home-slider-heading h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
+
 font-size: 47px;
-leading-trim: NONE;
+
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 color: #0A71B9;
@@ -1099,18 +1104,29 @@ padding-bottom: 5%;
   box-sizing: border-box;
 }
 
-.section-1-card-img-1 img,
-.section-1-card-img-2 img,
-.section-1-card-img-3 img {
+.section-1-card-img-1 img{
   max-width: 168px;
   max-height: 167px;
   width: 100%;
   height: auto;
 }
+.section-1-card-img-2 img{
+  max-width: 207px;
+  max-height: 174px;
+  width: 100%;
+  height: auto;
+}
+
+.section-1-card-img-3 img {
+  max-width: 282px;
+  max-height: 172px;
+  width: 100%;
+  height: auto;
+}
 
 .section-1-card-text-1 h2{
-  font-family: Montserrat;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
+ 
   font-size: 15px;
   line-height: 1.2;
   text-align: center;
@@ -1121,8 +1137,8 @@ padding-bottom: 5%;
 }
 
 .section-1-card-paragraph-1 p{
-  font-family: Montserrat;
-  font-weight: 400;
+  font-family: 'Montserrat-Regular';
+
   font-size: 14px;
   line-height: 1.4;
   text-align: center;
@@ -1143,11 +1159,10 @@ padding-bottom: 5%;
                  
   background-color: #0976C2;          
   color: #fff;                        
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
+
 font-size: 17px;
-leading-trim: NONE;
+
 line-height: 100%;
 letter-spacing: 0%;
                 /* rounded corners */
@@ -1183,9 +1198,8 @@ gap: 10px;
   text-align: center;
 }
  .result-header h2  {
- font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+ font-family: 'Montserrat-Bold';
+
 font-size: 47px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1195,9 +1209,7 @@ color: #0A71B9;
 padding-top: 10%;
 }
 .result-header-paragraph p{
-font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+font-family: 'Montserrat-Regular';
 font-size: 22px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1212,9 +1224,7 @@ color: #000000;
   gap: 15px;
 }
 .blog-heading h2{
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
 font-size: 47px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1230,9 +1240,7 @@ padding-bottom: 5%;
 }
 
 .result-text h3{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 84px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1241,9 +1249,7 @@ color: #028BEC;
 }
 
 .result-text p {
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 24px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1307,7 +1313,7 @@ color: #000000;
 /* Heading */
 .blog-card-heading h2{
   font-size: 20px;
-  font-weight: 700;
+  font-family: 'Montserrat-Bold';
   color: #0A71B9;
   line-height: 1.2;
 }
@@ -1315,7 +1321,7 @@ color: #000000;
 /* Paragraph */
 .blog-card-paragraph p{
   font-size: clamp(14px, 1.2vw, 16px);
-
+font-family: 'Montserrat-Regular';
   color: #ffffff;
   line-height: 1.2;
   margin-top: 12px;
@@ -1343,9 +1349,7 @@ gap: 10px;
 background-color: #0A71B9;
 justify-content: center;
 color: #FFFFFF;
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
 font-size: 16px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1377,8 +1381,7 @@ letter-spacing: 0%;
 /* faq-start */
 
     .home-faq-title {
-  font-family: Montserrat !important;
-  font-weight: 700 !important;
+  font-family: 'Montserrat-Bold';
   font-size: clamp(40px, 4vw, 62px) !important;
   line-height: 112% !important;
   color: #0A71B9;
@@ -1433,16 +1436,14 @@ letter-spacing: 0%;
 
 /* Text */
 .home-card-heading {
-  font-family: Montserrat !important;
-  font-weight: 700 !important;
+  font-family: 'Montserrat-Bold';
   font-size: clamp(18px, 2.2vw, 22px) !important;
   line-height: 112% !important;
   color: #000;
 }
 
 .home-card-paragraph {
-  font-family: Montserrat !important;
-  font-weight: 500 !important;
+  font-family: 'Montserrat-Medium';
   font-size: clamp(10px, 1.2vw, 12px) !important;
   line-height: 112% !important;
   color: #000;
@@ -1498,10 +1499,7 @@ height: 133px;
 }
 /* MAIN SECTION */
 .kot-Glance {
-  /* min-height: 100vh; */
-
-
-  /* Background Image */
+  
   background-image: url("../images/homepage/Untitled\ design\ \(20\)\ 1.png");
   background-repeat: no-repeat;
   background-position: right center;
@@ -1513,8 +1511,8 @@ height: 590px;
 
 /* TEXT STYLE */
 .kot-title {
-  font-family: Montserrat;
-font-weight: 900;
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 64px;
 leading-trim: NONE;
@@ -1523,9 +1521,7 @@ letter-spacing: 0%;
 color: #0A71B9;
 }
 .kot-paragraph{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+ font-family: 'Montserrat-Regular';
 font-size: 24px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1533,9 +1529,8 @@ letter-spacing: 0%;
 color: #000000;
 }
 .kot-paragraph span{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
+
 font-size: 24px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1574,9 +1569,8 @@ display: none;
 }
 
 .home-avatar h6{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
+
 font-size: 20.71px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1586,11 +1580,10 @@ color: #FFFFFF;
     width: 144px;
 }
 .home-avatar p{
-  font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+  font-family: 'Montserrat-Regular';
+
 font-size: 13.81px;
-leading-trim: NONE;
+
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
@@ -1598,11 +1591,10 @@ color: #FFFFFF;
 width: 155px;
 }
 .home-card-text p{
-  font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+  font-family: 'Montserrat-Medium';
+
 font-size: 20px;
-leading-trim: NONE;
+
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 color: #FFFFFF;
@@ -1682,9 +1674,7 @@ margin-bottom: 15px;
   display: block;
 }
   .home-avatar h5{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 10px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -1705,6 +1695,7 @@ display: block;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #000000;
 }
 
 
@@ -1819,6 +1810,12 @@ display: block;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   margin-top: 1%;
   margin-bottom:1%;
+    /* smooth animation */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.graphoria-card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
 .graphoria-card__img{
@@ -1837,9 +1834,7 @@ border-top-right-radius: 10px;
 
 .graphoria-card__label{
   padding: 45px 12px 45px;
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 16px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1888,9 +1883,7 @@ text-transform: uppercase;
   padding-left: 8%;
 }
 .our-purpoos-heading-2{
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
 font-size: 32px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1900,9 +1893,7 @@ color: #0C72BA;
 
 }
 .our-purpoos-heading-1{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 48px;
 leading-trim: NONE;
 line-height: 100%;
@@ -1935,9 +1926,7 @@ color: #96C049;
 }
 
 .graphoria-our-small{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: clamp(10px, 3.2vw, 40px);
 
 leading-trim: NONE;
@@ -1947,9 +1936,7 @@ color: #FFFFFF;
 }
 
 .graphoria-our-big{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: clamp(13px, 3.5vw, 60px);
 
 leading-trim: NONE;
@@ -1985,9 +1972,7 @@ letter-spacing: 0%;
 }
 
 .our-purpose-text p{
-  font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+  font-family: 'Montserrat-Regular';
 font-size: clamp(22px, 2.8vw, 30px);
 
 leading-trim: NONE;
@@ -2276,9 +2261,7 @@ color: #FFFFFF;
 
 /* TITLE */
 .what-we-offer-card-title {
- font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+ font-family: 'Montserrat-Bold';
 font-size: 16px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -2298,9 +2281,7 @@ color: #FFFFFF;
   
 
 
- font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+ font-family: 'Montserrat-Regular';
 font-size: 12px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -2341,9 +2322,7 @@ width: 100%
 }
 
 .meet-our-developer-heading h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 47px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
@@ -2354,9 +2333,7 @@ padding-top: 20%;
 }
 
 .meet-our-developer-heading p{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 16px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2438,9 +2415,7 @@ position: relative;
     background-repeat: no-repeat;
 }
 .empowering-heading h2{
-    font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+    font-family: 'Montserrat-Bold';
 font-size: 42px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2469,9 +2444,9 @@ align-items: center;
 }
 .empowering-text-paragraph p{
 width: 549px;
-font-family: Montserrat;
-font-weight: 300;
-font-style: Light;
+font-family: 'Montserrat-Light';
+
+
 font-size: 17px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2498,9 +2473,7 @@ display: flex;
     width: 100%;
 }
 .empowering-btn-agile a{
-    font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+    font-family: 'Montserrat-Bold';
 font-size: 25.17px;
 leading-trim: NONE;
 line-height: 53.49px;
@@ -2532,8 +2505,8 @@ text-decoration: none;
 }
 
 .sets-agile-apps-heading h2 {
-    font-family: Montserrat;
-font-weight: 900;
+    font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 52px;
 leading-trim: NONE;
@@ -2606,9 +2579,7 @@ text-align: center;
 }
 
 .sets-agile-apps-card p {
-    font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+    font-family: 'Montserrat-Regular';
 font-size: 22px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2617,9 +2588,7 @@ color: #000000;
     margin: 0;
 }
 .sets-agile-apps-card span{
-font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+font-family: 'Montserrat-Bold';
 font-size: 22px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2677,9 +2646,7 @@ height: 240px;
     margin-bottom:30px;
 }
 .agile-apps-offer-para{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2691,8 +2658,8 @@ padding-left: 15%;
     padding-bottom: 2%;
 }
 .saas-main-heading{
-  font-family: Montserrat;
-font-weight: 900;
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
 leading-trim: NONE;
@@ -2783,9 +2750,7 @@ background: #0A71B9;
     display: flex;
     
     align-items: center;
-    font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+    font-family: 'Montserrat-Bold';
 font-size: 27px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2811,9 +2776,7 @@ height: 121px;
 padding-right: 6%;
 }
 .saas-right p{
-   font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
+   font-family: 'Montserrat-Regular';
 font-size: 22px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2844,9 +2807,7 @@ color: #FFFFFF;
   position: relative;
 }
 .engineering-the-future-heading h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 52px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2859,9 +2820,7 @@ padding-bottom:2% ;
 padding-right:8% ;
 }
 .engineering-the-future-paragraph p{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 21px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2889,9 +2848,7 @@ margin: auto;
 
 }
 .engineering-the-future-btn a{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 25.17px;
 leading-trim: NONE;
 line-height: 53.49px;
@@ -2910,9 +2867,7 @@ text-decoration: none;
     padding-bottom: 7%;
 }
 .what-we-offer-flawless h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 52px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2920,9 +2875,7 @@ letter-spacing: 0%;
 color: #17D4FF;
 }
 .what-we-offer-flawless  p{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2941,9 +2894,7 @@ padding-right: 7%;
     padding-top: 7%;
 }
 .card-flawless-heading h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2952,9 +2903,7 @@ color: #000000;
 padding-right: 40%;
 }
 .card-flawless-heading p{
-  font-family: Montserrat;
-font-weight: 400;
-font-style: Regular;
+  font-family: 'Montserrat-Regular';
 font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2966,9 +2915,7 @@ width: 100%;
 
 }
 .card-flawless-btn a{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
@@ -2986,9 +2933,7 @@ color: #000000;
   padding-bottom: 7%;
 }
 .quality-flawless-bg h2{
-  font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
+  font-family: 'Montserrat-Bold';
 font-size: 292px;
 leading-trim: NONE;
 line-height: 266px;
