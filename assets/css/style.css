@@ -444,16 +444,18 @@ border-radius: 50px !important;
 }
 
 .why-join-kot-text-heading h2{
-  font-family: Montserrat, sans-serif;
-  font-weight: 900;
+  font-family: 'Montserrat-Bold';
+  font-weight: 900 !important;
   font-size: 42px;
   color: #0C72BA;
 }
 
 .why-join-kot-text-heading p{
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat-Regular';
   font-size: 20px;
   color: #000;
+      padding-left: 15%;
+    padding-right: 15%;
 }
 
 /* ================= CARD ================= */
@@ -473,16 +475,16 @@ border-radius: 50px !important;
     padding-right: 21px;
 }
 .why-kot-card h6{
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
+ font-family: 'Montserrat-Bold';
   font-size: 24px;
   color: #000;
 }
 
 .why-kot-card p{
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat-Medium';
   font-size: 18px;
-  max-width: 400px;
+  max-width: 410px;
+  width: 100%;
 }
 
 /* ================= BUTTON WRAPPER ================= */
@@ -518,17 +520,7 @@ border-radius: 50px !important;
 }
  /* Mobile */
 @media (max-width: 767px) {
- .carousel-nav{
-    justify-content: center;
-  }
-
-  .why-kot-card p{
-    max-width: 100%;
-  }
-
-  .why-kot-card-image-mission{
-    height: 240px;
-  }
+ 
 
 }
 /* Responsive tweaks */
