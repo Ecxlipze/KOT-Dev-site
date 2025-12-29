@@ -3003,16 +3003,17 @@ border: 1px solid #FFFFFF
 /* images-section-flawless */
 .images-flawless-section{
   background-image: url(../images/Flawless/blure-section.png);
-  background-size: cover;
-  background-position: center;
+  /* background-size: cover;
+  background-position: center; */
   height: 300px; /* Figma design ke hisaab se */
   display: flex;
   align-items: center; /* vertical centering */
   justify-content: center;
   margin-left: 2%;
     margin-right: 2%;
-        position: relative;
-    top: -144px;
+        position: absolute;
+    top: 480px;
+    width: 95%;
 }
 
 .images-flawless-section-1 img{
