@@ -1886,6 +1886,7 @@ margin-bottom: 30px;
 .challenges-grid {
   display: grid;
   gap: 24px;
+  padding: 0 5%;
 }
 
 /* DESKTOP */
