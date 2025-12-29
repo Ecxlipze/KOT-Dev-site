@@ -176,15 +176,34 @@ color: #000000;
 padding-top: 2%;
 }
 .career-section-card-first{
-    background-color: #EAEAEF;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 20px;
-   
-    padding-left:10% ;
-    padding-bottom:11% ;
-    padding-top: 10%;
-    border-left: 7px solid #0C72BA;
+  background-color: #EAEAEF;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px;
+
+  padding-left: 10%;
+  padding-bottom: 11%;
+  padding-top: 10%;
+
+  /* border pehle se do (transparent) */
+  border-left: 7px solid transparent;
+
+  /* smooth transition */
+  transition: 
+    0.9s ease;
+}
+
+/* hover = press */
+.career-section-card-first:hover{
+  transform: translateY(4px);
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.12); */
+  border-left-color: #0C72BA;
+}
+
+/* active = real press */
+.career-section-card-first:active{
+  transform: translateY(6px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .career-section-card-first-img{
     background-color: #F6F6F6;
@@ -431,17 +450,21 @@ border-radius: 50px !important;
     padding: 0 5%;
 }
 
-.why-kot-card {
-    width: 100%; /* Ensure the card takes up full width */
+.why-kot-card-image-mission{
+  background-image: url(../images/career/missionthatmatter.png);
+width: 100%; /* Ensure the card takes up full width */
     max-width: 500px; /* Ensure it doesn't stretch beyond 500px */
     height: 300px; /* Fixed height for all cards */
-    border-radius: 24px;
+}
+.why-kot-card {
+    
+    /* border-radius: 24px;
     border-width: 3px;
    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(32, 79, 118, 0.4) 100%);
 
-  border: 3px solid;
+  border: 3px solid transparent;
 
-border-image-source: linear-gradient(180deg, #C2D6E5 0%, #014F85 33.66%, #44769A 65.87%, #9CABB5 100%);
+border-image-source: linear-gradient(180deg, #C2D6E5 0%, #014F85 33.66%, #44769A 65.87%, #9CABB5 100%); */
 
 
     padding-top: 61px;
