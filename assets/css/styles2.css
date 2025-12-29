@@ -1935,3 +1935,40 @@ margin-bottom: 30px;
 .c4 { background-image: url("../images/merc-light/cad4.png"); }
 .s4 { background-image: url("../images/merc-light/cad8.png"); }
 
+
+
+/* SECTION */
+.digittrail-section {
+  background-image: url("../images/digi-light/digibg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+/* HEADING */
+.digittrail-heading {
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.2rem, 3.5vw, 2.6rem);
+}
+
+.digittrail-heading span {
+  display: block;
+  font-weight: 800;
+}
+
+/* CARD WRAPPER */
+.digittrail-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE CARD */
+.digittrail-card {
+  width: 100%;
+  max-width: 1000px; /* controls desktop size */
+  height: auto;
+  opacity: 75%;
+}
