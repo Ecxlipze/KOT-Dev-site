@@ -243,18 +243,7 @@ color: #000000;
 height: 202.35140991210938px;
 
 opacity: 1;
-
-border-radius: 24px;
-border-width: 3px;
-
-   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(32, 79, 118, 0.4) 100%);
-
-  border: 3px solid;
-
-border-image-source: linear-gradient(180deg, #C2D6E5 0%, #014F85 33.66%, #44769A 65.87%, #9CABB5 100%);
-
-
-    padding-top: 25px;
+  padding-top: 25px;
     padding-left: 21px;
     padding-bottom: 15px;
     padding-right: 21px;
