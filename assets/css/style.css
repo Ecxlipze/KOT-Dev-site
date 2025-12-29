@@ -368,14 +368,17 @@ border-radius: 50px !important;
 /* Contact Section Background */
 .contact-wrapper {
   padding: 80px 0;
-  background: url('../images/main-bg-image/main-bg-image.jpg') center/cover no-repeat;
+  background: url('../images/main-bg-image/main-bg-image.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Cards */
 .contact-card {
   background: linear-gradient(135deg, #b9ddf6, #8ec3e6);
   border-radius: 16px;
-  padding: 30px;
+  padding: 30px 40px;
   height: 100%;
 }
 
@@ -387,7 +390,9 @@ border-radius: 50px !important;
   font-size: 14px;
   font-weight: 500;
 }
-
+.form-control {
+  border: 1px solid black;
+}
 /* Icons */
 .icon-img {
   width: 30px;
@@ -411,7 +416,10 @@ border-radius: 50px !important;
 /* CTA Banner */
 .contact-cta {
   padding: 100px 0;
-  background: url('../images/contact/contact-person.png') center/cover no-repeat;
+  background: url('../images/contact/contact-person.png');
+    background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -3012,4 +3020,13 @@ max-width: 486px;
   width: 100%;
   height: 257px;
   border-radius: 20px;
+}
+.hero-btn {
+  padding: 12px 22px !important;
+  font-weight: 800 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #0C72BA !important;  
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  
 }
