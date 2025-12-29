@@ -465,25 +465,25 @@ border-radius: 50px !important;
   background-size: contain;
   background-position: center;
   height: 300px;
-  padding: 30px;
+    padding-left: 8%;
+    padding-top: 14%;
+    padding-right: 14%;
+  max-width: 500px;
+  width: 100%;
 }
-.why-kot-card {
- 
-  padding-top: 25px;
-    padding-left: 21px;
-    padding-bottom: 15px;
-    padding-right: 21px;
-}
+
 .why-kot-card h6{
  font-family: 'Montserrat-Bold';
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
+
   color: #000;
 }
 
 .why-kot-card p{
   font-family: 'Montserrat-Medium';
-  font-size: 18px;
-  max-width: 410px;
+  font-size: clamp(16px, 2.5vw, 20px);
+
+  max-width: 403px;
   width: 100%;
 }
 

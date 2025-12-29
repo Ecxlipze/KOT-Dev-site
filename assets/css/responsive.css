@@ -490,17 +490,20 @@ letter-spacing: 0%;
 max-width: 100%;
 }
 .carousel-nav{
-    justify-content: center;
+            justify-content: end;
+        margin-right: 9%;
+        margin-top: 6%;
   }
 
   
   .why-kot-card-image-mission{
             height: 202px;
-        /* max-width: 302px; */
+        max-width: 337px;
         width: 100%;
         padding-left: 40px;
         padding-top: 40px;
   }
+ 
   .why-kot-card h6{
     font-family: 'Montserrat-Bold';
 font-size: 24px;
@@ -508,6 +511,9 @@ font-size: 24px;
 line-height: 100%;
 letter-spacing: 0%;
 
+  }
+  .why-join-wrapper {
+    padding-left: 0% !important;
   }
 }
 
@@ -829,7 +835,32 @@ letter-spacing: 0%;
     color: #000000;
 }
 .why-kot-card-image-mission {
-     width: 500px;
-    height: 300px;
+            max-width: 500px;
+        height: 300px;
+        width: 100%;
 }
+.why-kot-card h6 {
+  padding-top: 7%;
+}
+}
+@media (max-width: 1024px) and (min-width: 992px){
+
+  .why-kot-card-image-mission{
+    max-width: 420px;
+    height: 260px;
+    padding-left: 40px;
+    padding-top: 45px;
+    padding-right: 40px;
+  }
+
+  .why-kot-card h6{
+    font-size: 20px;
+    padding-top: 2%;
+  }
+
+  .why-kot-card p{
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 100%;
+  }
 }
