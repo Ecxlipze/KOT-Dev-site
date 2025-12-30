@@ -648,6 +648,16 @@ color: #A53692;
 display: block;
 
 }
+.mobile-image-change-layout img{
+  display: block;
+  max-width: 348px;
+  height: auto;
+  aspect-ratio: 348 / 299;
+}
+.mobile-image-change-layout {
+  display: flex;
+    justify-content: center;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1089,14 +1099,26 @@ display: flex;
   font-family: 'Montserrat-Bold';
 font-weight: 900 !important;
 font-style: Black;
-font-size: 24px;
+font-size: 42px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 color: #A53692;
 display: block !important;
+padding-top: 2%;
+padding-bottom: 2%;
 
+}
+.mobile-image-change-layout img{
+  display: block;
+  max-width: 694px;
+  height: auto;
+  aspect-ratio: 694 / 597;
+}
+.mobile-image-change-layout {
+  display: flex;
+    justify-content: center;
 }
 }
 @media (max-width: 1024px) and (min-width: 992px){

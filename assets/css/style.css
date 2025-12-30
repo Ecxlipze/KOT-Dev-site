@@ -2756,6 +2756,9 @@ padding-bottom: 3%;
 .mobile-layout-changing-add h2{
   display: none;
 }
+.mobile-image-change-layout img{
+  display: none;
+}
 /* ================= CARD ================= */
 .agile-apps-offer-card{
     /* background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%); */
