@@ -2892,7 +2892,7 @@ color: #FFFFFF;
 .img-5{ background-image:url("../images/Agile/Subtract.png"); }
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .engineering-the-future{
-  background-image: url(../images/Flawless/Ellipse326.png);
+  background-image: url(../images/Flawless/Flawless.gif);
  background-repeat: no-repeat;
     background-size: 100%;
     height: 837px;
@@ -3096,10 +3096,11 @@ max-width: 486px;
 .app-sculpt-service{
  background-image: url("../images/Appsculp/RotationAnimation.gif");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 2344px 2344px;   /* poora gif visible */
 
-background-position-y: -20%;
+height: 800px;
+
+    background-size: 196% 210%;
+    background-position-x: -637px;
 
   
 }
