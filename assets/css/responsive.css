@@ -518,7 +518,7 @@ letter-spacing: 0%;
   .app-sculpt-mobile-heading {
     font-family: 'Montserrat-Extra-Bold';
 
-font-size: 5px;
+font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -528,6 +528,126 @@ text-align: center;
   .mobile-heading-app-sculpt  {
     display: none;
   }
+  .mobile-paragraph-app-sculpt{
+    display: none;
+  }
+  .app-sculpt-mobile-paragraph{
+    display: none;
+  }
+  .app-sculpt-mobile-button{
+   
+max-width: 140px;
+    width: 100%;
+    height: 43px;
+
+
+  }
+  .images-mobile-appsec {
+    margin-bottom: 4%;
+  }
+  .images-mobile-appsec img{
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 375 / 232;   /* apna exact ratio yahan */
+height: auto;
+}
+   .app-sculpt-mobile-button a{
+    font-family: 'Montserrat-Bold';
+
+font-size: 13px;
+leading-trim: NONE;
+line-height: 53.49px;
+letter-spacing: 0%;
+text-align: center;
+
+   }
+   .andoride-solution-heading h2{
+font-family: 'Montserrat-Extra-Bold';
+font-size: clamp(20px, 3vw ,25px);
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+   }
+   .andorid-solution-card-1{
+    width: 120px;
+height: 78px;
+
+border-radius: 9px;
+
+border-width: 1px;
+
+   }
+   .android-card-paragraph p{
+    font-family: 'Montserrat-Regular';
+
+font-size: 8px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+   }
+
+   .android-card-head h2{
+    font-family: 'Montserrat-Bold';
+
+font-size: 15px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+   }
+   .card-section-btn-app-sctupl a{
+    height: 30px;
+        padding: 2%;
+
+
+   }
+   .home-page-banner{
+    margin-top: 0%;
+   }
+   .saas-main-heading {
+    display: none;
+   }
+     .saas-main-heading-mob-tab{
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 40px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #A53692;
+padding-bottom: 3%;
+display: block;
+}
+.mobile-tab-image{
+display: flex;
+    justify-content: center;
+    max-width: 768px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 768 / 565;
+}
+.mobile-tab-image img{
+  
+}
+.mobile-layout-changing-add h2{
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #A53692;
+display: block;
+
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -875,11 +995,11 @@ line-height: 100%;
 letter-spacing: 0%;
 
   }
- .images-mobile-appsec{
+ .images-mobile-appsec img{
   width: 100%;
   max-width: 768px;
   aspect-ratio: 768 / 761;   /* apna exact ratio yahan */
-
+height: auto;
 }
 
  .images-tree-appsec{
@@ -927,7 +1047,7 @@ letter-spacing: 0%;
 text-align: center;
 display: block;
 }
-.app-sculpt-mobile-button{
+.app-sculpt-mobile-button a{
   color: #FFFFFF;
   font-family: 'Montserrat-Bold';
 
@@ -938,6 +1058,45 @@ font-size: 18px;
 .andorid-solution-card-1{
   width: 233px;
     height: 284px;
+}
+   .kot-Glance{
+    margin-top: 0%;
+   }
+   .saas-main-heading-mob-tab{
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+padding-bottom: 3%;
+}
+.mobile-tab-image{
+display: flex;
+    justify-content: center;
+   
+}
+.mobile-tab-image img{
+   max-width: 768px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 768 / 1400;
+}
+.mobile-layout-changing-add h2{
+  font-family: 'Montserrat-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #A53692;
+display: block !important;
+
 }
 }
 @media (max-width: 1024px) and (min-width: 992px){
