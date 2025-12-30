@@ -1,100 +1,92 @@
+/* FOOTER */
 .kot-footer {
-  /* background: #fff; */
-  padding: clamp(40px, 6vw, 80px) 0 30px;
-  font-family: 'Montserrat', sans-serif;
-}
-.kot-footer-scale {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 1400px) {
-  .kot-footer-scale {
-    transform: scale(calc(100vw / 1400));
-    transform-origin: top center;
-  }
+  padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+  /* background: #ffffff; */
+  font-size: 15px;
 }
 
-
-.kot-footer-inner {
-  /* max-width: 1400px; */
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2.2fr 1fr 1fr 1fr;
-  gap: clamp(30px, 4vw, 80px);
-  align-items: start;
-  padding: 0 clamp(20px, 4vw, 60px);
-}
-.kot-footer-inner {
-  width: 1400px;        /* fixed design width */
-  max-width: none;
-}
-
-/* Brand column */
+/* BRAND */
 .kot-footer-brand img {
-  max-width: clamp(160px, 18vw, 250px);
-  margin-bottom: 30px;
-}
-
-.kot-footer h5 {
-  font-size: clamp(13px, 1vw, 16px);
-  font-weight: 700;
+  max-width: 260px;
   margin-bottom: 20px;
-  letter-spacing: 0.05em;
 }
 
-.kot-footer ul {
+.kot-footer-tagline {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* TITLES */
+.kot-footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+/* LINKS */
+.kot-footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.kot-footer ul li {
-  font-size: clamp(13px, 0.9vw, 15px);
-  margin-bottom: 12px;
-  color: #444;
+.kot-footer-links li {
+  margin-bottom: 10px;
 }
 
-/* Newsletter */
+.kot-footer-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.kot-footer-links a:hover {
+  color: #007bff;
+}
+
+/* NEWSLETTER */
 .kot-footer-form {
   display: flex;
+  gap: 12px;
   border-bottom: 1px solid #000;
-  max-width: 360px;
+  max-width: 420px;
 }
 
 .kot-footer-form input {
-  flex: 1;
   border: none;
   outline: none;
-  padding: 10px 0;
-  font-size: 14px;
+  flex: 1;
+  padding: 6px 0;
 }
 
 .kot-footer-form button {
   background: none;
   border: none;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-/* Bottom bar */
+/* DIVIDER */
+.kot-footer-divider {
+  margin: 3rem 0 1.5rem;
+}
+
+/* BOTTOM */
 .kot-footer-bottom {
   text-align: center;
-  margin-top: clamp(40px, 6vw, 80px);
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
   font-size: 14px;
-  color: #555;
+  color: #333;
 }
 
-@media (max-width: 360px) {
-  .kot-footer-scale {
-    transform: scale(0.85);
+/* MOBILE */
+@media (max-width: 767px) {
+  .kot-footer {
+    text-align: center;
   }
-}
 
-
-.kot-footer {
-  overflow-x: hidden;
+  .kot-footer-form {
+    margin: 0 auto;
+  }
 }
