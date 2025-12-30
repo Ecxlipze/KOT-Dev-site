@@ -515,6 +515,19 @@ letter-spacing: 0%;
   .why-join-wrapper {
     padding-left: 0% !important;
   }
+  .app-sculpt-mobile-heading {
+    font-family: 'Montserrat-Extra-Bold';
+
+font-size: 5px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+  }
+  .mobile-heading-app-sculpt  {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -842,6 +855,90 @@ letter-spacing: 0%;
 .why-kot-card h6 {
   padding-top: 7%;
 }
+  .some-solution-heading h2{
+    font-family: 'Montserrat-Bold';
+
+font-size: 34.13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+padding-left: 14%;
+padding-right: 14%;
+  }
+  .app-sculpt-last-section-paragraph{
+    font-family: 'Montserrat-Regular';
+
+font-size: 18.67px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+  }
+ .images-mobile-appsec{
+  width: 100%;
+  max-width: 768px;
+  aspect-ratio: 768 / 761;   /* apna exact ratio yahan */
+
+}
+
+ .images-tree-appsec{
+  width: 100%;
+  max-width: 768px;
+  aspect-ratio: 768 / 761; /* example */
+  
+}
+
+  .andoride-solution-heading h2{
+    font-family: 'Montserrat-Extra-Bold';
+
+font-size: 42px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+
+  }
+  .app-sculpt-mobile-heading{
+    display: none;
+  }
+  .mobile-heading-app-sculpt{
+    font-family: 'Montserrat-Extra-Bold';
+
+font-size: 33px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+display: block;
+  }
+ .app-sculpt-mobile-paragraph{
+  display: none;
+ }
+.mobile-paragraph-app-sculpt{
+  font-family: 'Montserrat-Light';
+
+font-size: clamp(14px, 1.5vw, 16px);
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+display: block;
+}
+.app-sculpt-mobile-button{
+  color: #FFFFFF;
+  font-family: 'Montserrat-Bold';
+
+font-size: 18px;
+
+
+}
+.andorid-solution-card-1{
+  width: 233px;
+    height: 284px;
+}
 }
 @media (max-width: 1024px) and (min-width: 992px){
 
@@ -863,4 +960,5 @@ letter-spacing: 0%;
     line-height: 1.4;
     max-width: 100%;
   }
+
 }

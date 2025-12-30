@@ -3071,29 +3071,34 @@ max-width: 486px;
   text-decoration: none;
 }
 /* mobile-section */
-.app-sculpt-mobile-section{
+/* IMAGE LAYER */
+.app-sculpt-mobile-img {
+  width: 100%;
+ max-width: 1440px;      /* Original max width */
+  aspect-ratio: 1440 / 3319; /* Maintain original proportion */
+
+  display: block;
+}
+
+/* CONTENT LAYER */
+.app-sculpt-mobile-content {
+  position: absolute;
+  top: 12%;
+    left: 30%;
+    transform: translateX(-24%);
+  text-align: center;
+  max-width: 1009px;
+  z-index: 2;          /* ensure content stays above image */
+}
+
+/* SECTION CONTAINER */
+.app-sculpt-mobile-section {
   position: relative;
   width: 100%;
   max-width: 1604px;
-  height: 3325px;
   margin: auto;
-
-  background-image: url("../images/Appsculp/appsculp-sec-2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
-/* CONTENT WRAPPER */
-.app-sculpt-mobile-content{
-  position: absolute;
-  top: 15%;           /* vertical position */
-  left: 33%;
-    transform: translateX(-20%);
-  text-align: center;
-  max-width: 1009px;
-  
-}
 
 /* HEADING */
 .app-sculpt-mobile-heading{
@@ -3107,7 +3112,12 @@ text-align: center;
 color: #000000;
   margin-bottom: 16px;
 }
-
+.mobile-heading-app-sculpt{
+  display: none;
+}
+.mobile-paragraph-app-sculpt{
+  display: none;
+}
 /* PARAGRAPH */
 .app-sculpt-mobile-paragraph{
  font-family: 'Montserrat-Light';
@@ -3142,3 +3152,192 @@ border-radius: 15.73px;
 .app-sculpt-mobile-button:hover{
   background: #0091cc;
 }
+
+/* cards-appsculpt */
+.andorid-solution-card-1{
+  width: 301.4544372558594px;
+height: 301.4544372558594px;
+opacity: 1;
+
+border-radius: 20px;
+
+border: 4px solid #FFFFFF;
+box-shadow: 0px 0px 0.84px 0px #EC268F;
+
+box-shadow: 0px 0px 1.68px 0px #EC268F;
+
+box-shadow: 0px 0px 5.88px 0px #EC268F;
+
+box-shadow: 0px 0px 11.76px 0px #EC268F;
+
+box-shadow: 0px 0px 20.16px 0px #EC268F;
+
+box-shadow: 0px 0px 35.28px 0px #EC268F;
+
+}
+.card-section-btn-app-sctupl{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  
+}
+
+.card-section-btn-app-sctupl a{
+  padding: 20px 20px;
+  background: #EC2696;
+ 
+  text-decoration: none;
+  
+  font-family: 'Montserrat-Extra-Bold';
+color: #FFFFFF;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+    max-width: 151px;
+    width: 100%;
+height: 56.490196228027344px;
+
+border-radius: 6px;
+
+opacity: 1;
+}
+.andorid-solution-card-1{
+
+}
+.android-card-head h2{
+font-family: 'Montserrat-Bold';
+
+font-size: 28px;
+
+padding: 2%;
+
+ text-shadow: 
+    0px 0px 0.35px #EC268F,
+    0px 0px 0.7px #EC268F,
+    0px 0px 2.46px #EC268F,
+    0px 0px 4.92px #EC268F,
+    0px 0px 8.43px #EC268F,
+    0px 0px 14.75px #EC268F;
+}
+.android-card-paragraph p{
+font-family: 'Montserrat-Regular';
+
+font-size: 24px;
+
+line-height: 100%;
+ text-shadow: 
+    0px 0px 0.35px #EC268F,
+    0px 0px 0.7px #EC268F,
+    0px 0px 2.46px #EC268F,
+    0px 0px 4.92px #EC268F,
+    0px 0px 8.43px #EC268F,
+    0px 0px 14.75px #EC268F;
+padding: 2%;
+
+}
+
+
+.andoride-solution-heading h2 {
+font-family: 'Montserrat-Extra-Bold';
+
+font-size: 55px;
+color: #EC2696;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 6%;
+}
+.images-mobile-appsec{
+max-width: 1440px;
+height: 937px;
+width: 100%;
+opacity: 1;
+
+
+}
+.images-tree-appsec{
+max-width: 1440px;
+height: 1281px;
+width: 100%;
+opacity: 1;
+}
+.some-solution-heading h2 {
+  font-family: 'Montserrat-Bold';
+
+font-size: 64px;
+color: #000000;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 6%;
+}
+/* SECTION BACKGROUND */
+.app-sculpt-last-section{
+  position: relative;
+  width: 100%;
+  
+
+  background-image: url("../images/Appsculp/bgRectangle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.app-sculpt-last-section-card{
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+}
+
+.app-sculpt-last-section-card img{
+ max-width: 1148px;
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* CONTENT ON CARD */
+.app-sculpt-last-section-content{
+  position: absolute;
+    top: 11%;
+    left: 2%;
+ 
+
+  padding: 30px;
+  max-width: 957px;
+  width: 100%;
+}
+
+/* HEADING */
+.app-sculpt-last-section-heading{
+  font-size: clamp(22px, 3vw, 35px);
+  font-family: 'Montserrat-Regular';
+
+line-height: 100%;
+
+color: #000000;
+  margin-bottom: 16px;
+}
+
+/* PARAGRAPH */
+.app-sculpt-last-section-paragraph{
+   font-size: clamp(22px, 3vw, 35px);
+  font-family: 'Montserrat-Regular';
+
+line-height: 100%;
+color: #000000;
+  margin-bottom: 26px;
+}
+
