@@ -1,0 +1,92 @@
+/* FOOTER */
+.kot-footer {
+  padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+  /* background: #ffffff; */
+  font-size: 15px;
+}
+
+/* BRAND */
+.kot-footer-brand img {
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+
+.kot-footer-tagline {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* TITLES */
+.kot-footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+/* LINKS */
+.kot-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kot-footer-links li {
+  margin-bottom: 10px;
+}
+
+.kot-footer-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.kot-footer-links a:hover {
+  color: #007bff;
+}
+
+/* NEWSLETTER */
+.kot-footer-form {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #000;
+  max-width: 420px;
+}
+
+.kot-footer-form input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 6px 0;
+}
+
+.kot-footer-form button {
+  background: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* DIVIDER */
+.kot-footer-divider {
+  margin: 3rem 0 1.5rem;
+}
+
+/* BOTTOM */
+.kot-footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .kot-footer {
+    text-align: center;
+  }
+
+  .kot-footer-form {
+    margin: 0 auto;
+  }
+}
