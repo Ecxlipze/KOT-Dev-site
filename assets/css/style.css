@@ -29,6 +29,11 @@ body{
   src: url('../Montserrat/static/Montserrat-Bold.ttf') format('truetype');
  font-weight: 700;
 }
+@font-face {
+  font-family: 'Montserrat-Extra-Bold';
+  src: url('../Montserrat/static//Montserrat-ExtraBold.ttf') format('truetype');
+ font-weight: 800;
+}
 
 
 /* .container-fluid{
@@ -2682,7 +2687,9 @@ padding-bottom: 3%;
 }
 /* ================= CARD ================= */
 .agile-apps-offer-card{
-    background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%);
+    /* background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%); */
+    background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%, rgba(0, 0, 0, 0) 100%);
+
     border-radius:20px;
     padding:32px;
     width:429px;
@@ -2970,7 +2977,7 @@ border: 1px solid #FFFFFF
   margin-left: 2%;
     margin-right: 2%;
         position: absolute;
-    top: 480px;
+    top: 502px;
     width: 95%;
 }
 
@@ -3008,4 +3015,130 @@ max-width: 486px;
   border-radius: 6px !important;
   font-size: 13px !important;
   
+}
+
+/* appsculpt */
+/* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
+.app-sculpt-service{
+  background-image: url(../images/Appsculp/RotationAnimation.gif);
+  background-repeat: no-repeat;
+ 
+  
+}
+
+
+.app-sculpt-service-heading h2{
+  font-family: 'Montserrat-Bold';
+  font-size: 52px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  padding-top: 3%;
+  padding-left: 8%;
+  padding-bottom: 2%;
+  padding-right: 8%;
+}
+
+.app-sculpt-service-paragraph p{
+  font-family: 'Montserrat-Regular';
+  font-size: 21px;
+  line-height: 100%;
+  text-align: center;
+  padding-top: 1%;
+  padding-left: 8%;
+  padding-bottom: 6%;
+  padding-right: 8%;
+}
+
+.app-sculpt-service-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 60px;
+  border: 1px dashed #000;
+  border-radius: 15.73px;
+  background-color: #17D4FF;
+  margin: auto;
+}
+
+.app-sculpt-service-btn a{
+  font-family: 'Montserrat-Bold';
+  font-size: 25.17px;
+  line-height: 53.49px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+/* mobile-section */
+.app-sculpt-mobile-section{
+  position: relative;
+  width: 100%;
+  max-width: 1604px;
+  height: 3325px;
+  margin: auto;
+
+  background-image: url("../images/Appsculp/appsculp-sec-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* CONTENT WRAPPER */
+.app-sculpt-mobile-content{
+  position: absolute;
+  top: 15%;           /* vertical position */
+  left: 33%;
+    transform: translateX(-20%);
+  text-align: center;
+  max-width: 1009px;
+  
+}
+
+/* HEADING */
+.app-sculpt-mobile-heading{
+ font-family: 'Montserrat-Extra-Bold';
+
+font-size: 32px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+  margin-bottom: 16px;
+}
+
+/* PARAGRAPH */
+.app-sculpt-mobile-paragraph{
+ font-family: 'Montserrat-Light';
+
+font-size: 17px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+  margin-bottom: 24px;
+}
+
+/* BUTTON */
+.app-sculpt-mobile-button{
+  display: inline-block;
+  padding: 14px 36px;
+  background: #EC268F;
+  color: #000000;
+  text-decoration: none;
+
+  font-weight: 600;
+  transition: 0.3s ease;
+  max-width: 220px;
+  width: 100%;
+height: 54px;
+
+border-radius: 15.73px;
+
+}
+
+.app-sculpt-mobile-button:hover{
+  background: #0091cc;
 }
