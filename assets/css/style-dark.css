@@ -149,7 +149,7 @@ color: #FFFFFF;
 .career-section-3-main-image{
    
   min-height: 100vh;
-  background-image: url("../images/main-bg-image/main-bg-image.jpg");
+  background-image: url("../images/main-bg-image/main-bg-img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -706,19 +706,19 @@ color: #000000 !important;
 
 /* Background images */
 .value-1 {
-  background-image: url('../images/why-kot/core1copy.png');
+  background-image: url('../images/why-kot/core1.png');
 }
 
 .value-2 {
-  background-image: url('../images/why-kot/core2copy.png');
+  background-image: url('../images/why-kot/core2.png');
 }
 
 .value-3 {
-  background-image: url('../images/why-kot/core3copy.png');
+  background-image: url('../images/why-kot/core3.png');
 }
 
 .value-4 {
-  background-image: url('../images/why-kot/core4copy.png');
+  background-image: url('../images/why-kot/core4.png');
 }
 
 /* Responsive tweak */

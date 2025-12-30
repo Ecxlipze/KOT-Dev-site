@@ -445,22 +445,6 @@ color:#FFFFFF;
   transform: translateY(-8px);
 }
 
-/* Background images */
-.value-1 {
-  background-image: url('../images/why-kot/core1copy.png');
-}
-
-.value-2 {
-  background-image: url('../images/why-kot/core2copy.png');
-}
-
-.value-3 {
-  background-image: url('../images/why-kot/core3copy.png');
-}
-
-.value-4 {
-  background-image: url('../images/why-kot/core4copy.png');
-}
 
 /* Responsive tweak */
 @media (max-width: 768px) {
@@ -492,7 +476,7 @@ color:#FFFFFF;
   font-family: var(--font-main);
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #111;
+  color: #ffffff;
 }
 
 /* Tablet */
@@ -1723,22 +1707,23 @@ margin-bottom: 30px;
   font-family: var(--font-main);
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: #fbbc04; /* yellow */
+  color: #FFCC29; /* yellow */
 }
 
 .ecommerce-text{
   font-family: var(--font-main);
   font-size: 1rem;
   line-height: 1.4;
-  color: #111;
+  color: #ffffff;
 }
 
 .btn-ecommerce{
-  background-color: #fbbc04 !important;
-  color: white !important;
+  background-color: #FFCC29 !important;
+  color: rgb(0, 0, 0) !important;
   padding: 12px 28px;
   font-weight: 600;
   border-radius: 8px; 
+  border: 1px solid white;
   text-decoration: none;
   display: inline-block;
   transition: background 0.3s;
@@ -1796,20 +1781,20 @@ margin-bottom: 30px;
 
 /* Offer Ecommerce Section */
 .offer-ecommerce-section{
-  background: #fff;
-  color: #111;
+  /* background: #fff; */
+  color: #ffffff;
 }
 
 .offer-ecommerce-title{
   font-family: var(--font-main);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: #fbbc04; /* yellow */
+  color: #FFCC29; /* yellow */
 }
 
 .offer-ecommerce-subtitle{
   font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 1.1  em;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto;
@@ -1862,7 +1847,7 @@ margin-bottom: 30px;
   font-family: var(--font-main);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: #fbbc04; /* yellow */
+  color: #FFCC29; /* yellow */
   text-align: center !important;
 }
 
