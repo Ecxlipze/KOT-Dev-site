@@ -2293,4 +2293,30 @@ margin-bottom: 40px;
 
 }
 
+[class$="card"]:hover {
+  transform: translateY(-8px);
+}
+
+[class$="card"] {
+  transition: transform 0.3s ease;
+}
+
+.caard,
+.capability-card,
+.solution-card,
+.support-card,
+.work-card {
+  transition: transform 0.3s ease;
+}
+
+.caard:hover,
+.capability-card:hover,
+.solution-card:hover,
+.support-card:hover,
+.work-card:hover {
+  transform: translateY(-8px);
+}
+
+
+
 
