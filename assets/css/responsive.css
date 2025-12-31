@@ -1122,9 +1122,11 @@ padding-bottom: 2%;
     justify-content: center;
 }
 .app-sculpt-service{
- background-position-x: -379px;
-        height: 426px;
-        background-position-y: -34px;
+aspect-ratio: 768/426;
+    height: auto;
+   background-size: 1785px 1250px;
+        background-position-y: 19%;
+        background-position-x: 51%;
 }
 .app-sculpt-service-heading h2{
   font-family: 'Montserrat-Bold';
