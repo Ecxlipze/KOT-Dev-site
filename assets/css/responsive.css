@@ -658,7 +658,93 @@ display: block;
   display: flex;
     justify-content: center;
 }
+.app-sculpt-service-heading h2{
+  font-family: 'Montserrat-Bold';
 
+font-size: 18px;
+
+line-height: 100%;
+
+text-align: center;
+
+}
+.app-sculpt-service-paragraph p{
+font-family: 'Montserrat-Regular';
+
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.app-sculpt-service-btn{
+  max-width: 107px;
+height: 31px;
+aspect-ratio: 107/31;
+border-radius: 6px;
+border-width: 1px;
+border-style: dashed;
+dashes: 4.720000267028809, 4.720000267028809;
+
+}
+.app-sculpt-service-btn a{
+  font-family: 'Montserrat-Bold';
+
+font-size: 10px;
+
+line-height: 53.49px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+ 
+.app-sculpt-service{
+        aspect-ratio: 375 / 267;
+        height: auto;
+        background-size: 739px 446px;
+        background-position-y: -57%;
+}
+.images-tree-appsec img{
+  max-width: 311px;
+  aspect-ratio: 311 / 319;
+  height: auto;
+  width: 100%;
+}
+.some-solution-heading h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.app-sculpt-last-section-heading{
+  font-family: 'Montserrat-Regular';
+
+font-size: 13px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.app-sculpt-last-section-paragraph{
+    font-family: 'Montserrat-Regular';
+
+font-size: clamp(10px , 1vw, 13px);
+
+line-height: 100%;
+letter-spacing: 0%;
+}
+.app-sculpt-last-section-content{
+ 
+    top: 0%;
+    left: 0%;
+   
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1013,7 +1099,7 @@ letter-spacing: 0%;
 height: auto;
 }
 
- .images-tree-appsec{
+ .images-tree-appsec img{
   width: 100%;
   max-width: 768px;
   aspect-ratio: 768 / 761; /* example */
