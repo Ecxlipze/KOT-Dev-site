@@ -42,15 +42,14 @@ color: #FFFFFF;
     text-align: center;
 }
 .what-we-offer-text h2{
-    font-family: Montserrat !important;
-font-weight: 700 !important ;
-font-style: Bold !important ;
-font-size: 15px !important;
-leading-trim: NONE !important ;
-line-height: 112.00000000000001% !important;
-letter-spacing: 0% !important;
-text-align: center ;
-color: #000000 !important; 
+   font-family: 'Montserrat-Bold';
+
+font-size: clamp(37px, 3vw, 47px);
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+padding-top: 12% !important;
 
 }
 
@@ -605,8 +604,14 @@ letter-spacing: 0%;
 
 
    }
+
    .home-page-banner{
     margin-top: 0%;
+   }
+   .home-page-banner{
+    max-width: 427px;
+    aspect-ratio: 427 / 181;
+    height: auto;
    }
    .saas-main-heading {
     display: none;

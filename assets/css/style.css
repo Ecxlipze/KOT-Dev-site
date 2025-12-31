@@ -48,12 +48,13 @@ body{
 .home-page-banner {
   width: 100%;
   min-height: clamp(280px, 45vw, 700px);
-
+   max-width: 1440px;
+   aspect-ratio: 1440 / 526;
   background-image: url("../images/homepage/home-banner.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-
+height: auto;
   display: flex;
   align-items: center;
 }
@@ -1298,7 +1299,7 @@ color: #000000;
  
   
   margin-bottom: 30px;
-  gap: 15px;
+  gap: 8px;
 }
 .blog-heading h2{
 font-family: 'Montserrat-Bold';
@@ -1320,7 +1321,7 @@ padding-bottom: 5%;
   font-family: 'Montserrat-Bold';
 font-size: 84px;
 leading-trim: NONE;
-line-height: 112.00000000000001%;
+line-height: 100%;
 letter-spacing: 0%;
 color: #028BEC;
 }
@@ -1584,7 +1585,7 @@ height: 133px;
 height: 590px;
   display: flex;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 1%;
 }
 
 /* TEXT STYLE */
