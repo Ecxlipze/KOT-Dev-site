@@ -627,7 +627,7 @@ padding-bottom: 5%;
  
 }
 .need-hlp-text{
-  padding-top: 6%;
+  padding-top: 4%;
   padding-bottom: 6%;
 }
 .need-hlp-text h2 {
@@ -705,7 +705,9 @@ color: #000000 !important;
 }
 
 .support-slider-item img {
+  max-width: 271px;
   width: 100%;
+  aspect-ratio: 271 / 154;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
