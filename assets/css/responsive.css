@@ -52,7 +52,20 @@ text-align: center;
 padding-top: 12% !important;
 
 }
+.result-box{
+  flex-direction: column;
+  text-align: center;
+}
+.result-box img{
+  max-width: 375px;
+    height: auto;
+    aspect-ratio: 375/300;
 
+
+}
+.result-text h3{
+  font-size: 80px;
+}
 .what-we-offer-card-title {
     font-family: 'Montserrat-Bold';
 font-size: 10px;
@@ -149,12 +162,16 @@ padding: 5% !important;
         letter-spacing: 0% !important;
 }
 .home-chat-card-mobile{
-  /* max-width:351px ; */
-height: 176px;
+  max-width:402px ;
+height: auto;
+aspect-ratio: 402 / 300;
 width: 100%;
 border-radius: 10px ;
 border-width: 1px !important;
 
+}
+.chatbot-response {
+  margin-bottom: 4%;
 }
 .home-faq-cards{
   display: flex;

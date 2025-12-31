@@ -1575,6 +1575,66 @@ height: 133px;
   object-fit: cover;
   border: 2px solid #fff;
 }
+/* Styling for suggestions list */
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.suggestions-list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling the response area */
+.chatbot-response {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.chatbot-response.visible {
+  display: block;
+}
+
+/* Input field */
+.home-search-input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Load More button */
+.load-more-btn {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #68a8f1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.load-more-btn:hover {
+  background-color: #57a1d6;
+}
 /* MAIN SECTION */
 .kot-Glance {
   

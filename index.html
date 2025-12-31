@@ -360,7 +360,7 @@
    <div class="result-header pt-5 pb-2 ">
 <h2>Results That Speak For Themselves</h2>
    </div>
-  <div class="result-header-paragraph py-5 ">
+  <div class="result-header-paragraph pt-3 pb-5 ">
     <p>Our journey reflects dedication and excellence.</p>
     <p>Here’s a quick look at what we’ve accomplished.</p>
   </div>
@@ -416,7 +416,7 @@
 <!-- Blog Section -->
 <div class="container-fluid my-5">
    <div class="blog-heading"><h2>Our Blogs</h2></div>
-  <div class="row justify-content-center g-4">
+  <div class="row justify-content-center g-2">
      
     <!-- CARD 1 -->
     <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
@@ -509,6 +509,7 @@
 </div>
 
 <!-- faq-section-start -->
+  <!-- faq-section-start -->
 <div class="container py-5 home-faq-wrapper overflow-hidden ">
   <div class="row g-5 home-faq-row">
        <h2 class="home-faq-title home-faq-title-tablet mb-4">
@@ -519,26 +520,34 @@
       <h2 class="home-faq-title mb-4">
         Frequently asked<br>questions
       </h2>
+<div class="home-chat-card home-chat-card-mobile p-4">
+  <h4 class="fw-bold mb-3">
+    Still have a questions?
+    <small class="fw-normal">(Let's chat)</small>
+  </h4>
+<div id="chatbot-response" class="chatbot-response"></div>
+  <div class="mt-auto home-search-wrapper">
+    <input
+      type="text"
+      class="home-search-input"
+      placeholder="Ask or search anything"
+      id="user-input"
+      oninput="showSuggestions()" 
+      onkeydown="handleEnter(event)" 
+    >
+    <ul id="suggestions-list" class="suggestions-list"></ul>
+    <button id="load-more-btn" class="load-more-btn" onclick="loadMoreQuestions()" style="display: none;">Load More</button>
+  </div>
 
-      <div class="home-chat-card home-chat-card-mobile p-4">
-        <h4 class="fw-bold mb-3">
-          Still have a questions?
-          <small class="fw-normal">(Let's chat)</small>
-        </h4>
+  
+</div>
 
-        <div class="mt-auto home-search-wrapper">
-          <input
-            type="text"
-            class="home-search-input"
-            placeholder="Ask or search anything"
-          >
-        </div>
-      </div>
+
     </div>
 
     <!-- RIGHT COLUMN -->
     <div class="col-12 col-sm-12 col-md-4 col-lg-6 home-right-col">
-      <div class="row g-4 home-faq-cards">
+      <div class="row g-2 home-faq-cards">
 
         <div class="col-4 col-sm-4 col-md-12 col-lg-12 home-faq-item">
           <div class="home-card-1">
@@ -590,6 +599,109 @@
   toggler.addEventListener('click', () => {
     menu.classList.toggle('show');
   });
+
+
+
+  // Define questions and answers
+const qaData = [
+  { question: "What is your name?", answer: "I am ChatBot, your virtual assistant." },
+  { question: "How are you?", answer: "I am doing great, thank you for asking!" },
+  { question: "What can you do?", answer: "I can help you with any questions or assist with tasks." },
+  { question: "What is the weather like?", answer: "I am not sure, but you can check a weather app!" },
+  { question: "Tell me a joke", answer: "Why don't skeletons fight each other? They don't have the guts!" },
+  { question: "What is your favorite color?", answer: "I like blue! It's calming and peaceful." },
+  { question: "Where do you live?", answer: "I live in the cloud, always ready to help!" },
+  { question: "What is your purpose?", answer: "My purpose is to assist and make life easier for you!" },
+  { question: "Can you help with math?", answer: "Sure! I can help solve math problems or explain concepts." },
+  { question: "How can I contact you?", answer: "You can contact me here anytime!" }
+  // Add more predefined Q&A as necessary
+];
+
+let currentQuestionsIndex = 0; // Keep track of which questions are displayed
+
+// Show suggestions based on input
+function showSuggestions() {
+  const input = document.getElementById('user-input').value;
+  const suggestionsList = document.getElementById('suggestions-list');
+  suggestionsList.innerHTML = ''; // Clear previous suggestions
+
+  if (input.length > 2) {
+    const filteredQuestions = qaData.filter(item =>
+      item.question.toLowerCase().includes(input.toLowerCase())
+    );
+
+    // Show only the first 5 questions
+    const displayedQuestions = filteredQuestions.slice(0, 5);
+
+    displayedQuestions.forEach(item => {
+      const suggestionItem = document.createElement('li');
+      suggestionItem.textContent = item.question;
+      suggestionItem.onclick = () => showAnswer(item.answer);
+      suggestionsList.appendChild(suggestionItem);
+    });
+
+    // Show "Load More" if there are more than 5 suggestions
+    if (filteredQuestions.length > 5) {
+      document.getElementById('load-more-btn').style.display = 'block';
+    } else {
+      document.getElementById('load-more-btn').style.display = 'none';
+    }
+  }
+}
+
+// Show the chatbot's response
+function showAnswer(answer) {
+  const responseDiv = document.getElementById('chatbot-response');
+  responseDiv.classList.add('visible');
+  responseDiv.textContent = answer;
+  clearSuggestions();
+}
+
+// Clear suggestions when a question is clicked
+function clearSuggestions() {
+  const suggestionsList = document.getElementById('suggestions-list');
+  suggestionsList.innerHTML = '';
+}
+
+// Handle Enter key to show relevant questions
+function handleEnter(event) {
+  if (event.key === 'Enter') {
+    const input = document.getElementById('user-input').value.trim().toLowerCase();
+    const answerDiv = document.getElementById('chatbot-response');
+
+    // Check if the question is in the predefined list
+    const match = qaData.find(item => item.question.toLowerCase() === input);
+    if (match) {
+      answerDiv.textContent = match.answer;
+    } else {
+      answerDiv.textContent = "Sorry, I don't understand that. Can you ask something else?";
+    }
+
+    answerDiv.classList.add('visible');
+    showSuggestions(); // Reset to show suggestions again
+    document.getElementById('user-input').value = ''; // Clear input field
+  }
+}
+
+// Load more questions
+function loadMoreQuestions() {
+  const suggestionsList = document.getElementById('suggestions-list');
+  const displayedQuestions = qaData.slice(currentQuestionsIndex, currentQuestionsIndex + 5);
+  currentQuestionsIndex += 5;
+
+  displayedQuestions.forEach(item => {
+    const suggestionItem = document.createElement('li');
+    suggestionItem.textContent = item.question;
+    suggestionItem.onclick = () => showAnswer(item.answer);
+    suggestionsList.appendChild(suggestionItem);
+  });
+
+  // Hide "Load More" if there are no more questions
+  if (currentQuestionsIndex >= qaData.length) {
+    document.getElementById('load-more-btn').style.display = 'none';
+  }
+}
+
 </script>
   </body>
   </html>
