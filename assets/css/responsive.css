@@ -59,7 +59,7 @@ padding-top: 12% !important;
 .result-box img{
   max-width: 375px;
     height: auto;
-    aspect-ratio: 375/300;
+    aspect-ratio: 375/360;
 
 
 }
@@ -226,7 +226,7 @@ color: #0A71B9;
    }
    .kot-paragraph{
 font-family: 'Montserrat-Regular';
-font-size: 24px;
+font-size: clamp(22px, 2vw, 24px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -235,7 +235,7 @@ color: #000000;
    }
    .kot-paragraph span{
 font-family: 'Montserrat-Bold';
-font-size: 24px;
+font-size: clamp(22px, 2vw, 24px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -245,6 +245,7 @@ color: #000000;
    }
    .kot-Glance {
     background-position: right top;
+    margin-top: 0%;
    }
     .carousel-control-prev {
     left: 57% !important;
@@ -298,7 +299,7 @@ display: flex;
 font-size: clamp(10px, 0.8vw, 11px) !important;
 }
 .need-help-2{
-  font-family: Montserrat!important;
+  font-family: 'Montserrat-Extra-Bold'!important;
 font-weight: 900!important;
 font-style: Black!important;
 font-size: 20px!important;
@@ -308,8 +309,26 @@ letter-spacing: 0%!important;
 text-align: center!important;
 
 }
+.career-section-2-text h6{
+  font-family: 'Montserrat-Bold';
+
+font-size: 24px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.support-slider-item img{
+  max-width: 269px;
+  aspect-ratio: 269 / 152;
+  height: auto;
+}
+.support-slider{
+  padding-bottom: 0%;
+}
 .need-hlp-text h2{
-   font-family: Montserrat!important;
+   font-family: 'Montserrat-Extra-Bold'!important;
 font-weight: 900!important;
 font-style: Black!important;
 font-size: 20px!important;
@@ -766,6 +785,30 @@ letter-spacing: 0%;
     top: 0%;
     left: 0%;
    
+}
+.need-help-bg-text p{
+font-family: 'Montserrat-Bold';
+
+font-size: 12px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+
+}
+.need-help-bg-text span{
+font-family: 'Montserrat-Medium';
+
+font-size: 12px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.need-hlp-text {
+  padding-top: 2%;
 }
 }
 
@@ -1348,6 +1391,26 @@ leading-trim: NONE!important;
 line-height: 100%!important;
 letter-spacing: 0%!important;
 text-align: center!important;
+
+}
+.need-help-bg-text p {
+  font-family:' Montserrat-Bold';
+
+font-size: 24px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.need-help-bg-text span {
+  font-family:' Montserrat-Medium';
+
+font-size: 24px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
 
 }
 }
