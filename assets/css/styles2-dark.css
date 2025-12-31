@@ -1914,14 +1914,14 @@ margin-bottom: 30px;
 }
 
 
-.c1 { background-image: url("../images/merc-light/cad1.png"); }
-.s1 { background-image: url("../images/merc-light/cad5.png"); }
-.c2 { background-image: url("../images/merc-light/cad2.png"); }
-.s2 { background-image: url("../images/merc-light/cad6.png"); }
-.c3 { background-image: url("../images/merc-light/cad3.png"); }
-.s3 { background-image: url("../images/merc-light/cad7.png"); }
-.c4 { background-image: url("../images/merc-light/cad4.png"); }
-.s4 { background-image: url("../images/merc-light/cad8.png"); }
+.c1 { background-image: url("../images/merc-dark/cad1.png"); }
+.s1 { background-image: url("../images/merc-dark/cad5.png"); }
+.c2 { background-image: url("../images/merc-dark/cad2.png"); }
+.s2 { background-image: url("../images/merc-dark/cad6.png"); }
+.c3 { background-image: url("../images/merc-dark/cad3.png"); }
+.s3 { background-image: url("../images/merc-dark/cad7.png"); }
+.c4 { background-image: url("../images/merc-dark/cad4.png"); }
+.s4 { background-image: url("../images/merc-dark/cad8.png"); }
 
 
 
