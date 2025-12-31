@@ -47,7 +47,7 @@ body{
 /* MAIN BANNER */
 .home-page-banner {
   width: 100%;
-  min-height: clamp(280px, 45vw, 700px);
+ 
    max-width: 1440px;
    aspect-ratio: 1440 / 526;
   background-image: url("../images/homepage/home-banner.png");
