@@ -933,7 +933,7 @@ box-shadow: 0px 0px 21px 0px #0D6EB3;
 
 box-shadow: 0px 0px 36px 0px #0D6EB3;
 
-box-shadow: 0px 0px 63px 0px #0D6EB3;
+box-shadow: 0px 0px 20px 7px #0D6EB3;
 
 }
 
@@ -956,9 +956,17 @@ box-shadow: 0px 0px 63px 0px #0D6EB3;
   border-radius: 18px;
   border: 4px solid #ffffff;
 
-  box-shadow:
-    0px 0px 10px rgba(13,110,179,0.4),
-    0px 0px 30px rgba(13,110,179,0.3);
+  box-shadow: 0px 0px 1.5px 0px #0D6EB3;
+
+box-shadow: 0px 0px 3px 0px #0D6EB3;
+
+box-shadow: 0px 0px 10.5px 0px #0D6EB3;
+
+box-shadow: 0px 0px 21px 0px #0D6EB3;
+
+box-shadow: 0px 0px 36px 0px #0D6EB3;
+
+box-shadow: 0px 0px 20px 7px #0D6EB3;
 
   display: flex;
   align-items: center;
@@ -1031,9 +1039,7 @@ line-height: 100%;
 letter-spacing: 0%;
 color: #000000;
 }
-.explore-tabs li button:hover{
-  border-bottom: 2px solid #0976C2 !important;
-}
+
 .nav-tabs {
     --bs-nav-tabs-border-width: none !important;
     --bs-nav-tabs-border-color: none !important;
@@ -1054,6 +1060,18 @@ color: #000000;
   border-bottom: 3px solid #0d6efd;
 }
 
+
+
+/* active ka border */
+.explore-tabs .nav-link.active{
+  border-bottom-color: #0d6efd;         
+}
+
+/* optional: agar LI ko active dikhana hai */
+.explore-tabs .nav-item.active .nav-link{
+  border-bottom: 3px solid #0976C2;
+  color: #0976C2;
+}
 .explore-main-box {
   max-width: 1070px;
   margin: 0 auto;
@@ -1114,6 +1132,7 @@ color: #000000;
 .explore-card-btn .explore-btn:hover {
   background: linear-gradient(90deg, #014F85 0%, #0A71B9 100%);
 }
+
 /* home-page styling */
 .what-we-offer-text{
     max-width: 896px;      /* design width */

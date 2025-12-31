@@ -115,7 +115,7 @@
 
     <!-- Tabs -->
     <ul class="nav nav-tabs justify-content-center explore-tabs mb-4" role="tablist">
-      <li class="nav-item "  >
+      <li class="nav-item active "  >
         <button class="nav-link " data-bs-toggle="tab" data-bs-target="#explore-personal">
           Personal Support
         </button>
@@ -398,5 +398,33 @@
 </section>
       
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".explore-tabs .nav-link");
+  const navItems = document.querySelectorAll(".explore-tabs .nav-item");
+  const panes = document.querySelectorAll(".tab-content .tab-pane");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // remove active from all
+      navLinks.forEach(l => l.classList.remove("active"));
+      navItems.forEach(li => li.classList.remove("active"));
+      panes.forEach(p => p.classList.remove("show", "active"));
+
+      // add active to clicked
+      link.classList.add("active");
+      const li = link.closest(".nav-item");
+      if (li) li.classList.add("active");
+
+      // show correct pane
+      const targetSel = link.getAttribute("data-bs-target") || link.getAttribute("href");
+      const target = targetSel ? document.querySelector(targetSel) : null;
+      if (target) target.classList.add("show", "active");
+    });
+  });
+});
+</script>
     </body>
     </html>
