@@ -1238,6 +1238,96 @@ padding-top: 11%;
         padding-left: 16%;
         padding-bottom: 2%;
 }
+.engineering-the-future{
+  aspect-ratio: 767/500;
+    height: auto;
+          background-size: 1350px 1250px !important;
+        background-position-y: 2% !important;
+        background-position-x: 68% !important;
+}
+.images-flawless-section-1 img{
+  aspect-ratio: 263 / 139;
+  max-width: 283px !important;
+  height: auto !important;
+}
+.images-flawless-section-2-1 img{
+aspect-ratio:128 / 64;
+  max-width: 128px !important;
+  height: auto !important;
+}
+.images-flawless-section-2-2 img{
+aspect-ratio:128 / 64;
+  max-width: 128px !important;
+  height: auto !important;
+}
+.images-flawless-section-3 img{
+  aspect-ratio:133 / 139;
+  max-width: 133px !important;
+  height: auto !important;
+}
+.images-flawless-section-4 img{
+    aspect-ratio:133 / 139;
+  max-width: 133px !important;
+  height: auto !important;
+}
+.images-flawless-section{
+   aspect-ratio: 730 / 163;
+  max-width: 730px !important;
+  height: auto !important;
+}
+.engineering-the-future-heading  h2{
+  font-family: 'Montserrat-Bold' !important;
+
+font-size: 40px !important;
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+
+    text-align: center !important;
+        padding-top: 3% !important;
+        padding-left: 4% !important;
+        padding-bottom: 2% !important;
+        padding-right: 17% !important;
+}
+.engineering-the-future-paragraph p{
+  font-family: 'Montserrat-Regular' !important;
+
+font-size: 15px !important;
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+padding-top: 3% !important;
+        padding-left: 4% !important;
+        padding-bottom: 2% !important;
+        padding-right: 20% !important;
+    
+}
+.engineering-the-future-btn{
+  margin-left: 28% !important;
+}
+.what-we-offer-flawless{
+  margin-top: 15%;
+}
+.what-we-offer-flawless h2{
+font-family: 'Montserrat-Bold' !important;
+
+font-size: 40px!important;
+leading-trim: NONE!important;
+line-height: 100%!important;
+letter-spacing: 0%!important;
+
+}
+.what-we-offer-flawless p{
+  font-family: 'Montserrat-Regular'!important;
+
+font-size: 15px!important;
+leading-trim: NONE!important;
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+
+}
 }
 @media (max-width: 1024px) and (min-width: 992px){
 
