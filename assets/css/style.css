@@ -3095,11 +3095,11 @@ max-width: 486px;
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .app-sculpt-service{
   background-image: url("../images/Appsculp/RotationAnimation.gif");
-  background-repeat: no-repeat;
+  
 
-  height: 683px;
-
- background-size: 2619px 2344px;
+ background-repeat: no-repeat;
+    height: 597px;
+    background-size: 2738px 2178px;
     background-position-y: 12%;
     background-position-x: 51%;
 }
@@ -3344,6 +3344,10 @@ opacity: 1;
 
 }
 .images-tree-appsec{
+  display: flex;
+  justify-content: center;
+}
+.images-tree-appsec img{
 max-width: 1440px;
 height: 1281px;
 width: 100%;
