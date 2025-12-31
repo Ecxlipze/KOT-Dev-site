@@ -47,13 +47,14 @@ body{
 /* MAIN BANNER */
 .home-page-banner {
   width: 100%;
-  min-height: clamp(280px, 45vw, 700px);
-
+ 
+   max-width: 1440px;
+   aspect-ratio: 1440 / 526;
   background-image: url("../images/homepage/home-banner.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-
+height: auto;
   display: flex;
   align-items: center;
 }
@@ -89,11 +90,11 @@ body{
     background-position: center;     /* background khud center */
     background-repeat: no-repeat;
 
-    /* max-width: 1440px; */
+    max-width: 1440px;
     width: 100%;
   height: auto;             /* section ki height */
     margin: 0 auto;
-
+ aspect-ratio: 1440 / 550;
     display: flex;
     flex-direction: column;          /* items upar neeche */
     justify-content: center;          /* vertical center */
@@ -165,7 +166,7 @@ color: #FFFFFF;
     padding-bottom: 5%;
 }
 .secton-3-intership-text h2{
-    font-family: 'Montserrat-Bold';
+    font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
@@ -502,7 +503,7 @@ color: #FFFFFF;
 }
 
 .why-join-kot-text-heading h2{
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Extra-Bold';
   font-weight: 900 !important;
   font-size: 42px;
   color: #0C72BA;
@@ -1298,7 +1299,7 @@ color: #000000;
  
   
   margin-bottom: 30px;
-  gap: 15px;
+  gap: 8px;
 }
 .blog-heading h2{
 font-family: 'Montserrat-Bold';
@@ -1320,7 +1321,7 @@ padding-bottom: 5%;
   font-family: 'Montserrat-Bold';
 font-size: 84px;
 leading-trim: NONE;
-line-height: 112.00000000000001%;
+line-height: 100%;
 letter-spacing: 0%;
 color: #028BEC;
 }
@@ -1574,6 +1575,66 @@ height: 133px;
   object-fit: cover;
   border: 2px solid #fff;
 }
+/* Styling for suggestions list */
+.suggestions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.suggestions-list li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling the response area */
+.chatbot-response {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.chatbot-response.visible {
+  display: block;
+}
+
+/* Input field */
+.home-search-input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Load More button */
+.load-more-btn {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #68a8f1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.load-more-btn:hover {
+  background-color: #57a1d6;
+}
 /* MAIN SECTION */
 .kot-Glance {
   
@@ -1584,7 +1645,7 @@ height: 133px;
 height: 590px;
   display: flex;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /* TEXT STYLE */
@@ -2894,10 +2955,10 @@ color: #FFFFFF;
 .engineering-the-future{
   background-image: url(../images/Flawless/Flawless.gif);
  background-repeat: no-repeat;
-    background-size: 100%;
-    height: 837px;
-    /* padding-bottom: 0%; */
-    background-position: center;
+    height: 597px;
+    background-size: 2850px 2178px;
+    background-position-y: 12%;
+    background-position-x: 51%;
   position: relative;
 }
 .engineering-the-future-heading h2{
@@ -3099,7 +3160,7 @@ max-width: 486px;
 
  background-repeat: no-repeat;
     height: 597px;
-    background-size: 2738px 2178px;
+    background-size: 2850px 2178px;
     background-position-y: 12%;
     background-position-x: 51%;
 }
