@@ -184,20 +184,17 @@
                 unique goals, challenges,  and working environment.  Our team combines practical experience with proven
                 strategies to give you clear, useful insights.</p>
 
-            <div class="container position-relative mt-4">
+<div class="container mt-5 mb-5">
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="achieve-card ach-9"></div>
+      <div class="achieve-card ach-10"></div>
+      <div class="achieve-card ach-11"></div>
+      <div class="achieve-card ach-12"></div>
+    </div>
+  </div>
+</div>
 
-                <button class="slider-btn left" onclick="slideLeft()">‹</button>
-                <button class="slider-btn right" onclick="slideRight()">›</button>
-
-                <div class="slider" id="aiSlider">
-
-                    <div class="achieve-card ach-9"></div>
-                    <div class="achieve-card ach-10"></div>
-                    <div class="achieve-card ach-11"></div>
-                    <div class="achieve-card ach-12"></div>
-
-                </div>
-            </div>
         </section>
 
       
@@ -213,6 +210,13 @@
     });
 </script>
 
+<script>
+  const track = document.getElementById("marqueeTrack");
+
+// Duplicate cards so animation never ends
+track.innerHTML += track.innerHTML;
+
+</script>
 
 
 

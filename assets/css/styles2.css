@@ -682,7 +682,7 @@ margin-bottom: 40px;
 /* Responsive spacing */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 28px;
+    font-size: 44px;
   }
 }
 
@@ -1441,9 +1441,7 @@ margin-bottom: 40px;
     padding: 60px 0;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
+  
 }
 
 
