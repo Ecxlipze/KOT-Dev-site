@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Image in Circle</title>
+<style>
+/* Set up basic styles for the body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Style the circle container */
+.circle {
+  width: 150px; /* Size of the circle */
+  height: 150px; /* Size of the circle */
+  border-radius: 50%; /* Makes it a circle */
+  overflow: hidden; /* Ensure image stays inside the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 5s linear infinite; /* Apply animation */
+  position: relative;
+}
+
+/* Style the image inside the circle */
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fits the circle properly */
+}
+
+/* Define the rotation animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <div class="circle">
+    <img src="assets/images/Flawless/animation.png" alt="Rotating Image">
+  </div>
+
+</body>
+</html>

@@ -2265,6 +2265,7 @@ color: #FFFFFF;
   line-height: 100%;
   text-align: center;
   color: #3b4197;
+  padding-top: 2%;
 }
 
 /* Subtitle */
@@ -2355,7 +2356,18 @@ color: #FFFFFF;
   
   background-repeat: no-repeat;
 }
+.what-we-offer-text-service{
+  z-index: -1;
+}
+.what-we-offer-text-service h2{
+  font-family: 'Montserrat-Bold';
 
+font-size: 128px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: rgba(10, 113, 185, 0.6);
+}
 /* CONTAINER */
 .what-we-offer-container {
   padding: 0 5%;
@@ -2414,9 +2426,10 @@ color: #FFFFFF;
 /* TEXT + BUTTON (SAME DIV) */
 .offer-card-text {
   background-color: #161838;
-   padding-bottom: 4%;
+   padding-bottom: 8%;
  
 }
+
 
 /* TITLE */
 .what-we-offer-card-title {
@@ -2994,6 +3007,16 @@ color: #FFFFFF;
     background-position-y: 12%;
     background-position-x: 51%;
   position: relative;
+  animation: rotate 5s linear infinite; /* Apply animation */
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
 }
 .engineering-the-future-heading h2{
   font-family: 'Montserrat-Bold';
