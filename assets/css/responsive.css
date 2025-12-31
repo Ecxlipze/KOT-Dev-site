@@ -658,6 +658,7 @@ display: block;
   display: flex;
     justify-content: center;
 }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1119,6 +1120,35 @@ padding-bottom: 2%;
 .mobile-image-change-layout {
   display: flex;
     justify-content: center;
+}
+.app-sculpt-service{
+ background-position-x: -379px;
+        height: 426px;
+        background-position-y: -34px;
+}
+.app-sculpt-service-heading h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.app-sculpt-service-paragraph p {
+  font-family: 'Montserrat-Regular';
+
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+padding-top: 11%;
+        padding-right: 11%;
+        padding-left: 16%;
+        padding-bottom: 2%;
 }
 }
 @media (max-width: 1024px) and (min-width: 992px){

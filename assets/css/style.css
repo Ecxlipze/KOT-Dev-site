@@ -3094,16 +3094,16 @@ max-width: 486px;
 /* appsculpt */
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .app-sculpt-service{
- background-image: url("../images/Appsculp/RotationAnimation.gif");
+  background-image: url("../images/Appsculp/RotationAnimation.gif");
   background-repeat: no-repeat;
 
-height: 800px;
+  height: 800px;
 
-    background-size: 196% 210%;
-    background-position-x: -637px;
-
-  
+ background-size: 2619px 2344px;
+    background-position-y: 15%;
+    background-position-x: 51%;
 }
+
 
 
 .app-sculpt-service-heading h2{
@@ -3114,7 +3114,7 @@ height: 800px;
   color: #000000;
   padding-top: 3%;
   padding-left: 8%;
-  padding-bottom: 2%;
+  
   padding-right: 8%;
 }
 
@@ -3137,7 +3137,7 @@ height: 800px;
   height: 60px;
   border: 1px dashed #000;
   border-radius: 15.73px;
-  background-color: #17D4FF;
+  background-color:#F88BCC;
   margin: auto;
 }
 
