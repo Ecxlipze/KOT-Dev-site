@@ -402,13 +402,30 @@ border-radius: 50px;
 }
 
 /* Each card */
+/* Default */
 .value-card {
   height: 350px;
   width: 350px;
   border-radius: 22px;
   background-size: 100% 100%;
- 
 }
+
+/* iPad Pro (11" & 12.9") */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1366px) 
+  and (orientation: portrait),
+only screen 
+  and (min-width: 1024px) 
+  and (max-width: 1366px) 
+  and (orientation: landscape) {
+
+  .value-card {
+    height: 290px;
+    width: 270px;
+  }
+}
+
 .support-section-bg {
   background-image: url(../images/SupportLightMode/support-section.png);
   background-size: 100% 100%;
@@ -2248,5 +2265,34 @@ margin-bottom: 40px;
         margin-bottom: 20px;
         padding: 0 3% !important; 
     }
+}  
+
+.impact-card {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(2rem, 4vw, 4rem);
+  color: #fff;
 }
+
+/* Desktop images */
+.impact-left {
+  background-image: url("../images/why-kot/border1.png");
+}
+
+.impact-right {
+  background-image: url("../images/why-kot/border2.png");
+}
+@media (max-width: 768px) {
+
+  .impact-left {
+    background-image: url("../images/why-kot/border3.png");
+  }
+
+  .impact-right {
+    background-image: url("../images/why-kot/border4.png");
+  }
+
+}
+
 
