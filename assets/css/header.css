@@ -8,7 +8,7 @@
 /* BRAND */
 .kot-footer-brand img {
   max-width: 260px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .kot-footer-tagline {
@@ -64,10 +64,12 @@
 .kot-footer-form button {
   background: none;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
 }
-
+.kot-footer-link {
+  margin-top: 10% !important;
+}
 /* DIVIDER */
 .kot-footer-divider {
   margin: 3rem 0 1.5rem;
@@ -88,5 +90,22 @@
 
   .kot-footer-form {
     margin: 0 auto;
+    padding: 0 10%;
+     border-bottom: none;
   }
 }
+
+   .footer-logo {
+      height: 50px;
+    }
+    .footer-section {
+      padding: 30px 0;
+    }
+    .footer-section h5 {
+      font-weight: bold;
+    }
+    .footer-bottom {
+      background-color: #f8f9fa;
+      padding: 10px 0;
+      text-align: center;
+    }
