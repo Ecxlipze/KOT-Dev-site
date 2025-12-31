@@ -656,7 +656,7 @@ letter-spacing: 0%;
     display: none;
    }
      .saas-main-heading-mob-tab{
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 40px;
@@ -671,16 +671,27 @@ display: block;
 .mobile-tab-image{
 display: flex;
     justify-content: center;
-    max-width: 768px;
-    height: auto;
-    width: 100%;
-    aspect-ratio: 768 / 565;
+   
 }
 .mobile-tab-image img{
-  
+   max-width: 343px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 343 / 548;
+}
+.agile-apps-offer-title{
+  font-family: 'Montserrat-Extra-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 24px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
 }
 .mobile-layout-changing-add h2{
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 24px;
@@ -690,7 +701,19 @@ letter-spacing: 0%;
 text-align: center;
 color: #A53692;
 display: block;
+padding-top: 2%;
+padding-bottom: 4%;
 
+}
+.agile-apps-offer-para{
+  font-family: 'Montserrat-Regular';
+
+font-size: 15px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
 }
 .mobile-image-change-layout img{
   display: block;
@@ -1251,7 +1274,7 @@ display: flex;
     aspect-ratio: 768 / 1400;
 }
 .mobile-layout-changing-add h2{
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
@@ -1261,8 +1284,8 @@ letter-spacing: 0%;
 text-align: center;
 color: #A53692;
 display: block !important;
-padding-top: 2%;
-padding-bottom: 2%;
+padding-top: 4%;
+padding-bottom: 4%;
 
 }
 .mobile-image-change-layout img{
