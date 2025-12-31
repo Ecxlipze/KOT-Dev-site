@@ -90,11 +90,11 @@ height: auto;
     background-position: center;     /* background khud center */
     background-repeat: no-repeat;
 
-    /* max-width: 1440px; */
+    max-width: 1440px;
     width: 100%;
   height: auto;             /* section ki height */
     margin: 0 auto;
-
+ aspect-ratio: 1440 / 550;
     display: flex;
     flex-direction: column;          /* items upar neeche */
     justify-content: center;          /* vertical center */
@@ -166,7 +166,7 @@ color: #FFFFFF;
     padding-bottom: 5%;
 }
 .secton-3-intership-text h2{
-    font-family: 'Montserrat-Bold';
+    font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 42px;
@@ -503,7 +503,7 @@ color: #FFFFFF;
 }
 
 .why-join-kot-text-heading h2{
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat-Extra-Bold';
   font-weight: 900 !important;
   font-size: 42px;
   color: #0C72BA;
@@ -1645,7 +1645,7 @@ height: 133px;
 height: 590px;
   display: flex;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 /* TEXT STYLE */
