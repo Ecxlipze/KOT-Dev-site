@@ -559,8 +559,11 @@ margin-bottom: 30px;
 
 
 .solutions-wrapper {
-  background: url('../images/main-bg-image/main-bg-img.png') center/cover no-repeat;
+  background: url('../images/main-bg-image/main-bg-img.png');
   padding: 50px 0;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 
