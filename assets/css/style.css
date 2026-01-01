@@ -3219,11 +3219,10 @@ border: 1px solid #FFFFFF
   display: flex;
   align-items: center; /* vertical centering */
   justify-content: center;
-  margin-left: 2%;
-    margin-right: 2%;
+ 
         position: absolute;
-    top: 153%;
-    width: 96%;
+    margin-top: -10%;
+    width: 100%;
         background-repeat: no-repeat;
 }
 
