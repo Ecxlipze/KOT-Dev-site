@@ -802,10 +802,11 @@ text-align: center;
         background-position-y: -57%;
 }
 .images-tree-appsec img{
-  max-width: 311px;
-  aspect-ratio: 311 / 319;
+  max-width: 450px;
+  aspect-ratio: 450 / 419;
   height: auto;
   width: 100%;
+  margin-bottom: 4%;
 }
 .some-solution-heading h2{
   font-family: 'Montserrat-Bold';
@@ -1220,8 +1221,9 @@ height: auto;
 
  .images-tree-appsec img{
   width: 100%;
-  max-width: 570px;
-  aspect-ratio: 570 / 574; /* example */
+  max-width: 770px;
+        aspect-ratio: 770 / 550;
+        margin-bottom: 4%;
   
 }
 
