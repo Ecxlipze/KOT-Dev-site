@@ -94,7 +94,7 @@ height: 526px;
     width: 100%;
   height: auto;             /* section ki height */
     margin: 0 auto;
- aspect-ratio: 1440 / 550;
+ /* aspect-ratio: 1440 / 550; */
     display: flex;
     flex-direction: column;          /* items upar neeche */
     justify-content: center;          /* vertical center */
@@ -105,7 +105,7 @@ height: 526px;
 }
 
 .career-section-1-image img{
-    /* max-width: 227px; */
+    max-width: 227px;
     width: 100%;
 height: auto;
 
@@ -2868,9 +2868,10 @@ padding-bottom: 3%;
   display: none;
 }
 .set-agile-app-image img{
-  max-width: 1440px;
+  /* max-width: 1440px; */
   height: auto;
-  aspect-ratio: 1440 / 937;
+  width: 100%;
+  /* aspect-ratio: 1440 / 937; */
 }
 /* ================= CARD ================= */
 .agile-apps-offer-card{
@@ -2970,7 +2971,7 @@ padding-right: 4%;
 
 /* ===== RIGHT IMAGE ===== */
 .saas-right{
-    max-width: 834px;
+  
     width: 100%;
 height: 121px;
 
@@ -3000,31 +3001,53 @@ color: #FFFFFF;
 }
 
 /* ===== INDIVIDUAL IMAGES ===== */
-.img-1{ background-image:url("../images/Agile/Subtract.png"); }
-.img-2{ background-image:url("../images/Agile/Subtract.png"); }
-.img-3{ background-image:url("../images/Agile/Subtract.png"); }
-.img-4{ background-image:url("../images/Agile/Subtract.png"); }
-.img-5{ background-image:url("../images/Agile/Subtract.png"); }
+.img-1{ background-image:url("../images/Agile/Subtract.png");
+
+background-size: 100% 100%; }
+.img-2{ background-image:url("../images/Agile/Subtract.png"); background-size: 100% 100%;  }
+.img-3{ background-image:url("../images/Agile/Subtract.png"); background-size: 100% 100%;  }
+.img-4{ background-image:url("../images/Agile/Subtract.png"); background-size: 100% 100%;  }
+.img-5{ background-image:url("../images/Agile/Subtract.png"); background-size: 100% 100%;  }
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .engineering-the-future{
-  background-image: url(../images/Flawless/Flawless.gif);
- background-repeat: no-repeat;
-    height: 597px;
-    background-size: 2850px 2178px;
-    background-position-y: 12%;
-    background-position-x: 51%;
   position: relative;
-  animation: rotate 5s linear infinite; /* Apply animation */
+  height: 700px;
+  overflow: hidden;
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-  
+
+/* 🔥 animated image only */
+.moving-bg{
+  position:absolute;
+  left:50%;
+  top:174%;
+  transform:translate(-50%, -50%);
+  z-index:0;
+  overflow-y: hidden;
+
 }
+
+.moving-bg img{
+  width:2002px;
+  height:2002px;
+  border-radius:50%;
+  animation: rotateImg 12s linear infinite;
+  transform-origin:center;
+  /* overflow: hidden; */
+}
+
+@keyframes rotateImg{
+  from{ transform: rotate(0deg); }
+  to{   transform: rotate(360deg); }
+}
+
+
+/* content always above */
+.engineering-the-future > .container-fluid{
+  position: relative;
+  z-index: 2;
+}
+
+
 .engineering-the-future-heading h2{
   font-family: 'Montserrat-Bold';
 font-size: 52px;
@@ -3167,8 +3190,7 @@ border: 1px solid #FFFFFF
 /* images-section-flawless */
 .images-flawless-section{
   background-image: url(../images/Flawless/blure-section.png);
-  /* background-size: cover;
-  background-position: center; */
+ 
   height: 300px; /* Figma design ke hisaab se */
   display: flex;
   align-items: center; /* vertical centering */
@@ -3177,7 +3199,8 @@ border: 1px solid #FFFFFF
     margin-right: 2%;
         position: absolute;
     top: 502px;
-    width: 95%;
+    width: 96%;
+        background-repeat: no-repeat;
 }
 
 .images-flawless-section-1 img{
@@ -3239,6 +3262,7 @@ max-width: 486px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
 
   animation: rotateCircle 18s linear infinite;
   z-index: 1;
