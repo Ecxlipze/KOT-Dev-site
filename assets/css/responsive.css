@@ -591,10 +591,10 @@ max-width: 100px;
     margin-bottom: 4%;
   }
   .images-mobile-appsec img{
-  width: 100%;
-  max-width: 204px;
-  aspect-ratio: 204 / 138;   /* apna exact ratio yahan */
-height: auto;
+           max-width: 430px;
+        aspect-ratio: 430 / 318;
+        height: auto;
+        width: 100%;
 
 }
    .app-sculpt-mobile-button a{
