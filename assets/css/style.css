@@ -2265,6 +2265,7 @@ color: #FFFFFF;
   line-height: 100%;
   text-align: center;
   color: #3b4197;
+  padding-top: 2%;
 }
 
 /* Subtitle */
@@ -2355,7 +2356,18 @@ color: #FFFFFF;
   
   background-repeat: no-repeat;
 }
+.what-we-offer-text-service{
+  z-index: -1;
+}
+.what-we-offer-text-service h2{
+  font-family: 'Montserrat-Bold';
 
+font-size: 128px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: rgba(10, 113, 185, 0.6);
+}
 /* CONTAINER */
 .what-we-offer-container {
   padding: 0 5%;
@@ -2414,9 +2426,10 @@ color: #FFFFFF;
 /* TEXT + BUTTON (SAME DIV) */
 .offer-card-text {
   background-color: #161838;
-   padding-bottom: 4%;
+   padding-bottom: 8%;
  
 }
+
 
 /* TITLE */
 .what-we-offer-card-title {
@@ -2994,6 +3007,16 @@ color: #FFFFFF;
     background-position-y: 12%;
     background-position-x: 51%;
   position: relative;
+  animation: rotate 5s linear infinite; /* Apply animation */
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
 }
 .engineering-the-future-heading h2{
   font-family: 'Montserrat-Bold';
@@ -3189,39 +3212,46 @@ max-width: 486px;
 /* appsculpt */
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .app-sculpt-service{
-  background-image: url("../images/Appsculp/RotationAnimation.gif");
+  position: relative;
+ height: 800px;
+  overflow: hidden;
   
-
- background-repeat: no-repeat;
-    height: 597px;
-    background-size: 2850px 2178px;
-    background-position-y: 12%;
-    background-position-x: 51%;
 }
 
+/* ROTATING IMAGE */
+.rotating-circle{
+  position: absolute;
+ 
+  left: 50%;
+ width: 3100px;
+    height: 1915px;
+  transform: translateX(-50%);
+  border-radius: 50%;
 
+  background-image: url("../images/Appsculp/animation.png"); /* IMAGE */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  animation: rotateCircle 18s linear infinite;
+  z-index: 1;
+      top: 30%;
+}
 .app-sculpt-service-heading h2{
   font-family: 'Montserrat-Bold';
   font-size: 52px;
-  line-height: 100%;
   text-align: center;
-  color: #000000;
-  padding-top: 3%;
-  padding-left: 8%;
-  
-  padding-right: 8%;
+  color: #000;
+  padding-top: 60px;
+  padding-inline: 8%;
 }
 
 .app-sculpt-service-paragraph p{
   font-family: 'Montserrat-Regular';
   font-size: 21px;
-  line-height: 100%;
   text-align: center;
-  padding-top: 1%;
-  padding-left: 8%;
-  padding-bottom: 6%;
-  padding-right: 8%;
+  padding-inline: 8%;
+  padding-bottom: 5%;
 }
 
 .app-sculpt-service-btn{
@@ -3231,19 +3261,34 @@ max-width: 486px;
   width: 230px;
   height: 60px;
   border: 1px dashed #000;
-  border-radius: 15.73px;
+  border-radius: 16px;
   background-color:#F88BCC;
-  margin: auto;
+  margin: 40px auto;
 }
-
 .app-sculpt-service-btn a{
   font-family: 'Montserrat-Bold';
-  font-size: 25.17px;
-  line-height: 53.49px;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
+text-decoration: none;
+font-size: 25.17px;
+leading-trim: NONE;
+line-height: 53.49px;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
 }
+/* CONTENT ABOVE */
+.content{
+  position: relative;
+  z-index: 2;
+}
+@keyframes rotateCircle {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
 /* mobile-section */
 /* IMAGE LAYER */
 .app-sculpt-mobile-img {
@@ -3271,6 +3316,7 @@ max-width: 486px;
   width: 100%;
   max-width: 1604px;
   margin: auto;
+  margin-top: -5%;
 }
 
 
@@ -3390,8 +3436,8 @@ font-family: 'Montserrat-Bold';
 
 font-size: 28px;
 
-padding: 2%;
-
+padding: 4%;
+padding-bottom: 0%;
  text-shadow: 
     0px 0px 0.35px #EC268F,
     0px 0px 0.7px #EC268F,
@@ -3413,10 +3459,16 @@ line-height: 100%;
     0px 0px 4.92px #EC268F,
     0px 0px 8.43px #EC268F,
     0px 0px 14.75px #EC268F;
-padding: 2%;
+padding: 4%;
+padding-bottom: 2%;
 
 }
-
+.tree-image-text h2{
+  display: none;
+}
+.tree-image-text p{
+  display: none;
+}
 
 .andoride-solution-heading h2 {
 font-family: 'Montserrat-Extra-Bold';
