@@ -49,12 +49,12 @@ body{
   width: 100%;
  
    max-width: 1440px;
-   aspect-ratio: 1440 / 526;
+   /* aspect-ratio: 1440 / 526; */
   background-image: url("../images/homepage/home-banner.png");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-height: auto;
+height: 526px;
   display: flex;
   align-items: center;
 }
