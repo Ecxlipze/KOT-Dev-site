@@ -318,17 +318,12 @@ border-radius: 50px !important;
   border: none;
 }
 
+
 /* Mobile spacing */
 @media (max-width: 768px) {
   .contact-wrapper {
     padding: 50px 0;
   }
-}
-/* CTA Banner */
-.contact-cta {
-  padding: 100px 0;
-  background: url('../images/contact/contact-person.png') center/cover no-repeat;
-  color: #fff;
 }
 
 .contact-cta h2 {
