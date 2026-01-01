@@ -3045,7 +3045,7 @@ background-size: 100% 100%; }
   left:50%;
   top:174%;
   transform:translate(-50%, -50%);
-  z-index:0;
+  z-index:-3;
   overflow-y: hidden;
 
 }
@@ -3066,10 +3066,10 @@ background-size: 100% 100%; }
 
 
 /* content always above */
-.engineering-the-future > .container-fluid{
+/* .engineering-the-future > .container-fluid{
   position: relative;
   z-index: 2;
-}
+} */
 
 
 .engineering-the-future-heading h2{
@@ -3124,7 +3124,46 @@ color: #000000;
 text-decoration: none;
 
 }
+/* images-section-flawless */
+.images-flawless-section{
+  background-image: url(../images/Flawless/blure-section.png);
+ 
+  height: 300px; /* Figma design ke hisaab se */
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: center;
+ 
+       
+    width: 100%;
+        background-repeat: no-repeat;
+}
 
+.images-flawless-section-1 img{
+max-width: 486px;
+    width: 100%;
+  height: 257px;
+  border-radius: 20px;
+}
+
+.images-flawless-section-2-1 img,
+.images-flawless-section-2-2 img{
+  max-width: 236px;
+  width: 100%;
+  height: 117px;
+  border-radius: 10px;
+}
+
+.images-flawless-section-2-1 {
+  margin-bottom: 10px; /* stacked images spacing */
+}
+
+.images-flawless-section-3 img,
+.images-flawless-section-4 img{
+  max-width: 246px;
+  width: 100%;
+  height: 257px;
+  border-radius: 20px;
+}
 .what-we-offer-flawless{
   text-align: center;
   
@@ -3211,47 +3250,7 @@ background: linear-gradient(100.31deg, #44DCFF 6.12%, #008EAF 100%);
 border: 1px solid #FFFFFF
 }
 
-/* images-section-flawless */
-.images-flawless-section{
-  background-image: url(../images/Flawless/blure-section.png);
- 
-  height: 300px; /* Figma design ke hisaab se */
-  display: flex;
-  align-items: center; /* vertical centering */
-  justify-content: center;
- 
-        position: absolute;
-    margin-top: -10%;
-    width: 100%;
-        background-repeat: no-repeat;
-}
 
-.images-flawless-section-1 img{
-max-width: 486px;
-    width: 100%;
-  height: 257px;
-  border-radius: 20px;
-}
-
-.images-flawless-section-2-1 img,
-.images-flawless-section-2-2 img{
-  max-width: 236px;
-  width: 100%;
-  height: 117px;
-  border-radius: 10px;
-}
-
-.images-flawless-section-2-1 {
-  margin-bottom: 10px; /* stacked images spacing */
-}
-
-.images-flawless-section-3 img,
-.images-flawless-section-4 img{
-  max-width: 246px;
-  width: 100%;
-  height: 257px;
-  border-radius: 20px;
-}
 .hero-btn {
   padding: 12px 22px !important;
   font-weight: 800 !important;
