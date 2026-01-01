@@ -3464,10 +3464,25 @@ padding-bottom: 2%;
 
 }
 .tree-image-text h2{
-  display: none;
+  font-family: 'Montserrat-Bold';
+margin-top: 2%;
+font-size: clamp(35px , 3vw, 42px);
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: rgba(236, 38, 143, 1);
 }
 .tree-image-text p{
-  display: none;
+  font-family: 'Montserrat-Regular';
+
+font-size: 20px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+padding-top: 1%;
+
 }
 
 .andoride-solution-heading h2 {
@@ -3482,6 +3497,35 @@ padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 6%;
 }
+.image-mobile-bg {
+  background-image: url(../images/Appsculp/Frame1171277097.png) !important;
+  background-size: 100% 100%;
+  margin-top: 5%;
+}
+.ios-mobile-text h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: clamp(30px, 4vw, 42px);
+
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: rgba(236, 38, 143, 1);
+}
+.ios-mobile-text  p{
+  font-family: 'Montserrat-Regular';
+
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
+padding-left: 23%;
+padding-right: 23%;
+margin-bottom: 5%;
+}
 .images-mobile-appsec img{
 max-width: 1440px;
 height: 937px;
@@ -3493,6 +3537,8 @@ opacity: 1;
 .images-tree-appsec{
   display: flex;
   justify-content: center;
+  padding-left: 6%;
+    padding-right: 6%;
 }
 .images-tree-appsec img{
 max-width: 1440px;
