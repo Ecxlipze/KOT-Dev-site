@@ -3501,6 +3501,7 @@ padding-left: 20%;
   background-image: url(../images/Appsculp/Frame1171277097.png) !important;
   background-size: 100% 100%;
   margin-top: 5%;
+  margin-bottom: 8%;
 }
 .ios-mobile-text h2{
   font-family: 'Montserrat-Bold';
@@ -3526,9 +3527,14 @@ padding-left: 23%;
 padding-right: 23%;
 margin-bottom: 5%;
 }
+.images-mobile-appsec{
+  display: flex;
+    justify-content: center;
+}
 .images-mobile-appsec img{
-max-width: 1440px;
-height: 937px;
+max-width: 938px;
+aspect-ratio: 938 / 625;
+height: auto;
 width: 100%;
 opacity: 1;
 
