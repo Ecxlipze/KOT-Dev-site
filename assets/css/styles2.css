@@ -841,7 +841,7 @@ margin-bottom: 40px;
 }
 
 .work-card {
-  height: 160px;
+  height: 190px;
   width: 375px;
   border-radius: 14px;
   background-size: 100% 100%;
@@ -1106,6 +1106,8 @@ margin-bottom: 40px;
   padding: clamp(2.0rem, 4vw, 4.2rem);
   color: #ffffff;
   background-color: #0C72BA; 
+  padding-left: 8%;
+  padding-right: 8%;
 
 }
 
