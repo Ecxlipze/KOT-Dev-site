@@ -695,7 +695,6 @@ margin-bottom: 40px;
 .solution-card {
   height: 250px;
   width: 230px;
-  border-radius: 14px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -2318,5 +2317,115 @@ margin-bottom: 40px;
 }
 
 
+/* Hero Section with Background Image */
+.venture-hero-section {
+  background-image: url('../images/vent-light/vent-banner.jpg'); /* Background Image */
+  background-size: 100% 100%;
+  background-position: center;
+  color: white;
+  padding: 200px 0;
+  position: relative; /* Set parent container to relative */
+}
+
+.venture-hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.venture-hero-content .venture-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.venture-hero-content .venture-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.venture-hero-content .venture-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* New Container for Text and Buttons with White Background */
+.venture-text-container {
+  background-color: white;
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position absolute within the relative parent */
+  top: 100%; /* Adjust top as needed */
+  left: 50%; /* Adjust left as needed */
+  transform: translate(-50%, -50%); /* Center the container */
+}
+
+/* Text Content Styles */
+.venture-text-content {
+  text-align: center;
+}
+
+.venture-text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.venture-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.venture-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.venture-btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.venture-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.venture-btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.venture-btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .venture-hero-content .venture-title {
+    font-size: 2.5rem;
+  }
+
+  .venture-hero-content .venture-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .venture-text-content p {
+    font-size: 1rem;
+  }
+
+  .venture-text-container {
+    padding: 30px;
+  }
+}
 
 
