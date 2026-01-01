@@ -3212,39 +3212,45 @@ max-width: 486px;
 /* appsculpt */
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .app-sculpt-service{
-  background-image: url("../images/Appsculp/RotationAnimation.gif");
+  position: relative;
+  height: 600px;
+  overflow: hidden;
   
-
- background-repeat: no-repeat;
-    height: 597px;
-    background-size: 2850px 2178px;
-    background-position-y: 12%;
-    background-position-x: 51%;
 }
 
+/* ROTATING IMAGE */
+.rotating-circle{
+  position: absolute;
+ 
+  left: 50%;
+  width: 2800px;
+  height: 2800px;
+  transform: translateX(-50%);
+  border-radius: 50%;
 
+  background-image: url("../images/Agile/animation.png"); /* IMAGE */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
+  animation: rotateCircle 18s linear infinite;
+  z-index: 1;
+      top: 30%;
+}
 .app-sculpt-service-heading h2{
   font-family: 'Montserrat-Bold';
   font-size: 52px;
-  line-height: 100%;
   text-align: center;
-  color: #000000;
-  padding-top: 3%;
-  padding-left: 8%;
-  
-  padding-right: 8%;
+  color: #000;
+  padding-top: 60px;
+  padding-inline: 8%;
 }
 
 .app-sculpt-service-paragraph p{
   font-family: 'Montserrat-Regular';
   font-size: 21px;
-  line-height: 100%;
   text-align: center;
-  padding-top: 1%;
-  padding-left: 8%;
-  padding-bottom: 6%;
-  padding-right: 8%;
+  padding-inline: 8%;
 }
 
 .app-sculpt-service-btn{
@@ -3254,19 +3260,34 @@ max-width: 486px;
   width: 230px;
   height: 60px;
   border: 1px dashed #000;
-  border-radius: 15.73px;
+  border-radius: 16px;
   background-color:#F88BCC;
-  margin: auto;
+  margin: 40px auto;
 }
-
 .app-sculpt-service-btn a{
   font-family: 'Montserrat-Bold';
-  font-size: 25.17px;
-  line-height: 53.49px;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
+text-decoration: none;
+font-size: 25.17px;
+leading-trim: NONE;
+line-height: 53.49px;
+letter-spacing: 0%;
+text-align: center;
+color: #000000;
 }
+/* CONTENT ABOVE */
+.content{
+  position: relative;
+  z-index: 2;
+}
+@keyframes rotateCircle {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
 /* mobile-section */
 /* IMAGE LAYER */
 .app-sculpt-mobile-img {
