@@ -48,7 +48,7 @@ body{
 .home-page-banner {
   width: 100%;
  
-   max-width: 1440px;
+   /* max-width: 1440px; */
    /* aspect-ratio: 1440 / 526; */
   background-image: url("../images/homepage/home-banner.png");
   background-size: contain;
@@ -63,7 +63,7 @@ height: 526px;
 /* FOREGROUND IMAGE */
 .home-banner-front-image {
  
-  max-width: 1440px;
+  /* max-width: 1440px; */
   width: 100%;
 
   height: auto;
@@ -77,9 +77,10 @@ height: 526px;
 
   .home-banner-front-image {
     
-    max-width: 80%;
+    /* max-width: 80%; */
     margin: 0 auto;
     display: block;
+    width: 100%;
   }
 }
 
@@ -104,7 +105,7 @@ height: 526px;
 }
 
 .career-section-1-image img{
-    max-width: 227px;
+    /* max-width: 227px; */
     width: 100%;
 height: auto;
 
@@ -692,6 +693,7 @@ color: #000000 !important;
   display: flex;
   width: max-content;
   animation: support-slider-marquee 25s linear infinite;
+  padding-top: 3%;
 }
 
 .support-slider-item {
@@ -704,16 +706,16 @@ color: #000000 !important;
 }
 
 .support-slider-item img {
-  max-width: 271px;
+  /* max-width: 271px; */
   width: 100%;
-  aspect-ratio: 271 / 154;
+  /* aspect-ratio: 271 / 154; */
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 /* Hover effect */
-.support-slider-item img:hover {
+.support-slider-item :hover {
   transform: scale(1.05);
 }
 
@@ -2362,11 +2364,16 @@ color: #FFFFFF;
 .what-we-offer-text-service h2{
   font-family: 'Montserrat-Bold';
 
-font-size: 128px;
+font-size: clamp(80px , 5vw, 100px);
 
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 color: rgba(10, 113, 185, 0.6);
+}
+.what-we-offer-text-service  {
+  overflow: hidden;
+    position: absolute;
+    left: 60%;
 }
 /* CONTAINER */
 .what-we-offer-container {
@@ -3293,8 +3300,8 @@ color: #000000;
 /* IMAGE LAYER */
 .app-sculpt-mobile-img {
   width: 100%;
- max-width: 1440px;      /* Original max width */
-  aspect-ratio: 1440 / 3319; /* Maintain original proportion */
+ /* max-width: 1440px;      
+  aspect-ratio: 1440 / 3319;  */
 
   display: block;
 }
@@ -3532,9 +3539,9 @@ margin-bottom: 5%;
     justify-content: center;
 }
 .images-mobile-appsec img{
-max-width: 938px;
-aspect-ratio: 938 / 625;
-height: auto;
+/* max-width: 938px;
+aspect-ratio: 938 / 625; */
+height: auto; 
 width: 100%;
 opacity: 1;
 
@@ -3547,8 +3554,8 @@ opacity: 1;
     padding-right: 6%;
 }
 .images-tree-appsec img{
-max-width: 1440px;
-height: 1281px;
+/* max-width: 1440px;
+height: 1281px; */
 width: 100%;
 opacity: 1;
 }
