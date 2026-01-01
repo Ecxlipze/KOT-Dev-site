@@ -3213,7 +3213,7 @@ max-width: 486px;
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .app-sculpt-service{
   position: relative;
-  height: 600px;
+ height: 800px;
   overflow: hidden;
   
 }
@@ -3223,12 +3223,12 @@ max-width: 486px;
   position: absolute;
  
   left: 50%;
-  width: 2800px;
-  height: 2800px;
+ width: 3100px;
+    height: 1915px;
   transform: translateX(-50%);
   border-radius: 50%;
 
-  background-image: url("../images/Agile/animation.png"); /* IMAGE */
+  background-image: url("../images/Appsculp/animation.png"); /* IMAGE */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3251,6 +3251,7 @@ max-width: 486px;
   font-size: 21px;
   text-align: center;
   padding-inline: 8%;
+  padding-bottom: 5%;
 }
 
 .app-sculpt-service-btn{
@@ -3315,6 +3316,7 @@ color: #000000;
   width: 100%;
   max-width: 1604px;
   margin: auto;
+  margin-top: -5%;
 }
 
 
@@ -3434,8 +3436,8 @@ font-family: 'Montserrat-Bold';
 
 font-size: 28px;
 
-padding: 2%;
-
+padding: 4%;
+padding-bottom: 0%;
  text-shadow: 
     0px 0px 0.35px #EC268F,
     0px 0px 0.7px #EC268F,
@@ -3457,10 +3459,16 @@ line-height: 100%;
     0px 0px 4.92px #EC268F,
     0px 0px 8.43px #EC268F,
     0px 0px 14.75px #EC268F;
-padding: 2%;
+padding: 4%;
+padding-bottom: 2%;
 
 }
-
+.tree-image-text h2{
+  display: none;
+}
+.tree-image-text p{
+  display: none;
+}
 
 .andoride-solution-heading h2 {
 font-family: 'Montserrat-Extra-Bold';

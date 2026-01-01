@@ -595,6 +595,7 @@ max-width: 140px;
   max-width: 375px;
   aspect-ratio: 375 / 232;   /* apna exact ratio yahan */
 height: auto;
+padding-top: 9%;
 }
    .app-sculpt-mobile-button a{
     font-family: 'Montserrat-Bold';
@@ -735,22 +736,42 @@ color: #000000;
 .app-sculpt-service-heading h2{
   font-family: 'Montserrat-Bold';
 
-font-size: 18px;
+font-size: 14px;
 
 line-height: 100%;
 
 text-align: center;
+padding-top: 3%;
 
 }
 .app-sculpt-service-paragraph p{
 font-family: 'Montserrat-Regular';
 
-font-size: 13px;
+font-size:13px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 
+}
+.tree-image-text h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: clamp(15px, 2vw, 18px);
+
+text-align: center;
+color: rgba(236, 38, 143, 1);
+display: block;
+}
+.tree-image-text p{
+  font-family: 'Montserrat-Regular';
+
+font-size: clamp(10px , 1vw, 13px);
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+display: block;
 }
 .app-sculpt-service-btn{
   max-width: 107px;
@@ -1199,8 +1220,8 @@ height: auto;
 
  .images-tree-appsec img{
   width: 100%;
-  max-width: 768px;
-  aspect-ratio: 768 / 761; /* example */
+  max-width: 570px;
+  aspect-ratio: 570 / 574; /* example */
   
 }
 
@@ -1334,10 +1355,11 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 color: #FFFFFF;
-padding-top: 11%;
+padding-top: 10%;
         padding-right: 11%;
         padding-left: 16%;
-        padding-bottom: 2%;
+        padding-bottom: 0%;
+        
 }
 .engineering-the-future{
   aspect-ratio: 767/500;
@@ -1448,6 +1470,25 @@ line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
 
+}
+.tree-image-text h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: 42px;
+
+text-align: center;
+color: rgba(236, 38, 143, 1);
+display: block;
+}
+.tree-image-text p{
+  font-family: 'Montserrat-Regular';
+
+font-size: 19px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+display: block;
 }
 }
 @media (max-width: 1024px) and (min-width: 992px){
