@@ -895,6 +895,66 @@ color: #000000;
 padding-left: 10%;
 padding-right: 10%;
 }
+.engineering-the-future{
+    padding-bottom: 35%;
+  }
+
+  .moving-bg img{
+    width: clamp(700px, 220vw, 1300px);
+  }
+
+  .engineering-the-future-heading h2{
+   font-family: 'Montserrat-Bold';
+
+font-size: clamp(22px, 1.8vw, 25px) !important;
+
+
+line-height: 100% !important;
+letter-spacing: 0% !important;
+text-align: center !important;
+color: rgba(0, 0, 0, 1) !important;
+    padding: 8% 6% 4% !important;
+  }
+
+  .engineering-the-future-paragraph p{
+    font-family: 'Montserrat-Regular'!important;
+
+
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+
+    font-size: clamp(14px, 2vw, 17px)!important;
+   
+    padding: 2% 6% 8% !important;
+  }
+
+  .engineering-the-future-btn{
+    width: 150px !important;
+    height: 42px !important;
+
+border-radius: 50px !important;
+border-width: 1px !important;
+border-style: dashed !important;
+dashes: 4.720000267028809, 4.720000267028809 !important;
+
+  }
+
+  .engineering-the-future-btn a{
+    font-family: 'Montserrat-Bold'!important;
+
+font-size: 13px !important;
+
+line-height: 53.49px !important;
+letter-spacing: 0% !important;
+text-align: center !important;
+   
+  }
+
+  .bg-overlap-img{
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1544,6 +1604,17 @@ letter-spacing: 0%;
 text-align: center;
 color: #000000;
 }
+  .moving-bg img{
+    width: clamp(800px, 180vw, 1600px);
+  }
+
+  .engineering-the-future-heading h2{
+    font-size: 40px;
+  }
+
+  .engineering-the-future-paragraph p{
+    font-size: 18px;
+  }
 }
 @media (max-width: 1024px) and (min-width: 992px){
 
