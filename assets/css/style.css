@@ -3065,11 +3065,7 @@ background-size: 100% 100%; }
 }
 
 
-/* content always above */
-/* .engineering-the-future > .container-fluid{
-  position: relative;
-  z-index: 2;
-} */
+
 
 
 .engineering-the-future-heading h2{
@@ -3128,16 +3124,18 @@ text-decoration: none;
 .images-flawless-section{
   background-image: url(../images/Flawless/blure-section.png);
  
-  height: 300px; /* Figma design ke hisaab se */
+  height: 300px; 
   display: flex;
-  align-items: center; /* vertical centering */
+  align-items: center; 
   justify-content: center;
  
-       
+       background-size: 100% 100%;
     width: 100%;
         background-repeat: no-repeat;
 }
-
+.bg-overlap-img {
+  margin-top: -12%;
+}
 .images-flawless-section-1 img{
 max-width: 486px;
     width: 100%;
@@ -3154,7 +3152,7 @@ max-width: 486px;
 }
 
 .images-flawless-section-2-1 {
-  margin-bottom: 10px; /* stacked images spacing */
+  margin-bottom: 10px; 
 }
 
 .images-flawless-section-3 img,
@@ -3164,6 +3162,9 @@ max-width: 486px;
   height: 257px;
   border-radius: 20px;
 }
+
+
+
 .what-we-offer-flawless{
   text-align: center;
   
