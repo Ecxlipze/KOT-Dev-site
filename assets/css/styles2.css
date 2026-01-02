@@ -1925,6 +1925,10 @@ margin-bottom: 40px;
 }
 
 
+.card {
+  background-color: transparent !important;
+
+} 
 /* Strategic Advantages Section */
 .strategic-advantages-section{
   color: #111;
