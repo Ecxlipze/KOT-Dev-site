@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audits - KOT</title>
-    <link rel="stylesheet" href="../assets/css/styles2-dark.css">
-    <link rel="stylesheet" href="../assets/css/header-dark.css">
+    <link rel="stylesheet" href="../assets/css/styles2.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
 <body>
     <section class="solutions-wrapper" style="background: 
-  linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+  linear-gradient(rgba(114,110,110,0.4), rgba(114,110,110,0.4)),
   url('../assets/images/auditslightmode/auditsbanner.jpg') center/cover no-repeat;
 
 ">
@@ -75,19 +75,19 @@
             <div class="container"> 
                 <div class="row justify-content-center g-2 mt-4">
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                         <div class="support-card sup-9"></div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                         <div class="support-card sup-10"></div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                         <div class="support-card sup-11"></div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
                         <div class="support-card sup-12"></div>
                     </div>
 
@@ -102,27 +102,24 @@
 
 
             <div class="container">
-                <div class="row justify-content-center g-5 mt-1" style="margin: 0 -5%;">
+                <div class="row justify-content-center g-5 mt-1">
 
-                    <div class="col-lg-2 col-md-6 col-8">
+                    <div class="col-lg-3 col-md-6 col-8 kard">
                         <div class="solution-card sol-10"></div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 col-8">
+                    <div class="col-lg-3 col-md-6 col-8 kard">
                         <div class="solution-card sol-11"></div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 col-8">
+                    <div class="col-lg-3 col-md-6 col-8 kard">
                         <div class="solution-card sol-12"></div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 col-8">
+                    <div class="col-lg-3 col-md-6 col-8 kard">
                         <div class="solution-card sol-13"></div>
                     </div>
 
-                    <!-- <div class="col-lg-2 col-md-4 col-8">
-                        <div class="solution-card sol-5"></div>
-                    </div> -->
 
                 </div>
 
@@ -175,29 +172,26 @@
 
 
         <section class="achieve-section text-center mt-5">
-            <h2 class="section-title" style="text-align: start; padding:0 7%" >
+            <h2 class="section-title">
                 Our Approach
             </h2>
             <p class="section-title"
-                style="font-size: 24px; color: rgb(255, 255, 255); font-weight: 400; text-align: start; padding:0 7%;">We don’t
+                style="text-align: center; font-size: 24px; color: black; font-weight: 400;">We don’t
                 believe in one-size-fits-all audits. Every business is different, so we start by  understanding your 
                 unique goals, challenges,  and working environment.  Our team combines practical experience with proven
                 strategies to give you clear, useful insights.</p>
 
-            <div class="container position-relative mt-4">
+<div class="container mt-5 mb-5" style="max-width: 1490px !important;">
+  <div class="marquee-wrapper">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="achieve-card ach-9"></div>
+      <div class="achieve-card ach-10"></div>
+      <div class="achieve-card ach-11"></div>
+      <div class="achieve-card ach-12"></div>
+    </div>
+  </div>
+</div>
 
-                <button class="slider-btn left" onclick="slideLeft()">‹</button>
-                <button class="slider-btn right" onclick="slideRight()">›</button>
-
-                <div class="slider" id="aiSlider">
-
-                    <div class="achieve-card ach-9"></div>
-                    <div class="achieve-card ach-10"></div>
-                    <div class="achieve-card ach-11"></div>
-                    <div class="achieve-card ach-12"></div>
-
-                </div>
-            </div>
         </section>
 
       
@@ -213,6 +207,13 @@
     });
 </script>
 
+<script>
+  const track = document.getElementById("marqueeTrack");
+
+// Duplicate cards so animation never ends
+track.innerHTML += track.innerHTML;
+
+</script>
 
 
 

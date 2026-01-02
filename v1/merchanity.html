@@ -26,9 +26,9 @@
     <div class="row align-items-center">
 
       <!-- Left Column -->
-      <div class="col-lg-5 col-md-5 col-4 left-side">
-        <h2 class="ecommerce-title mb-3">ELEVATING YOUR E-COMMERCE EXPERIENCE</h2>
-        <p class="ecommerce-text mb-4">
+      <div class="col-lg-6 col-md-5 col-4 left-side">
+        <h2 class="ecommerce-title mb-4">ELEVATING YOUR E-COMMERCE EXPERIENCE</h2>
+        <p class="ecommerce-text mb-5">
           At Merchanity, we understand that e-commerce is no longer just about online transactions. 
           It's about building long-term customer relationships through seamless, intelligent, and secure digital experiences. 
           We enable businesses to adapt, scale, and thrive in the digital marketplace through advanced, 
@@ -38,8 +38,8 @@
       </div>
 
       <!-- Right Column -->
-      <div class="col-lg-7 col-md-7 col-8 text-center">
-        <img src="../assets/images/merc-light/mercbanner.png" alt="E-commerce Illustration" class="img-fluid">
+      <div class="col-lg-6 col-md-7 col-8 text-center">
+        <img src="../assets/images/merc-light/mercbanner.png" alt="E-commerce Illustration" class="">
       </div>
 
     </div>
@@ -100,10 +100,24 @@
 
 <section class="strategic-advantages-section py-5 text-center">
   <div class="container">
-    <h2 class="strategic-title mb-1">OUR STRATEGIC ADVANTAGES</h2>
+    <h2 class="strategic-title mb-3">OUR STRATEGIC ADVANTAGES</h2>
     <div class="strategic-image">
-      <img src="../assets/images/merc-light/pannel.png" alt="Strategic Advantages Illustration" class="img-fluid">
-    </div>
+  <picture>
+    <!-- Desktop -->
+    <source media="(min-width: 992px)" 
+            srcset="../assets/images/merc-light/pannel.png">
+
+    <!-- Tablet -->
+    <source media="(min-width: 768px)" 
+            srcset="../assets/images/merc-light/pannel-tablet.png">
+
+    <!-- Mobile -->
+    <img src="../assets/images/merc-light/pannel-mobile.png"
+         alt="Strategic Advantages Illustration"
+         class="img-fluid">
+  </picture>
+</div>
+
   </div>
 </section>
 
