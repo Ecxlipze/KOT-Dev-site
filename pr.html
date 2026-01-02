@@ -2,548 +2,236 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>What We Offer</title>
+<title>KOT Enterprises Header</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-/* ================= GLOBAL ================= */
 
-
-/* ================= SECTION SPACING ================= */
-.agile-apps-offer{
-    padding-left:5%;
-    padding-right:5%;
+/* ================= TOP MARQUEE ================= */
+.top-marquee{
+    background:#0A71B9;
+    color:#fff;
+    font-size:13px;
+    padding:6px 0;
 }
 
-/* ================= TITLE ================= */
-.agile-apps-offer-title{
-    text-align:center;
-    color:#c43fbf;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:70px;
+.top-marquee marquee{
+    font-weight:500;
 }
 
-/* ================= CARD ================= */
-.agile-apps-offer-card{
-    background: linear-gradient(90deg, #A53692 0%, rgba(0, 44, 139, 0) 99.99%);
-    border-radius:20px;
-    padding:32px;
-    width:429px;
-    height:230px;
+/* ================= MAIN HEADER ================= */
+.main-header{
+    background:#fff;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+}
+
+/* ================= TOP LINKS ================= */
+.header-top-links{
+    background:#0A71B9;
+    width:40%;
+    padding:6px 15px;
     margin-left:auto;
-    margin-right:auto;
-    transition:transform .3s ease;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.agile-apps-offer-card h5{
-    font-family:Montserrat;
-    font-size:22px;
-    font-weight:700;
-    line-height:1.2;
-    width:279px;
-    color:#fff;
-}
-
-.agile-apps-offer-card p{
-    font-family:Montserrat;
-    font-size:13px;
-    font-weight:400;
-    width:310px;
-    margin-top:12px;
-    color:#fff;
-}
-
-.agile-apps-offer-read-more{
-    font-family:Montserrat;
-    font-size:13px;
-    font-weight:700;
+.header-top-links a{
+    font-family: Montserrat;
+    font-size:12.55px;
     color:#fff;
     text-decoration:none;
-    letter-spacing:.5px;
+    font-weight:500;
 }
 
-.agile-apps-offer-read-more:hover{
+.header-top-links a:hover{
     text-decoration:underline;
 }
 
-/* ================= OVERLAP ================= */
-.agile-apps-offer-first-row{
+.header-top-links img{
+    width:12px;
+    height:7px;
+}
+
+/* ================= DROPDOWN ================= */
+.header-dropdown button{
+    background:transparent;
+    border:none;
+    color:#fff;
+    padding:0;
+}
+
+.header-dropdown .profile-img{
+    width:18px;
+    height:18px;
+}
+
+.header-dropdown .dropdown-menu{
+    font-size:13px;
+    min-width:140px;
+}
+
+/* ================= LOGO + SEARCH ================= */
+.header-bottom{
+    padding:15px 0;
+}
+
+.logo img{
+    height:55px;
+}
+
+/* SEARCH */
+.search-box{
     position:relative;
-    z-index:1;
-    margin-bottom:2%;
+    width:260px;
 }
 
-.agile-apps-offer-overlap-row{
-    position:relative;
-    z-index:2;
+.search-box input{
+    border-radius:7px;
+    padding-right:40px;
 }
 
-/* Desktop overlap only */
-@media (min-width:992px){
-    .agile-apps-offer-first-row .col-lg-4:nth-child(2),
-    .agile-apps-offer-overlap-row .col-lg-4:nth-child(2){
-        margin-left:-40px;
-    }
-
-    .agile-apps-offer-first-row .col-lg-4:nth-child(3),
-    .agile-apps-offer-overlap-row .col-lg-4:nth-child(3){
-        margin-left:-40px;
-    }
+.search-box button{
+    position:absolute;
+    right:8px;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
 }
 
-/* ================= MOBILE & TABLET ================= */
-@media (max-width:991px){
-
-    .agile-apps-offer{
-        padding-left:20px;
-        padding-right:20px;
-    }
-
-    .agile-apps-offer-card{
-        width:100%;
-        max-width:429px;
-        height:auto;
-    }
-
-    .agile-apps-offer-card h5,
-    .agile-apps-offer-card p{
-        width:100%;
-    }
-}
-/* ===== ROW ===== */
-.saas-row{
-    display:flex;
-    align-items:center;
-    margin-bottom:22px;
+/* ================= NAV BAR ================= */
+.nav-bar{
+    background:#0A71B9;
 }
 
-/* ===== LEFT BLUE ===== */
-.saas-left{
-   width: 892px;
-height: 121px;
-
-    border-top-left-radius: 5px;
-    border-top-right-radius: 90px;
-    border-bottom-right-radius: 90px;
-           border-bottom-left-radius: 5px;
-background: #0A71B9;
-
-
-    position:relative;
-    z-index:2;
-    display: flex;
-    
-    align-items: center;
-    font-family: Montserrat;
-font-weight: 700;
-font-style: Bold;
-font-size: 27px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-color: #FFFFFF;
- padding-left:4%;
-padding-right: 4%;
+.nav-bar a{
+    color:#fff;
+    padding:12px 18px;
+    font-weight:600;
+    text-decoration:none;
 }
 
-/* ===== RIGHT IMAGE ===== */
-.saas-right{
-    width: 834px;
-height: 121px;
-
-   
-    background-size:contain;
-    background-position:center;
-    background-repeat:no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- padding-left: 6%;
-padding-right: 6%;
-}
-.saas-right p{
-   font-family: Montserrat;
-font-weight: 500;
-font-style: Medium;
-font-size: 22px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-color: #FFFFFF;
-    margin-bottom: 0%;
-}
-/* ===== NUMBER ===== */
-.saas-number{
-    font-weight:800;
-    margin-right:12px;
-}
-
-/* ===== INDIVIDUAL IMAGES ===== */
-.img-1{ background-image:url("assets/images/Agile/Subtract.png"); }
-.img-2{ background-image:url("assets/images/Agile/Subtract.png"); }
-.img-3{ background-image:url("assets/images/Agile/Subtract.png"); }
-.img-4{ background-image:url("assets/images/Agile/Subtract.png"); }
-.img-5{ background-image:url("assets/images/Agile/Subtract.png"); }
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    .saas-row{
-        flex-direction:column;
-    }
-
-    .saas-left,
-    .saas-right{
-        width:100%;
-        margin-left:0;
-        border-radius:30px;
-    }
-
-    .saas-right{
-        margin-top:12px;
-    }
-}
-/* section-Agileapps-appart */
-
-/* .section-Agileapps-appart{
-    background-image: url(assets/images/Agile/agileapps-apart.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.section-Agileapps-appart-image{
-     background-image: url(assets/images/Agile/Group\ 1171277096.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.section-Agileapps-appart-image-text h2{
-
-} */
- /* ================= SECTION ================= */
-/* ================= MAIN SECTION ================= */
-.sets-agile-apps-section {
-    background-image: url("assets/images/Agile/agileapps-apart.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    color: #fff;
-    font-family: Montserrat, sans-serif;
-    position: relative;
-    overflow: hidden;
-}
-
-/* ================= HEADING ================= */
-.sets-agile-apps-heading {
-    text-align: center;
-    padding-top: 80px;
-    max-width: 900px;
-    margin: auto;
-}
-
-.sets-agile-apps-heading h2 {
-    font-size: 48px;
-    font-weight: 800;
-    color: #ff3ea5;
-}
-
-.sets-agile-apps-heading p {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #e01212;
-}
-
-/* ================= MAIN AREA ================= */
-.sets-agile-apps-wrapper {
-    position: relative;
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ================= PHONE ================= */
-.sets-agile-apps-phone {
-    position: relative;
-    z-index: 5;
-}
-
-.sets-agile-apps-phone img {
-    width: 280px;
-}
-
-/* vertical text */
-.sets-agile-apps-phone-text {
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    font-weight: 800;
-    font-size: 82px;
-    line-height: 100%;
-    color: #FFA8F0;
-    width: 547px;
-}
-
-/* ================= FLOATING CARDS ================= */
-.sets-agile-apps-card {
-    position: absolute;
-    color: #000;
-    padding: 22px 20px;
-    border-radius: 20px;
-    width: 260px;
-    height: 172px;
-    border: 1px solid;
-    backdrop-filter: blur(15px);
-    border-image-source: linear-gradient(180deg, #000000 0%, rgba(117, 86, 86, 0.4) 100%);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(153, 153, 153, 0.1) 100%);
-}
-
-.sets-agile-apps-card h4 {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    color: #000000;
-    margin-bottom: 6px;
-}
-
-.sets-agile-apps-card p {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 100%;
-    margin: 0;
-}
-
-/* Card positions */
-.sets-agile-apps-card-1 {
-    left: 23%;
-    top: 19%;
-}
-
-.sets-agile-apps-card-2 {
-    right: 21%;
-    top: 43%;
-}
-
-.sets-agile-apps-card-3 {
-    left: 23%;
-    bottom: 5%;
+.nav-bar a:hover{
+    background:#1565c0;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 991px) {
-
-    .sets-agile-apps-heading h2 {
-        font-size: 34px;
+@media(max-width:768px){
+    .header-top-links{
+        width:100%;
+        justify-content:center;
     }
 
-    .sets-agile-apps-wrapper {
-        flex-direction: column;
-    }
-
-    .sets-agile-apps-card {
-        position: static;
-        margin: 15px auto;
-        width: 90%;
-    }
-
-    .sets-agile-apps-phone-text {
-        font-size: 30px;
+    .search-box{
+        width:100%;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container-fluid py-5 agile-apps-offer">
-
-    <h2 class="agile-apps-offer-title">WHAT WE OFFER</h2>
-
-    <!-- FIRST ROW -->
-    <div class="row g-4 justify-content-center agile-apps-offer-first-row">
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>Custom SaaS Product Development</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>Cloud-Based Web & Mobile Apps</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>Agile Project Management & Iterative Releases</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
+<!-- ================= TOP MARQUEE ================= -->
+<div class="top-marquee">
+    <div class="container">
+        <marquee behavior="scroll" direction="left">
+            Empowering businesses to streamline operations, reduce inefficiencies, and achieve sustainable growth through tailored solutions.
+        </marquee>
     </div>
-
-    <!-- SECOND ROW -->
-    <div class="row g-4 justify-content-center agile-apps-offer-overlap-row">
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>Scalable Architecture & Microservices</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>User-Centric UI/UX Design</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
-            <div class="agile-apps-offer-card">
-                <div>
-                    <h5>Customer Behavior Analytics & Insights</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
-            </div>
-        </div>
-
-    </div>
-
 </div>
 
+<!-- ================= MAIN HEADER ================= -->
+<div class="main-header">
 
-<!--  -->
-<div class="container-fluid py-5 px-0">
+    <!-- TOP LINKS -->
+     <div class="header-top-links">
+    <div class="header-top-links-main">
 
-    <!-- 01 -->
-    <div class="saas-row">
-        <div class="saas-left">
-            <span class="saas-number">01</span>
-            High Market Competition in SaaS?
-        </div>
-        <div class="saas-right img-1">
-           <p> We craft niche-focused platforms with unique value propositions.</p>
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">Home</a>
+
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">Startups</a>
+
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">E-Life</a>
+
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">FAQ</a>
+
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">Contact</a>
+
+        <span><img src="assets/images/Header/Vector (1).png"></span>
+        <a href="#">Site Map</a>
+
+        
+
+    </div>
+    <!-- 🔽 DROPDOWN -->
+        <div class="dropdown header-dropdown">
+            <button class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                <img src="assets/images/Header/user.png" class="profile-img me-1">
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">ABC</a></li>
+                <li><a class="dropdown-item" href="#">BFD</a></li>
+                <li><a class="dropdown-item" href="#">DFR</a></li>
+            </ul>
         </div>
     </div>
+    <!-- LOGO + SEARCH -->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row align-items-center">
 
-    <!-- 02 -->
-    <div class="saas-row">
-        <div class="saas-left">
-            <span class="saas-number">02</span>
-            Subscription Fatigue & Budget Constraints?
-        </div>
-        <div class="saas-right img-2">
-            <p>We offer tiered pricing and modular MVPs for lean launches.</p>
-        </div>
-    </div>
+                <div class="col-md-4 col-12 mb-2 mb-md-0">
+                    <div class="logo">
+                        <img src="assets/images/Header/support-2.png" alt="KOT Enterprises">
+                    </div>
+                </div>
 
-    <!-- 03 -->
-    <div class="saas-row">
-        <div class="saas-left">
-            <span class="saas-number">03</span>
-            Frequent Tech Upgrades?
-        </div>
-        <div class="saas-right img-3">
-           <p> Our R&D ensures your platform evolves with modern frameworks.</p>
-        </div>
-    </div>
+                <div class="col-md-8 col-12 text-md-end">
+                    <div class="search-box ms-md-auto">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button>
+                            <img src="assets/images/Header/search-icon.png">
+                        </button>
+                    </div>
+                </div>
 
-    <!-- 04 -->
-    <div class="saas-row">
-        <div class="saas-left">
-            <span class="saas-number">04</span>
-            Data Security Concerns?
-        </div>
-        <div class="saas-right img-4">
-            <p>Security-first design with GDPR, HIPAA & SOC2 readiness.</p>
-        </div>
-    </div>
-
-    <!-- 05 -->
-    <div class="saas-row">
-        <div class="saas-left">
-            <span class="saas-number">05</span>
-            Economic Uncertainty?
-        </div>
-        <div class="saas-right img-5">
-            <p>Cloud cost optimization with pay-as-you-scale models.</p>
+            </div>
         </div>
     </div>
 
 </div>
 
-<!-- What Sets AgileApps Apart -->
-<!-- What Sets AgileApps Apart -->
-<div class="sets-agile-apps-section">
-
-    <div class="container-fluid">
-
-        <!-- HEADING -->
-        <div class="sets-agile-apps-heading">
-            <h2>iOS Experiences That Feel Natural</h2>
-            <p>
-                App Sculpt provides a complete suite of mobile and web app development services,
-                tailored to meet modern business needs.
-            </p>
-        </div>
-
-        <!-- MAIN DESIGN -->
-        <div class="sets-agile-apps-wrapper">
-
-            <!-- LEFT CARD -->
-            <div class="sets-agile-apps-card sets-agile-apps-card-1">
-                <h4>01</h4>
-                <p>Clean, human-centered interfaces</p>
-            </div>
-
-            <!-- PHONE -->
-            <div class="sets-agile-apps-phone">
-                <img src="assets/images/Agile/Group 1171277096.png" alt="Phone">
-                <div class="sets-agile-apps-phone-text">APP SCULPT</div>
-            </div>
-
-            <!-- RIGHT CARD -->
-            <div class="sets-agile-apps-card sets-agile-apps-card-2">
-                <h4>02</h4>
-                <p>Smooth user flows that guide effortlessly</p>
-            </div>
-
-            <!-- BOTTOM LEFT -->
-            <div class="sets-agile-apps-card sets-agile-apps-card-3">
-                <h4>03</h4>
-                <p>Secure, high-performance builds designed for long-term success</p>
-            </div>
-
-        </div>
-
+<!-- ================= NAVIGATION ================= -->
+<div class="nav-bar">
+    <div class="container d-flex justify-content-center flex-wrap">
+        <a href="#">CORPORATE</a>
+        <a href="#">SERVICES</a>
+        <a href="#">CONSULTANCY</a>
+        <a href="#">SUPPORT</a>
+        <a href="#">CAREER</a>
+        <a href="#">CONTACT</a>
     </div>
-
 </div>
 
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
