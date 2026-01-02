@@ -3040,38 +3040,37 @@ background-size: 100% 100%; }
 }
 
 /* 🔥 animated image only */
-.moving-bg{
+/* .moving-bg{
      position: absolute;
     left: 50%;
-    /* top: 174%; */
+    
     transform: translate(-50%, -50%);
     z-index: -3;
     overflow-y: hidden;
-    /* bottom: -3%; */
-    /* padding-top: 1883px; */
+    
     margin-top: 90%;
 
 }
 
 .moving-bg img{
-  /* width:2026px; */
-      height: 320vh;
+  
+      max-height: 320vh;
+      min-height: 90vh;
   border-radius:50%;
   animation: rotateImg 12s linear infinite;
   transform-origin:center;
-  /* overflow: hidden; */
+  
 }
 
 @keyframes rotateImg{
   from{ transform: rotate(0deg); }
   to{   transform: rotate(360deg); }
-}
+} */
 
 
 
 
-
-.engineering-the-future-heading h2{
+/* .engineering-the-future-heading h2{
   font-family: 'Montserrat-Bold';
 font-size: 52px;
 leading-trim: NONE;
@@ -3122,9 +3121,9 @@ text-align: center;
 color: #000000;
 text-decoration: none;
 
-}
+} */
 /* images-section-flawless */
-.images-flawless-section{
+/* .images-flawless-section{
   background-image: url(../images/Flawless/blure-section.png);
  
   height: 300px; 
@@ -3164,8 +3163,189 @@ max-width: 486px;
   width: 100%;
   height: 257px;
   border-radius: 20px;
+} */
+
+/* ===============================
+   ENGINEERING THE FUTURE SECTION
+================================ */
+
+.engineering-the-future{
+  position: relative;
+  padding-bottom: 18%;
+  overflow: hidden;
 }
 
+/* ===============================
+   ANIMATED CIRCLE (TOP CENTER)
+================================ */
+
+.moving-bg{
+  position: absolute;
+  top: 40%;                      /* 👈 TOP se */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.moving-bg img{
+  width: clamp(900px, 160vw, 2200px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  animation: rotateImg 14s linear infinite;
+  transform-origin: center;
+}
+
+/* rotation animation */
+@keyframes rotateImg{
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ===============================
+   CONTENT STYLING
+================================ */
+
+.engineering-the-future-heading h2{
+  font-family: 'Montserrat-Bold';
+  font-size: 52px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  padding: 3% 8% 2%;
+}
+
+.engineering-the-future-paragraph p{
+  font-family: 'Montserrat-Regular';
+  font-size: 21px;
+  line-height: 130%;
+  text-align: center;
+  padding: 1% 8% 6%;
+}
+
+.engineering-the-future-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 60px;
+  border: 1px dashed #000;
+  border-radius: 15.73px;
+  background-color: #17D4FF;
+  margin: auto;
+}
+
+.engineering-the-future-btn a{
+  font-family: 'Montserrat-Bold';
+  font-size: 25.17px;
+  line-height: 53px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* ===============================
+   IMAGE OVERLAP SECTION
+================================ */
+
+.images-flawless-section{
+  background-image: url(../images/Flawless/blure-section.png);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-overlap-img{
+  margin-top: -12%;
+}
+
+.images-flawless-section-1 img{
+  max-width: 486px;
+  width: 100%;
+  height: 257px;
+  border-radius: 20px;
+}
+
+.images-flawless-section-2-1 img,
+.images-flawless-section-2-2 img{
+  max-width: 236px;
+  width: 100%;
+  height: 117px;
+  border-radius: 10px;
+}
+
+.images-flawless-section-2-1{
+  margin-bottom: 10px;
+}
+
+.images-flawless-section-3 img,
+.images-flawless-section-4 img{
+  max-width: 246px;
+  width: 100%;
+  height: 257px;
+  border-radius: 20px;
+}
+
+/* ===============================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 991px){
+
+  .moving-bg img{
+    width: clamp(800px, 180vw, 1600px);
+  }
+
+  .engineering-the-future-heading h2{
+    font-size: 40px;
+  }
+
+  .engineering-the-future-paragraph p{
+    font-size: 18px;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE (375px SAFE)
+================================ */
+
+@media (max-width: 576px){
+
+  .engineering-the-future{
+    padding-bottom: 35%;
+  }
+
+  .moving-bg img{
+    width: clamp(700px, 220vw, 1300px);
+  }
+
+  .engineering-the-future-heading h2{
+    font-size: clamp(26px, 6vw, 34px);
+    padding: 8% 6% 4%;
+  }
+
+  .engineering-the-future-paragraph p{
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 140%;
+    padding: 2% 6% 8%;
+  }
+
+  .engineering-the-future-btn{
+    width: 190px;
+    height: 52px;
+  }
+
+  .engineering-the-future-btn a{
+    font-size: 20px;
+  }
+
+  .bg-overlap-img{
+    margin-top: -20%;
+  }
+}
 
 
 .what-we-offer-flawless{
