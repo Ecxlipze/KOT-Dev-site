@@ -3035,24 +3035,27 @@ background-size: 100% 100%; }
 /* ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start-flawless */
 .engineering-the-future{
   position: relative;
- padding-bottom: 20%;
+ padding-bottom: 15%;
   overflow: hidden;
 }
 
 /* 🔥 animated image only */
 .moving-bg{
-  position:absolute;
-  left:50%;
-  top:174%;
-  transform:translate(-50%, -50%);
-  z-index:-3;
-  overflow-y: hidden;
+     position: absolute;
+    left: 50%;
+    /* top: 174%; */
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    overflow-y: hidden;
+    /* bottom: -3%; */
+    /* padding-top: 1883px; */
+    margin-top: 93%;
 
 }
 
 .moving-bg img{
-  width:2002px;
-  height:2002px;
+  width:2026px;
+  height:2026px;
   border-radius:50%;
   animation: rotateImg 12s linear infinite;
   transform-origin:center;
