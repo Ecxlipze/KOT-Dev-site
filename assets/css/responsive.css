@@ -955,6 +955,45 @@ text-align: center !important;
   body .bg-overlap-img{
     display: none !important;
   }
+  .mobile-view-flawlessx-bg img{
+   display: block !important;
+  width: 100%;
+  }
+  .what-we-offer-flawless h2{
+    font-family: 'Montserrat-Bold'!important;
+
+font-size: 30px!important;
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+color: #17D4FF!important;
+
+  }
+  .what-we-offer-flawless{
+padding-left: 2% !important;
+padding-right: 2% !important;
+  }
+  .what-we-offer-flawless p {
+      font-family: 'Montserrat-Regular'!important;
+
+font-size: 13px !important;
+
+line-height: 100%!important;
+letter-spacing: 0% !important;
+text-align: center !important;
+
+  }
+  .chalenges-we-solve-text h2{
+    font-family: 'Montserrat-Bold'!important;
+
+font-size: 30px!important;
+padding-top: 0% !important;
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center;
+font-variant: small-caps!important;
+color: #17D4FF!important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1609,11 +1648,36 @@ color: #000000;
   }
 
   .engineering-the-future-heading h2{
-    font-size: 40px;
+    font-family: 'Montserrat-Bold'!important;
+
+font-size: clamp(35px , 4vw, 40px)!important;
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+
   }
 
   .engineering-the-future-paragraph p{
-    font-size: 18px;
+    font-family: 'Montserrat-Regular'!important;
+
+font-size: clamp(15px , 3vw, 17px)!important;
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+;
+  }
+  .chalenges-we-solve-text h2{
+    color: #17D4FF!important;
+    font-family: 'Montserrat-Bold'!important;
+
+font-size: 40px!important;
+
+line-height: 100%!important;
+letter-spacing: 0%!important;
+text-align: center!important;
+font-variant: small-caps!important;
+
   }
 }
 @media (max-width: 1024px) and (min-width: 992px){
