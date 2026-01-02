@@ -1394,13 +1394,7 @@ padding-top: 10%;
         padding-bottom: 0%;
         
 }
-.engineering-the-future{
-  aspect-ratio: 767/500;
-    height: auto;
-          background-size: 1350px 1250px !important;
-        background-position-y: 2% !important;
-        background-position-x: 68% !important;
-}
+
 .images-flawless-section-1 img{
   aspect-ratio: 263 / 139;
   max-width: 283px !important;
@@ -1431,7 +1425,14 @@ aspect-ratio:128 / 64;
   max-width: 730px !important;
   height: auto !important;
 }
-.engineering-the-future-heading  h2{
+/* .engineering-the-future{
+  aspect-ratio: 767/500;
+    height: auto;
+          background-size: 1350px 1250px !important;
+        background-position-y: 2% !important;
+        background-position-x: 68% !important;
+} */
+/* .engineering-the-future-heading  h2{
   font-family: 'Montserrat-Bold' !important;
 
 font-size: 40px !important;
@@ -1444,8 +1445,8 @@ letter-spacing: 0%!important;
         padding-left: 4% !important;
         padding-bottom: 2% !important;
         padding-right: 17% !important;
-}
-.engineering-the-future-paragraph p{
+} */
+/* .engineering-the-future-paragraph p{
   font-family: 'Montserrat-Regular' !important;
 
 font-size: 15px !important;
@@ -1458,10 +1459,10 @@ padding-top: 3% !important;
         padding-bottom: 2% !important;
         padding-right: 20% !important;
     
-}
-.engineering-the-future-btn{
+} */
+/* .engineering-the-future-btn{
   margin-left: 28% !important;
-}
+} */
 .what-we-offer-flawless{
   margin-top: 15%;
 }
