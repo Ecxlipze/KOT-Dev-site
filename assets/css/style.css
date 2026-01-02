@@ -3258,8 +3258,9 @@ max-width: 486px;
   background-repeat: no-repeat;
 }
 
-.bg-overlap-img{
+body .bg-overlap-img{
   margin-top: -12%;
+  display: block;
 }
 
 .images-flawless-section-1 img{

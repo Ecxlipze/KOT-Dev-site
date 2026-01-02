@@ -952,7 +952,7 @@ text-align: center !important;
    
   }
 
-  .bg-overlap-img{
+  body .bg-overlap-img{
     display: none !important;
   }
 }
