@@ -2115,13 +2115,14 @@ margin-bottom: 40px;
   font-size: clamp(2.0rem, 4.5vw, 3.6rem);
   font-weight: 800;
   line-height: 1.1;
-  max-width: 14ch;
+  max-width: 18ch;
 }
 
 .digi-content p {
   font-size: clamp(1.2rem, 1.4vw, 1.8rem) !important;
-  line-height: 1.6;
-  max-width: 52ch;
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 46ch;
 }
 
 /* ---------- IMAGE ---------- */
