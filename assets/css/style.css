@@ -3049,13 +3049,13 @@ background-size: 100% 100%; }
     overflow-y: hidden;
     /* bottom: -3%; */
     /* padding-top: 1883px; */
-    margin-top: 93%;
+    margin-top: 90%;
 
 }
 
 .moving-bg img{
   /* width:2026px; */
-      height: 568vh;
+      height: 320vh;
   border-radius:50%;
   animation: rotateImg 12s linear infinite;
   transform-origin:center;
