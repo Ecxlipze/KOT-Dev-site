@@ -3295,24 +3295,14 @@ max-width: 486px;
 
 @media (max-width: 991px){
 
-  .moving-bg img{
-    width: clamp(800px, 180vw, 1600px);
-  }
 
-  .engineering-the-future-heading h2{
-    font-size: 40px;
-  }
-
-  .engineering-the-future-paragraph p{
-    font-size: 18px;
-  }
 }
 
 /* ===============================
    MOBILE RESPONSIVE (375px SAFE)
 ================================ */
 
-@media (max-width: 576px){
+/* @media (max-width: 576px){
 
   .engineering-the-future{
     padding-bottom: 35%;
@@ -3345,7 +3335,7 @@ max-width: 486px;
   .bg-overlap-img{
     margin-top: -20%;
   }
-}
+} */
 
 
 .what-we-offer-flawless{
@@ -3406,13 +3396,28 @@ width: 100%;
 .card-flawless-btn a{
   font-family: 'Montserrat-Bold';
 font-size: 13px;
-leading-trim: NONE;
+
 line-height: 100%;
 letter-spacing: 0%;
 text-decoration: none;
 color: #000000;
 }
+/* challanges */
+.chalenges-we-solve-text h2{
+  font-family: 'Montserrat-Bold';
+padding-top: 5%;
+font-size: 42px;
 
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+font-variant: small-caps;
+color: rgba(1, 79, 133, 1);
+}
+.chalanges-we-solve-image img{
+  width: 100%;
+  height: auto;
+}
 /* quality-flawless */
 .quality-flawless-bg{
   background-image: url(../images/Flawless/Frame171277067.png);
@@ -3423,9 +3428,10 @@ color: #000000;
 }
 .quality-flawless-bg h2{
   font-family: 'Montserrat-Bold';
-font-size: 292px;
+font-size: clamp(64px, 22vw, 295px);
+
 leading-trim: NONE;
-line-height: 266px;
+line-height: 200px;
 letter-spacing: 0%;
 text-align: center;
 background: linear-gradient(100.31deg, #44DCFF 6.12%, #008EAF 100%);
