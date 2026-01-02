@@ -11,6 +11,10 @@
   margin-bottom: 30px;
 }
 
+.kot-footer-brand img {
+  content: url("../images/kotlogo.png");
+}
+
 .kot-footer-tagline {
   font-size: 12px;
   letter-spacing: 1px;
