@@ -3054,8 +3054,8 @@ background-size: 100% 100%; }
 }
 
 .moving-bg img{
-  width:2026px;
-  height:2026px;
+  /* width:2026px; */
+      height: 568vh;
   border-radius:50%;
   animation: rotateImg 12s linear infinite;
   transform-origin:center;
