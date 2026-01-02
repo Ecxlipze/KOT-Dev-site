@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Yellow box (Top Box) */
+        .yellow-box {
+            background-color: yellow;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        /* Red box (Middle Box) */
+        .red-box {
+            background-color: red;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        /* Blue and Yellow boxes at the bottom (Side-by-side boxes) */
+        .bottom-boxes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .blue-box, .yellow-box-bottom {
+            padding: 20px;
+            width: 48%;  /* To make them side by side with some space between */
+        }
+
+        .blue-box {
+            background-color: blue;
+            color: white;
+        }
+
+        .yellow-box-bottom {
+            background-color: yellow;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .bottom-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .blue-box, .yellow-box-bottom {
+                width: 100%;  /* Stacks the boxes vertically on smaller screens */
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Yellow Box (Top) -->
+        <div class="yellow-box">
+            <p>Text</p>
+        </div>
+
+        <!-- Red Box (Middle) -->
+        <div class="red-box">
+            <p>Content for the red box</p>
+        </div>
+
+        <!-- Bottom Boxes (Side-by-side) -->
+        <div class="bottom-boxes">
+            <div class="blue-box">
+                <p>Blue Box</p>
+            </div>
+            <div class="yellow-box-bottom">
+                <p>Yellow Box</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
