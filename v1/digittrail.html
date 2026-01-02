@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIGITTRAIL</title>
-    <link rel="stylesheet" href="../assets/css/styles2-dark.css">
+    <link rel="stylesheet" href="../assets/css/styles2.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+    
     <section class="digittrail-section">
         <div class="container text-center">
 
@@ -31,7 +33,7 @@
 
             <!-- Image Card -->
             <div class="digittrail-card-wrapper">
-                <img src="../assets/images/digi-light/digibannerdark.png" alt="Digittrail Content"
+                <img src="../assets/images/digi-light/digibanner.png" alt="Digittrail Content"
                     class="img-fluid digittrail-card">
             </div>
 
@@ -129,7 +131,7 @@
                         <h4>Search Engine Optimization </h4>
                         <h6> Being Found When It Matters Most </h6>
 
-                        <p>Visibility is the beginning of opportunity. Our SEO strategies ensure your brand appears
+                        <p>Our SEO strategies ensure your brand appears
                             exactly when your audience is searching, built on strong foundations and long-term
                             relevance.</p>
                         <a href="#">READ MORE</a>
@@ -138,7 +140,7 @@
 
                 <div class="col-lg-4 col-md-6 dgx-card dgx-hide-md">
                     <div class="dgx-card-inner dgx-bg-8">
-                        <h4>Social Media <br> Marketing </h4>
+                        <h4>Social Media  Marketing </h4>
                         <h6>Turning Audiences into Communities </h6>
                         <p>Social media is not about posting — it’s about connection. We help brands spark
                             conversations, build loyalty, and grow meaningful communities.</p>
@@ -156,22 +158,42 @@
         </div>
     </section>
 
-    <section class="digittrail-section2">
-  <div class="digi-content">
-    <h2>What  Sets  DigitTrail  Apart</h2>
+<section class="digittrail-section2">
+  <div class="container">
 
-    <p>
-      We combine clarity in design with precision in execution, bringing high-impact solutions to businesses that are ready to scale.
-    </p>
+    <!-- Content -->
+    <div class="digi-content">
+      <h2>
+        What<br>
+        Sets 👍<br>
+        DigitTrail Apart
+      </h2>
+
+      <p>
+        We combine clarity in design with precision in execution, bringing
+        high-impact solutions to businesses that are ready to scale.
+      </p>
+    </div>
   </div>
+    <!-- Image -->
+    <div class="digi-visual">
+      <img src="../assets/images/digi-light/digi2.png" alt="DigitTrail graphic">
+    </div>
 
-  <div class="visual">
-    <img src="../assets/images/digi-light/digi2dark.png" alt="DigitTrail differentiators graphic" />
   </div>
 </section>
 
 
    </section>
+    <div id="global-footer"></div>
+
+<script>
+  fetch('../components/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-footer').innerHTML = data;
+    });
+</script>
 
 
     <!-- Bootstrap JS -->
