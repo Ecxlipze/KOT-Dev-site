@@ -12,53 +12,55 @@ body{
 }
 
 /* ================= NAV BAR ================= */
-.main-nav{
+.kot-main-header-nav-bar{
     background:#0A71B9;
     position:relative;
     --hover-color:#8f4b36;
 }
 
-.nav-inner{
+.kot-main-header-nav-bar-inner{
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-/* Wrapper for LI + borders */
-.nav-item-wrapper{
+/* Wrapper */
+.kot-main-header-nav-bar-item-wrapper{
     display:flex;
     align-items:center;
     position:relative;
 }
 
-/* Hover background (LI + borders) */
-.nav-item-wrapper::before{
+/* Hover background */
+.kot-main-header-nav-bar-item-wrapper::before{
     content:"";
     position:absolute;
     inset:0;
+    top:10%;
     background:var(--hover-color);
     opacity:0;
     z-index:0;
-    transition:opacity 0.5s ease;
-    top: 10%;
+    transition:opacity .4s ease;
 }
 
-.nav-item-wrapper.hovered::before{
+.kot-main-header-nav-bar-item-wrapper.hovered::before{
     opacity:1;
 }
 
-.nav-item{
+/* Anchor */
+.kot-main-header-nav-bar-item{
     color:#fff;
     padding:14px 16px;
     font-weight:600;
-    cursor:pointer;
     white-space:nowrap;
     position:relative;
     z-index:1;
+    text-decoration:none;
+    display:block;
 }
 
-/* Vertical borders */
-.nav-item-wrapper:not(:last-child)::after{
+/* Borders */
+.kot-main-header-nav-bar-item-wrapper:not(:last-child)::after{
     content:"";
     position:absolute;
     top:10%;
@@ -66,18 +68,15 @@ body{
     width:1px;
     height:80%;
     background:#cfe6f7;
-    z-index:2;
-    transition:opacity 0.3s;
 }
 
-/* Hide borders */
-.nav-item-wrapper.hovered::after,
-.nav-item-wrapper.previous-hide::after{
+.kot-main-header-nav-bar-item-wrapper.hovered::after,
+.kot-main-header-nav-bar-item-wrapper.previous-hide::after{
     opacity:0;
 }
 
 /* ================= MEGA MENU ================= */
-.mega-menu{
+.kot-main-header-nav-bar-mega-menu{
     position:absolute;
     top:100%;
     left:0;
@@ -87,147 +86,298 @@ body{
     background:var(--hover-color);
     overflow:hidden;
     z-index:10;
-    transition:height 0.4s ease;
+    transition:height .4s ease;
 }
 
-.mega-menu.show{
-    height:260px;
+.kot-main-header-nav-bar-mega-menu.show{
+    height:320px;
 }
 
-.mega-content{
+/* ================= CONTENT ================= */
+.kot-main-header-nav-bar-mega-content{
     max-width:1140px;
     margin:auto;
     padding:30px;
     color:#fff;
-    display:grid;
-    grid-template-columns:1fr 2fr;
     opacity:0;
-    transform:translateY(-20px);
-    transition:opacity 0.3s ease, transform 0.3s ease;
+    transform:translateY(-15px);
+    transition:.3s;
 }
 
-.mega-menu.show .mega-content{
+.kot-main-header-nav-bar-mega-menu.show 
+.kot-main-header-nav-bar-mega-content{
     opacity:1;
     transform:translateY(0);
 }
 
-.mega-content .left{
-    font-size:24px;
-    font-weight:700;
-    text-transform:uppercase;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.kot-main-header-nav-bar-mega-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 2fr;
+    gap:30px;
 }
 
-.mega-content .right ul{
+.kot-main-header-nav-bar-col-1 img{
+    width:100%;
+    border-radius:6px;
+    margin-bottom:12px;
+}
+
+.kot-main-header-nav-bar-col-1 p,
+.kot-main-header-nav-bar-col-2 p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.kot-main-header-nav-bar-col-2 h3{
+    margin-top:0;
+}
+
+.kot-main-header-nav-bar-mega-btn{
+    display:inline-block;
+    padding:10px 18px;
+    background:#fff;
+    color:#000;
+    font-weight:600;
+    border-radius:4px;
+    text-decoration:none;
+    margin-top:10px;
+}
+
+.kot-main-header-nav-bar-mega-btn.outline{
+    background:transparent;
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.kot-main-header-nav-bar-list-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.kot-main-header-nav-bar-list-col ul{
     list-style:none;
     padding:0;
     margin:0;
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:12px 40px;
 }
 
-.mega-content .right li{
-    position:relative;
-    padding-left:20px;
+.kot-main-header-nav-bar-list-col li{
+    margin-bottom:10px;
 }
 
-.mega-content .right li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
+.kot-main-header-nav-bar-list-col a{
     color:#fff;
+    text-decoration:none;
+    font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="main-nav" id="nav">
-  <div class="nav-inner">
-    <div class="nav-item-wrapper"><div class="nav-item">CORPORATE</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">SERVICES</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">CONSULTANCY</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">MARKETPLACE</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">SPOTLIGHTS</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">SUPPORT</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">CAREER</div></div>
-    <div class="nav-item-wrapper"><div class="nav-item">CONTACT</div></div>
+<div class="kot-main-header-nav-bar" id="nav">
+  <div class="kot-main-header-nav-bar-inner">
+
+    <!-- CORPORATE -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Corporate"
+        data-text="Enterprise-grade digital solutions."
+        data-heading="Corporate Solutions"
+        data-desc="Robust systems for large organizations."
+        data-left="ERP,CRM,HRMS,Intranet,Compliance"
+        data-right="Strategy,Governance,Security,Audits,Support">
+        CORPORATE
+      </a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Services"
+        data-text="Managed IT and digital services."
+        data-heading="Our Services"
+        data-desc="From development to deployment."
+        data-left="Web Apps,Mobile Apps,Cloud,DevOps,UI UX"
+        data-right="Maintenance,Monitoring,Scaling,Upgrades,Support">
+        SERVICES
+      </a>
+    </div>
+
+    <!-- CONSULTANCY -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Consultancy"
+        data-text="Expert consulting services."
+        data-heading="Consultancy"
+        data-desc="Guiding digital transformation."
+        data-left="IT Audit,Roadmap,Risk,Architecture,Planning"
+        data-right="Optimization,Advisory,Security,Governance,QA">
+        CONSULTANCY
+      </a>
+    </div>
+
+    <!-- MARKETPLACE -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Marketplace"
+        data-text="Technology marketplace solutions."
+        data-heading="Marketplace"
+        data-desc="Products that power business."
+        data-left="POS,Plugins,Themes,Integrations,APIs"
+        data-right="Licensing,Updates,Support,Addons,Docs">
+        MARKETPLACE
+      </a>
+    </div>
+
+    <!-- SPOTLIGHTS -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Spotlights"
+        data-text="Featured projects and highlights."
+        data-heading="Spotlights"
+        data-desc="Showcasing innovation."
+        data-left="Case Studies,Success Stories,Awards,Media,Events"
+        data-right="Highlights,Press,News,Gallery,Timeline">
+        SPOTLIGHTS
+      </a>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Support"
+        data-text="Dedicated customer support."
+        data-heading="Support Center"
+        data-desc="We are here to help."
+        data-left="Help Desk,Documentation,FAQs,Tickets,Community"
+        data-right="Live Chat,Email,SLA,Updates,Status">
+        SUPPORT
+      </a>
+    </div>
+
+    <!-- CAREER -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Career"
+        data-text="Join our growing team."
+        data-heading="Careers"
+        data-desc="Build your future with us."
+        data-left="Open Roles,Internships,Culture,Benefits,Life@KOT"
+        data-right="Apply Now,HR Policies,Training,Growth,Events">
+        CAREER
+      </a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#"
+        data-img="https://via.placeholder.com/300x160?text=Contact"
+        data-text="Get in touch with us."
+        data-heading="Contact Us"
+        data-desc="Let’s start a conversation."
+        data-left="Email,Phone,Locations,Support,Enquiry"
+        data-right="Request Quote,Meet Team,Office Map,Hours,Directions">
+        CONTACT
+      </a>
+    </div>
+
   </div>
 
   <!-- MEGA MENU -->
-  <div class="mega-menu" id="megaMenu">
-    <div class="mega-content">
-      <div class="left"></div>
-      <div class="right"><ul></ul></div>
+  <div class="kot-main-header-nav-bar-mega-menu" id="megaMenu">
+    <div class="kot-main-header-nav-bar-mega-content">
+      <div class="kot-main-header-nav-bar-mega-grid">
+
+        <div class="kot-main-header-nav-bar-col-1">
+          <img id="mm-img">
+          <p id="mm-text"></p>
+          <a href="#" class="kot-main-header-nav-bar-mega-btn">Learn More</a>
+        </div>
+
+        <div class="kot-main-header-nav-bar-col-2">
+          <h3 id="mm-heading"></h3>
+          <p id="mm-desc"></p>
+          <a href="#" class="kot-main-header-nav-bar-mega-btn outline">Get Started</a>
+        </div>
+
+        <div class="kot-main-header-nav-bar-col-3">
+          <div class="kot-main-header-nav-bar-list-row">
+            <div class="kot-main-header-nav-bar-list-col">
+              <ul id="mm-left"></ul>
+            </div>
+            <div class="kot-main-header-nav-bar-list-col">
+              <ul id="mm-right"></ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
+
 </div>
 
 <script>
 const nav = document.getElementById("nav");
 const megaMenu = document.getElementById("megaMenu");
-const leftDiv = megaMenu.querySelector(".left");
-const rightUl = megaMenu.querySelector(".right ul");
 
-/* Mega menu data */
-const megaData = {
-  "CORPORATE": ["About Us","Leadership","Company Profile"],
-  "SERVICES": ["POS Systems","E-Commerce","Healthcare Systems","CMS","LMS"],
-  "CONSULTANCY": ["Business Strategy","IT Consulting","Digital Transformation"],
-  "MARKETPLACE": ["Point of Sales","Ecommerce Platforms","Healthcare Systems","Content Management","LMS"],
-  "SPOTLIGHTS": ["Projects","Highlights","Updates"],
-  "SUPPORT": ["Technical Support","Help Desk","Maintenance"],
-  "CAREER": ["Jobs","Internships","Life at KOT"],
-  "CONTACT": ["Contact Info","Locations","Support Desk"]
-};
+const img = document.getElementById("mm-img");
+const text = document.getElementById("mm-text");
+const heading = document.getElementById("mm-heading");
+const desc = document.getElementById("mm-desc");
+const left = document.getElementById("mm-left");
+const right = document.getElementById("mm-right");
 
-/* Hover colors */
 const hoverColors = {
-  "CORPORATE": "#28a745",
-  "SERVICES": "#fd7e14",
-  "CONSULTANCY": "#0d6efd",
-  "MARKETPLACE": "#6610f2",
-  "SPOTLIGHTS": "#20c997",
-  "SUPPORT": "#ffc107",
-  "CAREER": "#dc3545",
-  "CONTACT": "#6c757d"
+  CORPORATE:"#28a745",
+  SERVICES:"#fd7e14",
+  CONSULTANCY:"#0d6efd",
+  MARKETPLACE:"#6610f2",
+  SPOTLIGHTS:"#20c997",
+  SUPPORT:"#ffc107",
+  CAREER:"#dc3545",
+  CONTACT:"#6c757d"
 };
 
-document.querySelectorAll(".nav-item-wrapper").forEach((wrapper,i,arr)=>{
-  const text = wrapper.innerText.trim();
+document.querySelectorAll(".kot-main-header-nav-bar-item")
+.forEach((item,i,arr)=>{
 
-  wrapper.addEventListener("mouseenter",()=>{
-    arr.forEach(w=>{
-      w.classList.remove("hovered","previous-hide");
-    });
+  item.addEventListener("mouseenter",()=>{
 
-    wrapper.classList.add("hovered");
-    if(i>0) arr[i-1].classList.add("previous-hide");
+    document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+      .forEach(w=>w.classList.remove("hovered","previous-hide"));
 
-    // set content
-    leftDiv.textContent = text;
-    rightUl.innerHTML = megaData[text].map(v=>`<li>${v}</li>`).join("");
+    const wrap = item.parentElement;
+    wrap.classList.add("hovered");
+    if(i>0) arr[i-1].parentElement.classList.add("previous-hide");
 
-    // 🎨 set color globally
-    nav.style.setProperty("--hover-color", hoverColors[text] || "#8f4b36");
+    nav.style.setProperty(
+      "--hover-color",
+      hoverColors[item.innerText.trim()] || "#8f4b36"
+    );
 
-    megaMenu.style.display = "block";
-    setTimeout(()=> megaMenu.classList.add("show"),10);
+    img.src = item.dataset.img;
+    text.innerText = item.dataset.text;
+    heading.innerText = item.dataset.heading;
+    desc.innerText = item.dataset.desc;
+
+    left.innerHTML = item.dataset.left
+      .split(",").map(v=>`<li><a href="#">📌 ${v}</a></li>`).join("");
+
+    right.innerHTML = item.dataset.right
+      .split(",").map(v=>`<li><a href="#">⭐ ${v}</a></li>`).join("");
+
+    megaMenu.style.display="block";
+    setTimeout(()=>megaMenu.classList.add("show"),10);
   });
 });
 
 nav.addEventListener("mouseleave",()=>{
-  document.querySelectorAll(".nav-item-wrapper").forEach(w=>{
-    w.classList.remove("hovered","previous-hide");
-  });
-
-  nav.style.removeProperty("--hover-color");
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    .forEach(w=>w.classList.remove("hovered","previous-hide"));
   megaMenu.classList.remove("show");
-
-  setTimeout(()=> megaMenu.style.display = "none",300);
+  setTimeout(()=>megaMenu.style.display="none",300);
 });
 </script>
 
