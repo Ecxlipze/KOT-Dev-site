@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KOT Enterprises Mega Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= NAV BAR ================= */
+.main-nav{
+    background:#0A71B9;
+    position:relative;
+    --hover-color:#8f4b36;
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Wrapper for LI + borders */
+.nav-item-wrapper{
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+/* Hover background (LI + borders) */
+.nav-item-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:var(--hover-color);
+    opacity:0;
+    z-index:0;
+    transition:opacity 0.5s ease;
+    top: 10%;
+}
+
+.nav-item-wrapper.hovered::before{
+    opacity:1;
+}
+
+.nav-item{
+    color:#fff;
+    padding:14px 16px;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+    position:relative;
+    z-index:1;
+}
+
+/* Vertical borders */
+.nav-item-wrapper:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    top:10%;
+    right:0;
+    width:1px;
+    height:80%;
+    background:#cfe6f7;
+    z-index:2;
+    transition:opacity 0.3s;
+}
+
+/* Hide borders */
+.nav-item-wrapper.hovered::after,
+.nav-item-wrapper.previous-hide::after{
+    opacity:0;
+}
+
+/* ================= MEGA MENU ================= */
+.mega-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:0;
+    display:none;
+    background:var(--hover-color);
+    overflow:hidden;
+    z-index:10;
+    transition:height 0.4s ease;
+}
+
+.mega-menu.show{
+    height:260px;
+}
+
+.mega-content{
+    max-width:1140px;
+    margin:auto;
+    padding:30px;
+    color:#fff;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    opacity:0;
+    transform:translateY(-20px);
+    transition:opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mega-menu.show .mega-content{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.mega-content .left{
+    font-size:24px;
+    font-weight:700;
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.mega-content .right ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:12px 40px;
+}
+
+.mega-content .right li{
+    position:relative;
+    padding-left:20px;
+}
+
+.mega-content .right li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-item-wrapper"><div class="nav-item">CORPORATE</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">SERVICES</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">CONSULTANCY</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">MARKETPLACE</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">SPOTLIGHTS</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">SUPPORT</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">CAREER</div></div>
+    <div class="nav-item-wrapper"><div class="nav-item">CONTACT</div></div>
+  </div>
+
+  <!-- MEGA MENU -->
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-content">
+      <div class="left"></div>
+      <div class="right"><ul></ul></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const nav = document.getElementById("nav");
+const megaMenu = document.getElementById("megaMenu");
+const leftDiv = megaMenu.querySelector(".left");
+const rightUl = megaMenu.querySelector(".right ul");
+
+/* Mega menu data */
+const megaData = {
+  "CORPORATE": ["About Us","Leadership","Company Profile"],
+  "SERVICES": ["POS Systems","E-Commerce","Healthcare Systems","CMS","LMS"],
+  "CONSULTANCY": ["Business Strategy","IT Consulting","Digital Transformation"],
+  "MARKETPLACE": ["Point of Sales","Ecommerce Platforms","Healthcare Systems","Content Management","LMS"],
+  "SPOTLIGHTS": ["Projects","Highlights","Updates"],
+  "SUPPORT": ["Technical Support","Help Desk","Maintenance"],
+  "CAREER": ["Jobs","Internships","Life at KOT"],
+  "CONTACT": ["Contact Info","Locations","Support Desk"]
+};
+
+/* Hover colors */
+const hoverColors = {
+  "CORPORATE": "#28a745",
+  "SERVICES": "#fd7e14",
+  "CONSULTANCY": "#0d6efd",
+  "MARKETPLACE": "#6610f2",
+  "SPOTLIGHTS": "#20c997",
+  "SUPPORT": "#ffc107",
+  "CAREER": "#dc3545",
+  "CONTACT": "#6c757d"
+};
+
+document.querySelectorAll(".nav-item-wrapper").forEach((wrapper,i,arr)=>{
+  const text = wrapper.innerText.trim();
+
+  wrapper.addEventListener("mouseenter",()=>{
+    arr.forEach(w=>{
+      w.classList.remove("hovered","previous-hide");
+    });
+
+    wrapper.classList.add("hovered");
+    if(i>0) arr[i-1].classList.add("previous-hide");
+
+    // set content
+    leftDiv.textContent = text;
+    rightUl.innerHTML = megaData[text].map(v=>`<li>${v}</li>`).join("");
+
+    // 🎨 set color globally
+    nav.style.setProperty("--hover-color", hoverColors[text] || "#8f4b36");
+
+    megaMenu.style.display = "block";
+    setTimeout(()=> megaMenu.classList.add("show"),10);
+  });
+});
+
+nav.addEventListener("mouseleave",()=>{
+  document.querySelectorAll(".nav-item-wrapper").forEach(w=>{
+    w.classList.remove("hovered","previous-hide");
+  });
+
+  nav.style.removeProperty("--hover-color");
+  megaMenu.classList.remove("show");
+
+  setTimeout(()=> megaMenu.style.display = "none",300);
+});
+</script>
+
+</body>
+</html>

@@ -5,10 +5,7 @@
 <title>KOT Enterprises Header</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- FONT AWESOME -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -21,120 +18,194 @@
     padding:6px 0;
 }
 
-.top-marquee marquee{
-    font-weight:500;
-}
-
-/* ================= MAIN HEADER ================= */
-.main-header{
-    background:#fff;
-    display:flex;
-    flex-direction:column;
-}
-
 /* ================= TOP LINKS ================= */
-.header-top-links{
+.top-links-wrapper{
+    width:100%;
+    position:relative;
+}
+
+.top-links-right{
+    width:39%;
+    margin-left:49%;
     background:#0A71B9;
-    width:40%;
-    padding:6px 15px;
-    margin-left:auto;
+    padding:6px 60px 6px 15px;
     display:flex;
     align-items:center;
     justify-content:flex-end;
-    gap:12px;
-    flex-wrap:wrap;
+    gap:10px;
 }
 
-.header-top-links a{
-    font-family: Montserrat;
-    font-size:12.55px;
+.top-links-right a{
     color:#fff;
-    text-decoration:none;
+    font-size:12.5px;
     font-weight:500;
+    text-decoration:none;
 }
 
-.header-top-links a:hover{
-    text-decoration:underline;
-}
-
-.header-top-links img{
-    width:12px;
-    height:7px;
-}
-
-/* ================= DROPDOWN ================= */
-.header-dropdown button{
-    background:transparent;
-    border:none;
-    color:#fff;
-    padding:0;
-}
-
-.header-dropdown .profile-img{
-    width:18px;
-    height:18px;
-}
-
-.header-dropdown .dropdown-menu{
-    font-size:13px;
-    min-width:140px;
-}
-
-/* ================= LOGO + SEARCH ================= */
-.header-bottom{
-    padding:15px 0;
-}
-
-.logo img{
-    height:55px;
-}
-
-/* SEARCH */
-.search-box{
-    position:relative;
-    width:260px;
-}
-
-.search-box input{
-    border-radius:7px;
-    padding-right:40px;
-}
-
-.search-box button{
+/* ================= ACTIONS ================= */
+.top-actions{
     position:absolute;
-    right:8px;
+    right:15px;
     top:50%;
     transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ================= LANGUAGE ================= */
+.dropdown{
+    border:1px solid #000;
+    border-top:none;
+    width:94px;
+    height:32px;
+    border-radius:0 0 5px 5px;
+}
+
+.lang-dropdown button{
     background:none;
     border:none;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    gap:6px;
 }
 
-/* ================= NAV BAR ================= */
-.nav-bar{
+.lang-dropdown img{
+    width:18px;
+    height:12px;
+}
+
+/* ================= TOGGLE ================= */
+.switch{
+    width:44px;
+    height:22px;
+    position:relative;
+}
+.switch input{display:none;}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#fff;
+    border-radius:20px;
+    cursor:pointer;
+    border:1× solid #0A71B9;
+}
+.slider:before{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    left:3px;
+    top:3px;
+    background:#0A71B9;
+    border-radius:50%;
+    transition:.3s;
+}
+.switch input:checked + .slider{
     background:#0A71B9;
 }
+.switch input:checked + .slider:before{
+    transform:translateX(22px);
+    background:#fff;
+}
 
-.nav-bar a{
+/* ================= LOGO ================= */
+.header-main{padding:15px 0;}
+.logo img{height:55px;}
+.search-box{
+    width:260px;
+    margin-left:auto;
+    position:relative;
+}
+.search-box button{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+}
+
+/* ================= NAV ================= */
+.main-nav{
+    background:#0A71B9;
+    position:relative;
+}
+
+.main-nav .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0px;
+}
+
+.main-nav a{
     color:#fff;
-    padding:12px 18px;
+    padding:12px 16px;
     font-weight:600;
     text-decoration:none;
 }
 
-.nav-bar a:hover{
-    background:#1565c0;
+.main-nav a:hover{
+background-color: #8f4b36;
+}
+.divider{
+    color:#cfe6f7;
 }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:768px){
-    .header-top-links{
-        width:100%;
-        justify-content:center;
-    }
+/* ================= MEGA MENU ================= */
+.mega-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    display:none;
+    background:#8f4b36;
+    z-index:999;
+}
+.main-nav:hover .mega-menu{
+    display:block;
+}
+.mega-menu .container{
+    max-width:1140px;
+}
 
-    .search-box{
-        width:100%;
-    }
+.mega-left{
+   background:#9a523b;
+    min-height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.mega-right{
+     padding:30px 40px;
+    color:#fff;
+}
+
+.mega-right ul{
+     list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px 40px;
+}
+
+.mega-right li{
+   position:relative;
+    padding-left:22px;
+}
+.mega-right li:before{
+    content:"✓";
+    position:absolute;
+    left:0;
 }
 
 </style>
@@ -142,96 +213,113 @@
 
 <body>
 
-<!-- ================= TOP MARQUEE ================= -->
+<!-- TOP MARQUEE -->
 <div class="top-marquee">
     <div class="container">
-        <marquee behavior="scroll" direction="left">
-            Empowering businesses to streamline operations, reduce inefficiencies, and achieve sustainable growth through tailored solutions.
-        </marquee>
+        <marquee>Empowering businesses to streamline operations and grow.</marquee>
     </div>
 </div>
 
-<!-- ================= MAIN HEADER ================= -->
-<div class="main-header">
-
-    <!-- TOP LINKS -->
-     <div class="header-top-links">
-    <div class="header-top-links-main">
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
+<!-- TOP LINKS -->
+<div class="top-links-wrapper">
+    <div class="top-links-right">
         <a href="#">Home</a>
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
-        <a href="#">Startups</a>
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
-        <a href="#">E-Life</a>
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
-        <a href="#">FAQ</a>
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
-        <a href="#">Contact</a>
-
-        <span><img src="assets/images/Header/Vector (1).png"></span>
-        <a href="#">Site Map</a>
-
-        
-
+       <span><img src="assets/images/Header/Vector (1).png" alt=""></span> <a href="#">Startups</a>
+       <span><img src="assets/images/Header/Vector (1).png" alt=""></span> <a href="#">E-Life</a>
+       <span><img src="assets/images/Header/Vector (1).png" alt=""></span> <a href="#">FAQ</a>
+       <span><img src="assets/images/Header/Vector (1).png" alt=""></span> <a href="#">Contact</a>
+      <span><img src="assets/images/Header/Vector (1).png" alt=""></span>  <a href="#">Site Map</a>
     </div>
-    <!-- 🔽 DROPDOWN -->
-        <div class="dropdown header-dropdown">
-            <button class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
-                <img src="assets/images/Header/user.png" class="profile-img me-1">
+
+    <div class="top-actions">
+        <div class="dropdown lang-dropdown">
+            <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="assets/images/Header/pak.png"> اردو
             </button>
-
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">ABC</a></li>
-                <li><a class="dropdown-item" href="#">BFD</a></li>
-                <li><a class="dropdown-item" href="#">DFR</a></li>
-            </ul>
         </div>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
     </div>
-    <!-- LOGO + SEARCH -->
-    <div class="header-bottom">
-        <div class="container">
-            <div class="row align-items-center">
+</div>
 
-                <div class="col-md-4 col-12 mb-2 mb-md-0">
-                    <div class="logo">
-                        <img src="assets/images/Header/support-2.png" alt="KOT Enterprises">
-                    </div>
+<!-- LOGO -->
+<div class="header-main">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 logo">
+                <img src="assets/images/Header/support-2.png">
+            </div>
+            <div class="col-md-6">
+                <div class="search-box">
+                    <input class="form-control" placeholder="Search">
+                    <button><i class="fa fa-search"></i></button>
                 </div>
-
-                <div class="col-md-8 col-12 text-md-end">
-                    <div class="search-box ms-md-auto">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button>
-                            <img src="assets/images/Header/search-icon.png">
-                        </button>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-
 </div>
 
-<!-- ================= NAVIGATION ================= -->
-<div class="nav-bar">
-    <div class="container d-flex justify-content-center flex-wrap">
-        <a href="#">CORPORATE</a>
-        <a href="#">SERVICES</a>
-        <a href="#">CONSULTANCY</a>
-        <a href="#">SUPPORT</a>
-        <a href="#">CAREER</a>
-        <a href="#">CONTACT</a>
+<!-- NAV + MEGA -->
+<div class="main-nav">
+    <div class="container">
+        <a class="menu-item" data-key="corporate">CORPORATE</a><span class="divider">|</span>
+        <a class="menu-item" data-key="services">SERVICES</a><span class="divider">|</span>
+        <a class="menu-item" data-key="consultancy">CONSULTANCY</a><span class="divider">|</span>
+        <a class="menu-item" data-key="support">SUPPORT</a><span class="divider">|</span>
+        <a class="menu-item" data-key="career">CAREER</a><span class="divider">|</span>
+        <a class="menu-item" data-key="contact">CONTACT</a>
+    </div>
+
+    <div class="mega-menu" id="megaMenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mega-left" id="megaLeft"></div>
+                <div class="col-md-6 mega-right" id="megaRight"></div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- BOOTSTRAP JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const data = {
+    corporate:["About Us","Leadership","Company Profile"],
+    services:["POS Systems","E-Commerce","Healthcare Systems","CMS","LMS"],
+    consultancy:["Business Strategy","IT Consulting","Digital Transformation"],
+    support:["Technical Support","Help Desk","Maintenance"],
+    career:["Jobs","Internships","Life at KOT"],
+    contact:["Contact Info","Locations","Support Desk"]
+};
+
+const megaMenu = document.getElementById("megaMenu");
+const megaLeft = document.getElementById("megaLeft");
+const megaRight = document.getElementById("megaRight");
+
+document.querySelectorAll(".menu-item").forEach(item=>{
+    item.addEventListener("mouseenter",()=>{
+        const key=item.dataset.key;
+        megaLeft.textContent=key.toUpperCase();
+        megaRight.innerHTML="<ul>"+data[key].map(i=>`<li>${i}</li>`).join("")+"</ul>";
+        megaMenu.style.display="block";
+    });
+});
+
+document.querySelectorAll(".menu-item").forEach(item=>{
+    item.addEventListener("mouseenter",()=>{
+        const key = item.dataset.key;
+        megaLeft.textContent = key;
+        megaRight.innerHTML =
+            "<ul>" +
+            data[key].map(i=>`<li>${i}</li>`).join("") +
+            "</ul>";
+    });
+});
+
+</script>
 
 </body>
 </html>
