@@ -12,12 +12,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
      <link rel="icon" type="image/x-icon" href="assets/images/cardslight/fav.png">
-   
+   <style>
+ .navbar-nav {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.navbar-nav::-webkit-scrollbar { display: none; }
+.navbar-nav .nav-link {
+  white-space: nowrap;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #333;
+}
+.navbar-nav .nav-link:hover { color: #0d6efd; }
+.navbar-brand { font-weight: bold; font-size: 1.5rem; }
+@media(max-width: 992px){ .navbar-nav { flex-wrap: wrap; } }
+   </style>
 </head>
 
 <body>
 <!-- Navbar -->
- <?php require 'public/header.php'; ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MySite</a>
+    <button class="navbar-toggler" type="button" id="navbarToggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home </a></li>
+        <li class="nav-item"><a class="nav-link" href="career.html">Career </a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html"> Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/why-kot.html">Why KOT</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/board-of-directors.html">Board</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/gen-ai.html">Gen AI</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/data-engineering.html">Data Eng</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/audits.html">Audits</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/merchanity.html">Merchy</a></li>
+        <li class="nav-item"><a class="nav-link" href="agileappsservice.html">AgileApps</a></li>
+        <li class="nav-item"><a class="nav-link" href="v1/digittrail.html">DigiTral</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="graphoria.html">Graph</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="WebSculpture.html">Web Sculpture</a></li>
+        <li class="nav-item"><a class="nav-link" href="flawless.html">FlawlessX</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/contact.html">Contact dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/why-kot.html">Why KOT DArk</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/board-of-directors.html">Board dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/gen-ai.html">Gen AI dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/data-engineering.html">Data Eng dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/audits.html">Audits Dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/merchanity.html">Merch Dark</a></li>
+        <li class="nav-item"><a class="nav-link" href="d1/digittrail.html">DigiTral dark</a></li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
  <div class="home-page-banner">
   
 </div>
