@@ -1,17 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KOT Enterprises Mega Menu</title>
+<title>KOT Enterprises Header</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 <style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
+
+/* ================= TOP MARQUEE ================= */
+.top-marquee{
+    background:#0A71B9;
+    color:#fff;
+    font-size:13px;
+    padding:6px 0;
 }
 
-/* ================= NAV BAR ================= */
+/* ================= TOP LINKS ================= */
+.top-links-wrapper{
+    width:100%;
+    position:relative;
+}
+
+.top-links-right{
+    width:39%;
+    margin-left:49%;
+    background:#0A71B9;
+    padding:6px 60px 6px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.top-links-right a{
+    color:#fff;
+    font-size:12.5px;
+    font-weight:500;
+    text-decoration:none;
+}
+
+/* ================= ACTIONS ================= */
+.top-actions{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ================= LANGUAGE ================= */
+.dropdown{
+    border:1px solid #000;
+    border-top:none;
+    width:94px;
+    height:32px;
+    border-radius:0 0 5px 5px;
+}
+
+.lang-dropdown button{
+    background:none;
+    border:none;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.lang-dropdown img{
+    width:18px;
+    height:12px;
+}
+
+/* ================= TOGGLE ================= */
+.switch{
+    width:44px;
+    height:22px;
+    position:relative;
+}
+.switch input{display:none;}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#fff;
+    border-radius:20px;
+    cursor:pointer;
+}
+.slider:before{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    left:3px;
+    top:3px;
+    background:#0A71B9;
+    border-radius:50%;
+    transition:.3s;
+}
+.switch input:checked + .slider{
+    background:#0A71B9;
+}
+.switch input:checked + .slider:before{
+    transform:translateX(22px);
+    background:#fff;
+}
+
+/* ================= LOGO ================= */
+.header-main{padding:15px 0;}
+.logo img{height:55px;}
+.search-box{
+    width:260px;
+    margin-left:auto;
+    position:relative;
+}
+.search-box button{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+}
+
+/* ================================================= */
+/* ================= CODE-2 CSS ===================== */
+/* ================================================= */
+
 .kot-main-header-nav-bar{
     background:#0A71B9;
     position:relative;
@@ -24,14 +144,12 @@ body{
     align-items:center;
 }
 
-/* Wrapper */
 .kot-main-header-nav-bar-item-wrapper{
     display:flex;
     align-items:center;
     position:relative;
 }
 
-/* Hover background */
 .kot-main-header-nav-bar-item-wrapper::before{
     content:"";
     position:absolute;
@@ -47,7 +165,6 @@ body{
     opacity:1;
 }
 
-/* Anchor */
 .kot-main-header-nav-bar-item{
     color:#fff;
     padding:14px 16px;
@@ -59,7 +176,6 @@ body{
     display:block;
 }
 
-/* Borders */
 .kot-main-header-nav-bar-item-wrapper:not(:last-child)::after{
     content:"";
     position:absolute;
@@ -75,7 +191,6 @@ body{
     opacity:0;
 }
 
-/* ================= MEGA MENU ================= */
 .kot-main-header-nav-bar-mega-menu{
     position:absolute;
     top:100%;
@@ -93,7 +208,6 @@ body{
     height:320px;
 }
 
-/* ================= CONTENT ================= */
 .kot-main-header-nav-bar-mega-content{
     max-width:1140px;
     margin:auto;
@@ -114,39 +228,6 @@ body{
     display:grid;
     grid-template-columns:1.3fr 1fr 2fr;
     gap:30px;
-}
-
-.kot-main-header-nav-bar-col-1 img{
-    width:100%;
-    border-radius:6px;
-    margin-bottom:12px;
-}
-
-.kot-main-header-nav-bar-col-1 p,
-.kot-main-header-nav-bar-col-2 p{
-    font-size:14px;
-    line-height:1.6;
-}
-
-.kot-main-header-nav-bar-col-2 h3{
-    margin-top:0;
-}
-
-.kot-main-header-nav-bar-mega-btn{
-    display:inline-block;
-    padding:10px 18px;
-    background:#fff;
-    color:#000;
-    font-weight:600;
-    border-radius:4px;
-    text-decoration:none;
-    margin-top:10px;
-}
-
-.kot-main-header-nav-bar-mega-btn.outline{
-    background:transparent;
-    border:2px solid #fff;
-    color:#fff;
 }
 
 .kot-main-header-nav-bar-list-row{
@@ -170,20 +251,71 @@ body{
     text-decoration:none;
     font-size:14px;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- TOP MARQUEE -->
+<div class="top-marquee">
+  <div class="container">
+    <marquee>Empowering businesses to streamline operations and grow.</marquee>
+  </div>
+</div>
+
+<!-- TOP LINKS -->
+<div class="top-links-wrapper">
+  <div class="top-links-right">
+    <a href="#">Home</a>
+    <span>|</span><a href="#">Startups</a>
+    <span>|</span><a href="#">E-Life</a>
+    <span>|</span><a href="#">FAQ</a>
+    <span>|</span><a href="#">Contact</a>
+    <span>|</span><a href="#">Site Map</a>
+  </div>
+
+  <div class="top-actions">
+    <div class="dropdown lang-dropdown">
+      <button class="dropdown-toggle" data-bs-toggle="dropdown">
+        <img src="assets/images/Header/pak.png"> اردو
+      </button>
+    </div>
+
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+
+<!-- LOGO -->
+<div class="header-main">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 logo">
+        <img src="assets/images/Header/support-2.png">
+      </div>
+      <div class="col-md-6">
+        <div class="search-box">
+          <input class="form-control" placeholder="Search">
+          <button><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CODE-2 NAV + MEGA (EXACT) ================= -->
+
 <div class="kot-main-header-nav-bar" id="nav">
   <div class="kot-main-header-nav-bar-inner">
 
+    <!-- ALL ITEMS EXACT FROM CODE-2 -->
     <!-- CORPORATE -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Corporate"
-        data-text="Enterprise-grade digital solutions."
-        data-heading="Corporate Solutions"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Corporate"
+        data-text="Enterprise-grade digital solutions." data-heading="Corporate Solutions"
         data-desc="Robust systems for large organizations."
         data-left="ERP,CRM,HRMS,Intranet,Compliance"
         data-right="Strategy,Governance,Security,Audits,Support">
@@ -193,10 +325,8 @@ body{
 
     <!-- SERVICES -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Services"
-        data-text="Managed IT and digital services."
-        data-heading="Our Services"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Services"
+        data-text="Managed IT and digital services." data-heading="Our Services"
         data-desc="From development to deployment."
         data-left="Web Apps,Mobile Apps,Cloud,DevOps,UI UX"
         data-right="Maintenance,Monitoring,Scaling,Upgrades,Support">
@@ -206,10 +336,8 @@ body{
 
     <!-- CONSULTANCY -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Consultancy"
-        data-text="Expert consulting services."
-        data-heading="Consultancy"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Consultancy"
+        data-text="Expert consulting services." data-heading="Consultancy"
         data-desc="Guiding digital transformation."
         data-left="IT Audit,Roadmap,Risk,Architecture,Planning"
         data-right="Optimization,Advisory,Security,Governance,QA">
@@ -219,10 +347,8 @@ body{
 
     <!-- MARKETPLACE -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Marketplace"
-        data-text="Technology marketplace solutions."
-        data-heading="Marketplace"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Marketplace"
+        data-text="Technology marketplace solutions." data-heading="Marketplace"
         data-desc="Products that power business."
         data-left="POS,Plugins,Themes,Integrations,APIs"
         data-right="Licensing,Updates,Support,Addons,Docs">
@@ -232,10 +358,8 @@ body{
 
     <!-- SPOTLIGHTS -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Spotlights"
-        data-text="Featured projects and highlights."
-        data-heading="Spotlights"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Spotlights"
+        data-text="Featured projects and highlights." data-heading="Spotlights"
         data-desc="Showcasing innovation."
         data-left="Case Studies,Success Stories,Awards,Media,Events"
         data-right="Highlights,Press,News,Gallery,Timeline">
@@ -245,10 +369,8 @@ body{
 
     <!-- SUPPORT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Support"
-        data-text="Dedicated customer support."
-        data-heading="Support Center"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Support"
+        data-text="Dedicated customer support." data-heading="Support Center"
         data-desc="We are here to help."
         data-left="Help Desk,Documentation,FAQs,Tickets,Community"
         data-right="Live Chat,Email,SLA,Updates,Status">
@@ -258,10 +380,8 @@ body{
 
     <!-- CAREER -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Career"
-        data-text="Join our growing team."
-        data-heading="Careers"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Career"
+        data-text="Join our growing team." data-heading="Careers"
         data-desc="Build your future with us."
         data-left="Open Roles,Internships,Culture,Benefits,Life@KOT"
         data-right="Apply Now,HR Policies,Training,Growth,Events">
@@ -271,10 +391,8 @@ body{
 
     <!-- CONTACT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#"
-        data-img="https://via.placeholder.com/300x160?text=Contact"
-        data-text="Get in touch with us."
-        data-heading="Contact Us"
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Contact"
+        data-text="Get in touch with us." data-heading="Contact Us"
         data-desc="Let’s start a conversation."
         data-left="Email,Phone,Locations,Support,Enquiry"
         data-right="Request Quote,Meet Team,Office Map,Hours,Directions">
@@ -315,10 +433,13 @@ body{
       </div>
     </div>
   </div>
-
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
+/* ================= CODE-2 JS (EXACT) ================= */
+
 const nav = document.getElementById("nav");
 const megaMenu = document.getElementById("megaMenu");
 
@@ -344,15 +465,12 @@ const hoverColors = {
   CONTACT:"#6c757d"
 };
 
-document
-.querySelectorAll(".kot-main-header-nav-bar-item")
+document.querySelectorAll(".kot-main-header-nav-bar-item")
 .forEach((item,i,arr)=>{
 
   item.addEventListener("mouseenter",()=>{
 
-    /* ===== NAV ITEM BG ===== */
-    document
-      .querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
       .forEach(w=>w.classList.remove("hovered","previous-hide"));
 
     const wrap = item.parentElement;
@@ -364,7 +482,6 @@ document
       hoverColors[item.innerText.trim()] || "#8f4b36"
     );
 
-    /* ===== CONTENT SLIDE RESET (NO CLOSE) ===== */
     content.style.transition = "none";
     content.style.opacity = "0";
     content.style.transform = "translateY(-20px)";
@@ -372,54 +489,37 @@ document
     requestAnimationFrame(()=>{
 
       content.style.transition = ".35s ease";
-      
-      /* ===== UPDATE CONTENT ===== */
+
       img.src = item.dataset.img;
       text.innerText = item.dataset.text;
       heading.innerText = item.dataset.heading;
       desc.innerText = item.dataset.desc;
 
-      left.innerHTML = item.dataset.left
-        .split(",")
-        .map(v=>`<li><a href="#">📌 ${v}</a></li>`)
-        .join("");
+      left.innerHTML = item.dataset.left.split(",").map(v=>`<li><a href="#">📌 ${v}</a></li>`).join("");
+      right.innerHTML = item.dataset.right.split(",").map(v=>`<li><a href="#">⭐ ${v}</a></li>`).join("");
 
-      right.innerHTML = item.dataset.right
-        .split(",")
-        .map(v=>`<li><a href="#">⭐ ${v}</a></li>`)
-        .join("");
-
-      /* ===== SLIDE DOWN AGAIN ===== */
       content.style.opacity = "1";
       content.style.transform = "translateY(0)";
     });
 
-    /* ===== OPEN ONLY FIRST TIME ===== */
     if(!isMegaOpen){
       megaMenu.style.display = "block";
-      requestAnimationFrame(()=>{
-        megaMenu.classList.add("show");
-      });
+      requestAnimationFrame(()=>megaMenu.classList.add("show"));
       isMegaOpen = true;
     }
   });
 });
 
-/* ===== CLOSE ONLY ON LEAVE NAV ===== */
 nav.addEventListener("mouseleave",()=>{
-  document
-    .querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
     .forEach(w=>w.classList.remove("hovered","previous-hide"));
 
   megaMenu.classList.remove("show");
   isMegaOpen = false;
 
-  setTimeout(()=>{
-    megaMenu.style.display = "none";
-  },300);
+  setTimeout(()=>megaMenu.style.display="none",300);
 });
 </script>
-
 
 </body>
 </html>
