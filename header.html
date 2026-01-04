@@ -134,11 +134,7 @@ background-color: #0A71B9;
       display: none; /* Hide by default */
     }
     
-    @media (max-width: 767px) {
-      .kot-header-menu-overlay {
-        display: block;
-      }
-    }
+  
     
     /* ✅ when open: show overlay BUT don't block scrolling */
     .kot-header-menu-overlay.kot-header-show{
@@ -196,11 +192,7 @@ background-color: #0A71B9;
       display: none; /* Hide by default */
     }
     
-    @media (max-width: 767px) {
-      .kot-header-mobile-menu {
-        display: block;
-      }
-    }
+   
     
     .kot-header-mobile-menu.kot-header-open{ transform: translateX(0); }
 
@@ -278,11 +270,7 @@ background-color: #0A71B9;
 }
 
 /* Show only on mobile */
-@media (max-width: 767px) {
-  .kot-header-mobile-bottom-nav {
-    display: block;
-  }
-}
+
 
 /* logo ko floating banao */
 .kot-header-mobile-logo-strip {
@@ -342,6 +330,28 @@ background-color: #0A71B9;
   width: 0;
   height: 0;
 }
+  @media (max-width: 767px) {
+      .kot-header-menu-overlay {
+        display: block;
+      }
+       .kot-header-mobile-menu {
+        display: block;
+      }
+      .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+    }
+ @media (max-width: 991px) {
+      .kot-header-mobile-menu {
+        display: block;
+      }
+        .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+  .kot-header-menu-overlay {
+        display: block;
+      }
+    }
 
 /* slider */
 .kot-header-slider {

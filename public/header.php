@@ -1,17 +1,23 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>KOT Enterprises Header</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>index</title>
+<link rel="icon" type="image/png" href="assets/images/Icons/Home Page/Madad Farma Logo.svg">
+  <!-- Bootstrap 5.3.8 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<style>
-
-/* ================= TOP MARQUEE ================= */
+    
+    
+  <style>
+   /* ================= TOP BAR ================= */
+    /* ================= TOP MARQUEE ================= */
 .top-marquee{
     background:#0A71B9;
     color:#fff;
@@ -359,12 +365,432 @@ letter-spacing: 0%;
     }
 }
 
-</style>
+
+    /* ================= MOBILE TOP (sticky) ================= */
+    .kot-header-mobile-top{
+      position: sticky;
+      top: 0;
+      z-index: 1060;
+      overflow: visible;
+      display: none; /* Hide by default */
+    }
+
+    /* Show only on mobile (max-width: 767px) */
+    @media (max-width: 767px) {
+      .kot-header-mobile-top {
+        display: block;
+      }
+    }
+
+    /* ✅ MOBILE: logo + typing text side-by-side */
+    .kot-header-mobile-top-container{
+  position: relative;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+   .kot-header-mobile-brand{
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 2;
+}
+   .kot-header-mobile-brand img{
+  width: 90px;
+  max-height: 112px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+}
+
+    /* ✅ hide old right block (1024 + top menu btn) */
+    .kot-header-mobile-right{
+      display: none !important;
+    }
+    .kot-header-mobile-top {
+background-color: #0A71B9;
+    }
+    .kot-header-hero-subline{
+      margin: 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.15;
+      color: #fff;
+      flex: 1 1 auto;
+    }
+    #jdc-rotate-word{
+      color: var(--jdc-blue);
+    }
+
+    /* ================= OVERLAY ================= */
+    .kot-header-menu-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1040;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(4px);
+      display: none; /* Hide by default */
+    }
+    
+  
+    
+    /* ✅ when open: show overlay BUT don't block scrolling */
+    .kot-header-menu-overlay.kot-header-show{
+      opacity: 1;
+      pointer-events: none; /* important: body scroll works */
+    }
+
+    /* ================= MOBILE MENU HEADER (logo + close button row) ================= */
+    .kot-header-mobile-menu-header {
+        position: relative;
+        z-index: 1051;
+        top: 20%;
+    }
+
+    /* Adjust close button position */
+    .kot-header-close-btn {
+        position: static !important;
+        top: auto;
+        right: auto;
+        margin: 0;
+        font-size: 28px;
+        padding: 8px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.10);
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .kot-header-close-btn:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* Logo image adjustment */
+    .kot-header-logo-layer img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* ================= OFFCANVAS FULL WIDTH ================= */
+    .kot-header-mobile-menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1050;
+      transform: translateX(-100%);
+      transition: transform .28s ease;
+      background: linear-gradient(180deg, rgba(23, 23, 57, 0.90), rgba(23, 23, 57, 0.60));
+      backdrop-filter: blur(8px);
+      color:#fff;
+      display: none; /* Hide by default */
+    }
+    
+   
+    
+    .kot-header-mobile-menu.kot-header-open{ transform: translateX(0); }
+
+    .kot-header-mobile-menu-body{
+      height: 100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      padding: 70px 20px 90px;
+    }
+
+    .kot-header-menu-item,
+    .kot-header-menu-acc-btn{
+      width: min(520px, 92vw);
+      color:#fff;
+      border:0;
+      padding:14px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-weight:700;
+      text-decoration:none;
+      border-radius:14px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .kot-header-menu-item:hover,
+    .kot-header-menu-acc-btn:hover{ background: rgba(255,255,255,0.12); }
+
+    .kot-header-menu-accordion{ 
+      width: min(520px, 92vw);
+    }
+    .kot-header-menu-acc-btn{ 
+      width:100%; 
+      position: relative; 
+    }
+    .kot-header-menu-acc-btn .kot-header-chev{
+      position:absolute;
+      right: 16px;
+      transition: transform .2s ease;
+    }
+
+    .kot-header-menu-acc-panel{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      margin-top: 8px;
+    }
+    .kot-header-menu-acc-panel a{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:12px 16px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:14px;
+      background: rgba(255,255,255,0.05);
+      margin: 8px 0;
+    }
+    .kot-header-menu-acc-panel a:hover{ background: rgba(255,255,255,0.12); }
+    .kot-header-menu-accordion.kot-header-open .kot-header-menu-acc-panel{ max-height: 260px; }
+    .kot-header-menu-accordion.kot-header-open .kot-header-chev{ transform: rotate(180deg); }
+
+    /* ================= MOBILE BOTTOM NAV ================= */
+.kot-header-mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none; /* Hide by default */
+}
+
+/* Show only on mobile */
+
+
+/* logo ko floating banao */
+.kot-header-mobile-logo-strip {
+  position: absolute;
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #810d0d;
+  padding: 6px 14px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* logo size */
+.kot-header-mobile-logo-strip img {
+  height: 42px;
+  width: auto;
+}
+
+/* menu ko thora neeche push karo */
+.kot-header-mobile-bottom-nav .kot-header-bottom-container {
+  padding-top: 30px;
+  background-color: rgba(11,59,122,.10);
+}
+
+.kot-header-mobile-bottom-nav a {
+  color: green;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kot-header-mobile-bottom-nav i {
+  font-size: 20px;
+}
+
+  /* outer glowing box */
+.kot-header-glow-toggle {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* toggle base */
+.kot-header-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+/* hide checkbox */
+.kot-header-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  @media (max-width: 767px) {
+      .kot-header-menu-overlay {
+        display: block;
+      }
+       .kot-header-mobile-menu {
+        display: block;
+      }
+      .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+    }
+ @media (max-width: 991px) {
+      .kot-header-mobile-menu {
+        display: block;
+      }
+        .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+  .kot-header-menu-overlay {
+        display: block;
+      }
+    }
+
+/* slider */
+.kot-header-slider {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+/* circle */
+.kot-header-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  top: 4px;
+  background: #1e90ff;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  box-shadow: 0 0 6px rgba(30,144,255,0.9);
+}
+
+/* ON state */
+.kot-header-toggle input:checked + .kot-header-slider::before {
+  transform: translateX(22px);
+}
+
+    /* optional: give page some breathing room from bottom nav */
+    .kot-header-page-wrap{ padding-bottom: 90px; }
+
+    /* demo hero */
+    .kot-header-hero{
+      min-height: 240px;
+      background: linear-gradient(135deg, rgba(11,59,122,.10), rgba(11,59,122,.02));
+      border-bottom: 1px solid #eee;
+      display:flex;
+      align-items:center;
+    }
+
+    /* =====================================================
+       ✅ DESKTOP: fixed header + floating logo outside height
+       ===================================================== */
+   
+
+/* DESKTOP DONATION BANNER - You can add your desktop image here */
+.kot-header-donation-banner {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Default mobile background */
+.kot-header-donation-banner {
+  background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG");
+}
+
+/* Desktop background (you'll add your image here) */
+@media (min-width: 768px) {
+  .kot-header-donation-banner {
+    /* Add your desktop background image here */
+    /* background-image: url("your-desktop-image.jpg"); */
+    background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG"); /* Keep same for now */
+  }
+}
+
+/* Overlay */
+.kot-header-donation-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+  z-index: 1;
+}
+
+/* Content */
+.kot-header-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #fff;
+}
+
+/* Heading */
+.kot-header-banner-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.kot-header-banner-content h1 span {
+  color: #f2b233;
+}
+
+/* Paragraph */
+.kot-header-banner-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+/* Button */
+.kot-header-btn-donate {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #f2b233;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.kot-header-btn-donate:hover {
+  background: #d99c1e;
+}
+
+  </style>
 </head>
 
 <body>
 
-
+<!-- ================= TOP BAR (DESKTOP) ================= -->
 <!-- TOP MARQUEE -->
 <div class="top-marquee">
   <div class="marquee-container">
@@ -591,9 +1017,158 @@ letter-spacing: 0%;
   </div>
 </div>
 
+<!-- ================= MOBILE TOP (logo + typing text) ================= -->
+<div class="kot-header-mobile-top d-lg-none">
+  <div class="container py-2 kot-header-mobile-top-container">
+    <h4 class="kot-header-hero-subline">
+      <marquee behavior="" direction=""> kot Enterprises Lorem ipsum dolor sit amet consectetur, adipisicing elit. dolorem totam ab deleniti nobis ratione quibusdam, ex voluptatem esse itaque obcaecati sed illum quis!</marquee>
+    </h4>
+
+    <div class="d-flex align-items-center gap-3 kot-header-mobile-right">
+      <button id="openMenuBtn" class="btn btn-sm btn-outline-dark" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="kot-header-menu-overlay" id="menuOverlay"></div>
+
+<!-- OFFCANVAS -->
+<aside class="kot-header-mobile-menu" id="mobileMenu" aria-hidden="true">
+    <!-- Logo and Close Button in same row -->
+    <div class="kot-header-mobile-menu-header d-flex justify-content-between align-items-center px-4 py-3">
+        <div class="kot-header-logo-layer">
+            <img src="assets/images/Header/support-2.png" alt="Support Logo" style="height: 50px;">
+        </div>
+        <button id="closeMenuBtn" class="kot-header-close-btn" aria-label="Close Menu">&times;</button>
+    </div>
+    
+    <div class="kot-header-mobile-menu-body">
+   <div class="kot-header-glow-toggle">
+  <label class="kot-header-toggle">
+    <input type="checkbox" id="glowToggle">
+    <span class="kot-header-slider"></span>
+  </label>
+</div>
+
+<a href="index.html" class="kot-header-menu-item"><i class="bi "></i> Home</a>
+
+<!-- PROJECT DROPDOWN ADDED HERE -->
+<div class="kot-header-menu-accordion" id="projectAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="projectBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi bi-folder"></i> Project
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+
+  <div class="kot-header-menu-acc-panel" id="projectPanel">
+    <a href="project1.html">Project 1</a>
+    <a href="project2.html">Project 2</a>
+    <a href="project3.html">Project 3</a>
+  </div>
+</div>
+
+<a href="about.html" class="kot-header-menu-item"><i class="bi "></i> About</a>
+<a href="contact.html" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
+<a href="donate.html" class="kot-header-menu-item"><i class="bi "></i> Donate</a>
+
+  </div>
+</aside>
+
+<!-- ================= PAGE CONTENT ================= -->
+<!-- <div class="kot-header-donation-banner">
+  <div class="kot-header-banner-content">
+    <h1>
+      <span>کیونکہ خدمت بھی عبادت ہی تو ہے۔</span> 
+    </h1>
+    <p>
+      Madad Farma works through a system of clear and practical programs to support basic health and education needs with respect and care. We believe in a system where help reaches people without making them feel small, where children can keep learning even when life becomes difficult, and where families receive support without judgment or conditions. When times are hard, Madad Farma stands quietly beside communities, helping protect health, learning, and dignity, one step at a time.
+    </p>
+    <a href="donate.html" class="kot-header-btn-donate">Donate Now</a>
+  </div>
+</div> -->
+
+<!-- <footer>@CsopyRight</footer> -->
+
+<!-- ================= MOBILE BOTTOM NAV ================= -->
+<div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
+  <div class="kot-header-mobile-logo-strip">
+    <img src="assets/images/Header/support-2.png" alt="Support Logo">
+  </div>
+
+  <div class="container kot-header-bottom-container">
+    <div class="row text-center">
+      <div class="col">
+        <a id="openMenuBtnBottom" role="button"
+           class="d-flex flex-column align-items-center">
+          <i class="bi bi-list"></i>
+          <span>Menu</span>
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="donate.html"
+           class="d-flex flex-column align-items-center">
+          <i class="bi bi-heart-fill"></i>
+          <span>Donate</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+    
+  // mobile offcanvas
+  const body = document.body;
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const openBtnTop = document.getElementById("openMenuBtn");
+  const openBtnBottom = document.getElementById("openMenuBtnBottom");
+  const closeBtn = document.getElementById("closeMenuBtn");
+
+  function openMenu(){
+    menu.classList.add("kot-header-open");
+    overlay.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu.setAttribute("aria-hidden", "false");
+  }
+
+  function closeMenu(){
+    menu.classList.remove("kot-header-open");
+    overlay.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu.setAttribute("aria-hidden", "true");
+  }
+
+  openBtnTop?.addEventListener("click", openMenu);
+  openBtnBottom?.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+  });
+
+  // PROJECT DROPDOWN FUNCTIONALITY
+  const projectAcc = document.getElementById("projectAcc");
+  const projectBtn = document.getElementById("projectBtn");
+  
+  if (projectBtn) {
+    projectBtn.addEventListener("click", () => {
+      projectAcc.classList.toggle("kot-header-open");
+    });
+  }
+
+  // toggle button functionality
+  document.getElementById("glowToggle")?.addEventListener("change", function () {
+    console.log(this.checked ? "ON" : "OFF");
+  });
+//   dexstop-header-code
 /* ================= CODE-2 JS (EXACT) ================= */
 
 const nav = document.getElementById("nav");
@@ -708,6 +1283,3 @@ document.querySelectorAll(".lang-option").forEach(option => {
   });
 });
 </script>
-
-</body>
-</html>
