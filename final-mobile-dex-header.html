@@ -784,6 +784,54 @@ background-color: #0A71B9;
 .kot-header-btn-donate:hover {
   background: #d99c1e;
 }
+/* =====================================================
+   SMART FIXED HEADER (DESKTOP ONLY)
+   ===================================================== */
+
+@media (min-width: 992px){
+
+  .desktop-header-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: #fff;
+    transition: all .4s ease;
+  }
+
+  /* smooth animation */
+  .top-marquee,
+  .top-links-wrapper,
+  .header-main{
+    transition: transform .4s ease, opacity .4s ease, padding .4s ease;
+  }
+
+  /* ===== SCROLL DOWN ===== */
+  .desktop-header-wrap.header-hide-top .top-marquee,
+  .desktop-header-wrap.header-hide-top .top-links-wrapper{
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  /* header shrink */
+  .desktop-header-wrap.header-shrink .header-main{
+    padding: 6px 0;
+  }
+
+  .desktop-header-wrap.header-shrink .logo img{
+    height: 46px;
+  }
+
+  .desktop-header-wrap.header-shrink .kot-main-header-nav-bar{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  /* content ko header ke neeche push */
+  body{
+    padding-top: 190px;
+  }
+}
 
   </style>
 </head>
@@ -792,6 +840,7 @@ background-color: #0A71B9;
 
 <!-- ================= TOP BAR (DESKTOP) ================= -->
 <!-- TOP MARQUEE -->
+ <div class="desktop-header-wrap">
 <div class="top-marquee">
   <div class="marquee-container">
     <div class="marquee-track" id="marqueeTrack">
@@ -1016,7 +1065,7 @@ background-color: #0A71B9;
     </div>
   </div>
 </div>
-
+</div>
 <!-- ================= MOBILE TOP (logo + typing text) ================= -->
 <div class="kot-header-mobile-top d-lg-none">
   <div class="container py-2 kot-header-mobile-top-container">
@@ -1090,7 +1139,7 @@ background-color: #0A71B9;
     <a href="donate.html" class="kot-header-btn-donate">Donate Now</a>
   </div>
 </div>
- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam quod aperiam aspernatur labore voluptate deserunt ut cum vel tenetur eos, amet expedita excepturi doloribus quaerat illum ab accusamus aut corporis quidem et. Officia quis recusandae esse quas aperiam modi alias provident est nobis repellat repellendus molestias nisi, dolorem totam praesentium inventore sapiente itaque blanditiis ducimus! Laborum, doloremque numquam? Fuga in temporibus, molestias quasi et enim sint eligendi placeat suscipit odio dicta nihil ut qui debitis ducimus provident cupiditate velit sequi nostrum libero omnis eaque. Quod natus repudiandae praesentium dignissimos vero alias sunt magnam distinctio non, aliquid vitae architecto voluptates laudantium consectetur molestias facilis quisquam recusandae! Hic quo alias tempora a, tempore quas doloremque asperiores error repudiandae maiores architecto, nesciunt laudantium consequatur dolore reprehenderit laboriosam ipsum, corporis minima quis. Rerum consectetur sapiente totam doloremque eius soluta, facilis minima! Inventore suscipit ipsum eaque, sit odio eveniet numquam quasi voluptate ipsa, est officiis dolorem beatae fuga quo tempore consequatur, esse architecto? Veniam rerum, perspiciatis non ducimus rem facere ipsum porro quae? Reprehenderit dignissimos, id veniam nihil voluptates culpa illo odit, eveniet esse ullam quam cum nisi! Quae facere soluta atque vitae beatae quibusdam expedita deserunt, eius accusantium neque qui debitis perspiciatis, incidunt impedit? Voluptatem eum quisquam perferendis nulla veniam asperiores eius unde! Quaerat, labore quae doloribus, quam nobis unde laudantium enim quos consequatur omnis quasi, perspiciatis architecto corporis nulla deserunt! Explicabo, odio fuga quidem asperiores ab dolore. Consequuntur ut ea, perspiciatis porro odio excepturi eligendi obcaecati tempore iure temporibus rerum ipsa nostrum facilis? Fuga aut incidunt assumenda dolor amet, illo accusantium? Necessitatibus qui aperiam cupiditate mollitia voluptas optio, autem totam dignissimos incidunt, id corrupti accusamus natus quibusdam sapiente distinctio odio explicabo recusandae ut facilis tempore quis dolorem ex? Officia odio nemo deserunt, veniam iste labore corporis doloribus perferendis. Quos, error! Dignissimos quia facere harum praesentium nisi inventore quisquam officiis deleniti illum corporis veritatis dolorem corrupti atque, facilis saepe minus illo iste modi consequuntur voluptas nostrum. Reiciendis iure omnis velit quaerat eos autem cumque qui molestiae mollitia, eius cupiditate hic, consequatur molestias laborum voluptates voluptatibus doloribus! Hic esse, vero dolorem eligendi temporibus eius voluptates dolor veniam nisi! Dicta corrupti necessitatibus eos neque, accusantium ullam natus modi voluptas quibusdam. Illum a mollitia ex ducimus enim velit, saepe, id, esse doloremque maiores ad minima? Quas ratione inventore, ducimus numquam est molestias? Tenetur, repellat incidunt atque, tempora at porro optio quaerat eligendi a eveniet debitis similique blanditiis corrupti labore culpa! Culpa sequi nam enim aperiam iste ipsum placeat deserunt, harum nemo sint nihil animi blanditiis magnam, qui quidem minima. Quaerat maxime ipsa suscipit cum veniam modi ratione accusamus laborum earum ullam eaque corrupti repellendus ab recusandae consectetur non a in, itaque minus quasi molestiae id. Maxime ad nemo deleniti saepe culpa repellendus excepturi error dolore a nobis sapiente architecto laboriosam illo dicta porro, maiores, non ex aliquam eum quisquam quia animi expedita? Eos iusto ratione natus numquam quibusdam quasi, dolores blanditiis placeat eius? Quasi repellendus in aut, obcaecati maiores a nulla voluptates nisi, alias aspernatur placeat quae.</p>
+ <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe praesentium sapiente eius quasi excepturi corporis necessitatibus facere, perspiciatis amet laborum ab? Magni quidem tenetur pariatur, mollitia odio dicta obcaecati ut animi beatae perferendis cum explicabo deleniti a delectus doloremque consectetur dignissimos velit esse nesciunt error facilis placeat perspiciatis autem. Possimus recusandae saepe facere eos dolorum doloribus a delectus nam tenetur laborum culpa maiores exercitationem magni itaque voluptas, ad beatae, excepturi, ducimus dolor? Veritatis blanditiis nulla explicabo molestiae dolorem, corporis provident harum maiores alias reiciendis quasi est consequuntur eaque itaque atque laudantium vero fuga iusto at vitae tempore aspernatur assumenda suscipit? In alias aliquam, veritatis reprehenderit mollitia nam. Quasi nesciunt aspernatur accusantium similique esse molestias maiores nam. Odit atque tempora itaque beatae ab autem maiores earum, illo facere, esse dicta necessitatibus quod incidunt minima architecto, iste dolore obcaecati delectus soluta voluptatibus perspiciatis ullam! Maxime placeat ullam magnam expedita sequi mollitia rem commodi! Laboriosam, corporis omnis? Dolores iusto nostrum eum nulla molestiae porro voluptatum sequi, libero voluptas, non dolorem tenetur. Vel a fugiat, voluptas placeat, doloremque tenetur quasi perferendis ipsa dolores facere unde eius vitae corrupti nulla cumque necessitatibus. Id minus ut, possimus commodi pariatur necessitatibus eaque sunt quas deserunt facilis voluptates odit expedita recusandae quo quidem? Eos optio similique laboriosam delectus dolorum magni ea quos dolores voluptatibus. Qui consequuntur, enim vitae ullam quos totam nostrum, labore voluptatibus nesciunt illum temporibus minus officiis explicabo facere sunt quibusdam. Ducimus pariatur quis assumenda deserunt nam magni neque reprehenderit ab quod minus commodi aspernatur doloremque officia quisquam iusto delectus fugiat mollitia rem, similique corporis asperiores quia laborum error! Quo, illo ea. Vero harum eligendi non nostrum earum dolores, modi consequatur, fugit voluptates quia distinctio odio dolorem porro quisquam temporibus at possimus incidunt itaque voluptas aut? Temporibus soluta necessitatibus vel quibusdam obcaecati ab, pariatur accusantium voluptatum animi nostrum sit unde velit sunt et deserunt enim ullam odit in. Aliquid possimus aspernatur debitis tempora similique itaque libero est unde repellat, voluptate veniam hic obcaecati commodi iusto voluptas, deserunt sapiente minima, assumenda cumque aliquam rerum. Nisi natus dolorem earum quasi! Blanditiis suscipit provident ducimus doloribus veniam reiciendis sint veritatis, ex quidem, delectus molestiae libero. Officiis, quod assumenda. A ullam atque, sunt reprehenderit laboriosam tempora molestias cum soluta assumenda recusandae fugit ipsum, excepturi voluptatibus. Doloribus maiores commodi ullam, sit in aliquid, obcaecati repellat ea atque sequi doloremque. Iusto earum, dignissimos numquam labore laborum quas veniam explicabo dolor recusandae cum omnis ad. Similique cumque eum repellat doloremque quia et aperiam porro asperiores nulla atque! Quis iusto consequatur porro, dolorum aliquid suscipit impedit aperiam. Modi nemo placeat non nihil fugiat ut, quos dicta quod in qui nam. Repellendus minima doloremque eum ad consequatur odio, alias ea sunt totam similique aspernatur perspiciatis voluptate esse! Officiis a neque temporibus optio! Voluptates iusto mollitia voluptate. Quo optio, soluta eum voluptas minus accusantium eveniet, cum nulla, impedit sint vitae corrupti corporis consequatur excepturi voluptatum vel. Illo maiores dolorum ad. Delectus, provident reiciendis vel culpa, distinctio veritatis accusantium, necessitatibus totam alias nobis ullam rerum tempore tempora.</p>
 <footer>@CsopyRight</footer>
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
@@ -1282,4 +1331,38 @@ document.querySelectorAll(".lang-option").forEach(option => {
     document.getElementById("langText").innerText = this.dataset.text;
   });
 });
+
+
+
+
+
+// header-smart-scrools
+
+if (window.innerWidth >= 992) {
+
+  const headerWrap = document.querySelector(".desktop-header-wrap");
+  let lastScroll = 0;
+  const threshold = 80;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // SCROLL DOWN
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      headerWrap.classList.add("header-hide-top","header-shrink");
+    }
+
+    // SCROLL UP
+    if (currentScroll < lastScroll) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    // TOP REACHED
+    if (currentScroll <= 5) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    lastScroll = currentScroll;
+  });
+}
 </script>
