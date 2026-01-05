@@ -994,6 +994,12 @@ text-align: center;
 font-variant: small-caps!important;
 color: #17D4FF!important;
   }
+  .our-purpose-we-create{
+    height: 60vh;
+  }
+  .what-we-do-bg-img {
+    height:130vh;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1700,6 +1706,8 @@ font-variant: small-caps!important;
     line-height: 1.4;
     max-width: 100%;
   }
- 
+ .graphoria-our-text-strip{
+  gap: 47px;
+ }
 }
         
