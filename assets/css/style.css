@@ -2056,7 +2056,7 @@ text-transform: uppercase;
 .what-we-do-bg-img{
   background-image: url("../images/Graphoria/graphoria-main-image.jpeg");
   background-size: cover;
-  background-position-y: 88%;
+  background-position-y: 58%;
   background-repeat: no-repeat;
   padding-bottom: 2%;
   height: 2000px;
@@ -2209,7 +2209,7 @@ color: #FFFFFF;
   transition: transform 0.4s ease;
 }
 .point-4 img{
-  width: 203px;
+  width: 400px;
   height: auto;
   overflow-x: hidden;
   transition: transform 0.4s ease;
