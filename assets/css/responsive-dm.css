@@ -22,7 +22,7 @@ leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
-color: rgba(10, 113, 185, 1);
+color: #FFFFFF;
         margin-top: 10%;
 }
 .meet-our-developer-heading p{
@@ -32,7 +32,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color:#FFFFFF;
 }
 /* .meet-our-first-developer{
   margin-top: 5%;
@@ -394,7 +394,7 @@ font-size: 16px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 width: 240px !important;
     }
 .agile-apps-offer-card p{
@@ -403,7 +403,7 @@ font-size: 10px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 width: 233px !important;
     }
         .empowering-heading h2{
@@ -431,7 +431,7 @@ font-size: 10px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000;
+color: #FFFFFF;
 
     }
     .empowering-btn-agile{
@@ -491,7 +491,7 @@ font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 }
 .emporing-business{
   overflow: hidden;
@@ -689,17 +689,17 @@ display: flex;
    
 }
 .mobile-tab-image img{
-   max-width: 343px;
+   /* max-width: 343px; */
     height: auto;
     width: 100%;
-    aspect-ratio: 343 / 548;
+    /* aspect-ratio: 343 / 548; */
 }
 .agile-apps-offer-title{
   font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 24px;
-
+color: #A53692;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
@@ -728,7 +728,7 @@ font-size: 15px;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color: #FFFFFF;
 }
 .mobile-image-change-layout img{
   display: block;
@@ -1015,7 +1015,7 @@ leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000 !important;
+color: #FFFFFF !important;
 max-width: 380px;
 width: 100%;
 
@@ -1040,7 +1040,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000 !important;
+color: #FFFFFF !important;
 max-width: 582px;
 width: 100%;
 }
@@ -1428,10 +1428,10 @@ display: flex;
    
 }
 .mobile-tab-image img{
-   max-width: 768px;
+   /* max-width: 768px; */
     height: auto;
     width: 100%;
-    aspect-ratio: 768 / 1400;
+    /* aspect-ratio: 768 / 1400; */
 }
 .mobile-layout-changing-add h2{
   font-family: 'Montserrat-Extra-Bold';

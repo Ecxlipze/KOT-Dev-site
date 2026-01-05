@@ -2309,7 +2309,7 @@ color: #FFFFFF;
   font-size: clamp(28px, 3.6vw, 60px);
   line-height: 100%;
   text-align: center;
-  color: #ffffff;
+  color: #0A71B9;
 }
 
 /* Description */
@@ -2408,7 +2408,7 @@ color: rgba(10, 113, 185, 0.6);
 .what-we-offer-title {
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
-  color: #0a2540;
+  color:#FFFFFF;
   padding-top: 9%;
 }
 
@@ -2417,7 +2417,7 @@ color: rgba(10, 113, 185, 0.6);
   max-width: 850px;
   margin: 15px auto 60px;
   font-size: 16px;
-  color: #5a6c7d;
+  color: #FFFFFF;
   line-height: 1.7;
 }
 
@@ -2509,7 +2509,7 @@ font-size: 47px !important;
 leading-trim: NONE !important;
 line-height: 112.00000000000001% !important;
 letter-spacing: 0% !important;
-color: #014F85 !important;
+color: #FFFFFF !important;
 text-align: start;
 max-width: 294px;
 width: 100%
@@ -2654,7 +2654,7 @@ font-size: 17px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 
 }
 .empowering-section-2 img{
@@ -2717,7 +2717,7 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 
-    color: #000000;
+    color: #FFFFFF;
 }
 
 /* .sets-agile-apps-heading p {
@@ -2843,7 +2843,7 @@ height: 240px;
 /* ================= TITLE ================= */
 .agile-apps-offer-title{
     text-align:center;
-    color:#c43fbf;
+    color:#FFFFFF;
     font-family: 'Monserrat-Extra-Bold';
     letter-spacing:2px;
     margin-bottom:30px;
@@ -2862,7 +2862,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000;
+color: #FFFFFF;
 padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 2%;
@@ -2876,7 +2876,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color: #FFFFFF;
 padding-bottom: 3%;
 }
 .saas-main-heading-mob-tab{
@@ -3215,7 +3215,7 @@ max-width: 486px;
   font-size: 52px;
   line-height: 100%;
   text-align: center;
-  color: #000000;
+  color: #FFFFFF;
   padding: 3% 8% 2%;
 }
 
@@ -3225,6 +3225,7 @@ max-width: 486px;
   line-height: 130%;
   text-align: center;
   padding: 1% 8% 6%;
+  color: #FFFFFF;
 }
 
 .engineering-the-future-btn{
@@ -3367,7 +3368,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-
+color: #FFFFFF;
 }
 .card-flawless-1{
      max-width: 429px;
@@ -3385,7 +3386,7 @@ font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 padding-right: 40%;
 }
 .card-flawless-heading p{
@@ -3394,7 +3395,7 @@ font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 max-width: 310px;
 width: 100%;
 
@@ -3407,7 +3408,7 @@ font-size: 13px;
 line-height: 100%;
 letter-spacing: 0%;
 text-decoration: none;
-color: #000000;
+color: #FFFFFF;
 }
 /* challanges */
 .chalenges-we-solve-text h2{
@@ -3419,7 +3420,7 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 font-variant: small-caps;
-color: rgba(1, 79, 133, 1);
+color: #17D4FF;
 }
 .chalanges-we-solve-image img{
   width: 100%;
@@ -3430,7 +3431,7 @@ color: rgba(1, 79, 133, 1);
   background-image: url(../images/Flawless/Frame171277067.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top:8%;
+  /* padding-top:8%; */
   padding-bottom: 7%;
 }
 .quality-flawless-bg h2{
@@ -3441,10 +3442,12 @@ leading-trim: NONE;
 line-height: 266px;
 letter-spacing: 0%;
 text-align: center;
-background: linear-gradient(100.31deg, #44DCFF 6.12%, #008EAF 100%);
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #FFFFFF 100%);
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-border: 1px solid #FFFFFF;
+/* border: 1px solid #FFFFFF; */
+padding-top: 8% !important;
 padding-top: 2%;
 }
 
