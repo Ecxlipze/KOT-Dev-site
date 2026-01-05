@@ -515,7 +515,7 @@ background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   color: transparent !important;
-border: 1px solid #FFFFFF!important;
+
 }
 .why-join-kot-text-heading p{
   font-family:' Montserrat-Regular';
@@ -912,7 +912,7 @@ font-size: clamp(22px, 1.8vw, 25px) !important;
 line-height: 100% !important;
 letter-spacing: 0% !important;
 text-align: center !important;
-color: rgba(0, 0, 0, 1) !important;
+color: #FFFFFF !important;
     padding: 8% 6% 4% !important;
   }
 
@@ -952,6 +952,9 @@ text-align: center !important;
    
   }
 
+ .dark-mode-image img{
+    display: none;
+ }
   body .bg-overlap-img{
     display: none !important;
   }
@@ -1296,11 +1299,11 @@ line-height: 160px !important;
 letter-spacing: 0%;
 text-align: center!important;
 
-background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #FFFFFF 100%)!important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   color: transparent !important;
-border: 1px solid #FFFFFF!important;
+/* border: 1px solid #FFFFFF!important; */
 }
 .why-kot-card p {
     width: 315px;
@@ -1679,6 +1682,18 @@ text-align: center!important;
 font-variant: small-caps!important;
 
   }
+  .dark-mode-image img{
+    display: none;
+ }
+ .card-flawless-heading h2 {
+color: #000000 !important;
+}
+ .card-flawless-heading p{
+color: #000000 !important;
+}
+.card-flawless-btn a{
+   color: #000000 !important; 
+}
 }
 @media (max-width: 1024px) and (min-width: 992px){
 
