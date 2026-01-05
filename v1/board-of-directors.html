@@ -7,6 +7,7 @@
     <title>Board of Directors</title>
     <link rel="stylesheet" href="../assets/css/styles2.css">
     <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/neww.css">
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -21,6 +22,8 @@
 </head>
 
 <body>
+    <div id="global-header"></div>
+
 <section id="message-board" class="message-section">
     <div class="container text-center">
         <h2 class="message-heading">A Message from Our Board of Directors</h2>
@@ -115,6 +118,209 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;
+    });
+</script>
+
+<script>
+  fetch('../components/header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-header').innerHTML = data;
+
+          
+  // mobile offcanvas
+  const body = document.body;
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const openBtnTop = document.getElementById("openMenuBtn");
+  const openBtnBottom = document.getElementById("openMenuBtnBottom");
+  const closeBtn = document.getElementById("closeMenuBtn");
+
+  function openMenu(){
+    menu.classList.add("kot-header-open");
+    overlay.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu.setAttribute("aria-hidden", "false");
+  }
+
+  function closeMenu(){
+    menu.classList.remove("kot-header-open");
+    overlay.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu.setAttribute("aria-hidden", "true");
+  }
+
+  openBtnTop?.addEventListener("click", openMenu);
+  openBtnBottom?.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+  });
+
+  // PROJECT DROPDOWN FUNCTIONALITY
+  const projectAcc = document.getElementById("projectAcc");
+  const projectBtn = document.getElementById("projectBtn");
+  
+  if (projectBtn) {
+    projectBtn.addEventListener("click", () => {
+      projectAcc.classList.toggle("kot-header-open");
+    });
+  }
+
+  // toggle button functionality
+  document.getElementById("glowToggle")?.addEventListener("change", function () {
+    console.log(this.checked ? "ON" : "OFF");
+  });
+//   dexstop-header-code
+/* ================= CODE-2 JS (EXACT) ================= */
+
+const nav = document.getElementById("nav");
+const megaMenu = document.getElementById("megaMenu");
+
+const img = document.getElementById("mm-img");
+const text = document.getElementById("mm-text");
+const heading = document.getElementById("mm-heading");
+const desc = document.getElementById("mm-desc");
+const left = document.getElementById("mm-left");
+const right = document.getElementById("mm-right");
+
+const content = document.querySelector(".kot-main-header-nav-bar-mega-content");
+
+let isMegaOpen = false;
+
+const hoverColors = {
+  CORPORATE:"#28a745",
+  SERVICES:"#fd7e14",
+  CONSULTANCY:"#0d6efd",
+  MARKETPLACE:"#6610f2",
+  SPOTLIGHTS:"#20c997",
+  SUPPORT:"#ffc107",
+  CAREER:"#dc3545",
+  CONTACT:"#6c757d"
+};
+
+document.querySelectorAll(".kot-main-header-nav-bar-item")
+.forEach((item,i,arr)=>{
+
+  item.addEventListener("mouseenter",()=>{
+
+    document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+      .forEach(w=>w.classList.remove("hovered","previous-hide"));
+
+    const wrap = item.parentElement;
+    wrap.classList.add("hovered");
+    if(i>0) arr[i-1].parentElement.classList.add("previous-hide");
+
+    nav.style.setProperty(
+      "--hover-color",
+      hoverColors[item.innerText.trim()] || "#8f4b36"
+    );
+
+    content.style.transition = "none";
+    content.style.opacity = "0";
+    content.style.transform = "translateY(-20px)";
+
+    requestAnimationFrame(()=>{
+
+      content.style.transition = ".35s ease";
+
+      img.src = item.dataset.img;
+      text.innerText = item.dataset.text;
+      heading.innerText = item.dataset.heading;
+      desc.innerText = item.dataset.desc;
+
+      left.innerHTML = item.dataset.left.split(",").map(v=>`<li><a href="#">📌 ${v}</a></li>`).join("");
+      right.innerHTML = item.dataset.right.split(",").map(v=>`<li><a href="#">⭐ ${v}</a></li>`).join("");
+
+      content.style.opacity = "1";
+      content.style.transform = "translateY(0)";
+    });
+
+    if(!isMegaOpen){
+      megaMenu.style.display = "block";
+      requestAnimationFrame(()=>megaMenu.classList.add("show"));
+      isMegaOpen = true;
+    }
+  });
+});
+
+nav.addEventListener("mouseleave",()=>{
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    .forEach(w=>w.classList.remove("hovered","previous-hide"));
+
+  megaMenu.classList.remove("show");
+  isMegaOpen = false;
+
+  setTimeout(()=>megaMenu.style.display="none",300);
+});
+
+// marquee js
+const track = document.getElementById("marqueeTrack");
+
+let pos = 0;
+let speed = 0.5;
+
+// exact width of ONE content copy
+const singleWidth = track.scrollWidth / 2;
+
+function animate(){
+  pos -= speed;
+
+  if(pos <= -singleWidth){
+    pos = 0; // 👈 exact reset point
+  }
+
+  track.style.transform = `translateX(${pos}px)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// language selection
+document.querySelectorAll(".lang-option").forEach(option => {
+  option.addEventListener("click", function(e){
+    e.preventDefault();
+
+    document.getElementById("langImg").src = this.dataset.img;
+    document.getElementById("langText").innerText = this.dataset.text;
+  });
+});
+
+
+
+
+
+// header-smart-scrools
+
+if (window.innerWidth >= 992) {
+
+  const headerWrap = document.querySelector(".desktop-header-wrap");
+  let lastScroll = 0;
+  const threshold = 80;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // SCROLL DOWN
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      headerWrap.classList.add("header-hide-top","header-shrink");
+    }
+
+    // SCROLL UP
+    if (currentScroll < lastScroll) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    // TOP REACHED
+    if (currentScroll <= 5) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    lastScroll = currentScroll;
+  });
+}
     });
 </script>
 
