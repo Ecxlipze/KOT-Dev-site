@@ -2298,20 +2298,13 @@ width: 100%;
 }
 
 .final-garaphoria-section{
-  background-image: url(../images/Graphoria/Group\ 1171277291.png);
+  background-image: url(../images/Graphoria/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-      margin-top: -6%;
+     height: 150vh;
+    margin-top: -7%;
 }
-
-
-
-
-
-
-
-
 
 
 
