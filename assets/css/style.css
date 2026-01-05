@@ -2056,15 +2056,17 @@ text-transform: uppercase;
 .what-we-do-bg-img{
   background-image: url("../images/Graphoria/graphoria-main-image.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position-y: 88%;
   background-repeat: no-repeat;
   padding-bottom: 2%;
+  height: 2000px;
 }
 .what-we-do-img img{
   width: 100%;
+  padding-top: 12%;
 }
 .our-purpoos-heading{
-  padding-top: 10%;
+  padding-top: 20%;
   padding-left: 8%;
 }
 .our-purpoos-heading-2{
@@ -2091,15 +2093,17 @@ color: #96C049;
   background-position: center;
   background-repeat: no-repeat;
   margin-top: -8%;
+  height: 822px;
 }
 .graphoria-our-text-strip{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:28px;
-  padding:40px 20px;
+  gap:68px;
+  padding:123px 20px;
   flex-wrap:nowrap;
   padding-left: 0%;
+  padding-bottom: 0%;
 }
 
 .graphoria-our-text-item{
@@ -2167,70 +2171,131 @@ text-align: center;
 color: #FFFFFF;
 
 }
-/* new section-design */
 .design-bg-image{
-  background-image: url("../images/Graphoria/green-vector.png");
+  background-image: url("../images/Graphoria/green-vector-dm.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 767px;
   width: 100%;
   position: relative;
-}
 
-/* Heading */
-.why-graphoria-text{
-  position: absolute;
-  top: 10%;
-  left: 5%;
-}
-
-.why-graphoria-text h3{
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* Common icon box */
-.graphoria-point{
-  position: absolute;
   display: flex;
-  align-items: center;
-  gap: 15px;
-  background: #0d6efd;
-  padding: 12px 18px;
-  border-radius: 6px;
-  color: #fff;
+  justify-content: space-between;
+  
 }
 
-.graphoria-point img{
-  width: 40px;
+/* 🔥 common */
+.graphoria-point{
+  position: relative;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* image size */
+.point-1 img{
+  width: 237px;
   height: auto;
+  transition: transform 0.4s ease;
+}
+.point-2 img{
+  width: 434px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+.point-3 img{
+  width: 259px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+.point-4 img{
+  width: 203px;
+  height: auto;
+  overflow-x: hidden;
+  transition: transform 0.4s ease;
 }
 
-.graphoria-point p{
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+/* hover */
+.graphoria-point img:hover{
+  transform: scale(1.1); 
 }
 
-/* Positioning like reference image */
-.point-1{
-  top: 35%;
-  left: 5%;
-}
-
-.point-2{
-  top: 48%;
-  left: 5%;
-}
-
-.point-3{
-  top: 61%;
-  left: 5%;
+/* 🎯 vertical positioning (NO transform here) */
+.point-1{ top: -18%; }
+.point-2{ top: -16%;  }
+.point-3{ top: 25%;
+left: -6%; }
+.point-4{
+  top: -18%; right: 0%;
+  overflow-x: hidden;
+  /* padding-right: 2%; */
 }
 
 
+
+
+
+/* For tablets and below */
+@media only screen and (max-width: 767px) {
+  .design-bg-image {
+    height: auto; /* Adjust height to be more flexible */
+  }
+
+  .point-1 img, .point-2 img, .point-3 img, .point-4 img {
+    width: 100%; /* Make images scale to container width */
+  }
+
+  .point-1 {
+    top: -71px; /* Adjust vertical positioning */
+    left: 0;
+  }
+  .point-2 {
+    top: -100px;
+    left: 0;
+  }
+  .point-3 {
+    top: 20px;
+    left: 0;
+  }
+  .point-4 {
+    top: -103px;
+    right: 0;
+  }
+}
+
+/* For mobile devices */
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+   .design-bg-image {
+    height: auto; /* Adjust height to be more flexible */
+  }
+
+  .point-1 img, .point-2 img, .point-3 img, .point-4 img {
+    width: 100%; /* Make images scale to container width */
+  }
+
+ .point-1 {
+    top: -110px; /* Adjust vertical positioning */
+    left: 0;
+  }
+  .point-2 {
+    top: -130px;
+    left: 0;
+  }
+  .point-3 {
+    top: -60px;
+    left: 0;
+  }
+  .point-4 {
+    top: -123px;
+    right: 0;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+ 
+}
 
 
 
