@@ -154,7 +154,7 @@ color: #FFFFFF;
 .career-section-3-main-image{
    
   min-height: 100vh;
-  background-image: url("../images/main-bg-image/main-bg-image.jpg");
+  background-image: url("../images/main-bg-image/main-bg-img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -183,11 +183,12 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color: #FFFFFF;
 padding-top: 2%;
 }
 .career-section-card-first{
-  background-color: #EAEAEF;
+  background: #161617;
+
   width: 100%;
   max-width: 250px;
   border-radius: 20px;
@@ -217,7 +218,9 @@ padding-top: 2%;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .career-section-card-first-img{
-    background-color: #F6F6F6;
+   background: #202020;
+
+
     max-width: 60px;
 max-height: 60px;
 height: auto;
@@ -261,7 +264,7 @@ font-size: 15px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #0E0E0E;
+color: #FFFFFF;
 }
  .career-section-card-first-text p{
     font-family: 'Montserrat-Regular';
@@ -269,14 +272,15 @@ font-size: 12px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-
+color: #FFFFFF;
   }
   .career-section-card-first-btn{
     /* justify-content: space-between; */
     gap: 37%;
   }
   .contact-us-arrow{
-    background-color: #F6F6F6;
+    background: #202020;
+
     max-width: 30px;
     width: 100%;
 max-height: 30px;
@@ -308,6 +312,16 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 
+}
+.career-section-text  h2{
+  font-family: 'Montserrat-Bold';
+
+font-size: 42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
 }
 .career-section-1-btn-3 {
     background-color: #000000 !important;
@@ -341,7 +355,7 @@ border-radius: 50px !important;
     
 }
 .career-section-btn-3 a{
- background-color: #000000;
+ background-color:#FFFFFF;
  width: 200px;
 height: 50px;
 display: flex;
@@ -354,12 +368,12 @@ font-family: 'Montserrat-semi-Bold';
 font-size: 17px;
 leading-trim: NONE;
 line-height: 100%;
-color: #FFFFFF;
+color: #000000;
 text-align: center;
 
 }
 .career-section-btn {
-background-color: #000000;
+background-color: #FFFFFF;
 width: 200px;
 height: 50px;
     align-items: center;
@@ -375,7 +389,7 @@ text-decoration: none;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #FFFFFF;
+color: #000000;
 
 }
 /* <!-- section-4-start --> */
@@ -536,14 +550,14 @@ color: #FFFFFF;
 .why-join-kot-text-heading p{
   font-family: 'Montserrat-Regular';
   font-size: 20px;
-  color: #000;
+  color: #FFFFFF;
       padding-left: 15%;
     padding-right: 15%;
 }
 
 /* ================= CARD ================= */
 .why-kot-card-image-mission{
-  background-image: url(../images/career/missionthatmatter.png);
+  background-image: url(../images/career/missionthatmatter-dm.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -559,13 +573,13 @@ color: #FFFFFF;
  font-family: 'Montserrat-Bold';
   font-size: clamp(18px, 3vw, 24px);
 
-  color: #000;
+  color: #FFFFFF;
 }
 
 .why-kot-card p{
   font-family: 'Montserrat-Medium';
   font-size: clamp(16px, 2.5vw, 20px);
-
+color: #FFFFFF;
   max-width: 403px;
   width: 100%;
 }
@@ -3738,7 +3752,7 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 padding-top: 1%;
-
+color: #FFFFFF;
 }
 
 .andoride-solution-heading h2 {
@@ -3778,7 +3792,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color: #FFFFFF;
 padding-left: 23%;
 padding-right: 23%;
 margin-bottom: 5%;
@@ -3819,6 +3833,7 @@ text-align: center;
 padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 6%;
+    padding-top: 4%;
 }
 /* SECTION BACKGROUND */
 .app-sculpt-last-section{
@@ -3826,8 +3841,8 @@ padding-left: 10%;
   width: 100%;
   
 
-  background-image: url("../images/Appsculp/bgRectangle.png");
-  background-size: cover;
+  background-image: url("../images/Appsculp/bgRectangle-dm.png");
+  /* background-size: cover; */
   background-position: center;
   background-repeat: no-repeat;
 
@@ -3869,7 +3884,7 @@ padding-left: 10%;
 
 line-height: 100%;
 
-color: #000000;
+color: #FFFFFF;
   margin-bottom: 16px;
 }
 
@@ -3879,7 +3894,7 @@ color: #000000;
   font-family: 'Montserrat-Regular';
 
 line-height: 100%;
-color: #000000;
+color: #FFFFFF;
   margin-bottom: 26px;
 }
 
