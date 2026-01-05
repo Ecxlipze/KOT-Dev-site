@@ -1226,7 +1226,7 @@ margin-bottom: 40px;
 
 
 .episodes-card{
-  background: #0c8b4c;
+  background:transparent;
   border-radius: 20px;
   padding: 100px 50px;
   display: grid;
