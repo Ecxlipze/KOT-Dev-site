@@ -1,21 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>index</title>
-<link rel="icon" type="image/png" href="assets/images/Icons/Home Page/Madad Farma Logo.svg">
-<link rel="stylesheet" href="../assets/css/header.css">
-  <!-- Bootstrap 5.3.8 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kot Enterprises</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/responsive.css">
+   <link rel="stylesheet" href="../assets/css/header.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
   <style>
    /* ================= TOP BAR ================= */
     /* ================= TOP MARQUEE ================= */
@@ -357,7 +354,7 @@ letter-spacing: 0%;
     text-decoration:none;
     font-size:14px;
 }
-@media (max-width: 991px){
+@media (max-width: 767px){
     .top-marquee,
     .top-links-wrapper,
     .header-main,
@@ -645,7 +642,7 @@ background-color: #0A71B9;
     display: block;
   }
     }
- @media (max-width: 991px) {
+ @media (max-width: 767px) {
       .kot-header-mobile-menu {
         display: block;
       }
@@ -655,6 +652,9 @@ background-color: #0A71B9;
   .kot-header-menu-overlay {
         display: block;
       }
+       .header-main-blank-div{
+    display: none!important;
+  }
     }
 
 /* slider */
@@ -732,6 +732,9 @@ background-color: #0A71B9;
     /* background-image: url("your-desktop-image.jpg"); */
     background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG"); /* Keep same for now */
   }
+  .header-main-blank-div{
+    height: 18vh !important;
+  }
 }
 
 /* Overlay */
@@ -785,24 +788,74 @@ background-color: #0A71B9;
 .kot-header-btn-donate:hover {
   background: #d99c1e;
 }
+/* =====================================================
+   SMART FIXED HEADER (DESKTOP ONLY)
+   ===================================================== */
+
+@media (min-width: 768px){
+
+  .desktop-header-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: #fff;
+    transition: all .4s ease;
+  }
+
+  /* smooth animation */
+  /* .top-marquee,
+  .top-links-wrapper,
+  .header-main{
+    transition: transform .4s ease, opacity .4s ease, padding .4s ease;
+  } */
+
+  /* ===== SCROLL DOWN ===== */
+  /* .desktop-header-wrap.header-hide-top .top-marquee,
+  .desktop-header-wrap.header-hide-top .top-links-wrapper{
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+
+  .desktop-header-wrap.header-shrink .header-main{
+    padding: 6px 0;
+  } */
+
+  /* .desktop-header-wrap.header-shrink .logo img{
+    height: 46px;
+  } */
+
+  .desktop-header-wrap.header-shrink .kot-main-header-nav-bar{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  /* content ko header ke neeche push */
+  body{
+    padding-top: 190px;
+  }
+}
 
   </style>
-</head>
 
+</head>
 <body>
+
 
 <!-- ================= TOP BAR (DESKTOP) ================= -->
 <!-- TOP MARQUEE -->
+ <div class="desktop-header-wrap">
 <div class="top-marquee">
   <div class="marquee-container">
     <div class="marquee-track" id="marqueeTrack">
       <span>
-        <img src="assets/images/Header/marquee-logo.png" alt="">
+        <img src="../assets/images/Header/marquee-logo.png" alt="">
         Empowering businesses to streamline operations and grow.
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </span>
       <span>
-        <img src="assets/images/Header/marquee-logo.png" alt="">
+        <img src="../assets/images/Header/marquee-logo.png" alt="">
         Empowering businesses to streamline operations and grow.
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </span>
@@ -814,51 +867,51 @@ background-color: #0A71B9;
 <!-- TOP LINKS -->
 <div class="top-links-wrapper">
   <div class="top-links-right">
-    <a href="#">Home</a>
-    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Startups</a>
-    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> E-Life</a>
-    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
-    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
-    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+    <a href="../v1/index.php">Home</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Startups</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> E-Life</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
+    <a href="../v1/contact.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
   </div>
 
   <div class="top-actions">
     <div class="dropdown lang-dropdown">
   <button class="dropdown-toggle" id="langBtn" data-bs-toggle="dropdown">
-    <img id="langImg" src="assets/images/Header/pak.png">
+    <img id="langImg" src="../assets/images/Header/pak.png">
     <span id="langText">اردو</span>
   </button>
 
   <ul class="dropdown-menu">
     <li>
       <a class="dropdown-item lang-option" href="#" 
-         data-img="assets/images/Header/pak.png" 
+         data-img="../assets/images/Header/pak.png" 
          data-text="اردو">
-        <img src="assets/images/Header/pak.png"> اردو
+        <img src="../assets/images/Header/pak.png"> اردو
       </a>
     </li>
 
     <li>
       <a class="dropdown-item lang-option" href="#" 
-         data-img="assets/images/Header/uk.png" 
+         data-img="../assets/images/Header/uk.png" 
          data-text="English">
-        <img src="assets/images/Header/uk.png"> English
+        <img src="../assets/images/Header/uk.png"> English
       </a>
     </li>
 
     <li>
       <a class="dropdown-item lang-option" href="#" 
-         data-img="assets/images/Header/saudi.png" 
+         data-img="../assets/images/Header/saudi.png" 
          data-text="العربية">
-        <img src="assets/images/Header/saudi.png"> العربية
+        <img src="../assets/images/Header/saudi.png"> العربية
       </a>
     </li>
 
     <li>
       <a class="dropdown-item lang-option" href="#" 
-         data-img="assets/images/Header/fr.png" 
+         data-img="../assets/images/Header/fr.png" 
          data-text="Français">
-        <img src="assets/images/Header/fr.png"> Français
+        <img src="../assets/images/Header/fr.png"> Français
       </a>
     </li>
   </ul>
@@ -877,12 +930,12 @@ background-color: #0A71B9;
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 logo">
-        <img src="assets/images/Header/Logo (2).png">
+        <a href="../v1/index.php"><img src="../assets/images/Header/Logo (2).png"></a>
       </div>
       <div class="col-md-6">
         <div class="search-box">
           <input class="form-control form-scontrol-style " placeholder="Search">
-          <button><img src="assets/images/Header/search-icon.png" alt=""></button>
+          <button><img src="../assets/images/Header/search-icon.png" alt=""></button>
         </div>
       </div>
     </div>
@@ -900,8 +953,20 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Corporate"
         data-text="Enterprise-grade digital solutions." data-heading="Corporate Solutions"
         data-desc="Robust systems for large organizations."
-        data-left="ERP,CRM,HRMS,Intranet,Compliance"
-        data-right="Strategy,Governance,Security,Audits,Support">
+        data-left="
+             WHY KOT ENTERPRISES| ../v1/why-kot.html,
+              BOARD OF DIRECTION | ../v1/board-of-directors.html,
+             MANAGEMENT TEAM | ../v1,
+             NEWS| ../
+             
+              "
+
+       data-right="
+           INVESTORS| ../v1,
+            CAREERS | ../v1/career.php
+       
+            "
+            >
         CORPORATE
       </a>
     </div>
@@ -911,8 +976,22 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Services"
         data-text="Managed IT and digital services." data-heading="Our Services"
         data-desc="From development to deployment."
-        data-left="Web Apps,Mobile Apps,Cloud,DevOps,UI UX"
-        data-right="Maintenance,Monitoring,Scaling,Upgrades,Support">
+        data-left="
+              APP SCULPT | ../v1/appsculpt.php,
+              AGILE APPS | ../v1/agileappsservice.php,
+              DIG-IT-TRAIL | ../v1/digittrail.html,
+             MERCHANITY | ../v1/merchanity.html
+             
+              "
+
+       data-right="
+           WEB SCULPTURE | ../v1/WebSculpture.php,
+            FLAWLESSX | ../v1/flawless.php,
+            VENTURE XCELERATOR | ../v1/venture.html,
+            GRAPHIORA | ../v1/graphoria.php
+       
+            "
+            >
         SERVICES
       </a>
     </div>
@@ -922,8 +1001,19 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Consultancy"
         data-text="Expert consulting services." data-heading="Consultancy"
         data-desc="Guiding digital transformation."
-        data-left="IT Audit,Roadmap,Risk,Architecture,Planning"
-        data-right="Optimization,Advisory,Security,Governance,QA">
+        data-left="
+              AUDITS | ../v1/audits.html,
+              AUGMENTATION | ../v1,
+              INFORMATION SECURITY | ../v,
+             AI, ML & DATA ANALYTICS | ../v
+             
+              "
+
+       data-right="
+           DATA ENGINEERING| ../v1/data-engineering.html,
+            GENERATIVE AI | ../v1/gen-ai.html
+       
+            ">
         CONSULTANCY
       </a>
     </div>
@@ -933,8 +1023,8 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Marketplace"
         data-text="Technology marketplace solutions." data-heading="Marketplace"
         data-desc="Products that power business."
-        data-left="POS,Plugins,Themes,Integrations,APIs"
-        data-right="Licensing,Updates,Support,Addons,Docs">
+        data-left="POINT OF SALES,ECOMMERCE PLATFORMS,HEALTH CARE SYSTEMS,CONTENT MANAGEMENT SYSTEMS"
+        data-right="LEARNING MANAGEMENT SYSTEMS">
         MARKETPLACE
       </a>
     </div>
@@ -944,29 +1034,31 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Spotlights"
         data-text="Featured projects and highlights." data-heading="Spotlights"
         data-desc="Showcasing innovation."
-        data-left="Case Studies,Success Stories,Awards,Media,Events"
-        data-right="Highlights,Press,News,Gallery,Timeline">
-        SPOTLIGHTS
+        data-left="PERSONAL SUPPORT,WORK SUPPORT,EDUCATION SUPPORT,Media,PARTNER SUPPORT"
+         data-right="Apply Now,HR Policies,Training,Growth,Events"
+        >
+     SPOTLIGHTS
       </a>
     </div>
 
     <!-- SUPPORT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Support"
+      <a class="kot-main-header-nav-bar-item" href="../v1/support.php" data-img="https://via.placeholder.com/300x160?text=Support"
         data-text="Dedicated customer support." data-heading="Support Center"
         data-desc="We are here to help."
-        data-left="Help Desk,Documentation,FAQs,Tickets,Community"
-        data-right="Live Chat,Email,SLA,Updates,Status">
+        data-left="PERSONAL SUPPORT,WORK SUPPORT,EDUCATION SUPPORT,PARTNER SUPPORT"
+         data-right="Apply Now,HR Policies,Training,Growth,Events"
+        >
         SUPPORT
       </a>
     </div>
 
     <!-- CAREER -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Career"
+      <a class="kot-main-header-nav-bar-item" href="../v1/career.php" data-img="https://via.placeholder.com/300x160?text=Career"
         data-text="Join our growing team." data-heading="Careers"
         data-desc="Build your future with us."
-        data-left="Open Roles,Internships,Culture,Benefits,Life@KOT"
+        data-left="Internships,Culture,Benefits"
         data-right="Apply Now,HR Policies,Training,Growth,Events">
         CAREER
       </a>
@@ -974,7 +1066,7 @@ background-color: #0A71B9;
 
     <!-- CONTACT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Contact"
+      <a class="kot-main-header-nav-bar-item" href="../v1/contact.html" data-img="https://via.placeholder.com/300x160?text=Contact"
         data-text="Get in touch with us." data-heading="Contact Us"
         data-desc="Let’s start a conversation."
         data-left="Email,Phone,Locations,Support,Enquiry"
@@ -1017,7 +1109,7 @@ background-color: #0A71B9;
     </div>
   </div>
 </div>
-
+</div>
 <!-- ================= MOBILE TOP (logo + typing text) ================= -->
 <div class="kot-header-mobile-top d-lg-none">
   <div class="container py-2 kot-header-mobile-top-container">
@@ -1041,7 +1133,7 @@ background-color: #0A71B9;
     <!-- Logo and Close Button in same row -->
     <div class="kot-header-mobile-menu-header d-flex justify-content-between align-items-center px-4 py-3">
         <div class="kot-header-logo-layer">
-            <img src="assets/images/Header/support-2.png" alt="Support Logo" style="height: 50px;">
+            <img src="../assets/images/Header/support-2.png" alt="Support Logo" style="height: 50px;">
         </div>
         <button id="closeMenuBtn" class="kot-header-close-btn" aria-label="Close Menu">&times;</button>
     </div>
@@ -1054,27 +1146,30 @@ background-color: #0A71B9;
   </label>
 </div>
 
-<a href="index.html" class="kot-header-menu-item"><i class="bi "></i> Home</a>
+<a href="..v1/index.php" class="kot-header-menu-item"><i class="bi "></i> Home</a>
 
 <!-- PROJECT DROPDOWN ADDED HERE -->
 <div class="kot-header-menu-accordion" id="projectAcc">
   <button class="kot-header-menu-acc-btn" type="button" id="projectBtn">
     <span class="d-flex align-items-center gap-2 justify-content-center w-100">
-      <i class="bi bi-folder"></i> Project
+      <i class="bi bi-folder"></i> Services
     </span>
     <i class="bi bi-chevron-down kot-header-chev"></i>
   </button>
 
   <div class="kot-header-menu-acc-panel" id="projectPanel">
-    <a href="project1.html">Project 1</a>
-    <a href="project2.html">Project 2</a>
-    <a href="project3.html">Project 3</a>
+    <a href="../v1/appsculpt.php"> APP SCULPT </a>
+    <a href="../v1/agileappsservice.php">AGILE APPS</a>
+    <a href="../v1/digittrail.html">DIG-IT-TRAIL</a>
+    <a href="../v1/merchanity.html"> MERCHANITY </a>
+    <a href="../v1/WebSculpture.php">WEB SCULPTURE</a>
+    <a href="../v1/flawless.php">FLAWLESSX</a>
   </div>
 </div>
-
-<a href="about.html" class="kot-header-menu-item"><i class="bi "></i> About</a>
-<a href="contact.html" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
-<a href="donate.html" class="kot-header-menu-item"><i class="bi "></i> Donate</a>
+ 
+<a href="../v1/support.php" class="kot-header-menu-item"><i class="bi "></i> Support</a>
+<a href="../v1/contact.php" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
+<a href="../v1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career/a>
 
   </div>
 </aside>
@@ -1090,14 +1185,14 @@ background-color: #0A71B9;
     </p>
     <a href="donate.html" class="kot-header-btn-donate">Donate Now</a>
   </div>
-</div> -->
-
-<!-- <footer>@CsopyRight</footer> -->
+</div>
+ <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe praesentium sapiente eius quasi excepturi corporis necessitatibus facere, perspiciatis amet laborum ab? Magni quidem tenetur pariatur, mollitia odio dicta obcaecati ut animi beatae perferendis cum explicabo deleniti a delectus doloremque consectetur dignissimos velit esse nesciunt error facilis placeat perspiciatis autem. Possimus recusandae saepe facere eos dolorum doloribus a delectus nam tenetur laborum culpa maiores exercitationem magni itaque voluptas, ad beatae, excepturi, ducimus dolor? Veritatis blanditiis nulla explicabo molestiae dolorem, corporis provident harum maiores alias reiciendis quasi est consequuntur eaque itaque atque laudantium vero fuga iusto at vitae tempore aspernatur assumenda suscipit? In alias aliquam, veritatis reprehenderit mollitia nam. Quasi nesciunt aspernatur accusantium similique esse molestias maiores nam. Odit atque tempora itaque beatae ab autem maiores earum, illo facere, esse dicta necessitatibus quod incidunt minima architecto, iste dolore obcaecati delectus soluta voluptatibus perspiciatis ullam! Maxime placeat ullam magnam expedita sequi mollitia rem commodi! Laboriosam, corporis omnis? Dolores iusto nostrum eum nulla molestiae porro voluptatum sequi, libero voluptas, non dolorem tenetur. Vel a fugiat, voluptas placeat, doloremque tenetur quasi perferendis ipsa dolores facere unde eius vitae corrupti nulla cumque necessitatibus. Id minus ut, possimus commodi pariatur necessitatibus eaque sunt quas deserunt facilis voluptates odit expedita recusandae quo quidem? Eos optio similique laboriosam delectus dolorum magni ea quos dolores voluptatibus. Qui consequuntur, enim vitae ullam quos totam nostrum, labore voluptatibus nesciunt illum temporibus minus officiis explicabo facere sunt quibusdam. Ducimus pariatur quis assumenda deserunt nam magni neque reprehenderit ab quod minus commodi aspernatur doloremque officia quisquam iusto delectus fugiat mollitia rem, similique corporis asperiores quia laborum error! Quo, illo ea. Vero harum eligendi non nostrum earum dolores, modi consequatur, fugit voluptates quia distinctio odio dolorem porro quisquam temporibus at possimus incidunt itaque voluptas aut? Temporibus soluta necessitatibus vel quibusdam obcaecati ab, pariatur accusantium voluptatum animi nostrum sit unde velit sunt et deserunt enim ullam odit in. Aliquid possimus aspernatur debitis tempora similique itaque libero est unde repellat, voluptate veniam hic obcaecati commodi iusto voluptas, deserunt sapiente minima, assumenda cumque aliquam rerum. Nisi natus dolorem earum quasi! Blanditiis suscipit provident ducimus doloribus veniam reiciendis sint veritatis, ex quidem, delectus molestiae libero. Officiis, quod assumenda. A ullam atque, sunt reprehenderit laboriosam tempora molestias cum soluta assumenda recusandae fugit ipsum, excepturi voluptatibus. Doloribus maiores commodi ullam, sit in aliquid, obcaecati repellat ea atque sequi doloremque. Iusto earum, dignissimos numquam labore laborum quas veniam explicabo dolor recusandae cum omnis ad. Similique cumque eum repellat doloremque quia et aperiam porro asperiores nulla atque! Quis iusto consequatur porro, dolorum aliquid suscipit impedit aperiam. Modi nemo placeat non nihil fugiat ut, quos dicta quod in qui nam. Repellendus minima doloremque eum ad consequatur odio, alias ea sunt totam similique aspernatur perspiciatis voluptate esse! Officiis a neque temporibus optio! Voluptates iusto mollitia voluptate. Quo optio, soluta eum voluptas minus accusantium eveniet, cum nulla, impedit sint vitae corrupti corporis consequatur excepturi voluptatum vel. Illo maiores dolorum ad. Delectus, provident reiciendis vel culpa, distinctio veritatis accusantium, necessitatibus totam alias nobis ullam rerum tempore tempora.</p>
+<footer>@CsopyRight</footer> -->
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
 <div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
   <div class="kot-header-mobile-logo-strip">
-    <img src="assets/images/Header/support-2.png" alt="Support Logo">
+    <img src="../assets/images/Header/support-2.png" alt="Support Logo">
   </div>
 
   <div class="container kot-header-bottom-container">
@@ -1111,16 +1206,26 @@ background-color: #0A71B9;
       </div>
 
       <div class="col">
-        <a href="donate.html"
+        <a href="../v1/index.php"
            class="d-flex flex-column align-items-center">
           <i class="bi bi-heart-fill"></i>
-          <span>Donate</span>
+          <span>Home</span>
         </a>
       </div>
     </div>
   </div>
 </div>
+<div class="header-main-blank-div" style="height: 30vh;" >
+
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  fetch('../components/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-footer').innerHTML = data;
+    });
+</script>
 
 <script>
     
@@ -1187,12 +1292,12 @@ const content = document.querySelector(".kot-main-header-nav-bar-mega-content");
 let isMegaOpen = false;
 
 const hoverColors = {
-  CORPORATE:"#28a745",
-  SERVICES:"#fd7e14",
-  CONSULTANCY:"#0d6efd",
-  MARKETPLACE:"#6610f2",
+  CORPORATE:"#FFC200",
+  SERVICES:"#E7007B",
+  CONSULTANCY:"#96C049",
+  MARKETPLACE:"#A45E4D",
   SPOTLIGHTS:"#20c997",
-  SUPPORT:"#ffc107",
+  SUPPORT:"#068A4F",
   CAREER:"#dc3545",
   CONTACT:"#6c757d"
 };
@@ -1227,8 +1332,36 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       heading.innerText = item.dataset.heading;
       desc.innerText = item.dataset.desc;
 
-      left.innerHTML = item.dataset.left.split(",").map(v=>`<li><a href="#">📌 ${v}</a></li>`).join("");
-      right.innerHTML = item.dataset.right.split(",").map(v=>`<li><a href="#">⭐ ${v}</a></li>`).join("");
+      left.innerHTML = item.dataset.left
+  .split(",")
+  .map(v => {
+    let [text, link] = v.split("|").map(s => s.trim());
+
+    return `
+      <li>
+        <a href="${link || '#'}">
+          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+          ${text}
+        </a>
+      </li>`;
+  })
+  .join("");
+
+      right.innerHTML = item.dataset.right
+  .split(",")
+  .map(v => {
+    let [text, link] = v.split("|").map(s => s.trim());
+
+    return `
+      <li>
+        <a href="${link || '#'}">
+          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+          ${text}
+        </a>
+      </li>`;
+  })
+  .join("");
+
 
       content.style.opacity = "1";
       content.style.transform = "translateY(0)";
@@ -1283,4 +1416,38 @@ document.querySelectorAll(".lang-option").forEach(option => {
     document.getElementById("langText").innerText = this.dataset.text;
   });
 });
+
+
+
+
+
+// header-smart-scrools
+
+if (window.innerWidth >= 992) {
+
+  const headerWrap = document.querySelector(".desktop-header-wrap");
+  let lastScroll = 0;
+  const threshold = 80;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // SCROLL DOWN
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      headerWrap.classList.add("header-hide-top","header-shrink");
+    }
+
+    // SCROLL UP
+    if (currentScroll < lastScroll) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    // TOP REACHED
+    if (currentScroll <= 5) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    lastScroll = currentScroll;
+  });
+}
 </script>

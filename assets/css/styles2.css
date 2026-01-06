@@ -533,7 +533,7 @@ color:#FFFFFF;
 
 /* ---------- HERO SECTION ---------- */
 .hero-section {
-  padding: 0px 0;
+  padding: 30px 0;
 }
 
 .hero-title {
@@ -585,7 +585,7 @@ margin-bottom: 40px;
 
 .solutions-wrapper {
   background: url('../images/main-bg-image/main-bg-img.png') center/cover no-repeat;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 

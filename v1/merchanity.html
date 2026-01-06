@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../assets/css/styles2.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/neww.css">
+      <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/responsive.css">
+   <link rel="stylesheet" href="../assets/css/header.css">
+  
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -187,6 +191,7 @@
       document.getElementById('global-header').innerHTML = data;
 
           
+    
   // mobile offcanvas
   const body = document.body;
   const menu = document.getElementById("mobileMenu");
@@ -250,12 +255,12 @@ const content = document.querySelector(".kot-main-header-nav-bar-mega-content");
 let isMegaOpen = false;
 
 const hoverColors = {
-  CORPORATE:"#28a745",
-  SERVICES:"#fd7e14",
-  CONSULTANCY:"#0d6efd",
-  MARKETPLACE:"#6610f2",
+  CORPORATE:"#FFC200",
+  SERVICES:"#E7007B",
+  CONSULTANCY:"#96C049",
+  MARKETPLACE:"#A45E4D",
   SPOTLIGHTS:"#20c997",
-  SUPPORT:"#ffc107",
+  SUPPORT:"#068A4F",
   CAREER:"#dc3545",
   CONTACT:"#6c757d"
 };
@@ -290,8 +295,36 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       heading.innerText = item.dataset.heading;
       desc.innerText = item.dataset.desc;
 
-      left.innerHTML = item.dataset.left.split(",").map(v=>`<li><a href="#">📌 ${v}</a></li>`).join("");
-      right.innerHTML = item.dataset.right.split(",").map(v=>`<li><a href="#">⭐ ${v}</a></li>`).join("");
+      left.innerHTML = item.dataset.left
+  .split(",")
+  .map(v => {
+    let [text, link] = v.split("|").map(s => s.trim());
+
+    return `
+      <li>
+        <a href="${link || '#'}">
+          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+          ${text}
+        </a>
+      </li>`;
+  })
+  .join("");
+
+      right.innerHTML = item.dataset.right
+  .split(",")
+  .map(v => {
+    let [text, link] = v.split("|").map(s => s.trim());
+
+    return `
+      <li>
+        <a href="${link || '#'}">
+          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+          ${text}
+        </a>
+      </li>`;
+  })
+  .join("");
+
 
       content.style.opacity = "1";
       content.style.transform = "translateY(0)";
