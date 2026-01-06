@@ -2530,8 +2530,8 @@ margin-bottom: 40px;
   height: 48px;
   border-radius: 50%;
   border: none;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #0A71B9;
+  color: white;
   font-size: 22px;
   cursor: pointer;
   opacity: 0;
@@ -2542,6 +2542,7 @@ margin-bottom: 40px;
 #goTopBtn:hover {
   transform: translateY(-4px);
   background-color: #ffffff;
+  color: #000;
 }
 
 /* Show button */
@@ -2553,7 +2554,7 @@ margin-bottom: 40px;
 /* Mobile adjustment */
 @media (max-width: 768px) {
   #goTopBtn {
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     width: 44px;
     height: 44px;

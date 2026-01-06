@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="../assets/css/styles2.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/neww.css">
-      <link rel="stylesheet" href="../assets/css/style.css">
-   <link rel="stylesheet" href="../assets/css/responsive.css">
-   <link rel="stylesheet" href="../assets/css/header.css">
-  
+   
     <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -242,6 +239,7 @@
 
           
     
+    
   // mobile offcanvas
   const body = document.body;
   const menu = document.getElementById("mobileMenu");
@@ -274,14 +272,24 @@
   });
 
   // PROJECT DROPDOWN FUNCTIONALITY
-  const projectAcc = document.getElementById("projectAcc");
-  const projectBtn = document.getElementById("projectBtn");
-  
-  if (projectBtn) {
-    projectBtn.addEventListener("click", () => {
-      projectAcc.classList.toggle("kot-header-open");
+  // PROJECT DROPDOWN FUNCTIONALITY
+const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
+
+accBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const accordion = btn.parentElement; // parent div.kot-header-menu-accordion
+    accordion.classList.toggle("kot-header-open");
+
+    // Optional: Close other accordions if you want only one open at a time
+    accBtns.forEach(otherBtn => {
+      const otherAccordion = otherBtn.parentElement;
+      if (otherAccordion !== accordion) {
+        otherAccordion.classList.remove("kot-header-open");
+      }
     });
-  }
+  });
+});
+
 
   // toggle button functionality
   document.getElementById("glowToggle")?.addEventListener("change", function () {
@@ -359,7 +367,7 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       </li>`;
   })
   .join("");
-
+      
       right.innerHTML = item.dataset.right
   .split(",")
   .map(v => {
@@ -374,7 +382,6 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       </li>`;
   })
   .join("");
-
 
       content.style.opacity = "1";
       content.style.transform = "translateY(0)";

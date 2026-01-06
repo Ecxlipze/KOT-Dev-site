@@ -1,6 +1,6 @@
 /* FOOTER */
 .kot-footer {
-  padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+  padding: clamp(3rem, 6vw, 5rem) 0 1.8rem;
   /* background: #ffffff; */
   font-size: 15px;
 }
@@ -59,16 +59,22 @@
 }
 
 .kot-footer-form input {
-  border: none;
-  outline: none;
-  flex: 1;
-  padding: 6px 0;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 17px;
+    flex: 1;
+    background-color: #1d1d1d;
+    padding: 6px 18px;
 }
 
 .kot-footer-form button {
   background: none;
-  border: none;
+   background-color: #1d1d1d;
+    padding: 6px 18px;
+   border-radius: 17px;
+  border: 1px solid white;
   font-weight: 600;
+  color: white;
   cursor: pointer;
 }
 .kot-footer-link {
@@ -117,101 +123,3 @@
 
 
 
-      body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* HERO */
-.hero-bg {
-    min-height: 30vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.hero-bg::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 27%;
-    margin-left: 30%;
-    padding-top: 2%;
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-.hero-subtitle {
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-/* CONTENT BOX */
-.hero-content-box {
-    margin-top: -100px;
-    position: relative;
-    z-index: 3;
-}
-
-.content-box {
-   padding: 35px;
-    margin-left: 29%;
-    margin-top: -18%;
-    border-radius: 12px;
-     border: 1px solid rgb(0, 0, 0);
-    background: #fff;
-   
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-.content-box p {
-  font-weight: 600;
-  margin-bottom: 1%;
-  
-}
-
-.content-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-content-box {
-        margin-top: -50px;
-    }
-
-    .content-box {
-        padding: 25px;
-        margin-left: 0%;
-        margin-top: -10%;
-    }
-    .content-box p {
-      font-size: 16px;
-    }
-
-    .content-title {
-        font-size: 1.1rem;
-    }
-    .hero-text {
-            margin-left: 0%;
-            margin-bottom: 20%;
-    }
-}

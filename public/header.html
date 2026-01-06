@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
-  <style>
+       <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    
+ <style>
    /* ================= TOP BAR ================= */
     /* ================= TOP MARQUEE ================= */
 .top-marquee{
@@ -265,7 +270,7 @@ letter-spacing: 0%;
   font-family: Montserrat;
 font-weight: 500;
 font-style: Medium;
-font-size: 12px;
+font-size: 11px;
 
 letter-spacing: 0%;
 
@@ -378,8 +383,15 @@ letter-spacing: 0%;
       .kot-header-mobile-top {
         display: block;
       }
+     
     }
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .kot-main-header-nav-bar-item{
 
+
+    color:#FFFFFF;
+    padding:14px 15px;}
+}
     /* ✅ MOBILE: logo + typing text side-by-side */
     .kot-header-mobile-top-container{
   position: relative;
@@ -447,7 +459,7 @@ background-color: #0A71B9;
     .kot-header-mobile-menu-header {
         position: relative;
         z-index: 1051;
-        top: 20%;
+        top: 13%;
     }
 
     /* Adjust close button position */
@@ -504,7 +516,7 @@ background-color: #0A71B9;
       justify-content:center;
       align-items:center;
       gap:12px;
-      padding: 70px 20px 90px;
+      padding: 30px 20px 90px;
     }
 
     .kot-header-menu-item,
@@ -522,6 +534,7 @@ background-color: #0A71B9;
       border-radius:14px;
       cursor: pointer;
       text-align: center;
+      background: none;
     }
     .kot-header-menu-item:hover,
     .kot-header-menu-acc-btn:hover{ background: rgba(255,255,255,0.12); }
@@ -549,16 +562,16 @@ background-color: #0A71B9;
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:12px 16px;
+      padding:4px 16px;
       color:#fff;
       text-decoration:none;
       font-weight:600;
       border-radius:14px;
-      background: rgba(255,255,255,0.05);
-      margin: 8px 0;
+      
+      margin: 0px 0;
     }
     .kot-header-menu-acc-panel a:hover{ background: rgba(255,255,255,0.12); }
-    .kot-header-menu-accordion.kot-header-open .kot-header-menu-acc-panel{ max-height: 260px; }
+    .kot-header-menu-accordion.kot-header-open .kot-header-menu-acc-panel{ max-height: 400px; }
     .kot-header-menu-accordion.kot-header-open .kot-header-chev{ transform: rotate(180deg); }
 
     /* ================= MOBILE BOTTOM NAV ================= */
@@ -576,14 +589,19 @@ background-color: #0A71B9;
 /* logo ko floating banao */
 .kot-header-mobile-logo-strip {
   position: absolute;
-  top: -7%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #810d0d;
-  padding: 6px 14px;
-  border-radius: 50%;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  z-index: 10;
+    top: -7%;
+    left: 42%;
+    /* transform: translateX(-50%); */
+    /* background: #FFFFFF; */
+    padding: 0px -3px;
+    border-radius: 100px;
+    /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); */
+    z-index: 999;
+    background-image: url(../assets/images/Header/Vector2.png);
+    height: 4vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* logo size */
@@ -594,13 +612,13 @@ background-color: #0A71B9;
 
 /* menu ko thora neeche push karo */
 .kot-header-mobile-bottom-nav .kot-header-bottom-container {
-  padding-top: 30px;
-  background-color: rgba(11,59,122,.10);
+  /* padding-top: 30px; */
+  background-color: #0A71B9;
 }
 
 .kot-header-mobile-bottom-nav a {
-  color: green;
-  font-size: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -642,7 +660,7 @@ background-color: #0A71B9;
     display: block;
   }
     }
- @media (max-width: 767px) {
+ /* @media (max-width: 991px) {
       .kot-header-mobile-menu {
         display: block;
       }
@@ -652,10 +670,7 @@ background-color: #0A71B9;
   .kot-header-menu-overlay {
         display: block;
       }
-       .header-main-blank-div{
-    display: none!important;
-  }
-    }
+    } */
 
 /* slider */
 .kot-header-slider {
@@ -732,9 +747,6 @@ background-color: #0A71B9;
     /* background-image: url("your-desktop-image.jpg"); */
     background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG"); /* Keep same for now */
   }
-  .header-main-blank-div{
-    height: 18vh !important;
-  }
 }
 
 /* Overlay */
@@ -792,7 +804,7 @@ background-color: #0A71B9;
    SMART FIXED HEADER (DESKTOP ONLY)
    ===================================================== */
 
-@media (min-width: 768px){
+@media (min-width: 992px){
 
   .desktop-header-wrap{
     position: fixed;
@@ -838,10 +850,9 @@ background-color: #0A71B9;
 }
 
   </style>
-
 </head>
-<body>
 
+<body>
 
 <!-- ================= TOP BAR (DESKTOP) ================= -->
 <!-- TOP MARQUEE -->
@@ -850,12 +861,12 @@ background-color: #0A71B9;
   <div class="marquee-container">
     <div class="marquee-track" id="marqueeTrack">
       <span>
-        <img src="../assets/images/Header/marquee-logo.png" alt="">
+        <img src="assets/images/Header/marquee-logo.png" alt="">
         Empowering businesses to streamline operations and grow.
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </span>
       <span>
-        <img src="../assets/images/Header/marquee-logo.png" alt="">
+        <img src="assets/images/Header/marquee-logo.png" alt="">
         Empowering businesses to streamline operations and grow.
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </span>
@@ -868,11 +879,11 @@ background-color: #0A71B9;
 <div class="top-links-wrapper">
   <div class="top-links-right">
     <a href="../v1/index.php">Home</a>
-    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Startups</a>
-    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> E-Life</a>
-    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
-    <a href="../v1/contact.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
-    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Startups</a>
+    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> E-Life</a>
+    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
+    <a href="../v1/contact.html"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
+    <a href="#"> <span><img src="assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
   </div>
 
   <div class="top-actions">
@@ -893,7 +904,7 @@ background-color: #0A71B9;
 
     <li>
       <a class="dropdown-item lang-option" href="#" 
-         data-img="../assets/images/Header/uk.png" 
+         data-img="assets/images/Header/uk.png" 
          data-text="English">
         <img src="../assets/images/Header/uk.png"> English
       </a>
@@ -930,7 +941,7 @@ background-color: #0A71B9;
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 logo">
-        <a href="../v1/index.php"><img src="../assets/images/Header/Logo (2).png"></a>
+       <a href=""> <img src="../assets/images/Header/Logo (2).png"></a>
       </div>
       <div class="col-md-6">
         <div class="search-box">
@@ -955,14 +966,13 @@ background-color: #0A71B9;
         data-desc="Robust systems for large organizations."
         data-left="
              WHY KOT ENTERPRISES| ../v1/why-kot.html,
-              BOARD OF DIRECTION | ../v1/board-of-directors.html,
-             MANAGEMENT TEAM | ../v1,
-             NEWS| ../
+              BOARD OF DIRECTION | ../v1/board-of-directors.html
+             
+             
              
               "
 
        data-right="
-           INVESTORS| ../v1,
             CAREERS | ../v1/career.php
        
             "
@@ -1001,11 +1011,9 @@ background-color: #0A71B9;
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Consultancy"
         data-text="Expert consulting services." data-heading="Consultancy"
         data-desc="Guiding digital transformation."
-        data-left="
-              AUDITS | ../v1/audits.html,
-              AUGMENTATION | ../v1,
-              INFORMATION SECURITY | ../v,
-             AI, ML & DATA ANALYTICS | ../v
+         data-left="
+              AUDITS | ../v1/audits.html
+          
              
               "
 
@@ -1019,58 +1027,45 @@ background-color: #0A71B9;
     </div>
 
     <!-- MARKETPLACE -->
-    <div class="kot-main-header-nav-bar-item-wrapper">
+    <!-- <div class="kot-main-header-nav-bar-item-wrapper">
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Marketplace"
         data-text="Technology marketplace solutions." data-heading="Marketplace"
         data-desc="Products that power business."
-        data-left="POINT OF SALES,ECOMMERCE PLATFORMS,HEALTH CARE SYSTEMS,CONTENT MANAGEMENT SYSTEMS"
-        data-right="LEARNING MANAGEMENT SYSTEMS">
+        data-left=""
+        data-right="">
         MARKETPLACE
       </a>
-    </div>
+    </div> -->
 
     <!-- SPOTLIGHTS -->
-    <div class="kot-main-header-nav-bar-item-wrapper">
+    <!-- <div class="kot-main-header-nav-bar-item-wrapper">
       <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Spotlights"
         data-text="Featured projects and highlights." data-heading="Spotlights"
         data-desc="Showcasing innovation."
-        data-left="PERSONAL SUPPORT,WORK SUPPORT,EDUCATION SUPPORT,Media,PARTNER SUPPORT"
-         data-right="Apply Now,HR Policies,Training,Growth,Events"
-        >
-     SPOTLIGHTS
+        data-left=""
+        data-right="">
+        SPOTLIGHTS
       </a>
-    </div>
+    </div> -->
 
     <!-- SUPPORT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
       <a class="kot-main-header-nav-bar-item" href="../v1/support.php" data-img="https://via.placeholder.com/300x160?text=Support"
-        data-text="Dedicated customer support." data-heading="Support Center"
-        data-desc="We are here to help."
-        data-left="PERSONAL SUPPORT,WORK SUPPORT,EDUCATION SUPPORT,PARTNER SUPPORT"
-         data-right="Apply Now,HR Policies,Training,Growth,Events"
         >
         SUPPORT
       </a>
     </div>
-
+   
     <!-- CAREER -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="../v1/career.php" data-img="https://via.placeholder.com/300x160?text=Career"
-        data-text="Join our growing team." data-heading="Careers"
-        data-desc="Build your future with us."
-        data-left="Internships,Culture,Benefits"
-        data-right="Apply Now,HR Policies,Training,Growth,Events">
+      <a class="kot-main-header-nav-bar-item" href="../v1/career.php" >
         CAREER
       </a>
     </div>
 
     <!-- CONTACT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="../v1/contact.html" data-img="https://via.placeholder.com/300x160?text=Contact"
-        data-text="Get in touch with us." data-heading="Contact Us"
-        data-desc="Let’s start a conversation."
-        data-left="Email,Phone,Locations,Support,Enquiry"
-        data-right="Request Quote,Meet Team,Office Map,Hours,Directions">
+      <a class="kot-main-header-nav-bar-item" href="../v1/contact.php">
         CONTACT
       </a>
     </div>
@@ -1146,30 +1141,61 @@ background-color: #0A71B9;
   </label>
 </div>
 
-<a href="..v1/index.php" class="kot-header-menu-item"><i class="bi "></i> Home</a>
-
-<!-- PROJECT DROPDOWN ADDED HERE -->
-<div class="kot-header-menu-accordion" id="projectAcc">
-  <button class="kot-header-menu-acc-btn" type="button" id="projectBtn">
+<!-- Services -->
+<div class="kot-header-menu-accordion" id="servicesAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="servicesBtn">
     <span class="d-flex align-items-center gap-2 justify-content-center w-100">
-      <i class="bi bi-folder"></i> Services
+      <i class="bi "></i> CORPORATE
     </span>
     <i class="bi bi-chevron-down kot-header-chev"></i>
   </button>
-
-  <div class="kot-header-menu-acc-panel" id="projectPanel">
-    <a href="../v1/appsculpt.php"> APP SCULPT </a>
-    <a href="../v1/agileappsservice.php">AGILE APPS</a>
-    <a href="../v1/digittrail.html">DIG-IT-TRAIL</a>
-    <a href="../v1/merchanity.html"> MERCHANITY </a>
-    <a href="../v1/WebSculpture.php">WEB SCULPTURE</a>
-    <a href="../v1/flawless.php">FLAWLESSX</a>
+  <div class="kot-header-menu-acc-panel" id="servicesPanel">
+    <a href="../v1/why-kot.html">Why Kot Enterprises</a>
+    <a href="../v1/board-of-directors.html">Board Of Director</a>
+    <a href="../v1/career.php">Career</a>
+   
   </div>
 </div>
- 
+
+<!-- PROJECT DROPDOWN ADDED HERE -->
+<!-- Services -->
+<div class="kot-header-menu-accordion" id="servicesAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="servicesBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi "></i> Services
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+  <div class="kot-header-menu-acc-panel" id="servicesPanel">
+    <a href="../v1/appsculpt.php">APP SCULPT</a>
+    <a href="../v1/agileappsservice.php">AGILE APPS</a>
+    <a href="../v1/digittrail.html">DIG-IT-TRAIL</a>
+    <a href="../v1/merchanity.html">MERCHANITY</a>
+    <a href="../v1/WebSculpture.php">WEB SCULPTURE</a>
+    <a href="../v1/flawless.php">FLAWLESSX</a>
+    <a href="../v1/graphoria.php">GRAPHIORA</a>
+    <a href="../v1/venture.html">VENTURE XCELERATOR</a>
+  </div>
+</div>
+
+<!-- Consultancy -->
+<div class="kot-header-menu-accordion" id="consultancyAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="consultancyBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi "></i> Consultancy
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+  <div class="kot-header-menu-acc-panel" id="consultancyPanel">
+    <a href="../v1/audits.html">Audits</a>
+    <a href="../v1/data-engineering.html">Data Engineering</a>
+    <a href="../v1/gen-ai.html">Generative AI</a>
+  </div>
+</div>
+
 <a href="../v1/support.php" class="kot-header-menu-item"><i class="bi "></i> Support</a>
-<a href="../v1/contact.php" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
-<a href="../v1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career/a>
+<a href="../v1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career</a>
+<a href="../v1/contact.html" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
 
   </div>
 </aside>
@@ -1185,14 +1211,14 @@ background-color: #0A71B9;
     </p>
     <a href="donate.html" class="kot-header-btn-donate">Donate Now</a>
   </div>
-</div>
- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe praesentium sapiente eius quasi excepturi corporis necessitatibus facere, perspiciatis amet laborum ab? Magni quidem tenetur pariatur, mollitia odio dicta obcaecati ut animi beatae perferendis cum explicabo deleniti a delectus doloremque consectetur dignissimos velit esse nesciunt error facilis placeat perspiciatis autem. Possimus recusandae saepe facere eos dolorum doloribus a delectus nam tenetur laborum culpa maiores exercitationem magni itaque voluptas, ad beatae, excepturi, ducimus dolor? Veritatis blanditiis nulla explicabo molestiae dolorem, corporis provident harum maiores alias reiciendis quasi est consequuntur eaque itaque atque laudantium vero fuga iusto at vitae tempore aspernatur assumenda suscipit? In alias aliquam, veritatis reprehenderit mollitia nam. Quasi nesciunt aspernatur accusantium similique esse molestias maiores nam. Odit atque tempora itaque beatae ab autem maiores earum, illo facere, esse dicta necessitatibus quod incidunt minima architecto, iste dolore obcaecati delectus soluta voluptatibus perspiciatis ullam! Maxime placeat ullam magnam expedita sequi mollitia rem commodi! Laboriosam, corporis omnis? Dolores iusto nostrum eum nulla molestiae porro voluptatum sequi, libero voluptas, non dolorem tenetur. Vel a fugiat, voluptas placeat, doloremque tenetur quasi perferendis ipsa dolores facere unde eius vitae corrupti nulla cumque necessitatibus. Id minus ut, possimus commodi pariatur necessitatibus eaque sunt quas deserunt facilis voluptates odit expedita recusandae quo quidem? Eos optio similique laboriosam delectus dolorum magni ea quos dolores voluptatibus. Qui consequuntur, enim vitae ullam quos totam nostrum, labore voluptatibus nesciunt illum temporibus minus officiis explicabo facere sunt quibusdam. Ducimus pariatur quis assumenda deserunt nam magni neque reprehenderit ab quod minus commodi aspernatur doloremque officia quisquam iusto delectus fugiat mollitia rem, similique corporis asperiores quia laborum error! Quo, illo ea. Vero harum eligendi non nostrum earum dolores, modi consequatur, fugit voluptates quia distinctio odio dolorem porro quisquam temporibus at possimus incidunt itaque voluptas aut? Temporibus soluta necessitatibus vel quibusdam obcaecati ab, pariatur accusantium voluptatum animi nostrum sit unde velit sunt et deserunt enim ullam odit in. Aliquid possimus aspernatur debitis tempora similique itaque libero est unde repellat, voluptate veniam hic obcaecati commodi iusto voluptas, deserunt sapiente minima, assumenda cumque aliquam rerum. Nisi natus dolorem earum quasi! Blanditiis suscipit provident ducimus doloribus veniam reiciendis sint veritatis, ex quidem, delectus molestiae libero. Officiis, quod assumenda. A ullam atque, sunt reprehenderit laboriosam tempora molestias cum soluta assumenda recusandae fugit ipsum, excepturi voluptatibus. Doloribus maiores commodi ullam, sit in aliquid, obcaecati repellat ea atque sequi doloremque. Iusto earum, dignissimos numquam labore laborum quas veniam explicabo dolor recusandae cum omnis ad. Similique cumque eum repellat doloremque quia et aperiam porro asperiores nulla atque! Quis iusto consequatur porro, dolorum aliquid suscipit impedit aperiam. Modi nemo placeat non nihil fugiat ut, quos dicta quod in qui nam. Repellendus minima doloremque eum ad consequatur odio, alias ea sunt totam similique aspernatur perspiciatis voluptate esse! Officiis a neque temporibus optio! Voluptates iusto mollitia voluptate. Quo optio, soluta eum voluptas minus accusantium eveniet, cum nulla, impedit sint vitae corrupti corporis consequatur excepturi voluptatum vel. Illo maiores dolorum ad. Delectus, provident reiciendis vel culpa, distinctio veritatis accusantium, necessitatibus totam alias nobis ullam rerum tempore tempora.</p>
+</div> -->
+ <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe praesentium sapiente eius quasi excepturi corporis necessitatibus facere, perspiciatis amet laborum ab? Magni quidem tenetur pariatur, mollitia odio dicta obcaecati ut animi beatae perferendis cum explicabo deleniti a delectus doloremque consectetur dignissimos velit esse nesciunt error facilis placeat perspiciatis autem. Possimus recusandae saepe facere eos dolorum doloribus a delectus nam tenetur laborum culpa maiores exercitationem magni itaque voluptas, ad beatae, excepturi, ducimus dolor? Veritatis blanditiis nulla explicabo molestiae dolorem, corporis provident harum maiores alias reiciendis quasi est consequuntur eaque itaque atque laudantium vero fuga iusto at vitae tempore aspernatur assumenda suscipit? In alias aliquam, veritatis reprehenderit mollitia nam. Quasi nesciunt aspernatur accusantium similique esse molestias maiores nam. Odit atque tempora itaque beatae ab autem maiores earum, illo facere, esse dicta necessitatibus quod incidunt minima architecto, iste dolore obcaecati delectus soluta voluptatibus perspiciatis ullam! Maxime placeat ullam magnam expedita sequi mollitia rem commodi! Laboriosam, corporis omnis? Dolores iusto nostrum eum nulla molestiae porro voluptatum sequi, libero voluptas, non dolorem tenetur. Vel a fugiat, voluptas placeat, doloremque tenetur quasi perferendis ipsa dolores facere unde eius vitae corrupti nulla cumque necessitatibus. Id minus ut, possimus commodi pariatur necessitatibus eaque sunt quas deserunt facilis voluptates odit expedita recusandae quo quidem? Eos optio similique laboriosam delectus dolorum magni ea quos dolores voluptatibus. Qui consequuntur, enim vitae ullam quos totam nostrum, labore voluptatibus nesciunt illum temporibus minus officiis explicabo facere sunt quibusdam. Ducimus pariatur quis assumenda deserunt nam magni neque reprehenderit ab quod minus commodi aspernatur doloremque officia quisquam iusto delectus fugiat mollitia rem, similique corporis asperiores quia laborum error! Quo, illo ea. Vero harum eligendi non nostrum earum dolores, modi consequatur, fugit voluptates quia distinctio odio dolorem porro quisquam temporibus at possimus incidunt itaque voluptas aut? Temporibus soluta necessitatibus vel quibusdam obcaecati ab, pariatur accusantium voluptatum animi nostrum sit unde velit sunt et deserunt enim ullam odit in. Aliquid possimus aspernatur debitis tempora similique itaque libero est unde repellat, voluptate veniam hic obcaecati commodi iusto voluptas, deserunt sapiente minima, assumenda cumque aliquam rerum. Nisi natus dolorem earum quasi! Blanditiis suscipit provident ducimus doloribus veniam reiciendis sint veritatis, ex quidem, delectus molestiae libero. Officiis, quod assumenda. A ullam atque, sunt reprehenderit laboriosam tempora molestias cum soluta assumenda recusandae fugit ipsum, excepturi voluptatibus. Doloribus maiores commodi ullam, sit in aliquid, obcaecati repellat ea atque sequi doloremque. Iusto earum, dignissimos numquam labore laborum quas veniam explicabo dolor recusandae cum omnis ad. Similique cumque eum repellat doloremque quia et aperiam porro asperiores nulla atque! Quis iusto consequatur porro, dolorum aliquid suscipit impedit aperiam. Modi nemo placeat non nihil fugiat ut, quos dicta quod in qui nam. Repellendus minima doloremque eum ad consequatur odio, alias ea sunt totam similique aspernatur perspiciatis voluptate esse! Officiis a neque temporibus optio! Voluptates iusto mollitia voluptate. Quo optio, soluta eum voluptas minus accusantium eveniet, cum nulla, impedit sint vitae corrupti corporis consequatur excepturi voluptatum vel. Illo maiores dolorum ad. Delectus, provident reiciendis vel culpa, distinctio veritatis accusantium, necessitatibus totam alias nobis ullam rerum tempore tempora.</p>
 <footer>@CsopyRight</footer> -->
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
 <div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
   <div class="kot-header-mobile-logo-strip">
-    <img src="../assets/images/Header/support-2.png" alt="Support Logo">
+    <!-- <img src="../assets/images/Header/support-2.png" alt="Support Logo"> -->
   </div>
 
   <div class="container kot-header-bottom-container">
@@ -1208,24 +1234,18 @@ background-color: #0A71B9;
       <div class="col">
         <a href="../v1/index.php"
            class="d-flex flex-column align-items-center">
-          <i class="bi bi-heart-fill"></i>
+          <i class="bi bi-house-fill"></i>
           <span>Home</span>
         </a>
       </div>
     </div>
   </div>
 </div>
-<div class="header-main-blank-div" style="height: 30vh;" >
+
+<!-- <div class="header-gap-div" style="margin-bottom: 14%;" > -->
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  fetch('../components/footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('global-footer').innerHTML = data;
-    });
-</script>
 
 <script>
     
@@ -1261,14 +1281,24 @@ background-color: #0A71B9;
   });
 
   // PROJECT DROPDOWN FUNCTIONALITY
-  const projectAcc = document.getElementById("projectAcc");
-  const projectBtn = document.getElementById("projectBtn");
-  
-  if (projectBtn) {
-    projectBtn.addEventListener("click", () => {
-      projectAcc.classList.toggle("kot-header-open");
+  // PROJECT DROPDOWN FUNCTIONALITY
+const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
+
+accBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const accordion = btn.parentElement; // parent div.kot-header-menu-accordion
+    accordion.classList.toggle("kot-header-open");
+
+    // Optional: Close other accordions if you want only one open at a time
+    accBtns.forEach(otherBtn => {
+      const otherAccordion = otherBtn.parentElement;
+      if (otherAccordion !== accordion) {
+        otherAccordion.classList.remove("kot-header-open");
+      }
     });
-  }
+  });
+});
+
 
   // toggle button functionality
   document.getElementById("glowToggle")?.addEventListener("change", function () {
@@ -1346,7 +1376,7 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       </li>`;
   })
   .join("");
-
+      
       right.innerHTML = item.dataset.right
   .split(",")
   .map(v => {
@@ -1361,7 +1391,6 @@ document.querySelectorAll(".kot-main-header-nav-bar-item")
       </li>`;
   })
   .join("");
-
 
       content.style.opacity = "1";
       content.style.transform = "translateY(0)";
