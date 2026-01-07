@@ -566,24 +566,6 @@ background-color: #0A71B9;
 /* logo ko floating banao */
 .kot-header-mobile-logo-strip {
   position: absolute;
-    top: -7%;
-    left: 42%;
-    /* transform: translateX(-50%); */
-    /* background: #FFFFFF; */
-    padding: 0px -3px;
-    border-radius: 100px;
-    /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); */
-    z-index: 999;
-    background-image: url(../assets/images/Header/Vector2.png);
-    height: 4vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-/* logo size */
-.kot-header-mobile-logo-strip {
-  position: absolute;
     top: -56%;
     left: 50%;
     transform: translateX(-50%);
@@ -592,7 +574,7 @@ background-color: #0A71B9;
     border-radius: 100px;
     /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); */
     z-index: 999;
-    background-image: url(../assets/images/Header/Vector3.png);
+    background-image: url(../images/Header/Vector3.png);
     height: 84px;
     width: 84px;
     background-repeat: no-repeat;
@@ -600,9 +582,15 @@ background-color: #0A71B9;
     background-size: 100% 100%;
 }
 
+/* logo size */
+.kot-header-mobile-logo-strip img {
+  height: 42px;
+  width: auto;
+}
+
 /* menu ko thora neeche push karo */
 .kot-header-mobile-bottom-nav .kot-header-bottom-container {
-  /* padding-top: 30px; */
+  padding-top: 15px;
   background-color: #0A71B9;
 }
 
@@ -614,7 +602,7 @@ background-color: #0A71B9;
 }
 
 .kot-header-mobile-bottom-nav i {
-  font-size: 20px;
+  font-size: 30px;
 }
 
   /* outer glowing box */
@@ -837,4 +825,20 @@ background-color: #0A71B9;
   body{
     padding-top: 175px !important;
   }
+}
+
+
+@media screen and (min-width: 50px) and (max-width: 767px) {
+    .login-btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 6px 22px;
+        background-color: #0C72BA;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .login-btn a {
+      color: white;
+    }
 }

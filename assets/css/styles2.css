@@ -2530,19 +2530,21 @@ margin-bottom: 40px;
   height: 48px;
   border-radius: 50%;
   border: none;
-  background-color: #0A71B9;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   font-size: 22px;
   cursor: pointer;
   opacity: 0;
+  
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #goTopBtn:hover {
   transform: translateY(-4px);
-  background-color: #ffffff;
-  color: #000;
+  background-color: #0A71B9;
+  color: white;
+  border: 1px solid white;
 }
 
 /* Show button */

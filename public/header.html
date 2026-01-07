@@ -16,7 +16,7 @@
        <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+       <link rel="stylesheet" href="../assets/css/header.css">
     
  <style>
    /* ================= TOP BAR ================= */
@@ -589,19 +589,20 @@ background-color: #0A71B9;
 /* logo ko floating banao */
 .kot-header-mobile-logo-strip {
   position: absolute;
-    top: -7%;
-    left: 42%;
-    /* transform: translateX(-50%); */
+    top: -56%;
+    left: 50%;
+    transform: translateX(-50%);
     /* background: #FFFFFF; */
     padding: 0px -3px;
     border-radius: 100px;
     /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); */
     z-index: 999;
-    background-image: url(../assets/images/Header/Vector2.png);
-    height: 4vh;
-    width: 100%;
+    background-image: url(../assets/images/Header/Vector3.png);
+    height: 84px;
+    width: 84px;
     background-repeat: no-repeat;
     background-size: contain;
+    background-size: 100% 100%;
 }
 
 /* logo size */
@@ -612,7 +613,7 @@ background-color: #0A71B9;
 
 /* menu ko thora neeche push karo */
 .kot-header-mobile-bottom-nav .kot-header-bottom-container {
-  /* padding-top: 30px; */
+  padding-top: 15px;
   background-color: #0A71B9;
 }
 
@@ -624,7 +625,7 @@ background-color: #0A71B9;
 }
 
 .kot-header-mobile-bottom-nav i {
-  font-size: 20px;
+  font-size: 30px;
 }
 
   /* outer glowing box */
@@ -845,7 +846,7 @@ background-color: #0A71B9;
 
   /* content ko header ke neeche push */
   body{
-    padding-top: 190px;
+    padding-top: 175px !important;
   }
 }
 
@@ -856,7 +857,8 @@ background-color: #0A71B9;
 
 <!-- ================= TOP BAR (DESKTOP) ================= -->
 <!-- TOP MARQUEE -->
- <div class="desktop-header-wrap">
+
+<div class="desktop-header-wrap">
 <div class="top-marquee">
   <div class="marquee-container">
     <div class="marquee-track" id="marqueeTrack">
@@ -1065,7 +1067,7 @@ background-color: #0A71B9;
 
     <!-- CONTACT -->
     <div class="kot-main-header-nav-bar-item-wrapper">
-      <a class="kot-main-header-nav-bar-item" href="../v1/contact.php">
+      <a class="kot-main-header-nav-bar-item" href="../v1/contact.html">
         CONTACT
       </a>
     </div>
@@ -1134,11 +1136,16 @@ background-color: #0A71B9;
     </div>
     
     <div class="kot-header-mobile-menu-body">
+      <div class="alternate-changing">
    <div class="kot-header-glow-toggle">
   <label class="kot-header-toggle">
     <input type="checkbox" id="glowToggle">
     <span class="kot-header-slider"></span>
   </label>
+   
+</div>
+<div class="login-btn"><a href="login.php" class="login-btn">Login</a>
+</div>
 </div>
 
 <!-- Services -->
@@ -1158,6 +1165,7 @@ background-color: #0A71B9;
 </div>
 
 <!-- PROJECT DROPDOWN ADDED HERE -->
+
 <!-- Services -->
 <div class="kot-header-menu-accordion" id="servicesAcc">
   <button class="kot-header-menu-acc-btn" type="button" id="servicesBtn">
@@ -1227,7 +1235,7 @@ background-color: #0A71B9;
         <a id="openMenuBtnBottom" role="button"
            class="d-flex flex-column align-items-center">
           <i class="bi bi-list"></i>
-          <span>Menu</span>
+          <!-- <span>Menu</span> -->
         </a>
       </div>
 
@@ -1235,7 +1243,7 @@ background-color: #0A71B9;
         <a href="../v1/index.php"
            class="d-flex flex-column align-items-center">
           <i class="bi bi-house-fill"></i>
-          <span>Home</span>
+          <!-- <span>Home</span> -->
         </a>
       </div>
     </div>
