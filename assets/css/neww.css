@@ -566,7 +566,7 @@ background-color: #0A71B9;
 /* logo ko floating banao */
 .kot-header-mobile-logo-strip {
   position: absolute;
-    top: -56%;
+    top: -40%;
     left: 50%;
     transform: translateX(-50%);
     /* background: #FFFFFF; */
@@ -591,6 +591,7 @@ background-color: #0A71B9;
 /* menu ko thora neeche push karo */
 .kot-header-mobile-bottom-nav .kot-header-bottom-container {
   padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #0A71B9;
 }
 

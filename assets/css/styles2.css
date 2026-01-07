@@ -1,6 +1,6 @@
 body{
     margin: 0%;
-    padding: 0% !important;
+    padding: 0%;
     font-family: 'Montserrat', sans-serif;
 }
 .container-fluid{
@@ -2523,7 +2523,7 @@ margin-bottom: 40px;
 
 #goTopBtn {
   position: fixed;
-  bottom: 30px;
+  bottom: 35px;
   right: 30px;
   z-index: 999;
   width: 48px;
@@ -2556,7 +2556,7 @@ margin-bottom: 40px;
 /* Mobile adjustment */
 @media (max-width: 768px) {
   #goTopBtn {
-    bottom: 70px;
+    bottom: 100px;
     right: 20px;
     width: 44px;
     height: 44px;
