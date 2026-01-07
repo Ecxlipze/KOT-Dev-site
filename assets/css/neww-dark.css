@@ -1,14 +1,18 @@
+
 .top-marquee{
     background:#0A71B9;
-    color:#fff;
+    color:#000000;
     font-size:13px;
-    padding:6px 0;
+    padding:8px 0;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .marquee-container{
     overflow:hidden;
     white-space:nowrap;
 }
+
 
 .marquee-track{
     display:flex;
@@ -41,7 +45,7 @@
 .top-links-right{
    
     background:#0A71B9;
-    padding:6px 6px 6px 6px;
+    padding:6px 8px 6px 10px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -76,12 +80,17 @@ letter-spacing: 0%;
     gap:12px;
 }
 
+.desktop-header-wrap {
+    background-color: #000;
+}
 /* ================= LANGUAGE ================= */
 .dropdown{
     
     border-top:none;
     width:94px;
     height:32px;
+    color: white;
+    background-color: #000;
    
 border-bottom-right-radius: 5.23px;
 border-bottom-left-radius: 5.23px;
@@ -92,7 +101,7 @@ border-left-width: 1.05px;
 
 border-style: solid;
     border-top-style:none;
-border-color: #000000;
+border-color: #ffffff;
 
 
 }
@@ -104,6 +113,7 @@ border-color: #000000;
     display:flex;
     align-items:center;
     gap:6px;
+    color: white;
 }
 
 /* .lang-dropdown img{
@@ -121,20 +131,29 @@ border-color: #000000;
     align-items:center;
     gap:6px;
     font-size:12px;
+    background-color: #000;
+    color: white;
+}
+#langText {
+    color: white;
+}
+.dropdown-menu.show {
+    background-color: #000;
+    border: 1px solid white;
 }
 
 /* ================= TOGGLE ================= */
 .switch{
-    width:38px;
-    height:14px;
+    width:35px;
+    height:15px;
     position:relative;
- border: 0.9px solid #0A71B9;
+ border: 1px solid #ffffff;
 opacity: 1;
-border-radius: 20px;
-border-width: 0.9px;
-box-shadow: 0px 0px 1.5px 0px #0D6EB3;
+border-radius: 50px;
+border-width: 1px;
+box-shadow: 1px 1px 1.5px 1px #0D6EB3;
 
-box-shadow: 0px 0px 3px 0px #0D6EB3;
+box-shadow: 1px 1px 3px 1px #0D6EB3;
 
 box-shadow: 0px 0px 10.5px 0px #0D6EB3;
 
@@ -150,8 +169,12 @@ box-shadow: 0px 0px 63px 0px #0D6EB3;
 .slider{
     position:absolute;
     inset:0;
-    background:#fff;
+    background:#121212;
     border-radius:20px;
+    box-shadow:
+  0 0 18px rgba(10, 113, 185, 0.9),
+  0 0 40px rgba(255, 255, 255, 0.15);
+
     cursor:pointer;
 }
 .slider:before{
@@ -181,9 +204,24 @@ box-shadow: 0px 0px 63px 0px #0D6EB3;
 
     height: 32px;
 
+    
     margin-left:auto;
     position:relative;
 }
+
+.form-control {
+    background-color: #000 !important;
+    color: white !important;
+}
+.form-scontrol-style {
+  color: #ffffff !important;              /* Typed text color */
+}
+
+.form-scontrol-style::placeholder {
+  color: #ffffff !important;              /* Placeholder color */
+  opacity: 0.8;
+}
+
 .form-scontrol-style {
 border-radius: 6.01px;
 border-width: 1.2px;
@@ -193,17 +231,22 @@ font-weight: 400;
 font-style: Regular;
 font-size: 14.42px;
 leading-trim: NONE;
+color: white !important;
 line-height: 100%;
 letter-spacing: 0%;
 
 }
 .search-box button{
     position:absolute;
-    right:-5px;
-    top:50%;
+    right:-3px;
+    top:58%;
     transform:translateY(-50%);
     border:none;
     background:none;
+}
+
+.logo img {
+  content: url("../images/kotlogodark.png");
 }
 
 /* ================================================= */
@@ -378,11 +421,6 @@ letter-spacing: 0%;
   gap: 12px;
 }
 
-
-
-.logo img {
-  content: url("../images/kotlogo.png");
-}
    .kot-header-mobile-brand{
   position: absolute;
   top: -10px;
@@ -593,6 +631,7 @@ background-color: #0A71B9;
   width: auto;
 }
 
+
 /* menu ko thora neeche push karo */
 .kot-header-mobile-bottom-nav .kot-header-bottom-container {
   padding-top: 15px;
@@ -796,7 +835,7 @@ background-color: #0A71B9;
     left: 0;
     width: 100%;
     z-index: 1050;
-    background: #fff;
+    background: #000000;
     transition: all .4s ease;
   }
 
@@ -847,4 +886,4 @@ background-color: #0A71B9;
     .login-btn a {
       color: white;
     }
-} 
+}
