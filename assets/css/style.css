@@ -771,7 +771,7 @@ color: #000000 !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 65%;
+  padding-bottom: 50%;
 }
 
 /* Each card */
@@ -861,7 +861,50 @@ color: #000000 !important;
     font-size: 1rem;
   }
 }
+#goTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+#goTopBtn:hover {
+  transform: translateY(-4px);
+  background-color: #0A71B9;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Show button */
+#goTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+  #goTopBtn {
+    bottom: 70px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+  .kot-footer{
+    padding-bottom: 26% !important;
+  }
+}
 .need-help-bg-text{
 background: linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
   text-align: center
@@ -1007,7 +1050,9 @@ box-shadow: 0px 0px 20px 7px #0D6EB3;
   background: linear-gradient(to bottom, #6ec1ff, #2f80ed);
   border-radius: 10px;
 }
-
+.kot-footer{
+  /* padding-bottom: 2% !important; */
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 991px) {
   .how-we-help h2 {
@@ -1881,6 +1926,7 @@ display: block;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000000;
+  margin-top: 14%;
 }
 
 
@@ -2056,10 +2102,10 @@ text-transform: uppercase;
 .what-we-do-bg-img{
   background-image: url("../images/Graphoria/graphoria-main-image.jpeg");
   background-size: cover;
-  background-position-y: 58%;
+  background-position-y: 30%;
   background-repeat: no-repeat;
-  padding-bottom: 2%;
-  height: 2000px;
+  padding-bottom: 12%;
+    height: 2200px;
 }
 .what-we-do-img img{
   width: 100%;
@@ -2238,7 +2284,8 @@ left: -6%; }
 /* For tablets and below */
 @media only screen and (max-width: 767px) {
   .design-bg-image {
-    height: auto; /* Adjust height to be more flexible */
+    height: 272px;
+        background-size: contain;
   }
 
   .point-1 img, .point-2 img, .point-3 img, .point-4 img {
@@ -2246,48 +2293,50 @@ left: -6%; }
   }
 
   .point-1 {
-    top: -71px; /* Adjust vertical positioning */
+    top: -10px; /* Adjust vertical positioning */
     left: 0;
   }
   .point-2 {
-    top: -100px;
+    top: -8px;
     left: 0;
   }
   .point-3 {
-    top: 20px;
+    top: 40px;
     left: 0;
   }
   .point-4 {
-    top: -103px;
+    top: -12px;
     right: 0;
   }
 }
 
 /* For mobile devices */
 
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-   .design-bg-image {
-    height: auto; /* Adjust height to be more flexible */
-  }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+       .design-bg-image {
+        height: 547px;
+        width: 100% !important;
+        background-size: contain;
+    }
 
   .point-1 img, .point-2 img, .point-3 img, .point-4 img {
     width: 100%; /* Make images scale to container width */
   }
 
  .point-1 {
-    top: -110px; /* Adjust vertical positioning */
+    top: -15px; /* Adjust vertical positioning */
     left: 0;
   }
   .point-2 {
-    top: -130px;
+    top: -73px;
     left: 0;
   }
   .point-3 {
-    top: -60px;
+    top: 123px;
     left: 0;
   }
   .point-4 {
-    top: -123px;
+    top: -20px;
     right: 0;
   }
 }
@@ -3939,5 +3988,131 @@ color: #000000;
 line-height: 100%;
 color: #000000;
   margin-bottom: 26px;
+  
 }
 
+
+/* .background-image{
+  background-image: url('../images/Graphoria/main-bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* overlays */
+/* .second-image,
+.transparent-image{
+  position: absolute;
+  inset: 0;
+}
+
+.second-image{
+  background-image: url('../images/Graphoria/DAILY1.png');
+  opacity: 0.7;
+  z-index: 1;
+} */
+
+/* .transparent-image{
+  background-image: url('../images/Graphoria/tranparent.png');
+  z-index: 2;
+} */
+
+/* layout */
+/* .hero-wrapper{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  padding: 40px 80px;
+} */
+/* .description{
+  font-family: 'Montserrat-Bold';
+
+font-size: 40px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+} */
+/* input */
+/* .input-field{
+  max-width: 600px;
+  margin-bottom: 30px;
+} */
+
+/* content */
+/* .content{
+  max-width: 650px;
+  color: #fff;
+} */
+
+/* tagline */
+/* .tagline{
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+} */
+
+/* .tagline span{
+  font-family: 'Montserrat-Bold';
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+} */
+/* .taglain-1{
+    font-family: 'Montserrat-Bold';
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FAC000;
+} */
+/* .taglain-2{
+color: #08D5A3;
+   font-family: 'Montserrat-Bold';
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+} */
+/* .taglain-3{
+color: #C0494B;
+   font-family: 'Montserrat-Bold';
+font-size: 60px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+} */
+/* .tagline p{
+ font-family: 'Montserrat-Regular';
+font-size: 40px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #ffffff;
+} */
+/* .content-parar{
+  font-family: 'Montserrat-Regular';
+
+font-size: 30px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color:#FFFFFF ;
+} */
+/* .grow-text{
+  font-family: 'Montserrat-Bold';
+
+font-size: 32px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #D4F892;
+}  */

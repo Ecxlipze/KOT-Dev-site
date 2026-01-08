@@ -289,6 +289,8 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-header').innerHTML = data;
+     
+  // mobile offcanvas
   const body = document.body;
   const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("menuOverlay");
@@ -374,73 +376,81 @@ const hoverColors = {
 document.querySelectorAll(".kot-main-header-nav-bar-item")
 .forEach((item,i,arr)=>{
 
-  item.addEventListener("mouseenter",()=>{
+  item.addEventListener("mouseenter", ()=>{
 
-    document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
-      .forEach(w=>w.classList.remove("hovered","previous-hide"));
+  // 🔹 Sab wrapper classes reset karo
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    .forEach(w => w.classList.remove("hovered", "previous-hide"));
 
-    const wrap = item.parentElement;
-    wrap.classList.add("hovered");
-    if(i>0) arr[i-1].parentElement.classList.add("previous-hide");
+  const wrap = item.parentElement;
+  wrap.classList.add("hovered");
+  if(i > 0) arr[i-1].parentElement.classList.add("previous-hide");
 
-    nav.style.setProperty(
-      "--hover-color",
-      hoverColors[item.innerText.trim()] || "#8f4b36"
-    );
+  nav.style.setProperty(
+    "--hover-color",
+    hoverColors[item.innerText.trim()] || "#8f4b36"
+  );
 
-    content.style.transition = "none";
-    content.style.opacity = "0";
-    content.style.transform = "translateY(-20px)";
+  // 🚫 Agar no-mega hai → mega menu hide karo aur exit
+  if (wrap.classList.contains("no-mega")) {
+    megaMenu.classList.remove("show");
+    megaMenu.style.display = "none";
+    isMegaOpen = false;
+    return; // hover classes applied, mega menu blocked
+  }
 
-    requestAnimationFrame(()=>{
+  // 🔹 Mega menu open ka existing code
+  content.style.transition = "none";
+  content.style.opacity = "0";
+  content.style.transform = "translateY(-20px)";
 
-      content.style.transition = ".35s ease";
+  requestAnimationFrame(()=>{
+    content.style.transition = ".35s ease";
 
-      img.src = item.dataset.img;
-      text.innerText = item.dataset.text;
-      heading.innerText = item.dataset.heading;
-      desc.innerText = item.dataset.desc;
+    img.src = item.dataset.img;
+    text.innerText = item.dataset.text;
+    heading.innerText = item.dataset.heading;
+    desc.innerText = item.dataset.desc;
 
-      left.innerHTML = item.dataset.left
-  .split(",")
-  .map(v => {
-    let [text, link] = v.split("|").map(s => s.trim());
+    left.innerHTML = item.dataset.left
+      .split(",")
+      .map(v => {
+        let [text, link] = v.split("|").map(s => s.trim());
+        return `
+          <li>
+            <a href="${link || '#'}">
+              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+              ${text}
+            </a>
+          </li>`;
+      })
+      .join("");
 
-    return `
-      <li>
-        <a href="${link || '#'}">
-          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
-          ${text}
-        </a>
-      </li>`;
-  })
-  .join("");
-      
-      right.innerHTML = item.dataset.right
-  .split(",")
-  .map(v => {
-    let [text, link] = v.split("|").map(s => s.trim());
+    right.innerHTML = item.dataset.right
+      .split(",")
+      .map(v => {
+        let [text, link] = v.split("|").map(s => s.trim());
+        return `
+          <li>
+            <a href="${link || '#'}">
+              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+              ${text}
+            </a>
+          </li>`;
+      })
+      .join("");
 
-    return `
-      <li>
-        <a href="${link || '#'}">
-          <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
-          ${text}
-        </a>
-      </li>`;
-  })
-  .join("");
-
-      content.style.opacity = "1";
-      content.style.transform = "translateY(0)";
-    });
-
-    if(!isMegaOpen){
-      megaMenu.style.display = "block";
-      requestAnimationFrame(()=>megaMenu.classList.add("show"));
-      isMegaOpen = true;
-    }
+    content.style.opacity = "1";
+    content.style.transform = "translateY(0)";
   });
+
+  if(!isMegaOpen){
+    megaMenu.style.display = "block";
+    requestAnimationFrame(()=>megaMenu.classList.add("show"));
+    isMegaOpen = true;
+  }
+
+});
 });
 
 nav.addEventListener("mouseleave",()=>{

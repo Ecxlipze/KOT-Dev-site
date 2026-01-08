@@ -47,6 +47,9 @@ color: #000000;
     overflow: hidden;
     text-align: center;
 }
+.websculpture-hero-section{
+  margin-top: 0% !important;
+}
 /* .what-we-offer-background-image {
   max-width: 405px;
   aspect-ratio: 405 / 747;
@@ -125,12 +128,12 @@ background: linear-gradient(90deg, #EAFF00 0%, #FF2B00 43.28%, #FF8500 100%);
   -webkit-text-fill-color: transparent;
 
 }
-.websculpture-logo {
+/* .websculpture-logo {
     width: 100%;
 
 
 
-}
+} */
 .websculpture-description {
     font-family: 'Montserrat-Regular';
 font-size: 12px;
@@ -239,7 +242,7 @@ color: #0A71B9;
    }
    .kot-paragraph{
 font-family: 'Montserrat-Regular';
-font-size: clamp(22px, 2vw, 24px);
+font-size: clamp(20px, 2vw, 24px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -337,6 +340,25 @@ text-align: center;
   aspect-ratio: 269 / 152;
   height: auto;
 }
+.alternate-changing{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+}
+.login-btn{
+  display: inline-block;
+  text-decoration: none;
+  padding:6px 22px;
+  background-color:#0C72BA;
+
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.login-btn a{
+  color: #fff;
+}
 .support-slider{
   padding-bottom: 0%;
 }
@@ -351,7 +373,7 @@ letter-spacing: 0%!important;
 text-align: center!important;
 }
 .explore-section{
-  padding-top: 0%;
+  padding-top: 34%;
 }
 .saas-row{
         flex-direction:column;
@@ -366,6 +388,9 @@ text-align: center!important;
 
     .saas-right{
         margin-top:12px;
+    }
+    #global-footer{
+      margin-top: 3% !important;
     }
     .empowering-text-paragraph {
         
@@ -422,6 +447,9 @@ color: #A53692;
     backdrop-filter: none !important;
     justify-content: start;
     }
+    .career-main-image-section {
+      margin-top: 0% !important;
+    }
     .empowering-text-paragraph p{
       width: 170px;
       font-family: 'Montserrat-Light';
@@ -434,6 +462,9 @@ letter-spacing: 0%;
 color: #000;
 
     }
+     .support-section-bg{
+  margin-top: 0% !important;
+ }
     .empowering-btn-agile{
       width: 106px;
 height: 28px;
@@ -495,6 +526,7 @@ color: #000000;
 }
 .emporing-business{
   overflow: hidden;
+    margin-top: 6% !important;
 }
   .what-we-do-img{
       overflow: hidden;
@@ -641,7 +673,9 @@ line-height: 100%;
 letter-spacing: 0%;
 
    }
-
+.responsive-layout-cl{
+  margin-top: -10% !important;
+}
    .android-card-head h2{
     font-family: 'Montserrat-Bold';
 
@@ -748,7 +782,8 @@ font-size: 14px;
 line-height: 100%;
 
 text-align: center;
-padding-top: 3%;
+/* 
+ */
 
 }
 .app-sculpt-service-paragraph p{
@@ -790,6 +825,10 @@ border-style: dashed;
 dashes: 4.720000267028809, 4.720000267028809;
 
 }
+  .graphoria-hero{
+      margin-top: 0% !important;
+      background-size: inherit !important;
+    }
 .app-sculpt-service-btn a{
   font-family: 'Montserrat-Bold';
 
@@ -801,7 +840,9 @@ text-align: center;
 
 }
 
- 
+ .app-sculpt-service{
+  margin-top: 0% !important;
+ }
 .app-sculpt-service{
         aspect-ratio: 375 / 267;
         height: auto;
@@ -897,6 +938,7 @@ padding-right: 10%;
 }
 .engineering-the-future{
     padding-bottom: 35%;
+    margin-top: 4% !important;
   }
 
   .moving-bg img{
@@ -1000,9 +1042,15 @@ color: #17D4FF!important;
   .what-we-do-bg-img {
     height:130vh;
   }
+  .home-page-banner {
+    margin-top: 0% !important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .responsive-layout-cl{
+  margin-top: -13% !important;
+}
   .meet-our-first-developer, .meet-our-second-developer, .meet-our-third-developer{
  width: 208px;
 height: 370px;
@@ -1011,6 +1059,12 @@ border-radius: 10px;
 background-color: #D9D9D9;
  margin: auto;
 }
+.home-page-banner {
+    margin-top: 0% !important;
+  }
+.career-main-image-section {
+      margin-top: 0% !important;
+    }
 .meet-our-f-developer{
   display: none;
 }
@@ -1116,6 +1170,16 @@ border-width: 1px !important;
 .home-card-4-mobile{
  
 }
+.explore-section{
+  padding: 0%;
+}
+.support-main-bg-image{
+  padding-bottom: 36%;
+}
+#global-footer{
+  margin-top: 5% !important;
+}
+
 .home-search-input{
           max-width: 374px !important;
         width: 100% !important;
@@ -1167,6 +1231,9 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #000000;
+   }
+   .emporing-business{
+    margin-top: 6% !important;
    }
     .kot-Glance {
     background-position: right top;
@@ -1236,6 +1303,10 @@ line-height: 100%;
 letter-spacing: 0%;
 color: #A53692;
     }
+    .graphoria-hero{
+      margin-top: 0% !important;
+   
+    }
     .empowering-text-paragraph{
      
     
@@ -1269,6 +1340,9 @@ color: #FFFFFF;
 height: 265px;
 
 
+    }
+    .websculpture-hero-section{
+      margin-top: 0% !important;
     }
     .sets-agile-apps-section{
       display: none;
@@ -1468,6 +1542,9 @@ padding-bottom: 4%;
     justify-content: center;
 }
 .app-sculpt-service{
+  margin-top: 0% !important;
+}
+.app-sculpt-service{
 aspect-ratio: 768/426;
     height: auto;
    background-size: 1785px 1250px;
@@ -1482,7 +1559,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-
+padding-top: 5%;
 }
 .app-sculpt-service-paragraph p {
   font-family: 'Montserrat-Regular';
@@ -1499,7 +1576,9 @@ padding-top: 10%;
         padding-bottom: 0%;
         
 }
-
+.app-sculpt-service{
+  margin-top: 0% !important;
+}
 .images-flawless-section-1 img{
   aspect-ratio: 263 / 139;
   max-width: 283px !important;
@@ -1568,6 +1647,12 @@ padding-top: 3% !important;
 /* .engineering-the-future-btn{
   margin-left: 28% !important;
 } */
+ .engineering-the-future{
+  margin-top: 5% !important;
+ }
+ .support-section-bg{
+  margin-top: 0% !important;
+ }
 .what-we-offer-flawless{
   margin-top: 15%;
 }
@@ -1709,5 +1794,31 @@ font-variant: small-caps!important;
  .graphoria-our-text-strip{
   gap: 47px;
  }
+ .point-1 img, .point-2 img, .point-3 img, .point-4 img {
+        width: 100%;}
+      
+            .design-bg-image {
+        
+    
+        background-size: contain;
+    }
+    .point-1{
+      top: 0%;
+    }
+    .point-2{
+top:1%;
+    }
+ 
+ .point-4{
+top: 0%;
+ }
+ .graphoria-hero {
+  
+   
+   
+    margin-top: 19%;}
+    .responsive-layout-cl{
+      margin-top: -15%;
+    }
 }
         

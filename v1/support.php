@@ -1,0 +1,447 @@
+
+  <?php require '../public/header.php'; ?>
+<div class="container-fluid support-section-bg d-flex align-items-center justify-content-center" style="margin-top: 13%;" >
+  <div class="support-main-section text-center">
+    
+    <div class="support-section-heading mb-4">
+      <h2>Welcome to KOT Support</h2>
+    </div>
+
+    <div class="support-section-input position-relative mx-auto">
+      <input type="text" class="form-control" placeholder="How can we help you?">
+      <button class="btn support-arrow-btn" type="button">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<section class="support-slider">
+  <div class="support-slider-wrapper">
+    <div class="support-slider-track">
+
+      <!-- Images (repeat once for smooth loop) -->
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
+    
+
+      <!-- Duplicate for seamless marquee -->
+      <!-- Images (repeat once for smooth loop) -->
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- need-help -->
+ <section class="support-main-bg-image" >
+  <div class="container-fluid mt-5  ">
+ <div class="need-hlp-text text-center ">
+    <h2>Need Help? </h2>
+    <h2 class="need-help-2" >You're in the Right Place.</h2>
+ </div>
+  </div>
+  
+ <div class="container-fluid need-help-text-bg ps-0 pe-0 ">
+    <div class="need-help-bg-text">
+        <p>Welcome to the KOT Support Centre<span>—your centralized hub for technical assistance, service guidance, and platform support. Whether you're a customer, employee, partner, or learner, we’re here to help you resolve issues, answer questions, and get the most out of your experience with KOT. </span> </p>
+    
+        <p> <span> From how-tos and troubleshooting to ticket tracking and direct contact, everything you need to get support starts here. </span> </p>
+    </div>
+
+  <section class="how-we-help">
+  <div class="container">
+
+    <h2>How We Help</h2>
+
+    <div class="help-layout">
+
+      <!-- LEFT -->
+      <div class="help-column">
+        <div class="help-card">Technical Troubleshooting</div>
+        <div class="help-card">Platform Navigation Support</div>
+        <div class="help-card">Learning Platform Support</div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="help-divider">
+        <div class="divider-box"></div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="help-column">
+        <div class="help-card">Account & Access Issues</div>
+        <div class="help-card">Integration & Setup Guidance</div>
+        <div class="help-card">Partner Platform Help</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+ </div>
+</section>
+<section class="explore-section">
+  <div class="container">
+
+    <h2 class="explore-heading">Explore</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center explore-tabs mb-4" role="tablist">
+      <li class="nav-item active "  >
+        <button class="nav-link " data-bs-toggle="tab" data-bs-target="#explore-personal">
+          Personal Support
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#explore-work">
+          Work Support
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#explore-education">
+          Education Support
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link mobile-pattern " data-bs-toggle="tab" data-bs-target="#explore-partner">
+          Partner Support
+        </button>
+      </li>
+    </ul>
+
+    <!-- Main Box -->
+    <div class="explore-main-box">
+      <div class="tab-content">
+
+        <!-- Personal -->
+        <div class="tab-pane fade show active" id="explore-personal">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/personal-1.png" alt="Self Help Resources">
+                </div>
+                <div class="explore-card-text">
+                  <p>Self Help Resources</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/personal-2.png" alt="Billing Support">
+                </div>
+                <div class="explore-card-text">
+                  <p>Billing Support</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/personal-3.png" alt="Community Support">
+                </div>
+                <div class="explore-card-text">
+                  <p>Community Support</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/personal-4.png" alt="Contact KOT Support">
+                </div>
+                <div class="explore-card-text">
+                  <p>Contact KOT Support</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work -->
+        <div class="tab-pane fade" id="explore-work">
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-1.png" alt="Self Help Resources">
+                </div>
+                <div class="explore-card-text">
+                  <p>Self Help Resources</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-2.png" alt="Admin Self Help">
+                </div>
+                <div class="explore-card-text">
+                  <p>Admin Self Help</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-3.png" alt="Support Plans">
+                </div>
+                <div class="explore-card-text">
+                  <p>Support Plans</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-4.png" alt="Partner Network Search">
+                </div>
+                <div class="explore-card-text">
+                  <p>Partner Network Search</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-5.png" alt="Contact Sales">
+                </div>
+                <div class="explore-card-text">
+                  <p>Contact Sales</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/work-6.png" alt="Community">
+                </div>
+                <div class="explore-card-text">
+                  <p>Community</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="tab-pane fade" id="explore-education">
+          <div class="row g-4 justify-content-center">
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/education-1.png" alt="Self Help Resources">
+                </div>
+                <div class="explore-card-text">
+                  <p>Self Help Resources</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/education-2.png" alt="Knowledge Center">
+                </div>
+                <div class="explore-card-text">
+                  <p>Knowledge Center</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/education-3.png" alt="Start a Support Ticket">
+                </div>
+                <div class="explore-card-text">
+                  <p>Start a Support Ticket</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/education-4.png" alt="Contact KOT Support">
+                </div>
+                <div class="explore-card-text">
+                  <p>Contact KOT Support</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/education-5.png" alt="Community">
+                </div>
+                <div class="explore-card-text">
+                  <p>Community</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner -->
+        <div class="tab-pane fade" id="explore-partner">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/partner-1.png" alt="Self Help Resources">
+                </div>
+                <div class="explore-card-text">
+                  <p>Self Help Resources</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="explore-card">
+                <div class="explore-card-img">
+                  <img src="../assets/images/SupportLightMode/partner-2.png" alt="Billing Support">
+                </div>
+                <div class="explore-card-text">
+                  <p>Billing Support</p>
+                </div>
+                <div class="explore-card-btn">
+                  <a class="btn explore-btn" href="#">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ 
+     <div id="global-footer" style="margin-top: 5%;" ></div>
+            <button id="goTopBtn" title="Go to top">↑</button>
+
+    <script>
+  const goTopBtn = document.getElementById("goTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      goTopBtn.classList.add("show");
+    } else {
+      goTopBtn.classList.remove("show");
+    }
+  });
+
+  goTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+
+
+<script>
+  fetch('../components/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-footer').innerHTML = data;
+    });
+</script>
+     
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".explore-tabs .nav-link");
+  const navItems = document.querySelectorAll(".explore-tabs .nav-item");
+  const panes = document.querySelectorAll(".tab-content .tab-pane");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // remove active from all
+      navLinks.forEach(l => l.classList.remove("active"));
+      navItems.forEach(li => li.classList.remove("active"));
+      panes.forEach(p => p.classList.remove("show", "active"));
+
+      // add active to clicked
+      link.classList.add("active");
+      const li = link.closest(".nav-item");
+      if (li) li.classList.add("active");
+
+      // show correct pane
+      const targetSel = link.getAttribute("data-bs-target") || link.getAttribute("href");
+      const target = targetSel ? document.querySelector(targetSel) : null;
+      if (target) target.classList.add("show", "active");
+    });
+  });
+});
+</script>
+    </body>
+    </html>
