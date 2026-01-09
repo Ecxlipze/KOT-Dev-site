@@ -729,7 +729,7 @@ margin-bottom: 40px;
   border-radius: 16px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 0% !important;
+  padding: 65% !important;
   background-position: center;
 }
 
@@ -757,6 +757,7 @@ margin-bottom: 40px;
   .support-card {
     align-items: center !important;
     margin: auto;
+    padding: 5% !important;
   }
 }
 
@@ -1170,7 +1171,7 @@ margin-bottom: 40px;
 }
 
 .offer-overlay h3{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -1448,7 +1449,7 @@ margin-bottom: 40px;
 
 #what-we-do h2 {
     font-size: 42px;
-    color: #1DAE90;
+    color: black;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
 }
@@ -1511,7 +1512,7 @@ margin-bottom: 40px;
   font-family: var(--font-main);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
-  color: #098C52;
+  color: black;
 
 }
 
@@ -2357,17 +2358,9 @@ margin-bottom: 40px;
 
 }
 
-[class$="card"]:hover {
-  transform: translateY(-8px);
-}
-
-[class$="card"] {
-  transition: transform 0.3s ease;
-}
 
 .caard,
 .capability-card,
-.solution-card,
 .support-card,
 .work-card {
   transition: transform 0.3s ease;
@@ -2375,7 +2368,6 @@ margin-bottom: 40px;
 
 .caard:hover,
 .capability-card:hover,
-.solution-card:hover,
 .support-card:hover,
 .work-card:hover {
   transform: translateY(-8px);
@@ -2561,4 +2553,32 @@ margin-bottom: 40px;
     width: 44px;
     height: 44px;
   }
+}
+
+
+.contact-item {
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-6px);
+}
+
+.contact-item a {
+  color: #ffffff; /* change if needed */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #000000; /* brand blue */
+  /* text-decoration: underline; */
+}
+
+.contact-icon {
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.08);
 }
