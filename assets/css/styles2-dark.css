@@ -2597,3 +2597,125 @@ font-weight: 500;
 .contact-item:hover .contact-icon {
   transform: scale(1.08);
 }
+
+
+.dt-ecom-hero {
+  position: relative;
+  background: url("../images/merc-light/mercbanner.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 6rem);
+}
+
+/* Background overlay */
+.dt-ecom-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  z-index: 1;
+}
+
+/* Main content wrapper */
+.dt-ecom-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+/* Logo */
+.dt-ecom-logo {
+  width: clamp(80px, 12vw, 140px);
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+.dt-ecom-title {
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+/* Divider */
+.dt-ecom-divider {
+  width: 500px;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0.5rem 0;
+}
+
+/* Description text */
+.dt-ecom-description {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+  font-weight: 400;
+  color: white;
+  max-width: 800px;
+}
+
+/* CTA Button */
+.dt-ecom-cta-btn {
+  margin-top: 1.8rem;
+  padding: 14px 35px !important;
+  background-color: #ffcc00 !important;
+  color: #000;
+  font-weight: 600;
+  border-radius: 999px !important;
+  
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+/* 📱 Mobile tweaks */
+@media (max-width: 768px) {
+  .dt-ecom-divider {
+    width: 200px;
+  }
+
+  .dt-ecom-description {
+    font-size: 1.2rem;
+  }
+}
+
+
+.dt-visual-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dt-visual-wrapper {
+  display: block;
+  width: 100%;
+}
+.dt-visual-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+
+.dt-visual-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dt-visual-image {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dt-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+

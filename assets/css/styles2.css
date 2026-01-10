@@ -2593,8 +2593,7 @@ font-weight: 500;
 
 .dt-ecom-hero {
   position: relative;
-  min-height: 100vh;
-  background: url("../images/merc-light/mercbanner.png") center / contain no-repeat;
+  background: url("../images/merc-light/mercbanner.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2606,7 +2605,7 @@ font-weight: 500;
 .dt-ecom-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.42);
   z-index: 1;
 }
 
@@ -2637,8 +2636,8 @@ font-weight: 500;
 
 /* Divider */
 .dt-ecom-divider {
-  width: 80px;
-  height: 2px;
+  width: 500px;
+  height: 1px;
   background-color: #000;
   margin: 0.5rem 0;
 }
@@ -2647,35 +2646,67 @@ font-weight: 500;
 .dt-ecom-description {
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   line-height: 1.7;
-  color: #222;
+  font-weight: 400;
   max-width: 800px;
 }
 
 /* CTA Button */
 .dt-ecom-cta-btn {
-  margin-top: 1.8rem;
-  padding: 14px 38px;
-  background-color: #ffcc00;
+ margin-top: 1.8rem;
+  padding: 14px 35px !important;
+  background-color: #ffcc00 !important;
   color: #000;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: 999px !important;
+  
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.dt-ecom-cta-btn:hover {
-  background-color: #000;
-  color: #fff;
-  transform: translateY(-3px);
-}
 
 /* 📱 Mobile tweaks */
 @media (max-width: 768px) {
   .dt-ecom-divider {
-    width: 60px;
+    width: 200px;
   }
 
   .dt-ecom-description {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
+
+
+.dt-visual-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dt-visual-wrapper {
+  display: block;
+  width: 100%;
+}
+.dt-visual-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+
+.dt-visual-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dt-visual-image {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dt-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
