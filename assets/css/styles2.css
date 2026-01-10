@@ -2588,3 +2588,94 @@ font-weight: 500;
 .contact-item:hover .contact-icon {
   transform: scale(1.08);
 }
+
+
+
+.dt-ecom-hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("../images/merc-light/mercbanner.png") center / contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 6rem);
+}
+
+/* Background overlay */
+.dt-ecom-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.82);
+  z-index: 1;
+}
+
+/* Main content wrapper */
+.dt-ecom-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+/* Logo */
+.dt-ecom-logo {
+  width: clamp(80px, 12vw, 140px);
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+.dt-ecom-title {
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #000;
+}
+
+/* Divider */
+.dt-ecom-divider {
+  width: 80px;
+  height: 2px;
+  background-color: #000;
+  margin: 0.5rem 0;
+}
+
+/* Description text */
+.dt-ecom-description {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.7;
+  color: #222;
+  max-width: 800px;
+}
+
+/* CTA Button */
+.dt-ecom-cta-btn {
+  margin-top: 1.8rem;
+  padding: 14px 38px;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dt-ecom-cta-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 768px) {
+  .dt-ecom-divider {
+    width: 60px;
+  }
+
+  .dt-ecom-description {
+    font-size: 1rem;
+  }
+}
