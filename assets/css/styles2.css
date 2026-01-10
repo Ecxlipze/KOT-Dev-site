@@ -2089,49 +2089,49 @@ font-weight: 500;
 }
 .dgx-card-inner a {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: 700;
   font-family: Montserrat !important;
 }
 .dgx-card-inner h4 {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: 700;
   font-family: Montserrat !important;
   /* margin-bottom: 2px; */
 }
 .dgx-card-inner h6 {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: 700 !important;
   font-family: Montserrat !important;
 }
 .dgx-card-inner p {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-weight: 500;
   font-family: Montserrat !important;
 }
 
 
 /* BACKGROUNDS */
-.dgx-bg-1 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-2 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-3 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-4 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-5 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-6 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-7 { background-image: url("../images/digi-light/dcard.png"); }
-.dgx-bg-8 { background-image: url("../images/digi-light/dcard.png"); }
+.dgx-bg-1 { background-image: url("../images/digi-light/dcard1.png"); }
+.dgx-bg-2 { background-image: url("../images/digi-light/dcard2.png"); }
+.dgx-bg-3 { background-image: url("../images/digi-light/dcard3.png"); }
+.dgx-bg-4 { background-image: url("../images/digi-light/dcard4.png"); }
+.dgx-bg-5 { background-image: url("../images/digi-light/dcard5.png"); }
+.dgx-bg-6 { background-image: url("../images/digi-light/dcard6.png"); }
+.dgx-bg-7 { background-image: url("../images/digi-light/dcard7.png"); }
+.dgx-bg-8 { background-image: url("../images/digi-light/dcard8.png"); }
 
 /* BUTTON */
 .dgx-cta-btn {
   padding: 12px 30px;
-  border: 2px dashed #f5a623;
+  border: 2px dashed #050505;
   border-radius: 15px;
   font-weight: 700;
   text-decoration: none;
-  color: #000;
+  color: #000000;
     font-family: Montserrat !important;
 
 }
@@ -2164,18 +2164,18 @@ font-weight: 500;
   margin-bottom: clamp(3rem, 6vw, 6rem);
 }
 
-.digi-content h2 {
+.digi-content h2 { 
   font-size: clamp(2.0rem, 4.5vw, 3.6rem);
   font-weight: 800;
   line-height: 1.1;
-  max-width: 18ch;
+  max-width: 22ch;
 }
 
 .digi-content p {
-  font-size: clamp(1.2rem, 1.4vw, 1.8rem) !important;
+  font-size: 32px;
   line-height: 1.4;
-  font-weight: 500;
-  max-width: 46ch;
+  font-weight: 400;
+  max-width: 34ch;
 }
 
 /* ---------- IMAGE ---------- */
@@ -2204,7 +2204,10 @@ font-weight: 500;
 /* ---------- MOBILE ---------- */
 @media (max-width: 576px) {
   .digi-content h2 {
-    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    font-size: 22px;
+  }
+  .digi-content p {
+    font-size: 12px;
   }
 }
 
