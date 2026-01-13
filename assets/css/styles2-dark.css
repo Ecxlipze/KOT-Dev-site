@@ -3054,3 +3054,247 @@ font-weight: 500;
   color: #0A71B9;
   text-decoration: none;
 }
+
+.kot-blog-banner {
+  background-image: url('../images/news/banner.png');
+  background-size: cover;
+  background-position: center;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.kot-blog-title {
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.kot-blog-subtitle {
+  color: #0A71B9;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 500;
+}
+
+.kot-blog-intro-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.kot-blog-intro-card {
+  max-width: 1100px;
+  background-image: url(../images/news/bgcard.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px;
+  font-weight: 500;
+  /* border-radius: 14px; */
+  /* border: 1px solid rgba(255,255,255,0.4); */
+  /* background: linear-gradient(
+    180deg,
+    rgba(20, 40, 60, 0.9),
+    rgba(10, 25, 40, 0.95)
+  ); */
+  color: #ffffff;
+  font-size: clamp(24px, 3vw, 32px);
+    line-height: 1.4;
+}
+.kot-blog-intro-card p {
+  text-align: center;
+}
+.kot-blog-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  color: #ffffff;
+}
+
+.kot-blog-heading {
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.kot-blog-author {
+  color: #0A71B9;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.kot-blog-subheading {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  margin: 40px 0 15px;
+}
+
+.kot-blog-content p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.kot-blog-list {
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.kot-blog-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+
+.ns-heroes-title{
+  color:#fff;
+  font-weight:700;
+  font-size:40px;
+  text-align: center;
+}
+
+/* Card */
+.ns-hero-card{
+  background:#fff;
+  border-radius:16px;
+  padding:12px;
+}
+
+.ns-hero-img{
+  background:#000;
+  border-radius:12px;
+  height:180px;
+}
+
+.ns-hero-info{
+  height:70px;
+  margin-top:12px;
+}
+
+/* =========================
+   Slider (Mobile / Tablet)
+========================= */
+.ns-heroes-slider{
+  overflow:hidden;
+}
+
+.ns-slider-track{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:8px;
+}
+
+.ns-slider-track::-webkit-scrollbar{
+  display:none;
+}
+
+.ns-slider-item{
+  min-width:260px;
+  scroll-snap-align:start;
+}
+
+
+/* =========================
+   Resources Section
+========================= */
+.ns-resources-section{
+  background:#000;
+}
+
+.ns-resources-title{
+  color:#fff;
+  font-weight:700;
+  font-size:36px;
+  margin-bottom:32px;
+}
+
+.ns-resource-card{
+  background:#111;
+  border-radius:12px;
+  padding:16px;
+  color:#fff;
+}
+
+.ns-resource-img{
+  background:#333;
+  border-radius:8px;
+  height:180px;
+  margin-bottom:12px;
+}
+
+.ns-resource-heading{
+  font-size:20px;
+  margin-bottom:6px;
+  color:#2fa2f2;
+}
+
+.ns-resource-text{
+  font-size:14px;
+  color:#ccc;
+  margin-bottom:12px;
+}
+
+.ns-resource-link{
+  color:#2fa2f2;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* Slider reuse from heroes section */
+.ns-resource-slider, .ns-gallery-slider{
+  overflow:hidden;
+  margin-bottom:24px;
+}
+
+.ns-slider-track{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:8px;
+}
+
+.ns-slider-track::-webkit-scrollbar{
+  display:none;
+}
+
+.ns-slider-item{
+  min-width:260px;
+  scroll-snap-align:start;
+}
+
+/* =========================
+   Gallery
+========================= */
+.ns-gallery-title{
+  color:#fff;
+  font-weight:700;
+  font-size:32px;
+}
+
+.ns-gallery-link{
+  color:#2fa2f2;
+  text-decoration:none;
+}
+
+.ns-gallery-card{
+  border-radius:12px;
+  overflow:hidden;
+  text-align:center;
+}
+
+.ns-gallery-img{
+  background:#333;
+  height:150px;
+  border-radius:12px;
+  margin-bottom:8px;
+}
+
+.ns-gallery-caption{
+  color:#2fa2f2;
+  font-size:14px;
+}
