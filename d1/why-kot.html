@@ -152,252 +152,405 @@
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
-<script>
-  fetch('../components/header-dark.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('global-header').innerHTML = data;
-     
-  // mobile offcanvas
-  const body = document.body;
-  const menu = document.getElementById("mobileMenu");
-  const overlay = document.getElementById("menuOverlay");
-  const openBtnTop = document.getElementById("openMenuBtn");
-  const openBtnBottom = document.getElementById("openMenuBtnBottom");
-  const closeBtn = document.getElementById("closeMenuBtn");
+ <script>
+    fetch('../components/header-dark.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('global-header').innerHTML = data;
 
-  function openMenu(){
-    menu.classList.add("kot-header-open");
-    overlay.classList.add("kot-header-show");
-    body.style.overflow = "hidden";
-    menu.setAttribute("aria-hidden", "false");
-  }
+    // ================= MOBILE MENU FUNCTIONALITY =================
+    const body = document.body;
+    const menu = document.getElementById("mobileMenu");
+    const overlay = document.getElementById("menuOverlay");
+    const openBtnTop = document.getElementById("openMenuBtn");
+    const openBtnBottom = document.getElementById("openMenuBtnBottom");
+    const closeBtn = document.getElementById("closeMenuBtn");
 
-  function closeMenu(){
-    menu.classList.remove("kot-header-open");
-    overlay.classList.remove("kot-header-show");
-    body.style.overflow = "";
-    menu.setAttribute("aria-hidden", "true");
-  }
+    function openMenu(){
+        menu.classList.add("kot-header-open");
+        overlay.classList.add("kot-header-show");
+        body.style.overflow = "hidden";
+        menu.setAttribute("aria-hidden", "false");
+    }
 
-  openBtnTop?.addEventListener("click", openMenu);
-  openBtnBottom?.addEventListener("click", openMenu);
-  closeBtn.addEventListener("click", closeMenu);
-  overlay.addEventListener("click", closeMenu);
+    function closeMenu(){
+        menu.classList.remove("kot-header-open");
+        overlay.classList.remove("kot-header-show");
+        body.style.overflow = "";
+        menu.setAttribute("aria-hidden", "true");
+    }
 
-  document.addEventListener("keydown", (e) => {
-    if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
-  });
+    openBtnTop?.addEventListener("click", openMenu);
+    openBtnBottom?.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
 
-  // PROJECT DROPDOWN FUNCTIONALITY
-  // PROJECT DROPDOWN FUNCTIONALITY
-const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
-
-accBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const accordion = btn.parentElement; // parent div.kot-header-menu-accordion
-    accordion.classList.toggle("kot-header-open");
-
-    // Optional: Close other accordions if you want only one open at a time
-    accBtns.forEach(otherBtn => {
-      const otherAccordion = otherBtn.parentElement;
-      if (otherAccordion !== accordion) {
-        otherAccordion.classList.remove("kot-header-open");
-      }
+    document.addEventListener("keydown", (e) => {
+        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
     });
-  });
-});
 
-
-  // toggle button functionality
-  document.getElementById("glowToggle")?.addEventListener("change", function () {
-    console.log(this.checked ? "ON" : "OFF");
-  });
-//   dexstop-header-code
-/* ================= CODE-2 JS (EXACT) ================= */
-
-const nav = document.getElementById("nav");
-const megaMenu = document.getElementById("megaMenu");
-
-const img = document.getElementById("mm-img");
-const text = document.getElementById("mm-text");
-const heading = document.getElementById("mm-heading");
-const desc = document.getElementById("mm-desc");
-const left = document.getElementById("mm-left");
-const right = document.getElementById("mm-right");
-
-const content = document.querySelector(".kot-main-header-nav-bar-mega-content");
-
-let isMegaOpen = false;
-
-const hoverColors = {
-  CORPORATE:"#FFC200",
-  SERVICES:"#E7007B",
-  CONSULTANCY:"#96C049",
-  MARKETPLACE:"#A45E4D",
-  SPOTLIGHTS:"#20c997",
-  SUPPORT:"#068A4F",
-  CAREER:"#dc3545",
-  CONTACT:"#6c757d"
-};
-
-document.querySelectorAll(".kot-main-header-nav-bar-item")
-.forEach((item,i,arr)=>{
-
-  item.addEventListener("mouseenter", ()=>{
-
-  // 🔹 Sab wrapper classes reset karo
-  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
-    .forEach(w => w.classList.remove("hovered", "previous-hide"));
-
-  const wrap = item.parentElement;
-  wrap.classList.add("hovered");
-  if(i > 0) arr[i-1].parentElement.classList.add("previous-hide");
-
-  nav.style.setProperty(
-    "--hover-color",
-    hoverColors[item.innerText.trim()] || "#8f4b36"
-  );
-
-  // 🚫 Agar no-mega hai → mega menu hide karo aur exit
-  if (wrap.classList.contains("no-mega")) {
-    megaMenu.classList.remove("show");
-    megaMenu.style.display = "none";
-    isMegaOpen = false;
-    return; // hover classes applied, mega menu blocked
-  }
-
-  // 🔹 Mega menu open ka existing code
-  content.style.transition = "none";
-  content.style.opacity = "0";
-  content.style.transform = "translateY(-20px)";
-
-  requestAnimationFrame(()=>{
-    content.style.transition = ".35s ease";
-
-    img.src = item.dataset.img;
-    text.innerText = item.dataset.text;
-    heading.innerText = item.dataset.heading;
-    desc.innerText = item.dataset.desc;
-
-    left.innerHTML = item.dataset.left
-      .split(",")
-      .map(v => {
-        let [text, link] = v.split("|").map(s => s.trim());
-        return `
-          <li>
-            <a href="${link || '#'}">
-              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
-              ${text}
-            </a>
-          </li>`;
-      })
-      .join("");
-
-    right.innerHTML = item.dataset.right
-      .split(",")
-      .map(v => {
-        let [text, link] = v.split("|").map(s => s.trim());
-        return `
-          <li>
-            <a href="${link || '#'}">
-              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
-              ${text}
-            </a>
-          </li>`;
-      })
-      .join("");
-
-    content.style.opacity = "1";
-    content.style.transform = "translateY(0)";
-  });
-
-  if(!isMegaOpen){
-    megaMenu.style.display = "block";
-    requestAnimationFrame(()=>megaMenu.classList.add("show"));
-    isMegaOpen = true;
-  }
-
-});
-});
-
-nav.addEventListener("mouseleave",()=>{
-  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
-    .forEach(w=>w.classList.remove("hovered","previous-hide"));
-
-  megaMenu.classList.remove("show");
-  isMegaOpen = false;
-
-  setTimeout(()=>megaMenu.style.display="none",300);
-});
-
-// marquee js
-const track = document.getElementById("marqueeTrack");
-
-let pos = 0;
-let speed = 0.5;
-
-// exact width of ONE content copy
-const singleWidth = track.scrollWidth / 2;
-
-function animate(){
-  pos -= speed;
-
-  if(pos <= -singleWidth){
-    pos = 0; // 👈 exact reset point
-  }
-
-  track.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-// language selection
-document.querySelectorAll(".lang-option").forEach(option => {
-  option.addEventListener("click", function(e){
-    e.preventDefault();
-
-    document.getElementById("langImg").src = this.dataset.img;
-    document.getElementById("langText").innerText = this.dataset.text;
-  });
-});
-
-
-
-
-
-// header-smart-scrools
-
-if (window.innerWidth >= 992) {
-
-  const headerWrap = document.querySelector(".desktop-header-wrap");
-  let lastScroll = 0;
-  const threshold = 80;
-
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    // SCROLL DOWN
-    if (currentScroll > lastScroll && currentScroll > threshold) {
-      headerWrap.classList.add("header-hide-top","header-shrink");
-    }
-
-    // SCROLL UP
-    if (currentScroll < lastScroll) {
-      headerWrap.classList.remove("header-hide-top","header-shrink");
-    }
-
-    // TOP REACHED
-    if (currentScroll <= 5) {
-      headerWrap.classList.remove("header-hide-top","header-shrink");
-    }
-
-    lastScroll = currentScroll;
-  });
-}
+    // MOBILE ACCORDION FUNCTIONALITY
+    const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
+    accBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const accordion = btn.parentElement;
+            accordion.classList.toggle("kot-header-open");
+            
+            // Close other accordions
+            accBtns.forEach(otherBtn => {
+                const otherAccordion = otherBtn.parentElement;
+                if (otherAccordion !== accordion) {
+                    otherAccordion.classList.remove("kot-header-open");
+                }
+            });
+        });
     });
-</script>
+
+    // TOGGLE BUTTON
+    document.getElementById("glowToggle")?.addEventListener("change", function () {
+        console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
+    });
+
+// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
+        const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
+const bufferZone = document.querySelector('.mega-menu-buffer');
+const navBar = document.getElementById('nav');
+ 
+        // Hide all mega menus initially
+        megaMenus.forEach(menu => {
+            menu.classList.remove('show');
+        });
+        
+        // Hover colors for ALL menu items
+        const hoverColors = {
+            'CORPORATE': '#A65E4E',
+            'SERVICES': '#A53694',
+            'CONSULTANCY': '#7EAB39',
+            'SUPPORT': '#068A4F',
+            'CAREER': '#dc3545',
+            'CONTACT': '#6c757d',
+            'INSIGHTS': '#C43882'
+        };
+        
+        // Control variables
+        let activeMenu = null;
+        let activeNavItem = null;
+        let hoverTimer = null;
+        let isTransitioning = false;
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Track mouse movement
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Function to get mega menu ID
+        function getMegaMenuId(menuType) {
+            switch(menuType) {
+                case 'CORPORATE': return 'corporateMega';
+                case 'SERVICES': return 'servicesMega';
+                case 'CONSULTANCY': return 'consultancyMega';
+                case 'INSIGHTS': return 'insightsMega';
+                default: return null;
+            }
+        }
+        
+        // Function to check if element has mega menu
+        function hasMegaMenu(item) {
+            const dataItem = item.getAttribute('data-item');
+            return dataItem === 'CORPORATE' || 
+                   dataItem === 'SERVICES' ||
+                   dataItem === 'CONSULTANCY' ||
+                   dataItem === 'INSIGHTS';
+        }
+        
+        // Function to hide ALL mega menus
+        function hideAllMegaMenus() {
+            megaMenus.forEach(menu => {
+                menu.classList.remove('show');
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('mega-hovered');
+                item.style.backgroundColor = '';
+            });
+            
+            if (bufferZone) bufferZone.style.display = 'none';
+            activeMenu = null;
+            activeNavItem = null;
+            isTransitioning = false;
+        }
+        
+        // Function to show specific mega menu
+        function showMegaMenu(menuType, navItemElement) {
+            // Clear any pending timers
+            if (hoverTimer) {
+                clearTimeout(hoverTimer);
+                hoverTimer = null;
+            }
+            
+            // If already showing the same menu, do nothing
+            const megaMenuId = getMegaMenuId(menuType);
+            if (activeMenu && activeMenu.id === megaMenuId) {
+                return;
+            }
+            
+            // Set transitioning flag
+            isTransitioning = true;
+            
+            // First hide all menus
+            hideAllMegaMenus();
+            
+            // Show buffer zone
+            if (bufferZone) {
+                bufferZone.style.display = 'block';
+                const rect = navItemElement.getBoundingClientRect();
+                const navRect = navBar.getBoundingClientRect();
+                bufferZone.style.left = (rect.left - navRect.left) + 'px';
+                bufferZone.style.width = rect.width + 'px';
+                bufferZone.style.top = '100%';
+                bufferZone.style.height = '10px';
+            }
+            
+            // Highlight nav item
+            navItemElement.classList.add('mega-hovered');
+            const color = hoverColors[navItemElement.getAttribute('data-item')];
+            if (color) {
+                navItemElement.style.backgroundColor = color;
+            }
+            
+            // Show target menu
+            if (megaMenuId) {
+                const targetMega = document.getElementById(megaMenuId);
+                if (targetMega) {
+                    // Small delay for smoothness
+                    setTimeout(() => {
+                        targetMega.classList.add('show');
+                        activeMenu = targetMega;
+                        activeNavItem = navItemElement;
+                        isTransitioning = false;
+                    }, 10);
+                }
+            }
+        }
+        
+        // ========== NAV ITEM HOVER EVENTS ==========
+        navItems.forEach((item) => {
+            const menuType = item.getAttribute('data-item');
+            const hasMega = hasMegaMenu(item);
+            
+            item.addEventListener('mouseenter', function(e) {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+                
+                // Apply hover color
+                const color = hoverColors[menuType];
+                if (color) {
+                    this.style.backgroundColor = color;
+                }
+                
+                if (hasMega) {
+                    // For items with mega menus
+                    showMegaMenu(menuType, this);
+                } else {
+                    // For items without mega menus
+                    hideAllMegaMenus();
+                    this.classList.add('mega-hovered');
+                    this.style.backgroundColor = color;
+                    activeNavItem = this;
+                }
+            });
+            
+            item.addEventListener('mouseleave', function(e) {
+                // Don't process if transitioning
+                if (isTransitioning) return;
+                
+                const relatedTarget = e.relatedTarget;
+                const goingToMega = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-mega-menu');
+                const goingToBuffer = relatedTarget && relatedTarget.closest('.mega-menu-buffer');
+                const goingToAnotherNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                
+                // If going to buffer zone, mega menu, or another nav item, don't hide immediately
+                if (goingToBuffer || goingToMega || goingToAnotherNav) {
+                    return;
+                }
+                
+                // Set timer to hide
+                hoverTimer = setTimeout(() => {
+                    // Reset background color
+                    this.style.backgroundColor = '';
+                    this.classList.remove('mega-hovered');
+                    
+                    // Hide mega menu if not hovering over it
+                    if (activeMenu && !isMouseOver(activeMenu) && !isMouseOver(bufferZone)) {
+                        hideAllMegaMenus();
+                    }
+                }, 50); // Very short delay
+            });
+        });
+        
+        // ========== BUFFER ZONE EVENTS ==========
+        if (bufferZone) {
+            bufferZone.addEventListener('mouseenter', function() {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+            });
+            
+            bufferZone.addEventListener('mouseleave', function(e) {
+                const relatedTarget = e.relatedTarget;
+                const goingToMega = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-mega-menu');
+                const goingToNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                
+                if (!goingToMega && !goingToNav) {
+                    hoverTimer = setTimeout(() => {
+                        if (activeMenu && !isMouseOver(activeMenu) && !isMouseOverAnyNav()) {
+                            hideAllMegaMenus();
+                        }
+                    }, 50);
+                }
+            });
+        }
+        
+        // ========== MEGA MENU EVENTS ==========
+        megaMenus.forEach(menu => {
+            menu.addEventListener('mouseenter', function() {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+            });
+            
+            menu.addEventListener('mouseleave', function(e) {
+                const relatedTarget = e.relatedTarget;
+                const goingToNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                const goingToBuffer = relatedTarget && relatedTarget.closest('.mega-menu-buffer');
+                
+                if (!goingToNav && !goingToBuffer) {
+                    hoverTimer = setTimeout(() => {
+                        if (!isMouseOverAnyNav() && !isMouseOver(bufferZone)) {
+                            hideAllMegaMenus();
+                        }
+                    }, 50);
+                }
+            });
+        });
+        
+        // ========== HELPER FUNCTIONS ==========
+        function isMouseOver(element) {
+            if (!element) return false;
+            
+            // Check if mouse is within element bounds
+            const rect = element.getBoundingClientRect();
+            return mouseX >= rect.left && 
+                   mouseX <= rect.right && 
+                   mouseY >= rect.top && 
+                   mouseY <= rect.bottom;
+        }
+        
+        function isMouseOverAnyNav() {
+            for (let item of navItems) {
+                if (isMouseOver(item)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // Close menus on click outside
+        document.addEventListener('click', function(e) {
+            const isNavItem = e.target.closest('.kot-main-header-nav-bar-item-wrapper');
+            const isMegaMenu = e.target.closest('.kot-main-header-nav-bar-mega-menu');
+            const isBuffer = e.target.closest('.mega-menu-buffer');
+            
+            if (!isNavItem && !isMegaMenu && !isBuffer) {
+                hideAllMegaMenus();
+            }
+        });
+        
+        // Close menus on scroll
+        window.addEventListener('scroll', function() {
+            hideAllMegaMenus();
+        });
+        
+        // Apply initial hover colors
+        navItems.forEach(item => {
+            const menuType = item.getAttribute('data-item');
+            if (hoverColors[menuType]) {
+                item.style.setProperty('--hover-color', hoverColors[menuType]);
+            }
+        });
+    });
+
+    // ================= MARQUEE ANIMATION =================
+    const trackk = document.getElementById("marqueeTrack");
+    if (track) {
+        let pos = 0;
+        let speed = 0.5;
+        const singleWidth = track.scrollWidth / 2;
+
+        function animate(){
+            pos -= speed;
+            if(pos <= -singleWidth){
+                pos = 0;
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+
+    // ================= LANGUAGE SELECTION =================
+    document.querySelectorAll(".lang-option").forEach(option => {
+        option.addEventListener("click", function(e){
+            e.preventDefault();
+            document.getElementById("langImg").src = this.dataset.img;
+            document.getElementById("langText").innerText = this.dataset.text;
+        });
+    });
+
+    // ================= SCROLL EFFECT FOR DESKTOP HEADER =================
+    if (window.innerWidth >= 992) {
+        const headerWrap = document.querySelector(".desktop-header-wrap");
+        if (headerWrap) {
+            let lastScroll = 0;
+            const threshold = 80;
+
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset;
+
+                // SCROLL DOWN
+                if (currentScroll > lastScroll && currentScroll > threshold) {
+                    headerWrap.classList.add("header-hide-top", "header-shrink");
+                }
+
+                // SCROLL UP
+                if (currentScroll < lastScroll) {
+                    headerWrap.classList.remove("header-hide-top", "header-shrink");
+                }
+
+                // TOP REACHED
+                if (currentScroll <= 5) {
+                    headerWrap.classList.remove("header-hide-top", "header-shrink");
+                }
+
+                lastScroll = currentScroll;
+            });
+        }
+    
+    }
+    
+  </script>
+
 
 
 

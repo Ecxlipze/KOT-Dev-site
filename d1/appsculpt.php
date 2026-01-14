@@ -1,5 +1,5 @@
 
-   <?php require '../public/header-dm.php'; ?>
+   <?php require '../public/header-dm-new.php'; ?>
 <div class="app-sculpt-service" style="margin-top: 14%;" >
   
   <!-- rotating image layer -->
@@ -7,9 +7,9 @@
 
   <!-- content -->
   <div class="container-fluid content">
-    <div class="dark-mode-img d-flex justify-content-center ">
-      <img src="../assets/images/Appsculp/appsecp-logo.png" alt="">
-    </div>
+    <div class="dark-mode-changing-logo d-flex  justify-content-center py-4">
+         <img src="../assets/images/Appsculp/app-secp.png" alt="">
+      </div>
     <div class="app-sculpt-service-heading">
       <h2>App Sculpt Where Ideas Take Shape and Purpose Becomes Experience</h2>
     </div>
@@ -20,10 +20,19 @@
 At App Sculpt, we don’t just build mobile applications — we bring ideas to life. We believe every app starts with a vision, a problem to solve, and a dream to grow. Our mission is to transform those ideas into meaningful digital experiences that people love to use and businesses rely on to scale.
       </p>
     </div>
-
-    <div class="app-sculpt-service-btn">
+           
+    <div class="new-btn-addition-fig d-flex justify-content-center " style="gap: 30px;" >
+      <div class="app-sculpt-service-btn ">
       <a href="#">Contact Us</a>
     </div>
+    <div class="app-sculpt-service-btn">
+      <a href="#">View all Services</a>
+    </div>
+    </div>   
+
+   
+
+    
   </div>
 
 </div>
@@ -45,14 +54,17 @@ At App Sculpt, we don’t just build mobile applications — we bring ideas to l
     <p class="app-sculpt-mobile-paragraph">
       Every business has a story. Every idea has potential. Whether you’re a startup stepping into the market or an established enterprise seeking efficiency and impact, we design and develop mobile apps that feel effortless, intuitive, and future-ready.
     </p>
-<p class="mobile-paragraph-app-sculpt">
+    <p class="mobile-paragraph-app-sculpt">
       In today’s digital world, user experience defines success. At App Sculpt, we don’t just develop apps, we sculpt them into powerful tools that deliver performance, engagement, and connection. Backed by the innovation-first mindset of KOT Enterprises, App Sculpt brings ideas to life with visually striking, highly functional, and user-centric mobile and web applications.
     </p>
-     <div class="app-sculpt-mobile-button">
-         <a href="#">
-      Contact Us
-    </a>
-     </div>
+     <div class="new-btn-addition-fig d-flex justify-content-center " style="gap: 30px;" >
+      <div class="app-sculpt-service-btn ">
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="app-sculpt-service-btn">
+      <a href="#">View all Services</a>
+    </div>
+    </div>  
     
   </div>
 </div>

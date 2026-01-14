@@ -1,5 +1,5 @@
 
-      <?php require '../public/header.php'; ?>
+      <?php require '../public/header-new.php'; ?>
 
   <!-- career-section-start -->
    <div class="container-fluid career-main-image-section " style="margin-top: 13%;" >
@@ -197,96 +197,86 @@
   <!-- section-4-start -->
    <!-- Why Join KOT? -->
 <div class="container-fluid why-join-wrapper pe-0">
-
+   <div class="glob-image-mobile">
   <!-- Heading -->
   <div class="why-join-kot-text-heading text-center mb-5">
     <h2>Why Join KOT?</h2>
     <p>Just like you, we care about where we work and who we work with. Here’s what makes KOT stand out:</p>
   </div>
-
+     </div>
   <!-- Carousel -->
-  <div id="whyKotCarousel" class="carousel slide">
-    <div class="carousel-inner">
+ <div class="career-slider">
+  <div class="career-track" id="careerTrack">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row g-4  justify-content-center">
-          <div class=" col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>Learning Always</h6>
-                <p>Internal workshops, external certifications, mentorship programs
-               your growth never stops here.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class=" col-md-6 col-lg-4  d-none d-md-block">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>People First Culture</h6>
-                <p>we’re collaborative, curious, and never afraid to challenge the status quo. No rigid hierarchies, just great teams doing great work.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class=" col-md-6 col-lg-4 d-none d-lg-block">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>Mission that Matters</h6>
-                <p>Work on products that power real businesses, improve healthcare, transform education, and reshape commerce.</p>
-              </div>
-            </div>
-          </div>
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>Learning Always</h6>
+          <p>Internal workshops, external certifications, mentorship programs your growth never stops here.</p>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-4 d-flex justify-content-center ">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>Growth Opportunities</h6>
-                <p>Internal workshops, external certifications, mentorship programs
-               your growth never stops here.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-none d-md-block">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>Team Support</h6>
-                <p>we’re collaborative, curious, and never afraid to challenge the status quo. No rigid hierarchies, just great teams doing great work.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-none d-lg-block">
-            <div class="why-kot-card-image-mission">
-              <div class="why-kot-card">
-                <h6>Impact Driven</h6>
-                <p>Work on products that power real businesses, improve healthcare, transform education, and reshape commerce.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <!-- Navigation -->
-  <div class="carousel-nav">
-    <button class="carousel-control-prev" data-bs-target="#whyKotCarousel" data-bs-slide="prev">
-      <img src="../assets/images/career/left-arrow.png" alt="">
-    </button>
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>People First Culture</h6>
+          <p>We’re collaborative, curious, and never afraid to challenge the status quo. No rigid hierarchies, just great teams doing great work.</p>
+        </div>
+      </div>
+    </div>
 
-    <button class="carousel-control-next" data-bs-target="#whyKotCarousel" data-bs-slide="next">
-      <img src="../assets/images/career/right-arrow.png" alt="">
-    </button>
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>Mission that Matters</h6>
+          <p>Work on products that power real businesses, improve healthcare, transform education, and reshape commerce.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>Growth Opportunities</h6>
+          <p>Internal workshops, external certifications, mentorship programs
+                 your growth never stops here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>Team Support</h6>
+          <p>No rigid hierarchies, just great teams.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="career-slide">
+      <div class="career-card-image-mission">
+        <div class="career-card">
+          <h6>Impact Driven</h6>
+          <p>Transform education & commerce.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<!-- Navigation -->
+<div class="career-carousel-nav">
+  <button class="career-carousel-prev" id="careerPrev">
+    <img src="../assets/images/career/left-arrow.png" alt="">
+  </button>
+
+  <button class="career-carousel-next" id="careerNext">
+    <img src="../assets/images/career/right-arrow.png" alt="">
+  </button>
+</div>
+
 
 </div>
 
@@ -328,24 +318,70 @@
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const carouselElement = document.querySelector('#whyKotCarousel');
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
 
-    const carousel = new bootstrap.Carousel(carouselElement, {
-      interval: false,   // disable auto slide
-      ride: false,
-      wrap: true,
-      touch: true        // enable swipe on mobile
-    });
+  const track = document.getElementById("careerTrack");
+  const slides = document.querySelectorAll(".career-slide");
+  const nextBtn = document.getElementById("careerNext");
+  const prevBtn = document.getElementById("careerPrev");
 
-    document.querySelector('.carousel-control-next')
-      .addEventListener('click', () => carousel.next());
+  function getVisible(){
+    if(window.innerWidth < 768) return 1;
+    if(window.innerWidth < 992) return 2;
+    return 3;
+  }
 
-    document.querySelector('.carousel-control-prev')
-      .addEventListener('click', () => carousel.prev());
-  });
+  let visible = getVisible();
+  let index = visible;
+
+  // Clone slides
+  for(let i = 0; i < visible; i++){
+    track.appendChild(slides[i].cloneNode(true));
+    track.insertBefore(
+      slides[slides.length - 1 - i].cloneNode(true),
+      track.firstChild
+    );
+  }
+
+  const allSlides = document.querySelectorAll(".career-slide");
+  const slideWidth = 100 / visible;
+
+  track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+  function move(){
+    track.style.transition = "transform 0.5s ease-in-out";
+    track.style.transform = `translateX(-${index * slideWidth}%)`;
+  }
+
+  nextBtn.onclick = () => {
+    index++;
+    move();
+    if(index === allSlides.length - visible){
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = visible;
+        track.style.transform = `translateX(-${index * slideWidth}%)`;
+      }, 500);
+    }
+  };
+
+  prevBtn.onclick = () => {
+    index--;
+    move();
+    if(index === 0){
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = allSlides.length - visible * 2;
+        track.style.transform = `translateX(-${index * slideWidth}%)`;
+      }, 500);
+    }
+  };
+
+  window.addEventListener("resize", () => location.reload());
+});
 </script>
+
 
 
 </body>

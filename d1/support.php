@@ -1,5 +1,5 @@
 
-  <?php require '../public/header-dm.php'; ?>
+  <?php require '../public/header-dm-new.php'; ?>
 <div class="container-fluid support-section-bg d-flex align-items-center justify-content-center" style="margin-top: 13%;" >
   <div class="support-main-section text-center">
     
@@ -50,17 +50,26 @@
  <div class="need-hlp-text text-center ">
     <h2>Need Help? </h2>
     <h2 class="need-help-2" >You're in the Right Place.</h2>
- </div>
+   </div>
   </div>
   
  <div class="container-fluid need-help-text-bg ps-0 pe-0 ">
     <div class="need-help-bg-text">
-        <p>Welcome to the KOT Support Centre<span>—your centralized hub for technical assistance, service guidance, and platform support. Whether you're a customer, employee, partner, or learner, we’re here to help you resolve issues, answer questions, and get the most out of your experience with KOT. </span> </p>
+        <p>Welcome to the KOT Support Centre<span style="padding-left: 0.1%;">—your centralized hub for technical assistance, service guidance, and platform support. Whether you're a customer, employee, partner, or learner, we’re here to help you resolve issues, answer questions, and get the most out of your experience with KOT. </span> </p>
     
         <p> <span> From how-tos and troubleshooting to ticket tracking and direct contact, everything you need to get support starts here. </span> </p>
     </div>
-
-  <section class="how-we-help">
+<!-- section-2 -->
+ <!-- end-section-2 -->
+ </div>
+    <div class="container-fluid need-help-text-bg-mobile ps-0 pe-0 ">
+    <div class="need-help-bg-text-mobile">
+        <h5>Welcome to the KOT Support Centre </h5>
+        <p>Your centralized hub for technical assistance, service guidance, and platform support. Whether you're a customer, employee, partner, or learner, we’re here to help you resolve issues, answer questions, and get the most out of your experience with KOT.
+    </p>
+        <p> From how-tos and troubleshooting to ticket tracking and direct contact, everything you need to get support starts here. </p>
+    </div>
+    <section class="how-we-help">
   <div class="container">
 
     <h2>How We Help</h2>
@@ -91,12 +100,6 @@
   </div>
 </section>
 
-
-
-
-
- </div>
-</section>
 <section class="explore-section">
   <div class="container">
 
@@ -207,7 +210,7 @@
             <div class="col-lg-2 col-md-4 col-6">
               <div class="explore-card">
                 <div class="explore-card-img">
-                  <img src="../assets/images/SupportLightMode/work-2.png" alt="Admin Self Help">
+                  <img src="../assets/images/SupportLightMode/work-2.png" alt="Admin Self Help" style="width: 58px;" >
                 </div>
                 <div class="explore-card-text">
                   <p>Admin Self Help</p>
@@ -381,8 +384,11 @@
   </div>
 </section>
 
- 
-     <div id="global-footer" style="margin-top: 5%;" ></div>
+</section>
+<!-- section -->
+
+   <!-- section -->
+     <div id="global-footer"  ></div>
             <button id="goTopBtn" title="Go to top">↑</button>
 
     <script>

@@ -1,8 +1,7 @@
 
-<?php require '../public/header.php'; ?>
+<?php require '../public/header-new.php'; ?>
     <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start -->
      <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start -->
-      
 <div class="engineering-the-future" style="margin-top: 19%;" >
 
     <!-- 👇 ONLY IMAGE ANIMATION -->
@@ -11,6 +10,9 @@
     </div>
 
     <div class="container-fluid">
+      <div class="bg-dark-logo d-flex justify-content-center "  >
+      <img src="../assets/images/Flawless/flaw-logo.png" alt="">
+      </div>
         <div class="engineering-the-future-heading ">
             <h2>ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE</h2>
         </div>
@@ -21,9 +23,14 @@
             </p>
         </div>
 
-        <div class="engineering-the-future-btn">
+        <div class="new-btn-service-add d-flex ">
+           <div class="engineering-the-future-btn">
             <a href="">Contact Us</a>
         </div>
+         <div class="engineering-the-future-btn">
+            <a href="">View all Services</a>
+        </div>
+         </div>
     </div>
 </div>
 <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-end -->
@@ -164,6 +171,9 @@
  </div>
 
 <!-- chalanges-we-solve -->
+ <div class="chalanges-we-solve-bg">
+
+ 
  <div class="container-fluid">
   <div class="chalenges-we-solve-text text-center pt-5">
     <h2>CHALANGES WE SOLVE</h2>
@@ -171,6 +181,7 @@
   <div class="chalanges-we-solve-image">
     <img src="../assets/images/Flawless/image-glob.png" alt="">
   </div>
+ </div>
  </div>
  <!-- Quality-start -->
 <div class="quality-flawless-bg">

@@ -2137,6 +2137,7 @@ font-weight: 500;
   font-weight: 700;
   text-decoration: none;
   color: #ffffff;
+  background-color: #000;
     font-family: Montserrat !important;
 
 }
@@ -2628,7 +2629,7 @@ font-weight: 500;
 
 /* Logo */
 .dt-ecom-logo {
-  width: clamp(80px, 12vw, 140px);
+  width: 250px;
   margin-bottom: 1rem;
 }
 
@@ -2656,19 +2657,27 @@ font-weight: 500;
   color: white;
   max-width: 800px;
 }
-
 /* CTA Button */
 .dt-ecom-cta-btn {
-  margin-top: 1.8rem;
-  padding: 14px 35px !important;
+ padding: 14px 35px !important;
   background-color: #ffcc00 !important;
   color: #000;
-  font-weight: 600;
   border-radius: 999px !important;
   
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
+/* Button group */
+.dt-ecom-btn-group {
+  margin-top: 2rem;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 
 
 /* 📱 Mobile tweaks */
@@ -2686,6 +2695,7 @@ font-weight: 500;
 .dt-visual-section {
   width: 100%;
   overflow: hidden;
+  margin-top: 3%;
 }
 
 .dt-visual-wrapper {
@@ -3298,3 +3308,270 @@ font-weight: 500;
   color:#2fa2f2;
   font-size:14px;
 }
+
+/* ========== BANNER ========== */
+.kot-banner-section {
+  background: url("../images/news/banner.png") center/cover no-repeat;
+  padding: 60px 0 50px;
+  color: #fff;
+}
+
+.kot-banner-title {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.kot-banner-subtitle {
+  color: #0D6EB3;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.kot-banner-text {
+  max-width: 900px;
+  margin: auto;
+  font-size: 17px;
+}
+
+/* ========== VERIFY CARD ========== */
+.kot-verify-section {
+  padding: 50px 0;
+}
+
+.kot-verify-card {
+  max-width: 1000px;
+  margin: auto;
+  background: url("../images/news/bgcard.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 70px;
+  border-radius: 16px;
+}
+
+.kot-verify-input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.kot-verify-btn {
+  float: right;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ========== CERTIFICATE DETAILS ========== */
+.kot-certificate-section {
+  padding: 10px 0;
+  }
+
+.kot-certificate-card {
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 16px;
+  color: #fff;
+   background: url("../images/news/bgcard.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding:50px;
+
+}
+
+.kot-certificate-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.kot-line {
+  flex: 1;
+  height: 1px;
+  background: #aaa;
+  margin-left: 20px;
+}
+
+/* ========== FOOTER ========== */
+.kot-footer-section {
+  padding: 20px 0;
+  color: #fff;
+}
+
+.kot-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  
+}
+
+.kot-footer-left img {
+  max-width: 400px;
+}
+
+.kot-footer-right {
+  text-align: right;
+  color: #1e90ff;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.kot-footer-valid {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .kot-banner-title {
+    font-size: 28px;
+  }
+
+  .kot-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kot-footer-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .kot-verify-btn {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+/* ===== OUR SERVICES ===== */
+
+
+/* Banner */
+.kot-services-banner {
+  padding: 50px 0;
+  text-align: center;
+    background: url("../images/news/banner.png") center/cover no-repeat;
+}
+
+.kot-services-banner h2 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+
+/* ===== GRID ===== */
+.kot-services-grid {
+  margin-top: 70px;
+}
+
+.kot-service-card {
+  display: block;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kot-service-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.kot-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .kot-services-banner h2 {
+    font-size: 30px;
+  }
+
+  .kot-service-logo img {
+    height: 80px;
+  }
+}
+
+.kot-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(236, 236, 236, 0.7);
+  padding: 50px 0;
+}
+
+.kot-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: kot-marquee-scroll 30s linear infinite;
+}
+
+.kot-marquee-wrap:hover .kot-marquee-track {
+  animation-play-state: paused;
+}
+
+.kot-marquee-track a {
+  padding: 0 40px;
+}
+
+.kot-marquee-track img {
+  height: 140px;
+    /* border-radius: 12px; */
+  transition: transform 0.3s ease;
+}
+
+.kot-marquee-track img:hover {
+  transform: scale(1.08);
+}
+
+@keyframes kot-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kot-marquee-track img {
+    height: 85px;
+  }
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 150px !important;
+  }
+} 

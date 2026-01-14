@@ -1,13 +1,15 @@
 
 
 <!-- Navbar -->
-<?php require '../public/header.php'; ?>
+<?php require '../public/header-new.php'; ?>
  <div class="home-page-banner " style="margin-top: 15%;" >
   
 </div>
+<div class="new-globe-section-addtion">
+
 
 <section class="kot-Glance">
-  <div class="container  me-4 ms-4">
+  <div class="container mobile-text-align-change ">
     <div class="row align-items-center">
 
       <!-- Left Text -->
@@ -287,10 +289,24 @@
   </div>
 
 </div>
+
+
+<!-- end-of-new-section -->
 <!-- new section-4 -->
-<div class="container mt-5">
+
+
+  <!-- end-section-3  -->
+</div>
+
+
+ 
+  </div>
+   <!-- card-section-home -->
+
+      <div class="resylt-the-spark-faq">
+    <div class="container mt-5">
    <div class="result-header pt-5 pb-2 ">
-<h2>Results That Speak For Themselves</h2>
+       <h2>Results That Speak For Themselves</h2>
    </div>
   <div class="result-header-paragraph pt-3 pb-5 ">
     <p>Our journey reflects dedication and excellence.</p>
@@ -303,7 +319,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/ph_handshake-light.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>145+</h3>
           <p>Happy Customer</p>
         </div>
@@ -315,7 +331,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/dashicons_awards.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>5+</h3>
           <p>Award Won</p>
         </div>
@@ -326,7 +342,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/material-symbols-light_support-agent.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>352+</h3>
           <p>After Sales Support</p>
         </div>
@@ -335,15 +351,6 @@
 
   </div>
 </div>
-
-
-  <!-- end-section-3  -->
-</div>
-
-
- 
-
-   <!-- card-section-home -->
 
 <!-- Blog Section -->
 <div class="container-fluid my-5">
@@ -522,9 +529,14 @@
 
   </div>
 </div>
+</div>
+
    <div id="global-footer"></div>
             <button id="goTopBtn" title="Go to top">↑</button>
 
+    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script>
+    
     <script>
   const goTopBtn = document.getElementById("goTopBtn");
 
@@ -542,6 +554,7 @@
       behavior: "smooth"
     });
   });
+
 </script>
 
 

@@ -1,13 +1,16 @@
 
 
 <!-- Navbar -->
-<?php require '../public/header-dm.php'; ?>
+<?php require '../public/header-dm-new.php'; ?>
  <div class="home-page-banner " style="margin-top: 15%;" >
   
 </div>
 
+<div class="new-globe-section-addtion">
+
+
 <section class="kot-Glance">
-  <div class="container  me-4 ms-4">
+  <div class="container mobile-text-align-change ">
     <div class="row align-items-center">
 
       <!-- Left Text -->
@@ -82,7 +85,7 @@
     
   <div class="home-service-button">
   <a href="#">
-   Explore More Services<i class="bi bi-arrow-right"></i>
+    See All Services<i class="bi bi-arrow-right"></i>
   </a>
 </div>
 <div class="container-fluid my-5 p-0">
@@ -287,10 +290,24 @@
   </div>
 
 </div>
+
+
+<!-- end-of-new-section -->
 <!-- new section-4 -->
-<div class="container mt-5">
+
+
+  <!-- end-section-3  -->
+</div>
+
+
+ 
+  </div>
+   <!-- card-section-home -->
+
+      <div class="resylt-the-spark-faq">
+    <div class="container mt-5">
    <div class="result-header pt-5 pb-2 ">
-<h2>Results That Speak For Themselves</h2>
+       <h2>Results That Speak For Themselves</h2>
    </div>
   <div class="result-header-paragraph pt-3 pb-5 ">
     <p>Our journey reflects dedication and excellence.</p>
@@ -303,7 +320,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/ph_handshake-light-dm.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>145+</h3>
           <p>Happy Customer</p>
         </div>
@@ -315,7 +332,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/dashicons_awards-dm.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>5+</h3>
           <p>Award Won</p>
         </div>
@@ -326,7 +343,7 @@
     <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/material-symbols-light_support-agent-dm.png" alt="">
-        <div class="result-text">
+        <div class="result-text" style="margin-top: 10%;" >
           <h3>352+</h3>
           <p>After Sales Support</p>
         </div>
@@ -335,15 +352,6 @@
 
   </div>
 </div>
-
-
-  <!-- end-section-3  -->
-</div>
-
-
- 
-
-   <!-- card-section-home -->
 
 <!-- Blog Section -->
 <div class="container-fluid my-5">
@@ -522,6 +530,7 @@
 
   </div>
 </div>
+</div>
    <div id="global-footer"></div>
             <button id="goTopBtn" title="Go to top">↑</button>
 
@@ -557,15 +566,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script>
   <script>
   const toggler = document.getElementById('navbarToggler');
-  const menu = document.getElementById('mainNavbar');
+const menu = document.getElementById('mainNavbar');
 
-  toggler.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
+toggler?.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
 
-
-
-  // Define questions and answers
+// Define questions and answers
 const qaData = [
   { question: "What is your name?", answer: "I am ChatBot, your virtual assistant." },
   { question: "How are you?", answer: "I am doing great, thank you for asking!" },
@@ -577,92 +584,81 @@ const qaData = [
   { question: "What is your purpose?", answer: "My purpose is to assist and make life easier for you!" },
   { question: "Can you help with math?", answer: "Sure! I can help solve math problems or explain concepts." },
   { question: "How can I contact you?", answer: "You can contact me here anytime!" }
-  // Add more predefined Q&A as necessary
 ];
 
-let currentQuestionsIndex = 0; // Keep track of which questions are displayed
+let currentQuestionsIndex = 0; // For Load More
 
-// Show suggestions based on input
+// Show suggestions
 function showSuggestions() {
-  const input = document.getElementById('user-input').value;
+  const input = document.getElementById('user-input').value.trim();
   const suggestionsList = document.getElementById('suggestions-list');
-  suggestionsList.innerHTML = ''; // Clear previous suggestions
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  suggestionsList.innerHTML = '';
+  currentQuestionsIndex = 0; // reset index on new input
 
   if (input.length > 2) {
-    const filteredQuestions = qaData.filter(item =>
-      item.question.toLowerCase().includes(input.toLowerCase())
-    );
+    const filtered = qaData.filter(q => q.question.toLowerCase().includes(input.toLowerCase()));
 
-    // Show only the first 5 questions
-    const displayedQuestions = filteredQuestions.slice(0, 5);
-
-    displayedQuestions.forEach(item => {
-      const suggestionItem = document.createElement('li');
-      suggestionItem.textContent = item.question;
-      suggestionItem.onclick = () => showAnswer(item.answer);
-      suggestionsList.appendChild(suggestionItem);
+    filtered.slice(0, 5).forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item.question;
+      li.onclick = () => showAnswer(item.answer);
+      suggestionsList.appendChild(li);
     });
 
-    // Show "Load More" if there are more than 5 suggestions
-    if (filteredQuestions.length > 5) {
-      document.getElementById('load-more-btn').style.display = 'block';
+    // Show load more button if filtered > 5
+    if (filtered.length > 5) {
+      loadMoreBtn.style.display = 'block';
+      currentQuestionsIndex = 5;
+      loadMoreBtn.dataset.filtered = JSON.stringify(filtered);
     } else {
-      document.getElementById('load-more-btn').style.display = 'none';
+      loadMoreBtn.style.display = 'none';
     }
+  } else {
+    loadMoreBtn.style.display = 'none';
   }
 }
 
-// Show the chatbot's response
+// Show answer
 function showAnswer(answer) {
-  const responseDiv = document.getElementById('chatbot-response');
-  responseDiv.classList.add('visible');
-  responseDiv.textContent = answer;
+  const resp = document.getElementById('chatbot-response');
+  resp.textContent = answer;
+  resp.classList.add('visible');
   clearSuggestions();
 }
 
-// Clear suggestions when a question is clicked
+// Clear suggestions
 function clearSuggestions() {
-  const suggestionsList = document.getElementById('suggestions-list');
-  suggestionsList.innerHTML = '';
+  document.getElementById('suggestions-list').innerHTML = '';
 }
 
-// Handle Enter key to show relevant questions
+// Handle Enter
 function handleEnter(event) {
   if (event.key === 'Enter') {
     const input = document.getElementById('user-input').value.trim().toLowerCase();
-    const answerDiv = document.getElementById('chatbot-response');
+    const match = qaData.find(q => q.question.toLowerCase() === input);
 
-    // Check if the question is in the predefined list
-    const match = qaData.find(item => item.question.toLowerCase() === input);
-    if (match) {
-      answerDiv.textContent = match.answer;
-    } else {
-      answerDiv.textContent = "Sorry, I don't understand that. Can you ask something else?";
-    }
-
-    answerDiv.classList.add('visible');
-    showSuggestions(); // Reset to show suggestions again
-    document.getElementById('user-input').value = ''; // Clear input field
+    showAnswer(match ? match.answer : "Sorry, I don't understand that. Can you ask something else?");
+    document.getElementById('user-input').value = '';
   }
 }
 
-// Load more questions
+// Load more filtered questions
 function loadMoreQuestions() {
   const suggestionsList = document.getElementById('suggestions-list');
-  const displayedQuestions = qaData.slice(currentQuestionsIndex, currentQuestionsIndex + 5);
-  currentQuestionsIndex += 5;
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const filtered = JSON.parse(loadMoreBtn.dataset.filtered || '[]');
 
-  displayedQuestions.forEach(item => {
-    const suggestionItem = document.createElement('li');
-    suggestionItem.textContent = item.question;
-    suggestionItem.onclick = () => showAnswer(item.answer);
-    suggestionsList.appendChild(suggestionItem);
+  filtered.slice(currentQuestionsIndex, currentQuestionsIndex + 5).forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item.question;
+    li.onclick = () => showAnswer(item.answer);
+    suggestionsList.appendChild(li);
   });
 
-  // Hide "Load More" if there are no more questions
-  if (currentQuestionsIndex >= qaData.length) {
-    document.getElementById('load-more-btn').style.display = 'none';
-  }
+  currentQuestionsIndex += 5;
+  if (currentQuestionsIndex >= filtered.length) loadMoreBtn.style.display = 'none';
 }
 
 </script>

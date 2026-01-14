@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kot Enterprises</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/responsive.css">
+   <link rel="stylesheet" href="../assets/css/header.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
+       <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+       <link rel="stylesheet" href="../assets/css/header.css">
+    
+ <style>
+   /* ================= TOP BAR ================= */
+    /* ================= TOP MARQUEE ================= */
+.top-marquee{
+    background:#0A71B9;
+    color:#fff;
+    font-size:13px;
+    padding:6px 0;
+}
+
+.marquee-container{
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee-track{
+    display:flex;
+    width:max-content;
+    will-change:transform;
+}
+
+.marquee-track span{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding-right:40px;
+}
+
+.marquee-track img{
+    height:16px;
+}
+
+
+/* ================= TOP LINKS ================= */
+.top-links-wrapper{
+     width:100%;
+    display:flex;
+    justify-content:flex-end;   /* right side align */
+    align-items:center;
+    /* gap:12px;                   spacing between both */
+    padding-right:1.5%;     
+}
+
+.top-links-right{
+   
+    background:#0A71B9;
+    padding:6px 6px 6px 6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:21px;
+ height: 32px;
+border-bottom-right-radius: 5.23px;
+border-bottom-left-radius: 5.23px;
+border-right-width: 1.05px;
+border-bottom-width: 1.05px;
+border-left-width: 1.05px;
+ white-space:nowrap;
+}
+
+.top-links-right a{
+    color:#fff;
+    font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 12.55px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+    text-decoration:none;
+}
+
+/* ================= ACTIONS ================= */
+.top-actions{
+     position:static;   /* ✅ absolute remove */
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ================= LANGUAGE ================= */
+.dropdown{
+    
+    border-top:none;
+    width:94px;
+    height:32px;
+   
+border-bottom-right-radius: 5.23px;
+border-bottom-left-radius: 5.23px;
+border-right-width: 1.05px;
+border-bottom-width: 1.05px;
+border-left-width: 1.05px;
+/* border-width: 0px, 1.05px, 1.05px, 1.05px; */
+
+border-style: solid;
+    border-top-style:none;
+border-color: #000000;
+
+
+}
+
+.lang-dropdown button{
+    background:none;
+    border:none;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+/* .lang-dropdown img{
+    width:18px;
+    height:12px;
+} */
+.lang-dropdown .dropdown-menu img{
+    width:18px;
+    height:12px;
+    margin-right:6px;
+}
+
+.lang-dropdown .dropdown-item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+}
+
+/* ================= TOGGLE ================= */
+.switch{
+    width:38px;
+    height:14px;
+    position:relative;
+ border: 0.9px solid #0A71B9;
+opacity: 1;
+border-radius: 20px;
+border-width: 0.9px;
+box-shadow: 0px 0px 1.5px 0px #0D6EB3;
+
+box-shadow: 0px 0px 3px 0px #0D6EB3;
+
+box-shadow: 0px 0px 10.5px 0px #0D6EB3;
+
+box-shadow: 0px 0px 21px 0px #0D6EB3;
+
+box-shadow: 0px 0px 36px 0px #0D6EB3;
+
+box-shadow: 0px 0px 63px 0px #0D6EB3;
+
+}
+.switch input{display:none;}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#fff;
+    border-radius:20px;
+    cursor:pointer;
+}
+.slider:before{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:3px;
+    /* top:3px; */
+    background:#0A71B9;
+    border-radius:50%;
+    transition:.3s;
+}
+.switch input:checked + .slider{
+    background:#0A71B9;
+}
+.switch input:checked + .slider:before{
+    transform:translateX(22px);
+    background:#fff;
+}
+
+/* ================= LOGO ================= */
+.header-main{padding:15px 0;}
+.logo img{height:64px; }
+.search-box{
+    width: 268px;
+
+    height: 32px;
+
+    margin-left:auto;
+    position:relative;
+}
+.form-scontrol-style {
+border-radius: 6.01px;
+border-width: 1.2px;
+  border: 1.2px solid #000000;
+  font-family: Montserrat;
+font-weight: 400;
+font-style: Regular;
+font-size: 14.42px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.search-box button{
+    position:absolute;
+    right:-5px;
+    top:50%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+}
+
+/* ================================================= */
+/* ================= CODE-2 CSS ===================== */
+/* ================================================= */
+
+.kot-main-header-nav-bar{
+    background:#0A71B9;
+    position:relative;
+    --hover-color:#8f4b36;
+}
+
+.kot-main-header-nav-bar-inner{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.kot-main-header-nav-bar-item-wrapper{
+    display:flex;
+    align-items:center;
+    position:relative;
+}
+
+.kot-main-header-nav-bar-item-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    top:10%;
+    background:var(--hover-color);
+    opacity:0;
+    z-index:0;
+    transition:opacity .4s ease;
+}
+
+.kot-main-header-nav-bar-item-wrapper.hovered::before{
+    opacity:1;
+}
+
+.kot-main-header-nav-bar-item{
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 11px;
+
+letter-spacing: 0%;
+
+    color:#FFFFFF;
+    padding:14px 16px;
+    font-weight:600;
+    white-space:nowrap;
+    position:relative;
+    z-index:1;
+    text-decoration:none;
+    display:block;
+}
+
+.kot-main-header-nav-bar-item-wrapper:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    /* top:10%; */
+    right:0;
+    width:1px;
+    height:40%;
+    background:#cfe6f7;
+}
+
+.kot-main-header-nav-bar-item-wrapper.hovered::after,
+.kot-main-header-nav-bar-item-wrapper.previous-hide::after{
+    opacity:0;
+}
+
+.kot-main-header-nav-bar-mega-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:0;
+    display:none;
+    background:var(--hover-color);
+    overflow:hidden;
+    z-index:10;
+    transition:height .4s ease;
+}
+
+.kot-main-header-nav-bar-mega-menu.show{
+    height:320px;
+}
+
+.kot-main-header-nav-bar-mega-content{
+    max-width:1140px;
+    margin:auto;
+    padding:30px;
+    color:#fff;
+    opacity:0;
+    transform:translateY(-15px);
+    transition:.3s;
+}
+
+.kot-main-header-nav-bar-mega-menu.show 
+.kot-main-header-nav-bar-mega-content{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.kot-main-header-nav-bar-mega-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 2fr;
+    gap:30px;
+}
+
+.kot-main-header-nav-bar-list-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.kot-main-header-nav-bar-list-col ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.kot-main-header-nav-bar-list-col li{
+    margin-bottom:10px;
+}
+
+.kot-main-header-nav-bar-list-col a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+}
+@media (max-width: 767px){
+    .top-marquee,
+    .top-links-wrapper,
+    .header-main,
+    .kot-main-header-nav-bar{
+        display: none;
+    }
+}
+
+
+    /* ================= MOBILE TOP (sticky) ================= */
+    .kot-header-mobile-top{
+      position: sticky;
+      top: 0;
+      z-index: 1060;
+      overflow: visible;
+      display: none; /* Hide by default */
+    }
+
+    /* Show only on mobile (max-width: 767px) */
+    @media (max-width: 767px) {
+      .kot-header-mobile-top {
+        display: block;
+      }
+     
+    }
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .kot-main-header-nav-bar-item{
+
+
+    color:#FFFFFF;
+    padding:14px 15px;}
+}
+    /* ✅ MOBILE: logo + typing text side-by-side */
+    .kot-header-mobile-top-container{
+  position: relative;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+   .kot-header-mobile-brand{
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 2;
+}
+   .kot-header-mobile-brand img{
+  width: 90px;
+  max-height: 112px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));
+}
+
+    /* ✅ hide old right block (1024 + top menu btn) */
+    .kot-header-mobile-right{
+      display: none !important;
+    }
+    .kot-header-mobile-top {
+background-color: #0A71B9;
+    }
+    .kot-header-hero-subline{
+      margin: 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.15;
+      color: #fff;
+      flex: 1 1 auto;
+    }
+    #jdc-rotate-word{
+      color: var(--jdc-blue);
+    }
+
+    /* ================= OVERLAY ================= */
+    .kot-header-menu-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1040;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+      background: rgba(0,0,0,.45);
+      backdrop-filter: blur(4px);
+      display: none; /* Hide by default */
+    }
+    
+  
+    
+    /* ✅ when open: show overlay BUT don't block scrolling */
+    .kot-header-menu-overlay.kot-header-show{
+      opacity: 1;
+      pointer-events: none; /* important: body scroll works */
+    }
+
+    /* ================= MOBILE MENU HEADER (logo + close button row) ================= */
+    .kot-header-mobile-menu-header {
+        position: relative;
+        z-index: 1051;
+        top: 13%;
+    }
+
+    /* Adjust close button position */
+    .kot-header-close-btn {
+        position: static !important;
+        top: auto;
+        right: auto;
+        margin: 0;
+        font-size: 28px;
+        padding: 8px 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.10);
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .kot-header-close-btn:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* Logo image adjustment */
+    .kot-header-logo-layer img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* ================= OFFCANVAS FULL WIDTH ================= */
+    .kot-header-mobile-menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1050;
+      transform: translateX(-100%);
+      transition: transform .28s ease;
+      background: linear-gradient(180deg, rgba(23, 23, 57, 0.90), rgba(23, 23, 57, 0.60));
+      backdrop-filter: blur(8px);
+      color:#fff;
+      display: none; /* Hide by default */
+    }
+    
+   
+    
+    .kot-header-mobile-menu.kot-header-open{ transform: translateX(0); }
+
+    .kot-header-mobile-menu-body{
+      height: 100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      /* padding: 30px 20px 90px; */
+    }
+
+    .kot-header-menu-item,
+    .kot-header-menu-acc-btn{
+      width: min(520px, 92vw);
+      color:#fff;
+      border:0;
+      padding:24px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      font-weight:700;
+      text-decoration:none;
+      border-radius:14px;
+      cursor: pointer;
+      text-align: center;
+      background: none;
+    }
+    .kot-header-menu-item:hover,
+    .kot-header-menu-acc-btn:hover{ background: rgba(255,255,255,0.12); }
+
+    .kot-header-menu-accordion{ 
+      width: min(520px, 92vw);
+    }
+    .kot-header-menu-acc-btn{ 
+      width:100%; 
+      position: relative; 
+    }
+    .kot-header-menu-acc-btn .kot-header-chev{
+      position:absolute;
+      right: 16px;
+      transition: transform .2s ease;
+    }
+
+    .kot-header-menu-acc-panel{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      margin-top: 8px;
+    }
+    .kot-header-menu-acc-panel a{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:4px 16px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:14px;
+      
+      margin: 0px 0;
+    }
+    .kot-header-menu-acc-panel a:hover{ background: rgba(255,255,255,0.12); }
+    .kot-header-menu-accordion.kot-header-open .kot-header-menu-acc-panel{ max-height: 400px; }
+    .kot-header-menu-accordion.kot-header-open .kot-header-chev{ transform: rotate(180deg); }
+
+    /* ================= MOBILE BOTTOM NAV ================= */
+.kot-header-mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none; /* Hide by default */
+}
+
+/* Show only on mobile */
+
+
+/* logo ko floating banao */
+.kot-header-mobile-logo-strip {
+  position: absolute;
+    top: -56%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: #FFFFFF; */
+    padding: 0px -3px;
+    border-radius: 100px;
+    /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); */
+    z-index: 999;
+    background-image: url(../assets/images/Header/Vector3.png);
+    height: 84px;
+    width: 84px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+}
+
+/* logo size */
+.kot-header-mobile-logo-strip img {
+  height: 42px;
+  width: auto;
+}
+
+/* menu ko thora neeche push karo */
+.kot-header-mobile-bottom-nav .kot-header-bottom-container {
+  padding-top: 15px;
+  background-color: #0A71B9;
+}
+
+.kot-header-mobile-bottom-nav a {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kot-header-mobile-bottom-nav i {
+  font-size: 30px;
+}
+
+  /* outer glowing box */
+.kot-header-glow-toggle {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* toggle base */
+.kot-header-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+/* hide checkbox */
+.kot-header-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  @media (max-width: 767px) {
+      .kot-header-menu-overlay {
+        display: block;
+      }
+       .kot-header-mobile-menu {
+        display: block;
+      }
+      .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+    }
+ /* @media (max-width: 991px) {
+      .kot-header-mobile-menu {
+        display: block;
+      }
+        .kot-header-mobile-bottom-nav {
+    display: block;
+  }
+  .kot-header-menu-overlay {
+        display: block;
+      }
+    } */
+
+/* slider */
+.kot-header-slider {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+/* circle */
+.kot-header-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  top: 4px;
+  background: #1e90ff;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  box-shadow: 0 0 6px rgba(30,144,255,0.9);
+}
+
+/* ON state */
+.kot-header-toggle input:checked + .kot-header-slider::before {
+  transform: translateX(22px);
+}
+
+    /* optional: give page some breathing room from bottom nav */
+    .kot-header-page-wrap{ padding-bottom: 90px; }
+
+    /* demo hero */
+    .kot-header-hero{
+      min-height: 240px;
+      background: linear-gradient(135deg, rgba(11,59,122,.10), rgba(11,59,122,.02));
+      border-bottom: 1px solid #eee;
+      display:flex;
+      align-items:center;
+    }
+
+    /* =====================================================
+       ✅ DESKTOP: fixed header + floating logo outside height
+       ===================================================== */
+   
+
+/* DESKTOP DONATION BANNER - You can add your desktop image here */
+.kot-header-donation-banner {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Default mobile background */
+.kot-header-donation-banner {
+  background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG");
+}
+
+/* Desktop background (you'll add your image here) */
+@media (min-width: 768px) {
+  .kot-header-donation-banner {
+    /* Add your desktop background image here */
+    /* background-image: url("your-desktop-image.jpg"); */
+    background-image: url("../images/HomePageImages/Landing\ Page\ Banner.PNG"); /* Keep same for now */
+  }
+}
+
+/* Overlay */
+.kot-header-donation-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+  z-index: 1;
+}
+
+/* Content */
+.kot-header-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #fff;
+}
+
+/* Heading */
+.kot-header-banner-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.kot-header-banner-content h1 span {
+  color: #f2b233;
+}
+
+/* Paragraph */
+.kot-header-banner-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+/* Button */
+.kot-header-btn-donate {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #f2b233;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.kot-header-btn-donate:hover {
+  background: #d99c1e;
+}
+/* =====================================================
+   SMART FIXED HEADER (DESKTOP ONLY)
+   ===================================================== */
+
+@media (min-width: 992px){
+
+  .desktop-header-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: #fff;
+    transition: all .4s ease;
+  }
+
+  /* smooth animation */
+  /* .top-marquee,
+  .top-links-wrapper,
+  .header-main{
+    transition: transform .4s ease, opacity .4s ease, padding .4s ease;
+  } */
+
+  /* ===== SCROLL DOWN ===== */
+  /* .desktop-header-wrap.header-hide-top .top-marquee,
+  .desktop-header-wrap.header-hide-top .top-links-wrapper{
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+
+  .desktop-header-wrap.header-shrink .header-main{
+    padding: 6px 0;
+  } */
+
+  /* .desktop-header-wrap.header-shrink .logo img{
+    height: 46px;
+  } */
+
+  .desktop-header-wrap.header-shrink .kot-main-header-nav-bar{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  /* content ko header ke neeche push */
+  body{
+    padding-top: 190px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- ================= TOP BAR (DESKTOP) ================= -->
+<!-- TOP MARQUEE -->
+ <div class="desktop-header-wrap">
+<div class="top-marquee">
+  <div class="marquee-container">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>
+        <img src="../assets/images/Header/marquee-logo.png" alt="">
+        Empowering businesses to streamline operations and grow.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </span>
+      <span>
+        <img src="../assets/images/Header/marquee-logo.png" alt="">
+        Empowering businesses to streamline operations and grow.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<!-- TOP LINKS -->
+<div class="top-links-wrapper">
+  <div class="top-links-right">
+    <a href="../v1/index.php">Home</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Startups</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> E-Life</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
+    <a href="../v1/contact.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
+    <a href="#"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+  </div>
+
+  <div class="top-actions">
+    <div class="dropdown lang-dropdown">
+  <button class="dropdown-toggle" id="langBtn" data-bs-toggle="dropdown">
+    <img id="langImg" src="../assets/images/Header/pak.png">
+    <span id="langText">اردو</span>
+  </button>
+
+  <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item lang-option" href="#" 
+         data-img="../assets/images/Header/pak.png" 
+         data-text="اردو">
+        <img src="../assets/images/Header/pak.png"> اردو
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item lang-option" href="#" 
+         data-img="assets/images/Header/uk.png" 
+         data-text="English">
+        <img src="../assets/images/Header/uk.png"> English
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item lang-option" href="#" 
+         data-img="../assets/images/Header/saudi.png" 
+         data-text="العربية">
+        <img src="../assets/images/Header/saudi.png"> العربية
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item lang-option" href="#" 
+         data-img="../assets/images/Header/fr.png" 
+         data-text="Français">
+        <img src="../assets/images/Header/fr.png"> Français
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+
+<!-- LOGO -->
+<div class="header-main">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 logo">
+       <a href="../v1/index.php"> <img src="../assets/images/Header/Logo (2).png"></a>
+      </div>
+      <div class="col-md-6">
+        <div class="search-box">
+          <input class="form-control form-scontrol-style " placeholder="Search">
+          <button><img src="../assets/images/Header/search-icon.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CODE-2 NAV + MEGA (EXACT) ================= -->
+
+<div class="kot-main-header-nav-bar" id="nav">
+  <div class="kot-main-header-nav-bar-inner">
+
+    <!-- ALL ITEMS EXACT FROM CODE-2 -->
+    <!-- CORPORATE -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="../assets/images/Header/bi_buildings.png"
+        data-text="Enterprise-grade digital solutions." data-heading="Corporate Solutions"
+        data-desc="Robust systems for large organizations."
+        data-left="
+             WHY KOT ENTERPRISES| ../v1/why-kot.html,
+              BOARD OF DIRECTION | ../v1/board-of-directors.html
+             
+             
+             
+              "
+
+       data-right="
+            CAREERS | ../v1/career.php
+       
+            "
+            >
+        CORPORATE
+      </a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Services"
+        data-text="Managed IT and digital services." data-heading="Our Services"
+        data-desc="From development to deployment."
+        data-left="
+              APP SCULPT | ../v1/appsculpt.php,
+              AGILE APPS | ../v1/agileappsservice.php,
+              DIG-IT-TRAIL | ../v1/digittrail.html,
+             MERCHANITY | ../v1/merchanity.html
+             
+              "
+
+       data-right="
+           WEB SCULPTURE | ../v1/WebSculpture.php,
+            FLAWLESSX | ../v1/flawless.php,
+            VENTURE XCELERATOR | ../v1/venture.html,
+            GRAPHIORA | ../v1/graphoria.php
+       
+            "
+            >
+        SERVICES
+      </a>
+    </div>
+
+    <!-- CONSULTANCY -->
+    <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="../assets/images/Header/cil_chat-bubble.png"
+        data-text="Expert consulting services." data-heading="Consultancy"
+        data-desc="Guiding digital transformation."
+         data-left="
+              AUDITS | ../v1/audits.html
+          
+             
+              "
+
+       data-right="
+           DATA ENGINEERING| ../v1/data-engineering.html,
+            GENERATIVE AI | ../v1/gen-ai.html
+       
+            ">
+        CONSULTANCY
+      </a>
+    </div>
+
+    <!-- MARKETPLACE -->
+    <!-- <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Marketplace"
+        data-text="Technology marketplace solutions." data-heading="Marketplace"
+        data-desc="Products that power business."
+        data-left=""
+        data-right="">
+        MARKETPLACE
+      </a>
+    </div> -->
+
+    <!-- SPOTLIGHTS -->
+    <!-- <div class="kot-main-header-nav-bar-item-wrapper">
+      <a class="kot-main-header-nav-bar-item" href="#" data-img="https://via.placeholder.com/300x160?text=Spotlights"
+        data-text="Featured projects and highlights." data-heading="Spotlights"
+        data-desc="Showcasing innovation."
+        data-left=""
+        data-right="">
+        SPOTLIGHTS
+      </a>
+    </div> -->
+
+    <!-- SUPPORT -->
+    <div class="kot-main-header-nav-bar-item-wrapper no-mega ">
+      <a class="kot-main-header-nav-bar-item" href="../v1/support.php" data-img="https://via.placeholder.com/300x160?text=Support"
+        >
+        SUPPORT
+      </a>
+    </div>
+   
+    <!-- CAREER -->
+    <div class="kot-main-header-nav-bar-item-wrapper no-mega ">
+      <a class="kot-main-header-nav-bar-item" href="../v1/career.php" >
+        CAREER
+      </a>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="kot-main-header-nav-bar-item-wrapper no-mega ">
+      <a class="kot-main-header-nav-bar-item" href="../v1/contact.html">
+        CONTACT
+      </a>
+    </div>
+
+  </div>
+
+  <!-- MEGA MENU -->
+  <div class="kot-main-header-nav-bar-mega-menu" id="megaMenu">
+    <div class="kot-main-header-nav-bar-mega-content">
+      <div class="kot-main-header-nav-bar-mega-grid">
+
+        <div class="kot-main-header-nav-bar-col-1">
+          <img id="mm-img">
+          <p id="mm-text"></p>
+          <a href="#" class="kot-main-header-nav-bar-mega-btn">Learn More</a>
+        </div>
+
+        <div class="kot-main-header-nav-bar-col-2">
+          <h3 id="mm-heading"></h3>
+          <p id="mm-desc"></p>
+          <a href="#" class="kot-main-header-nav-bar-mega-btn outline">Get Started</a>
+        </div>
+
+        <div class="kot-main-header-nav-bar-col-3">
+          <div class="kot-main-header-nav-bar-list-row">
+            <div class="kot-main-header-nav-bar-list-col">
+              <ul id="mm-left"></ul>
+            </div>
+            <div class="kot-main-header-nav-bar-list-col">
+              <ul id="mm-right"></ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ================= MOBILE TOP (logo + typing text) ================= -->
+<div class="kot-header-mobile-top d-lg-none">
+  <div class="container py-2 kot-header-mobile-top-container">
+    <h4 class="kot-header-hero-subline">
+      <marquee behavior="" direction=""> kot Enterprises Lorem ipsum dolor sit amet consectetur, adipisicing elit. dolorem totam ab deleniti nobis ratione quibusdam, ex voluptatem esse itaque obcaecati sed illum quis!</marquee>
+    </h4>
+
+    <div class="d-flex align-items-center gap-3 kot-header-mobile-right">
+      <button id="openMenuBtn" class="btn btn-sm btn-outline-dark" type="button">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="kot-header-menu-overlay" id="menuOverlay"></div>
+
+<!-- OFFCANVAS -->
+<aside class="kot-header-mobile-menu" id="mobileMenu" aria-hidden="true">
+    <!-- Logo and Close Button in same row -->
+    <div class="kot-header-mobile-menu-header d-flex justify-content-between align-items-center px-4 py-3">
+        <div class="kot-header-logo-layer">
+            <img src="../assets/images/Header/mobile-logo.png" alt="Support Logo" style="height: 50px;">
+        </div>
+        <button id="closeMenuBtn" class="kot-header-close-btn" aria-label="Close Menu">&times;</button>
+    </div>
+    
+    <div class="kot-header-mobile-menu-body">
+      <div class="alternate-changing">
+   <div class="kot-header-glow-toggle">
+  <label class="kot-header-toggle">
+    <input type="checkbox" id="glowToggle">
+    <span class="kot-header-slider"></span>
+  </label>
+   
+</div>
+<div class="login-btn"><a href="login.php" class="login-btn">Login</a>
+</div>
+</div>
+<div class="scroleer-addion-sec" style="height: 52vh; overflow: auto;" >
+<!-- Services -->
+<div class="kot-header-menu-accordion" id="servicesAcc"  >
+  <button class="kot-header-menu-acc-btn" type="button" id="servicesBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi "></i> CORPORATE
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+  <div class="kot-header-menu-acc-panel" id="servicesPanel"  >
+    <a href="../v1/why-kot.html">Why Kot Enterprises</a>
+    <a href="../v1/board-of-directors.html">Board Of Director</a>
+    <a href="../v1/career.php">Career</a>
+   
+  </div>
+</div>
+
+<!-- PROJECT DROPDOWN ADDED HERE -->
+
+<!-- Services -->
+<div class="kot-header-menu-accordion" id="servicesAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="servicesBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi "></i> Services
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+  <div class="kot-header-menu-acc-panel" id="servicesPanel" >
+    <a href="../v1/appsculpt.php">APP SCULPT</a>
+    <a href="../v1/agileappsservice.php">AGILE APPS</a>
+    <a href="../v1/digittrail.html">DIG-IT-TRAIL</a>
+    <a href="../v1/merchanity.html">MERCHANITY</a>
+    <a href="../v1/WebSculpture.php">WEB SCULPTURE</a>
+    <a href="../v1/flawless.php">FLAWLESSX</a>
+    <a href="../v1/graphoria.php">GRAPHIORA</a>
+    <a href="../v1/venture.html">VENTURE XCELERATOR</a>
+  </div>
+</div>
+
+<!-- Consultancy -->
+<div class="kot-header-menu-accordion" id="consultancyAcc">
+  <button class="kot-header-menu-acc-btn" type="button" id="consultancyBtn">
+    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+      <i class="bi "></i> Consultancy
+    </span>
+    <i class="bi bi-chevron-down kot-header-chev"></i>
+  </button>
+  <div class="kot-header-menu-acc-panel" id="consultancyPanel">
+    <a href="../v1/audits.html">Audits</a>
+    <a href="../v1/data-engineering.html">Data Engineering</a>
+    <a href="../v1/gen-ai.html">Generative AI</a>
+  </div>
+</div>
+
+<a href="../v1/support.php" class="kot-header-menu-item"><i class="bi "></i> Support</a>
+<a href="../v1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career</a>
+<a href="../v1/contact.html" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
+  
+</div>
+<!-- scroller -->
+  </div>
+</aside>
+
+<!-- ================= PAGE CONTENT ================= -->
+
+
+<!-- ================= MOBILE BOTTOM NAV ================= -->
+<div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
+  <div class="kot-header-mobile-logo-strip">
+    <!-- <img src="../assets/images/Header/support-2.png" alt="Support Logo"> -->
+  </div>
+
+  <div class="container-fluid kot-header-bottom-container">
+    <div class="row text-center">
+      <div class="col">
+        <a id="openMenuBtnBottom" role="button"
+           class="d-flex flex-column align-items-center">
+          <i class="bi bi-list"></i>
+          <!-- <span>Menu</span> -->
+        </a>
+      </div>
+
+      <div class="col">
+        <a href="../v1/index.php"
+           class="d-flex flex-column align-items-center">
+          <i class="bi bi-house-fill"></i>
+          <!-- <span>Home</span> -->
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="header-gap-div" style="margin-bottom: 14%;" > -->
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    
+  // mobile offcanvas
+  const body = document.body;
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const openBtnTop = document.getElementById("openMenuBtn");
+  const openBtnBottom = document.getElementById("openMenuBtnBottom");
+  const closeBtn = document.getElementById("closeMenuBtn");
+
+  function openMenu(){
+    menu.classList.add("kot-header-open");
+    overlay.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu.setAttribute("aria-hidden", "false");
+  }
+
+  function closeMenu(){
+    menu.classList.remove("kot-header-open");
+    overlay.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu.setAttribute("aria-hidden", "true");
+  }
+
+  openBtnTop?.addEventListener("click", openMenu);
+  openBtnBottom?.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+  });
+
+
+  // PROJECT DROPDOWN FUNCTIONALITY
+const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
+
+accBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const accordion = btn.parentElement; // parent div.kot-header-menu-accordion
+    accordion.classList.toggle("kot-header-open");
+
+    // Optional: Close other accordions if you want only one open at a time
+    accBtns.forEach(otherBtn => {
+      const otherAccordion = otherBtn.parentElement;
+      if (otherAccordion !== accordion) {
+        otherAccordion.classList.remove("kot-header-open");
+      }
+    });
+  });
+});
+
+
+  // toggle button functionality
+  document.getElementById("glowToggle")?.addEventListener("change", function () {
+    console.log(this.checked ? "ON" : "OFF");
+  });
+//   dexstop-header-code
+/* ================= CODE-2 JS (EXACT) ================= */
+
+const nav = document.getElementById("nav");
+const megaMenu = document.getElementById("megaMenu");
+
+const img = document.getElementById("mm-img");
+const text = document.getElementById("mm-text");
+const heading = document.getElementById("mm-heading");
+const desc = document.getElementById("mm-desc");
+const left = document.getElementById("mm-left");
+const right = document.getElementById("mm-right");
+
+const content = document.querySelector(".kot-main-header-nav-bar-mega-content");
+
+let isMegaOpen = false;
+
+const hoverColors = {
+  CORPORATE:"#A65E4E",
+  SERVICES:"#A53694",
+  CONSULTANCY:"#7EAB39",
+  MARKETPLACE:"#A45E4D",
+  SPOTLIGHTS:"#20c997",
+  SUPPORT:"#068A4F",
+  CAREER:"#dc3545",
+  CONTACT:"#6c757d"
+};
+
+document.querySelectorAll(".kot-main-header-nav-bar-item")
+.forEach((item,i,arr)=>{
+
+  item.addEventListener("mouseenter", ()=>{
+
+  // 🔹 Sab wrapper classes reset karo
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    .forEach(w => w.classList.remove("hovered", "previous-hide"));
+
+  const wrap = item.parentElement;
+  wrap.classList.add("hovered");
+  if(i > 0) arr[i-1].parentElement.classList.add("previous-hide");
+
+  nav.style.setProperty(
+    "--hover-color",
+    hoverColors[item.innerText.trim()] || "#8f4b36"
+  );
+
+  // 🚫 Agar no-mega hai → mega menu hide karo aur exit
+  if (wrap.classList.contains("no-mega")) {
+    megaMenu.classList.remove("show");
+    megaMenu.style.display = "none";
+    isMegaOpen = false;
+    return; // hover classes applied, mega menu blocked
+  }
+
+  // 🔹 Mega menu open ka existing code
+  content.style.transition = "none";
+  content.style.opacity = "0";
+  content.style.transform = "translateY(-20px)";
+
+  requestAnimationFrame(()=>{
+    content.style.transition = ".35s ease";
+
+    img.src = item.dataset.img;
+    text.innerText = item.dataset.text;
+    heading.innerText = item.dataset.heading;
+    desc.innerText = item.dataset.desc;
+
+    left.innerHTML = item.dataset.left
+      .split(",")
+      .map(v => {
+        let [text, link] = v.split("|").map(s => s.trim());
+        return `
+          <li>
+            <a href="${link || '#'}">
+              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+              ${text}
+            </a>
+          </li>`;
+      })
+      .join("");
+
+    right.innerHTML = item.dataset.right
+      .split(",")
+      .map(v => {
+        let [text, link] = v.split("|").map(s => s.trim());
+        return `
+          <li>
+            <a href="${link || '#'}">
+              <img src="../assets/images/Header/icon-service.png" alt="" class="icon">
+              ${text}
+            </a>
+          </li>`;
+      })
+      .join("");
+
+    content.style.opacity = "1";
+    content.style.transform = "translateY(0)";
+  });
+
+  if(!isMegaOpen){
+    megaMenu.style.display = "block";
+    requestAnimationFrame(()=>megaMenu.classList.add("show"));
+    isMegaOpen = true;
+  }
+
+});
+});
+
+nav.addEventListener("mouseleave",()=>{
+  document.querySelectorAll(".kot-main-header-nav-bar-item-wrapper")
+    .forEach(w=>w.classList.remove("hovered","previous-hide"));
+
+  megaMenu.classList.remove("show");
+  isMegaOpen = false;
+
+  setTimeout(()=>megaMenu.style.display="none",300);
+});
+
+// marquee js
+const track = document.getElementById("marqueeTrack");
+
+let pos = 0;
+let speed = 0.5;
+
+// exact width of ONE content copy
+const singleWidth = track.scrollWidth / 2;
+
+function animate(){
+  pos -= speed;
+
+  if(pos <= -singleWidth){
+    pos = 0; // 👈 exact reset point
+  }
+
+  track.style.transform = `translateX(${pos}px)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+// language selection
+document.querySelectorAll(".lang-option").forEach(option => {
+  option.addEventListener("click", function(e){
+    e.preventDefault();
+
+    document.getElementById("langImg").src = this.dataset.img;
+    document.getElementById("langText").innerText = this.dataset.text;
+  });
+});
+
+
+
+
+
+// header-smart-scrools
+
+if (window.innerWidth >= 992) {
+
+  const headerWrap = document.querySelector(".desktop-header-wrap");
+  let lastScroll = 0;
+  const threshold = 80;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // SCROLL DOWN
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      headerWrap.classList.add("header-hide-top","header-shrink");
+    }
+
+    // SCROLL UP
+    if (currentScroll < lastScroll) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    // TOP REACHED
+    if (currentScroll <= 5) {
+      headerWrap.classList.remove("header-hide-top","header-shrink");
+    }
+
+    lastScroll = currentScroll;
+  });
+}
+</script>

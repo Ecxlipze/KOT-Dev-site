@@ -1,7 +1,4 @@
 @media screen and (min-width: 50px) and (max-width: 767px) {
-  .websculpture-btn {
-background-color: #2B5368;
-  }
     .meet-our-first-developer, .meet-our-second-developer, .meet-our-third-developer{
  /* max-width: 116px; */
  width: 100%;
@@ -25,7 +22,7 @@ leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
-color: #FFFFFF;
+color: rgba(10, 113, 185, 1);
         margin-top: 10%;
 }
 .meet-our-developer-heading p{
@@ -60,7 +57,7 @@ color: #FFFFFF;
 .what-we-offer-text h2{
    font-family: 'Montserrat-Bold';
 
-font-size: clamp(37px, 3vw, 47px);
+font-size:  22px!important;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
@@ -80,12 +77,12 @@ padding-top: 12% !important;
 
 }
 .empowering-btn-agile{
-  margin-left: 70%;
+  margin-top: 0%;
 }
-
 .result-text h3{
   font-size: 80px;
 }
+
 .what-we-offer-card-title {
     font-family: 'Montserrat-Bold';
 font-size: 11px;
@@ -108,6 +105,11 @@ color: #FFFFFF;
     font-size: 5px;
     font-weight: 600;
     transition: all 0.3s ease;
+}
+.dark-mode-img img{
+  width: 74px;
+  height: auto;
+  padding-top: 5%;
 }
 .websculpture-subtitle-2{
     font-family: Montserrat !important; 
@@ -155,23 +157,23 @@ color: #FFFFFF;
     width: 100%;
   }
   .home-card-2, .home-card-3, .home-card-4, .home-card-1{
-  background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important;
+  /* background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important; */
 
-    max-width: 115px ;
+    /* max-width: 115px ; */
     width: 100%;
 height: 43px ;
  
-    border-radius: 8px  !important;
-    border-width: 1px;
-    border: 1px solid ;
+ background:
+    linear-gradient(270deg, rgba(10,113,185,0.5), rgba(68,172,245,0.5)) padding-box,
+    linear-gradient(75.68deg, #0000, rgba(24,24,24,0)) border-box;
 
-border-image-source: linear-gradient(75.68deg, #000000 1.67%, rgba(24, 24, 24, 0) 100%) ;
-backdrop-filter: blur(40px) ;
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 padding: 5% !important;
 
-}
-.bg-dark-logo img{
-  display: none;
 }
 .home-card-paragraph{
   display: none;
@@ -185,9 +187,9 @@ padding: 5% !important;
         letter-spacing: 0% !important;
 }
 .home-chat-card-mobile{
-  max-width:402px ;
-height: auto;
-aspect-ratio: 402 / 300;
+  /* max-width:402px ; */
+height: 176px;
+/* aspect-ratio: 402 / 300; */
 width: 100%;
 border-radius: 10px ;
 border-width: 1px !important;
@@ -215,7 +217,25 @@ border-width: 1px !important;
         height: 42px !important;
 }
 .blog-card-paragraph p{
-  font-size: 12px;
+  font-size: 14px;
+}
+.home-chat-card small{
+  font-family: 'Montserrat-Bold';
+
+font-size: 16px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: rgba(0, 0, 0, 1);
+}
+.home-chat-card h4{
+   font-family: 'Montserrat-Bold';
+
+font-size: 16px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+color: rgba(0, 0, 0, 1);
 }
     .home-card-heading{
       font-size: 9px !important;
@@ -237,14 +257,14 @@ letter-spacing: 0%;
       display: none;
     }
      .kot-title{
-    font-family: 'Montserrat-Bold';
+    font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: clamp(33px , 3vw, 40px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-
+padding-top: 0%;
 color: #0A71B9;
    }
    .kot-paragraph{
@@ -254,7 +274,8 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 
-color: #FFFFFF;
+        padding-right: 8%;
+color:#FFFFFF;
    }
    .kot-paragraph span{
 font-family: 'Montserrat-Bold';
@@ -264,7 +285,79 @@ line-height: 100%;
 letter-spacing: 0%;
 
 
-color: #000000;
+color: #FFFFFF;
+   }
+   .glob-image-mobile{
+      position: relative;
+  overflow: hidden;
+  min-height: auto;
+   }
+   .glob-image-mobile::before{
+            width: 100%;
+        height: 262px;
+        inset: 2% 0% 0% 0%;
+         content: "";
+  position: absolute;
+
+  background-image: url("../images/main-bg-image/glob.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: rotate(-22.16deg); /* 🎯 EXACT FIGMA VALUE */
+  transform-origin: center;
+
+  z-index: -1;
+   }
+      .resylt-the-spark-faq{
+          position: relative;
+  overflow: hidden;
+  min-height: auto;
+      }
+      .resylt-the-spark-faq::before{
+         width: 100%;
+        height: 278px;
+        inset: 0% 0% 0% 20%;
+         content: "";
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: rotate(-22.16deg); /* 🎯 EXACT FIGMA VALUE */
+  transform-origin: center;
+
+  z-index: -1;
+      }
+      .result-header h2{
+        padding-top: 1%;
+      }
+   .career-section-3-main-image{
+    height: auto;
+   }
+   .career-section-3-main-image::before{
+            width: 100%;
+        height: 262px;
+        inset: 0% 0% 0% 18%;
+   }
+   .how-we-help h2{
+    font-size: 20px;
+   }
+    .new-globe-section-addtion{
+           height: auto;
+           margin-top: 0%;
+       }
+        .new-globe-section-addtion::before{
+            width: 100%;
+        height: 278px;
+        inset: 3% 0% 0% 18%;
+   }
+   .mobile-text-align-change {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+   }
+   .secton-3-intership-text{
+    padding-top: 13%;
    }
    .kot-Glance {
     background-position: right top;
@@ -290,7 +383,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 
-    color: #000000;
+    color: #FFFFFF;
 }
 .support-section-input input{
   width: 289px !important;
@@ -318,6 +411,7 @@ display: flex;
 .explore-tabs{
   
 }
+
 .explore-tabs li{
 font-size: clamp(10px, 0.8vw, 11px) !important;
 }
@@ -380,22 +474,86 @@ letter-spacing: 0%!important;
 text-align: center!important;
 }
 .explore-section{
-  padding-top: 34%;
+  /* padding-top: 34%; */
+  padding-bottom: 0%;
 }
 .saas-row{
-        flex-direction:column;
+        /* flex-direction:column; */
     }
-
+.explore-section {
+  padding: 0px 0px;
+}
     .saas-left,
     .saas-right{
         width:100%;
         margin-left:0;
-        border-radius:30px;
+        /* border-radius:3px; */
+        height: 29px;
     }
+.saas-number{
+font-family: 'Montserrat-Bold';
 
-    .saas-right{
-        margin-top:12px;
+font-size: 8px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+
+}
+.sets-agile-apps-section-1-1{
+  min-height: auto;
+  height: auto;
+}
+.mobile-layout-changing-add{
+  display: none;
+}
+.saas-number-1{
+font-family: 'Montserrat-Bold';
+
+font-size: 8px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: uppercase;
+
+}
+    .saas-right p{
+   font-family: 'Montserrat-Medium';
+
+font-size: 7px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
     }
+    .saas-left{
+      font-family: 'Montserrat-Bold';
+
+font-size: 8px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+    }
+    .sets-agile-apps-heading{
+      padding-top: 0%;
+    }
+    .sets-agile-apps-heading h2{
+      font-family: 'Montserrat-Extra-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #A53692;
+padding-left: 18%;
+padding-right: 18%;
+    }
+    /* .saas-right{
+        margin-top:12px;
+    } */
     #global-footer{
       margin-top: 3% !important;
     }
@@ -440,15 +598,16 @@ width: 233px !important;
     }
         .empowering-heading h2{
       font-family: 'Montserrat-Bold';
-font-size: 36px;
+font-size: clamp(15px, 1vw,20px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #A53692;
+padding-top: 3%;
     }
     .empowering-text-paragraph{
      
-    
+    height: auto;
     border:none !important;
     border-radius: none !important;
     backdrop-filter: none !important;
@@ -477,11 +636,12 @@ color: #FFFFFF;
 height: 28px;
 
 border-radius: 110px;
-
+margin-top: -2%;
+    margin-bottom: 8%;
     }
     .empowering-btn-agile a{
       font-family: 'Montserrat-Bold';
-font-size: 12px;
+font-size: 7px;
 leading-trim: NONE;
 line-height: 53.49px;
 letter-spacing: 0%;
@@ -489,10 +649,13 @@ text-align: center;
 
 color: #FFFFFF;
     }
+    .new-btn-service-add{
+  gap: 15px;
+}
     .empowering-section-2 img{
-      max-width: 202px;
+    
       width: 100%;
-height: 134px;
+        height: 241px;
 
 
     }
@@ -506,14 +669,14 @@ height: 134px;
       display: none;
     }
     .saas-main{
-      display: none;
+      /* display: none; */
     }
      .mobile-heading-agile {
 
-display: block;
+display: none;
     }
     .empowering-heading{
-      display: none;
+      display: block;
     }
        .mobile-heading-agile h2 {
         font-family: 'Montserrat-Bold';
@@ -529,17 +692,21 @@ font-size: 13px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #000000;
+color: #FFFFFF;
 }
 .emporing-business{
   overflow: hidden;
-    margin-top: 6% !important;
+    margin-top: 0% !important;
 }
   .what-we-do-img{
       overflow: hidden;
     }
+    .result-header-paragraph p{
+      margin-bottom: 0%;
+    }
     .what-we-do-img img{
                width: 140% !important;
+               padding-top: 5%;
     }
      .quality-flawless-bg h2{
    font-family: 'Montserrat-Bold';
@@ -550,12 +717,11 @@ line-height: 80px!important;
 letter-spacing: 0%!important;
 text-align: center!important;
 
-background: linear-gradient(100.31deg, #A7EFFF 6.12%, #FFFFFF 100%)!important;
-
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   color: transparent !important;
-
+border: 1px solid #FFFFFF!important;
 }
 .why-join-kot-text-heading p{
   font-family:' Montserrat-Regular';
@@ -568,6 +734,90 @@ text-align: center;
 padding-left: 3%;
 padding-right: 3%;
 }
+.why-join-kot-text-heading h2{
+  font-family: 'Montserrat-Extra-BOLD';
+font-weight: 900 !important;
+
+font-size: 40px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+padding-top: 4%;
+
+}
+.need-help-text-bg{
+  display: none;
+}
+.need-help-bg-text-mobile{
+background: linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
+padding-top: 5%;
+padding-bottom: 5%;
+
+}
+.need-help-bg-text-mobile h5{
+display: block;
+ font-family: 'Montserrat-Bold';
+font-size: 12px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
+margin-bottom: 0%;
+}
+.need-help-bg-text-mobile p{
+  display: block;
+font-family: 'Montserrat-Medium';
+
+font-size: 12px;
+leading-trim: NONE;
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
+}
+
+
+.need-help-bg-text p {
+display: none;
+}
+.need-help-bg-text span{
+ display: none;
+}
+
+.how-we-help h2{
+  margin-bottom: 4%;
+}
+.support-main-bg-image {
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.support-main-bg-image::before {
+    content: "";
+
+    inset: 19% 0% -13% 1%;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-0.41deg);
+    transform-origin: center;
+    z-index: -1;
+    width: 100%;
+    height: 482px;
+}
+.why-join-wrapper{
+  padding-top: 0% !important;
+  margin-top: -5% !important;
+}
 .why-kot-card p{
   font-family: 'Montserrat-Regular';
 
@@ -576,7 +826,6 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 max-width: 100%;
-color: #FFFFFF;
 }
 .carousel-nav{
             justify-content: end;
@@ -614,13 +863,6 @@ letter-spacing: 0%;
 text-align: center;
 
   }
-  .how-we-help h2
-{
-  color: #FFFFFF;
-}
- .explore-heading{
-  color: #FFFFFF;
- }
   .what-we-offer-text-service{
     display: none;
   }
@@ -645,15 +887,14 @@ max-width: 100px;
     margin-bottom: 4%;
   }
   .images-mobile-appsec img{
-           /* max-width: 430px;
-        aspect-ratio: 430 / 318;
-        height: auto; */
+         
+        height: auto;
         width: 100%;
 
 }
    .app-sculpt-mobile-button a{
     font-family: 'Montserrat-Bold';
-
+color: #000000;
 font-size: clamp(8px, 1vw, 13px);
 leading-trim: NONE;
 line-height: 53.49px;
@@ -665,7 +906,8 @@ text-align: center;
    .andoride-solution-heading h2{
 font-family: 'Montserrat-Extra-Bold';
 font-size: clamp(20px, 3vw ,25px);
-
+padding-left: 15%;
+    padding-right: 15%;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
@@ -690,7 +932,24 @@ letter-spacing: 0%;
 
    }
 .responsive-layout-cl{
-  margin-top: -10% !important;
+  margin-top: -14% !important;
+}
+.our-purpoos-heading-1 {
+  font-family: 'Montserrat-Bold';
+
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.our-purpoos-heading-2{
+   font-family: 'Montserrat-Bold';
+
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
 }
    .android-card-head h2{
     font-family: 'Montserrat-Bold';
@@ -713,18 +972,29 @@ letter-spacing: 0%;
     margin-top: 0%;
    }
    .home-page-banner{
-    max-width: 427px;
-    aspect-ratio: 427 / 181;
-    height: auto;
+    width: 100%;
+    
+    height: 181px;
    }
    .saas-main-heading {
-    display: none;
+    display: block;
+    font-family:' Montserrat-Extra-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+padding-left: 12%;
+padding-right: 12%;
+
    }
      .saas-main-heading-mob-tab{
   font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
-font-size: 40px;
+font-size: 22px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -739,16 +1009,39 @@ display: flex;
    
 }
 .mobile-tab-image img{
-
+   /* max-width: 343px; */
+    height: auto;
     width: 100%;
-   
+    /* aspect-ratio: 343 / 548; */
 }
+.glob-bgimage::before{
+            width: 100%;
+        height: 197px;
+                     inset: 71% 0% 0% 29%;
+
+         content: "";
+  position: absolute;
+
+  background-image: url("../images/main-bg-image/glob.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: rotate(89.77deg); /* 🎯 EXACT FIGMA VALUE */
+  transform-origin: center;
+
+  z-index: -1;
+
+ 
+
+
+   }
 .agile-apps-offer-title{
   font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 24px;
-color: #A53692;
+
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
@@ -781,7 +1074,9 @@ color: #FFFFFF;
 }
 .mobile-image-change-layout img{
   display: block;
- width: 100%;
+  width: 100%;
+  height: auto;
+
 }
 .mobile-image-change-layout {
   display: flex;
@@ -791,9 +1086,9 @@ color: #FFFFFF;
   font-family: 'Montserrat-Bold';
 
 font-size: 14px;
-
+padding-top: 5%!important;
 line-height: 100%;
-
+padding-top: 0%;
 text-align: center;
 /* 
  */
@@ -801,13 +1096,14 @@ text-align: center;
 }
 .app-sculpt-service-paragraph p{
 font-family: 'Montserrat-Regular';
-
-font-size:13px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-text-align: center;
-padding-inline: 3%;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        padding-left: 0%;
+        padding-right: 0%;
+padding-bottom: 0%;
 }
 .tree-image-text h2{
   font-family: 'Montserrat-Bold';
@@ -836,7 +1132,7 @@ border-radius: 6px;
 border-width: 1px;
 border-style: dashed;
 dashes: 4.720000267028809, 4.720000267028809;
-
+margin-top: 0%;
 }
   .graphoria-hero{
       margin-top: 0% !important;
@@ -863,9 +1159,8 @@ text-align: center;
         background-position-y: -57%;
 }
 .images-tree-appsec img{
-  /* max-width: 450px;
-  aspect-ratio: 450 / 419;
-  height: auto; */
+  
+  height: auto;
   width: 100%;
   margin-bottom: 4%;
 }
@@ -911,7 +1206,7 @@ leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
-
+color: #FFFFFF;
 
 }
 .need-help-bg-text span{
@@ -922,7 +1217,7 @@ leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
-
+color: #FFFFFF;
 }
 .need-hlp-text {
   padding-top: 2%;
@@ -967,7 +1262,7 @@ font-size: clamp(22px, 1.8vw, 25px) !important;
 line-height: 100% !important;
 letter-spacing: 0% !important;
 text-align: center !important;
-color: #FFFFFF !important;
+color: rgba(0, 0, 0, 1) !important;
     padding: 8% 6% 4% !important;
   }
 
@@ -1050,35 +1345,69 @@ font-variant: small-caps!important;
 color: #17D4FF!important;
   }
   .our-purpose-we-create{
-    height: 60vh;
+    height: 30vh;
+  }
+  .graphoria-our-text-strip{
+ padding-top: 7%;
+ padding-bottom: 5%;
+  }
+  .our-purpose-text p{
+    font-family: 'Montserrat-Medium';
+
+font-size: 10px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+margin-bottom: 0%;
+  }
+  .our-purpose-bottom{
+    margin-top: -14%;
+  }
+  .dark-mode-changing-logo img{
+    width: 67px;
   }
   .what-we-do-bg-img {
-    height:130vh;
+    height:90vh;
   }
   .home-page-banner {
     margin-top: 0% !important;
   }
-  .dark-mode-img img{
-    display: none !important;
-  }
+  .career-card{
+      padding-left: 5%;
+    padding-right: 3%;
+}
+.career-section-card-first-img{
+  width: 20%;
+}
+.adding-agile-logo{
+  display: none;
+}
+.rotating-circle{
+  position: absolute;
+    left: 50%;
+    width: 796px;
+    height: 580px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-image: url(../images/Appsculp/animation.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: rotateCircle 18s linear infinite;
+    z-index: 1;
+    top: 38%;
+}
+.new-btn-addition-fig{
+  gap: 13px !important;
+}
+.new-btn-add{
+  gap: 15px;
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .bg-dark-logo img{
-  display: none;
-}
-.card-flawless-heading h2{
-color: #000000;
-}
-.card-flawless-heading p{
-color: #000000;
-}
-.card-flawless-btn a{
-color: #000000;
-}
-   .dark-mode-img img{
-    display: none !important;
-  }
   .responsive-layout-cl{
   margin-top: -13% !important;
 }
@@ -1089,6 +1418,12 @@ height: 370px;
 border-radius: 10px;
 background-color: #D9D9D9;
  margin: auto;
+}
+.new-btn-add{
+  gap: 22px;
+}
+.new-btn-service-add{
+  gap: 22px;
 }
 .home-page-banner {
     margin-top: 0% !important;
@@ -1131,12 +1466,9 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-color: #FFFFFF !important;
+color: #000000 !important;
 max-width: 582px;
 width: 100%;
-}
-.what-we-offer-text h2{
-  color: #FFFFFF !important;
 }
 .what-we-offer-title{
     font-family: 'Montserrat-Bold';
@@ -1151,7 +1483,7 @@ color: #FFFFFF;
     display: none;
 }
 .home-card-2, .home-card-3, .home-card-4, .home-card-1{
-  background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important;
+  /* background: linear-gradient(270deg, rgba(10, 113, 185, 0.5) 0%, rgba(68, 172, 245, 0.5) 100%)!important; */
 
     width: 203px;
 height: 76px;
@@ -1159,18 +1491,20 @@ height: 76px;
 
 
  
-    border-radius: 15px ;
-    border-width: 1px;
-    border: 1px solid;
+ background:
+    linear-gradient(270deg, rgba(10,113,185,0.5), rgba(68,172,245,0.5)) padding-box,
+    linear-gradient(75.68deg, #0000, rgba(24,24,24,0)) border-box;
 
-border-image-source: linear-gradient(75.68deg, #000000 1.67%, rgba(0, 0, 0, 0) 100%) !important;
+  border: 1px solid transparent;
+  border-radius: 8px;
 
-
-
-border-image-source: linear-gradient(75.68deg, #000000 1.67%, rgba(24, 24, 24, 0) 100%) ;
-backdrop-filter: blur(40px) ;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 padding: 5% !important;
 
+}
+.rotating-circle {
+  top: 23%;
 }
 .home-card-paragraph{
   display: none;
@@ -1201,6 +1535,7 @@ border-radius: 10px !important;
 border-width: 1px !important;
 
 }
+
 .home-card-4-mobile{
  
 }
@@ -1208,7 +1543,24 @@ border-width: 1px !important;
   padding: 0%;
 }
 .support-main-bg-image{
-  padding-bottom: 36%;
+  /* padding-bottom: 36%; */
+}
+.support-main-bg-image{
+  position: relative;
+    overflow: hidden;
+    min-height: auto;
+}
+.support-main-bg-image::before {
+           content: "";
+        position: absolute;
+        inset: 27% 0% 0% 3%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(0.01deg);
+        z-index: -1;
+        width: 100%;
+        height: 941px;
 }
 #global-footer{
   margin-top: 5% !important;
@@ -1241,7 +1593,7 @@ color: #0A71B9 !important;
     display: none;
    } 
    .kot-title{
-   font-family: 'Montserrat-Bold';
+   font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 font-style: Black;
 font-size: 52px;
@@ -1249,6 +1601,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #0A71B9;
+padding-top: 0%;
    }
    .kot-paragraph{
 font-family: 'Montserrat-Regular';
@@ -1267,7 +1620,7 @@ letter-spacing: 0%;
 color: #FFFFFF;
    }
    .emporing-business{
-    margin-top: 6% !important;
+    margin-top: 0% !important;
    }
     .kot-Glance {
     background-position: right top;
@@ -1331,11 +1684,12 @@ color: #FFFFFF;
     }
     .empowering-heading h2{
       font-family: 'Montserrat-Bold';
-font-size: 36px;
+font-size: 32px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #A53692;
+padding-top: 5%;
     }
     .graphoria-hero{
       margin-top: 0% !important;
@@ -1351,29 +1705,41 @@ color: #A53692;
     }
     .empowering-text-paragraph p{
       width: 371px;
+      font-family: 'Montserrat-Light';
 
+font-size: 15px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+    }
+    .adding-agile-logo {
+      display: none;
     }
     .empowering-btn-agile{
       width: 221px;
 height: 59px;
 
 border-radius: 15.73px;
-
+margin-top: 0%;
     }
     .empowering-btn-agile a{
       font-family: 'Montserrat-Bold';
-font-size: 25.17px;
+font-size: 13.17px;
 leading-trim: NONE;
 line-height: 53.49px;
 letter-spacing: 0%;
 text-align: center;
-color: #000000;
+color: #FFFFFF;
     }
     .empowering-section-2 img{
-      width: 350px;
-height: 265px;
+      width: 100%;
+height: 378px;
 
 
+    }
+    .empowering-text-paragraph{
+      height: auto;
     }
     .websculpture-hero-section{
       margin-top: 0% !important;
@@ -1382,7 +1748,48 @@ height: 265px;
       display: none;
     }
     .saas-main{
-      display: none;
+      /* display: none; */
+    }
+    .saas-number{
+      font-family: 'Montserrat-Bold';
+
+font-size: 15px;
+
+line-height: 100%;
+text-transform: uppercase;
+
+    }
+    .saas-left{
+      font-family: 'Montserrat-Bold';
+height: 58px;
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+    }
+    .saas-right{
+font-family: 'Montserrat-Medium';
+height: 58px;
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
+    }
+        .saas-right p{
+font-family: 'Montserrat-Medium';
+height: 58px;
+font-size: 13px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .saas-number-1{
+      font-size: 15px;
     }
     .mobile-heading-agile{
       display: none;
@@ -1410,11 +1817,11 @@ line-height: 160px !important;
 letter-spacing: 0%;
 text-align: center!important;
 
-background: linear-gradient(100.31deg, #A7EFFF 6.12%, #FFFFFF 100%)!important;
- 
+background: linear-gradient(100.31deg, #A7EFFF 6.12%, #000000 100%) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   color: transparent !important;
+border: 1px solid #FFFFFF!important;
 }
 .why-kot-card p {
     width: 315px;
@@ -1458,15 +1865,15 @@ letter-spacing: 0%;
  .images-mobile-appsec img{
   width: 100%;
 
-        /* max-width: 729px;
+        max-width: 729px;
         aspect-ratio: 729 / 500;
-        height: auto; */
+        height: auto;
 }
 
  .images-tree-appsec img{
   width: 100%;
-  /* max-width: 770px;
-        aspect-ratio: 770 / 550; */
+ 
+  height: 550px;
         margin-bottom: 4%;
   
 }
@@ -1502,17 +1909,16 @@ color: #FFFFFF;
  }
 .mobile-paragraph-app-sculpt{
   font-family: 'Montserrat-Light';
-
+color: #FFFFFF;
 font-size: clamp(14px, 1.5vw, 16px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 display: block;
-color: #FFFFFF;
 }
 .app-sculpt-mobile-button a{
-  color: #000000;
+  color: #FFFFFF;
   font-family: 'Montserrat-Bold';
 
 font-size: 18px;
@@ -1536,24 +1942,44 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 color: #A53692;
-padding-bottom: 5%;
-padding-top: 5%;
-display: block;
+padding-bottom: 3%;
 }
+.saas-main-heading-mob-tab{
+  display: block;
+}
+
+   .glob-bgimage{
+      position: relative;
+  overflow: hidden;
+  min-height: auto;
+   }
+   .glob-bgimage::before{
+            width: 100%;
+        height: 376px;
+               inset: 17% 0% 0% 29%;
+         content: "";
+  position: absolute;
+
+  background-image: url("../images/main-bg-image/glob.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: rotate(89.77deg); /* 🎯 EXACT FIGMA VALUE */
+  transform-origin: center;
+
+  z-index: -1;
+   }
 .mobile-tab-image{
 display: flex;
     justify-content: center;
    
 }
 .mobile-tab-image img{
-   /* max-width: 768px;
-    height: auto; */
+   /* max-width: 768px; */
+    height: auto;
     width: 100%;
     /* aspect-ratio: 768 / 1400; */
-}
-.agile-apps-offer-title
-{
-  color: #A53692;
 }
 .mobile-layout-changing-add h2{
   font-family: 'Montserrat-Extra-Bold';
@@ -1566,8 +1992,8 @@ letter-spacing: 0%;
 text-align: center;
 color: #A53692;
 display: block !important;
-padding-top: 7%;
-padding-bottom: 7%;
+padding-top: 4%;
+padding-bottom: 4%;
 
 }
 .what-we-offer-text-service{
@@ -1575,8 +2001,9 @@ padding-bottom: 7%;
 }
 .mobile-image-change-layout img{
   display: block;
-  width: 100%;
-  
+  max-width: 694px;
+  height: auto;
+  aspect-ratio: 694 / 597;
 }
 .mobile-image-change-layout {
   display: flex;
@@ -1600,7 +2027,9 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-padding-top: 5%;
+padding-top: 2%;
+padding-left: 17%;
+padding-right: 17%;
 }
 .app-sculpt-service-paragraph p {
   font-family: 'Montserrat-Regular';
@@ -1611,7 +2040,7 @@ line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
 color: #FFFFFF;
-padding-top: 10%;
+padding-top: 3%;
         padding-right: 11%;
         padding-left: 16%;
         padding-bottom: 0%;
@@ -1716,18 +2145,19 @@ letter-spacing: 0%!important;
 text-align: center!important;
 
 }
-.need-help-bg-text p {
-  font-family:' Montserrat-Bold';
 
-font-size: 24px;
-leading-trim: NONE;
-line-height: 112.00000000000001%;
-letter-spacing: 0%;
-text-align: center;
+.need-help-text-bg{
+  display: none;
+}
+.need-help-bg-text-mobile{
+background: linear-gradient(90deg, #FF4000 0%, #B93AE6 48.56%, #0A71B9 100%);
+padding-top: 5%;
+padding-bottom: 5%;
 
 }
-.need-help-bg-text span {
-  font-family:' Montserrat-Medium';
+.need-help-bg-text-mobile h5{
+display: block;
+ font-family: 'Montserrat-Bold';
 
 font-size: 24px;
 leading-trim: NONE;
@@ -1735,16 +2165,47 @@ line-height: 112.00000000000001%;
 letter-spacing: 0%;
 text-align: center;
 
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
+margin-bottom: 0%;
+}
+.need-help-bg-text-mobile p{
+  display: block;
+font-family: 'Montserrat-Medium';
+
+font-size: 24px;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+text-align: center;
+
+
+color: #FFFFFF;
+padding-left: 6%;
+padding-right: 6%;
+}
+
+
+.need-help-bg-text p {
+display: none;
+}
+.need-help-bg-text span{
+ display: none;
 }
 .tree-image-text h2{
   font-family: 'Montserrat-Bold';
-
+padding-left: 10%;
+        padding-right: 10%;
 font-size: 42px;
 
 text-align: center;
 color: rgba(236, 38, 143, 1);
 display: block;
 }
+.dark-mode-changing-logo img{
+    width: 106px;
+  }
 .tree-image-text p{
   font-family: 'Montserrat-Regular';
 
@@ -1758,12 +2219,13 @@ display: block;
  .ios-mobile-text h2{
     font-family: 'Montserrat-Bold';
 
-font-size: clamp(35px, 4vw, 42px);
+font-size:  42px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-
+padding-left: 14%;
+        padding-right: 14%;
   }
 .ios-mobile-text p{
   font-family: 'Montserrat-Regular';
@@ -1811,6 +2273,40 @@ text-align: center!important;
 font-variant: small-caps!important;
 
   }
+   .new-globe-section-addtion{
+           height: auto;
+           margin-top: 0%;
+       }
+        .new-globe-section-addtion::before{
+    content: "";
+        position: absolute;
+        inset: -2% 0% -13% 15%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(89.63deg);
+        transform-origin: center;
+        z-index: -1;
+        width: 100%;
+        height: 775px;
+   }
+   .resylt-the-spark-faq{
+           height: auto;
+       }
+       .resylt-the-spark-faq::before{
+   content: "";
+        position: absolute;
+        inset: 9% 0% -13% 0%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(89.63deg);
+        transform-origin: center;
+        z-index: -1;
+        width: 100%;
+        height: 775px;
+   }
+
 }
 @media (max-width: 1024px) and (min-width: 992px){
 
@@ -1837,9 +2333,7 @@ font-variant: small-caps!important;
  }
  .point-1 img, .point-2 img, .point-3 img, .point-4 img {
         width: 100%;}
-        .responsive-layout-cl{
-          margin-top: -15% !important;
-        }
+      
             .design-bg-image {
         
     
@@ -1860,5 +2354,18 @@ top: 0%;
    
    
     margin-top: 19%;}
+    .responsive-layout-cl{
+      margin-top: -15%;
+    }
+    .emporing-business{
+    margin-top: 20% !important;
+   }
+   .empowering-btn-agile {
+    margin-bottom: 5%;
+    
+   }
+   .empowering-section-2 img{
+    height: 568px;
+   }
 }
         

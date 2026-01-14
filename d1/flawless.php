@@ -1,5 +1,5 @@
 
-<?php require '../public/header-dm.php'; ?>
+<?php require '../public/header-dm-new.php'; ?>
     <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start -->
      <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-start -->
       
@@ -24,9 +24,14 @@
             </p>
         </div>
 
-        <div class="engineering-the-future-btn">
+        <div class="new-btn-service-add d-flex ">
+           <div class="engineering-the-future-btn">
             <a href="">Contact Us</a>
         </div>
+         <div class="engineering-the-future-btn">
+            <a href="">View all Services</a>
+        </div>
+         </div>
     </div>
 </div>
 <!-- ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE-section-end -->

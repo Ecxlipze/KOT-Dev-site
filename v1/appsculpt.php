@@ -1,5 +1,5 @@
 
-   <?php require '../public/header.php'; ?>
+   <?php require '../public/header-new.php'; ?>
 <div class="app-sculpt-service" style="margin-top: 14%;" >
   
   <!-- rotating image layer -->
@@ -7,6 +7,9 @@
 
   <!-- content -->
   <div class="container-fluid content">
+    <div class="dark-mode-changing-logo d-flex  justify-content-center py-4">
+         <img src="../assets/images/Appsculp/appsecp.png" alt="">
+      </div>
     <div class="app-sculpt-service-heading">
       <h2>App Sculpt Where Ideas Take Shape and Purpose Becomes Experience</h2>
     </div>
@@ -17,10 +20,19 @@
 At App Sculpt, we don’t just build mobile applications — we bring ideas to life. We believe every app starts with a vision, a problem to solve, and a dream to grow. Our mission is to transform those ideas into meaningful digital experiences that people love to use and businesses rely on to scale.
       </p>
     </div>
-
-    <div class="app-sculpt-service-btn">
+           
+    <div class="new-btn-addition-fig d-flex justify-content-center " style="gap: 30px;" >
+      <div class="app-sculpt-service-btn ">
       <a href="#">Contact Us</a>
     </div>
+    <div class="app-sculpt-service-btn">
+      <a href="#">View all Services</a>
+    </div>
+    </div>   
+
+   
+
+    
   </div>
 
 </div>
@@ -120,7 +132,7 @@ At App Sculpt, we don’t just build mobile applications — we bring ideas to l
         <p>App Sculpt provides a complete suite of mobile and web app development services, tailored to meet modern business needs:</p>
       </div>
         <div class="images-mobile-appsec">
- <img src="../assets/images/Appsculp/Group 1171277252.png" alt=""  >
+ <img src="../assets/images/Appsculp/mob-2.svg" alt=""  >
         </div>
      
     </div>
@@ -131,7 +143,7 @@ At App Sculpt, we don’t just build mobile applications — we bring ideas to l
         <p>We proudly work with innovators across industries</p>
       </div>
       <div class="images-tree-appsec">
-        <img src="../assets/images/Appsculp/tree2.png" alt=""  >
+        <img src="../assets/images/Appsculp/tree2.svg" alt=""  >
       </div>
     </div>
      <!-- Let’s Shape Something Meaningful Together-start -->
@@ -148,11 +160,11 @@ At App Sculpt, we don’t just build mobile applications — we bring ideas to l
         You deserve belief.
       </h3>
 
-      <p class="app-sculpt-last-section-paragraph">
+      <p class="app-sculpt-last-section-paragraph mb-0">
         An app is more than software — it’s a bridge between your vision and your users. If you have an idea, we have the expertise to shape it into something real, reliable, and remarkable.
-          Let’s sculpt an app that works, inspires, and grows with you.
+         
       </p>
-
+        <p class="app-sculpt-last-section-paragraph" > Let’s sculpt an app that works, inspires, and grows with you.</p>
       <p class="app-sculpt-last-section-paragraph">Sts.</p>
     </div>
   </div>

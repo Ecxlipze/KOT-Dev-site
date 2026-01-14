@@ -1,5 +1,5 @@
 
-    <?php require '../public/header-dm.php'; ?>
+    <?php require '../public/header-dm-new.php'; ?>
  <!-- graphoria-section-start -->
 <div class="graphoria-hero">
   <div class="container-fluid">
@@ -184,7 +184,7 @@
 
   
 
-<div class="container-fluid p-0 responsive-layout-cl " style="margin-top: -6%;" >
+<div class="container-fluid p-0 responsive-layout-cl " style="margin-top: -9%;" >
   <div class="background-image">
 
    <img src="../assets/images/Graphoria/bg2.png" alt="" width="100%" height="auto" >

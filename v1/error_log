@@ -108,3 +108,5 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/vologfbc/developers.volopreneurs.com/v1/flawless.php on line 2
+[10-Jan-2026 07:54:25 UTC] SMTP ERROR: Failed to connect to server: Connection timed out (110)
+[10-Jan-2026 07:54:25 UTC] SMTP Error: Could not connect to SMTP host. Failed to connect to server

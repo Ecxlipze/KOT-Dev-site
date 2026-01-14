@@ -1,5 +1,5 @@
 
-<?php require '../public/header.php'; ?>
+<?php require '../public/header-new.php'; ?>
 <!-- websculpture-section-start -->
 <section class="websculpture-hero-section" style="margin-top: 13%;" >
   <!-- Triangle GIF overlay -->
@@ -23,8 +23,7 @@
         <h4 class="websculpture-subtitle-2">KOT Enterprises</h4>
 
         <p class="websculpture-description">
-          At KOT, we believe that website design is more than just lines of code;
-          it’s about shaping ideas into digital experiences that inspire...
+          At KOT, we believe that website design is more than just lines of code; it’s about shaping ideas into digital experiences that inspire. Our clients come to us not with a checklist, but with a vision. They trust us to brin
         </p>
 
         <a href="#" class="websculpture-btn">Get Started</a>
@@ -45,9 +44,7 @@
         <div class="col-12 text-center">
           <h2 class="what-we-offer-title">WHAT WE OFFER</h2>
           <p class="what-we-offer-description">
-            From stunning UI/UX designs to robust backend solutions,
-            Web Sculptors offers cutting-edge digital services that help
-            businesses grow, scale, and succeed online.
+            From intuitive UI/UX design to the integration of the latest technologies, Web Sculptures is your all-in-onedestination for professional web development. Whether you're building a brand, launching a product, or upgrading your online presence, we’re here to bring your ideas to life.
           </p>
         </div>
       </div>
@@ -83,7 +80,7 @@
             <img src="../assets/images/websculpture/card-2.png" class="what-we-offer-card-img" alt="">
             
             <div class="offer-card-text">
-              <h5 class="what-we-offer-card-title">Responsive UI/UX Design <a href="">Explore</a></h5>
+              <h5 class="what-we-offer-card-title">Responsive UI/UX <br> Design </h5>     <!--<a href="">Explore</a> -->
               <div class="explore-btn-offer">
                  <a href="#" class="what-we-explore-btn">Explore</a>
              </div>
