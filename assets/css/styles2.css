@@ -448,6 +448,7 @@ color:#FFFFFF;
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
+  margin: auto;
 }
 
 /* Hover (optional but nice) */
@@ -1173,7 +1174,7 @@ font-weight: 500;
 }
 
 .offer-overlay p{
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   flex-grow: 1;
 }
@@ -1183,7 +1184,7 @@ font-weight: 500;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .offer-overlay a:hover{

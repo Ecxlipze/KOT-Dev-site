@@ -449,6 +449,7 @@ color:#FFFFFF;
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
+  margin: auto;
 }
 
 /* Hover (optional but nice) */
@@ -747,6 +748,10 @@ font-weight: 500;
 .sup-10 { background-image: url('../images/dataengdark/glowcard2.png'); }
 .sup-11 { background-image: url('../images/dataengdark/glowcard3.png'); }
 .sup-12 { background-image: url('../images/dataengdark/glowcard4.png'); }
+.sup-13 { background-image: url('../images/auditsdarkmode/core4.png'); }
+.sup-14 { background-image: url('../images/auditsdarkmode/core3.png'); }
+.sup-15 { background-image: url('../images/auditsdarkmode/core2.png'); }
+.sup-16 { background-image: url('../images/auditsdarkmode/core1.png'); }
 
 
 
@@ -1169,13 +1174,13 @@ font-weight: 500;
 }
 
 .offer-overlay h3{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .offer-overlay p{
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   flex-grow: 1;
 }
@@ -1185,7 +1190,7 @@ font-weight: 500;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .offer-overlay a:hover{
