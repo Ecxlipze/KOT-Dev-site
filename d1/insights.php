@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights</title>
+  <link rel="stylesheet" href="../assets/css/styles2-dark.css">
+  <link rel="stylesheet" href="../assets/css/header-dark.css">
+  <link rel="stylesheet" href="../assets/css/neww-dark.css">
+  <link rel="stylesheet" href="../assets/css/responsive-dm.css">
+  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div id="global-header"></div>
+
+<section class="ns-section ns-resources-section">
+  <div class="container">
+
+    <!-- =====================
+         Resources / Cards
+    ====================== -->
+ 
+    <!-- Desktop grid -->
+    <div class="row g-4 d-none d-lg-flex">
+      <!-- Example card -->
+      <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+          <p class="ns-resource-text">Where credentials become globally trusted.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+          <p class="ns-resource-text">Where credentials become globally trusted.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+          <p class="ns-resource-text">Where credentials become globally trusted.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+      
+      <!-- Duplicate other cards similarly -->
+      <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Appreciation Board</h3>
+          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+           <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Appreciation Board</h3>
+          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+           <div class="col-lg-4">
+        <div class="ns-resource-card">
+          <div class="ns-resource-img"></div>
+          <h3 class="ns-resource-heading">Appreciation Board</h3>
+          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
+          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+        </div>
+      </div>
+     
+      <!-- Add remaining cards (total 9) -->
+    </div>
+
+    <!-- Tablet/Mobile slider -->
+    <div class="ns-resource-slider d-lg-none">
+      <div class="ns-slider-track">
+        <div class="ns-slider-item">
+          <div class="ns-resource-card">
+            <div class="ns-resource-img"></div>
+            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+            <p class="ns-resource-text">Where credentials become globally trusted.</p>
+            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          </div>
+        </div>
+        <!-- duplicate for other cards -->
+         <div class="ns-slider-item">
+          <div class="ns-resource-card">
+            <div class="ns-resource-img"></div>
+            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+            <p class="ns-resource-text">Where credentials become globally trusted.</p>
+            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-resource-card">
+            <div class="ns-resource-img"></div>
+            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+            <p class="ns-resource-text">Where credentials become globally trusted.</p>
+            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-resource-card">
+            <div class="ns-resource-img"></div>
+            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+            <p class="ns-resource-text">Where credentials become globally trusted.</p>
+            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-resource-card">
+            <div class="ns-resource-img"></div>
+            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
+            <p class="ns-resource-text">Where credentials become globally trusted.</p>
+            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================
+         Gallery
+    ====================== -->
+    <div class="row mt-5">
+      <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+        <h2 class="ns-gallery-title">Our Gallery</h2>
+        <a href="#" class="ns-gallery-link">See All</a>
+      </div>
+    </div>
+
+    <!-- Gallery slider (all screens) -->
+    <div class="ns-gallery-slider">
+      <div class="ns-slider-track">
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Our Events</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Office Environment</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Our Events</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Office Environment</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Our Events</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Office Environment</p>
+          </div>
+        </div>
+        <div class="ns-slider-item">
+          <div class="ns-gallery-card">
+            <div class="ns-gallery-img"></div>
+            <p class="ns-gallery-caption">Activities</p>
+          </div>
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <div id="global-footer"></div>
+  <button id="goTopBtn" title="Go to top">↑</button>
+
+  <script>
+    const goTopBtn = document.getElementById("goTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        goTopBtn.classList.add("show");
+      } else {
+        goTopBtn.classList.remove("show");
+      }
+    });
+
+    goTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+
+
+  <script>
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('global-footer').innerHTML = data;
+      });
+  </script>
+ <script>
+    fetch('../components/header-dark.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('global-header').innerHTML = data;
+
+    // ================= MOBILE MENU FUNCTIONALITY =================
+    const body = document.body;
+    const menu = document.getElementById("mobileMenu");
+    const overlay = document.getElementById("menuOverlay");
+    const openBtnTop = document.getElementById("openMenuBtn");
+    const openBtnBottom = document.getElementById("openMenuBtnBottom");
+    const closeBtn = document.getElementById("closeMenuBtn");
+
+    function openMenu(){
+        menu.classList.add("kot-header-open");
+        overlay.classList.add("kot-header-show");
+        body.style.overflow = "hidden";
+        menu.setAttribute("aria-hidden", "false");
+    }
+
+    function closeMenu(){
+        menu.classList.remove("kot-header-open");
+        overlay.classList.remove("kot-header-show");
+        body.style.overflow = "";
+        menu.setAttribute("aria-hidden", "true");
+    }
+
+    openBtnTop?.addEventListener("click", openMenu);
+    openBtnBottom?.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
+
+    document.addEventListener("keydown", (e) => {
+        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    });
+
+    // MOBILE ACCORDION FUNCTIONALITY
+    const accBtns = document.querySelectorAll(".kot-header-menu-acc-btn");
+    accBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const accordion = btn.parentElement;
+            accordion.classList.toggle("kot-header-open");
+            
+            // Close other accordions
+            accBtns.forEach(otherBtn => {
+                const otherAccordion = otherBtn.parentElement;
+                if (otherAccordion !== accordion) {
+                    otherAccordion.classList.remove("kot-header-open");
+                }
+            });
+        });
+    });
+
+    // TOGGLE BUTTON
+    document.getElementById("glowToggle")?.addEventListener("change", function () {
+        console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
+    });
+
+// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
+        const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
+const bufferZone = document.querySelector('.mega-menu-buffer');
+const navBar = document.getElementById('nav');
+ 
+        // Hide all mega menus initially
+        megaMenus.forEach(menu => {
+            menu.classList.remove('show');
+        });
+        
+        // Hover colors for ALL menu items
+        const hoverColors = {
+            'CORPORATE': '#A65E4E',
+            'SERVICES': '#A53694',
+            'CONSULTANCY': '#7EAB39',
+            'SUPPORT': '#068A4F',
+            'CAREER': '#dc3545',
+            'CONTACT': '#6c757d',
+            'INSIGHTS': '#C43882'
+        };
+        
+        // Control variables
+        let activeMenu = null;
+        let activeNavItem = null;
+        let hoverTimer = null;
+        let isTransitioning = false;
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Track mouse movement
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Function to get mega menu ID
+        function getMegaMenuId(menuType) {
+            switch(menuType) {
+                case 'CORPORATE': return 'corporateMega';
+                case 'SERVICES': return 'servicesMega';
+                case 'CONSULTANCY': return 'consultancyMega';
+                case 'INSIGHTS': return 'insightsMega';
+                default: return null;
+            }
+        }
+        
+        // Function to check if element has mega menu
+        function hasMegaMenu(item) {
+            const dataItem = item.getAttribute('data-item');
+            return dataItem === 'CORPORATE' || 
+                   dataItem === 'SERVICES' ||
+                   dataItem === 'CONSULTANCY' ||
+                   dataItem === 'INSIGHTS';
+        }
+        
+        // Function to hide ALL mega menus
+        function hideAllMegaMenus() {
+            megaMenus.forEach(menu => {
+                menu.classList.remove('show');
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('mega-hovered');
+                item.style.backgroundColor = '';
+            });
+            
+            if (bufferZone) bufferZone.style.display = 'none';
+            activeMenu = null;
+            activeNavItem = null;
+            isTransitioning = false;
+        }
+        
+        // Function to show specific mega menu
+        function showMegaMenu(menuType, navItemElement) {
+            // Clear any pending timers
+            if (hoverTimer) {
+                clearTimeout(hoverTimer);
+                hoverTimer = null;
+            }
+            
+            // If already showing the same menu, do nothing
+            const megaMenuId = getMegaMenuId(menuType);
+            if (activeMenu && activeMenu.id === megaMenuId) {
+                return;
+            }
+            
+            // Set transitioning flag
+            isTransitioning = true;
+            
+            // First hide all menus
+            hideAllMegaMenus();
+            
+            // Show buffer zone
+            if (bufferZone) {
+                bufferZone.style.display = 'block';
+                const rect = navItemElement.getBoundingClientRect();
+                const navRect = navBar.getBoundingClientRect();
+                bufferZone.style.left = (rect.left - navRect.left) + 'px';
+                bufferZone.style.width = rect.width + 'px';
+                bufferZone.style.top = '100%';
+                bufferZone.style.height = '10px';
+            }
+            
+            // Highlight nav item
+            navItemElement.classList.add('mega-hovered');
+            const color = hoverColors[navItemElement.getAttribute('data-item')];
+            if (color) {
+                navItemElement.style.backgroundColor = color;
+            }
+            
+            // Show target menu
+            if (megaMenuId) {
+                const targetMega = document.getElementById(megaMenuId);
+                if (targetMega) {
+                    // Small delay for smoothness
+                    setTimeout(() => {
+                        targetMega.classList.add('show');
+                        activeMenu = targetMega;
+                        activeNavItem = navItemElement;
+                        isTransitioning = false;
+                    }, 10);
+                }
+            }
+        }
+        
+        // ========== NAV ITEM HOVER EVENTS ==========
+        navItems.forEach((item) => {
+            const menuType = item.getAttribute('data-item');
+            const hasMega = hasMegaMenu(item);
+            
+            item.addEventListener('mouseenter', function(e) {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+                
+                // Apply hover color
+                const color = hoverColors[menuType];
+                if (color) {
+                    this.style.backgroundColor = color;
+                }
+                
+                if (hasMega) {
+                    // For items with mega menus
+                    showMegaMenu(menuType, this);
+                } else {
+                    // For items without mega menus
+                    hideAllMegaMenus();
+                    this.classList.add('mega-hovered');
+                    this.style.backgroundColor = color;
+                    activeNavItem = this;
+                }
+            });
+            
+            item.addEventListener('mouseleave', function(e) {
+                // Don't process if transitioning
+                if (isTransitioning) return;
+                
+                const relatedTarget = e.relatedTarget;
+                const goingToMega = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-mega-menu');
+                const goingToBuffer = relatedTarget && relatedTarget.closest('.mega-menu-buffer');
+                const goingToAnotherNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                
+                // If going to buffer zone, mega menu, or another nav item, don't hide immediately
+                if (goingToBuffer || goingToMega || goingToAnotherNav) {
+                    return;
+                }
+                
+                // Set timer to hide
+                hoverTimer = setTimeout(() => {
+                    // Reset background color
+                    this.style.backgroundColor = '';
+                    this.classList.remove('mega-hovered');
+                    
+                    // Hide mega menu if not hovering over it
+                    if (activeMenu && !isMouseOver(activeMenu) && !isMouseOver(bufferZone)) {
+                        hideAllMegaMenus();
+                    }
+                }, 50); // Very short delay
+            });
+        });
+        
+        // ========== BUFFER ZONE EVENTS ==========
+        if (bufferZone) {
+            bufferZone.addEventListener('mouseenter', function() {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+            });
+            
+            bufferZone.addEventListener('mouseleave', function(e) {
+                const relatedTarget = e.relatedTarget;
+                const goingToMega = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-mega-menu');
+                const goingToNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                
+                if (!goingToMega && !goingToNav) {
+                    hoverTimer = setTimeout(() => {
+                        if (activeMenu && !isMouseOver(activeMenu) && !isMouseOverAnyNav()) {
+                            hideAllMegaMenus();
+                        }
+                    }, 50);
+                }
+            });
+        }
+        
+        // ========== MEGA MENU EVENTS ==========
+        megaMenus.forEach(menu => {
+            menu.addEventListener('mouseenter', function() {
+                // Clear any hide timer
+                if (hoverTimer) {
+                    clearTimeout(hoverTimer);
+                    hoverTimer = null;
+                }
+            });
+            
+            menu.addEventListener('mouseleave', function(e) {
+                const relatedTarget = e.relatedTarget;
+                const goingToNav = relatedTarget && relatedTarget.closest('.kot-main-header-nav-bar-item-wrapper');
+                const goingToBuffer = relatedTarget && relatedTarget.closest('.mega-menu-buffer');
+                
+                if (!goingToNav && !goingToBuffer) {
+                    hoverTimer = setTimeout(() => {
+                        if (!isMouseOverAnyNav() && !isMouseOver(bufferZone)) {
+                            hideAllMegaMenus();
+                        }
+                    }, 50);
+                }
+            });
+        });
+        
+        // ========== HELPER FUNCTIONS ==========
+        function isMouseOver(element) {
+            if (!element) return false;
+            
+            // Check if mouse is within element bounds
+            const rect = element.getBoundingClientRect();
+            return mouseX >= rect.left && 
+                   mouseX <= rect.right && 
+                   mouseY >= rect.top && 
+                   mouseY <= rect.bottom;
+        }
+        
+        function isMouseOverAnyNav() {
+            for (let item of navItems) {
+                if (isMouseOver(item)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // Close menus on click outside
+        document.addEventListener('click', function(e) {
+            const isNavItem = e.target.closest('.kot-main-header-nav-bar-item-wrapper');
+            const isMegaMenu = e.target.closest('.kot-main-header-nav-bar-mega-menu');
+            const isBuffer = e.target.closest('.mega-menu-buffer');
+            
+            if (!isNavItem && !isMegaMenu && !isBuffer) {
+                hideAllMegaMenus();
+            }
+        });
+        
+        // Close menus on scroll
+        window.addEventListener('scroll', function() {
+            hideAllMegaMenus();
+        });
+        
+        // Apply initial hover colors
+        navItems.forEach(item => {
+            const menuType = item.getAttribute('data-item');
+            if (hoverColors[menuType]) {
+                item.style.setProperty('--hover-color', hoverColors[menuType]);
+            }
+        });
+    });
+
+    // ================= MARQUEE ANIMATION =================
+    const trackk = document.getElementById("marqueeTrack");
+    if (track) {
+        let pos = 0;
+        let speed = 0.5;
+        const singleWidth = track.scrollWidth / 2;
+
+        function animate(){
+            pos -= speed;
+            if(pos <= -singleWidth){
+                pos = 0;
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+
+    // ================= LANGUAGE SELECTION =================
+    document.querySelectorAll(".lang-option").forEach(option => {
+        option.addEventListener("click", function(e){
+            e.preventDefault();
+            document.getElementById("langImg").src = this.dataset.img;
+            document.getElementById("langText").innerText = this.dataset.text;
+        });
+    });
+
+    // ================= SCROLL EFFECT FOR DESKTOP HEADER =================
+    if (window.innerWidth >= 992) {
+        const headerWrap = document.querySelector(".desktop-header-wrap");
+        if (headerWrap) {
+            let lastScroll = 0;
+            const threshold = 80;
+
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset;
+
+                // SCROLL DOWN
+                if (currentScroll > lastScroll && currentScroll > threshold) {
+                    headerWrap.classList.add("header-hide-top", "header-shrink");
+                }
+
+                // SCROLL UP
+                if (currentScroll < lastScroll) {
+                    headerWrap.classList.remove("header-hide-top", "header-shrink");
+                }
+
+                // TOP REACHED
+                if (currentScroll <= 5) {
+                    headerWrap.classList.remove("header-hide-top", "header-shrink");
+                }
+
+                lastScroll = currentScroll;
+            });
+        }
+    
+    }
+    
+  </script>
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

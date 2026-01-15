@@ -24,7 +24,7 @@
             </p>
         </div>
 
-        <div class="new-btn-service-add d-flex ">
+        <div class="new-btn-service-add d-flex justify-content-center ">
            <div class="engineering-the-future-btn">
             <a href="">Contact Us</a>
         </div>

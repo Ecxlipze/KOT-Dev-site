@@ -65,7 +65,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Custom SaaS Product Development</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>
@@ -75,7 +75,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Cloud-Based Web & Mobile Apps</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>
@@ -85,7 +85,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Agile Project Management & Iterative Releases</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>
@@ -100,7 +100,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Scalable Architecture & Microservices</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>
@@ -109,8 +109,8 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>User-Centric UI/UX Design</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <h5>User-Centric UI/UX Design (Figma, Flutter, Kotlin)</h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>
@@ -120,7 +120,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Customer Behavior Analytics & Insights</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
             </div>

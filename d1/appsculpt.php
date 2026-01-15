@@ -17,7 +17,7 @@
     <div class="app-sculpt-service-paragraph">
       <p>
        Crafting Mobile Experiences That Matter
-At App Sculpt, we don’t just build mobile applications — we bring ideas to life. We believe every app starts with a vision, a problem to solve, and a dream to grow. Our mission is to transform those ideas into meaningful digital experiences that people love to use and businesses rely on to scale.
+At App Sculpt, we don’t just build mobile applications we bring ideas to life. We believe every app starts with a vision, a problem to solve, and a dream to grow. Our mission is to transform those ideas into meaningful digital experiences that people love to use and businesses rely on to scale.
       </p>
     </div>
            

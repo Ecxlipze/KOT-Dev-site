@@ -676,7 +676,7 @@ color: #FFFFFF;
 
 .career-card p{
   font-family: 'Montserrat-Regular';
-  font-size: clamp(14px, 1vw, 20px);
+  font-size: clamp(12px, 1vw, 20px);
   
   box-sizing: border-box;
 }
@@ -2570,11 +2570,26 @@ width: 100%;
   display: inline-block;
   padding: 12px 32px;
   border-radius: 5px;
-  background: #3b4197;
+  background: #96C049;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s ease;
+}
+.websculpture-btn-1 {
+  display: block;
+  padding: 12px 18px;
+  border-radius: 5px;
+  background:rgba(101, 26, 236, 1);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.service-btn-add{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
 }
 /* .websculpture-btn:hover {
   transform: translateY(-2px);
@@ -2584,9 +2599,9 @@ width: 100%;
 .websculpture-triangle {
   position: absolute;
   left: 50%;
-  bottom: 2%;              /* thora niche for natural look */
+  bottom: 3%;              /* thora niche for natural look */
   transform: translateX(-50%);
-  width: min(320px, 70vw);    /* responsive */
+  /* width: min(320px, 70vw);     */
   height: auto;
   z-index: 2;                 /* background=0, triangle=2, content=3 */
   pointer-events: none;
@@ -2952,18 +2967,16 @@ border: 1px dashed rgba(255, 255, 255, 1);
 /* Rotated background */
 
 .chalanges-we-solve-bg::before {
-  content: "";
-  position: absolute;
-  inset: -19% -20% -13% -20%;
-  background-image: url("../images/main-bg-image/glob.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  transform: rotate(-22.16deg); /* 🎯 EXACT FIGMA VALUE */
-  transform-origin: center;
-
-  z-index: -1;
+     content: "";
+    position: absolute;
+    inset: -6% -20% -13% -20%;
+    background-image: url(../images/main-bg-image/glob.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(0.48deg);
+    transform-origin: center;
+    z-index: -1;
 }
 .empowering-btn-agile a{
     font-family: 'Montserrat-Bold';
@@ -3216,16 +3229,16 @@ padding-bottom: 3%;
 }
 
 .agile-apps-offer-card h5{
-    font-family:Montserrat;
+    font-family:'Montserrat-Bold';
     font-size:22px;
     font-weight:700;
     line-height:1.2;
-    width:279px;
+    /* width:279px; */
     color:#fff;
 }
 
 .agile-apps-offer-card p{
-    font-family:Montserrat;
+    font-family:'Montserrat-Regular';
     font-size:13px;
     font-weight:400;
     width:310px;
@@ -3234,7 +3247,7 @@ padding-bottom: 3%;
 }
 
 .agile-apps-offer-read-more{
-    font-family:Montserrat;
+    font-family:'Montserrat-Bold';
     font-size:13px;
     font-weight:700;
     color:#fff;
@@ -3739,7 +3752,7 @@ color: rgba(1, 79, 133, 1);
   justify-content: center;
 }
 .chalanges-we-solve-image img{
-  width: 53%;
+  width: 100%;
   height: auto;
 }
 /* quality-flawless */

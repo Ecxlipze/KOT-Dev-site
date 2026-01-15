@@ -99,7 +99,7 @@
          <div class="container-fluid">
         <div class="container">
        <div class="what-we-do-img">
-    <img src="../assets/images/Graphoria/Graphoria1-dm.png" alt="">
+    <img src="../assets/images/Graphoria/gro.svg" alt="">
   </div>
     </div>
     </div>
@@ -187,7 +187,7 @@
 <div class="container-fluid p-0 responsive-layout-cl " style="margin-top: -9%;" >
   <div class="background-image">
 
-   <img src="../assets/images/Graphoria/bg2.png" alt="" width="100%" height="auto" >
+   <img src="../assets/images/Graphoria/grl.jpg" alt="" width="100%" height="auto" >
 
   </div>
 </div>

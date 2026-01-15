@@ -95,7 +95,7 @@
 
         .top-links-right{
             background:#0A71B9;
-            padding:6px 6px 6px 6px;
+            padding:6px 14px 6px 14px;
             display:flex;
             align-items:center;
             justify-content:center;
@@ -129,6 +129,7 @@
             display:flex;
             align-items:center;
             gap:12px;
+            padding-left: 1%;
         }
 
         /* ================= LANGUAGE ================= */
@@ -186,8 +187,7 @@
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Montserrat-Medium';
-
-font-size: clamp(9px, 0.5vw, 14px);
+font-size: clamp(13px, 1.5vw, 18px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
@@ -942,10 +942,11 @@ letter-spacing: 0%;
             <a href="../d1/faq-page.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
             <a href="../d1/contact.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
             <a href="../d1/site-map.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+                <a href="" class="login-header-button" >Login</a>
         </div>
 
         <div class="top-actions">
-            <div class="dropdown lang-dropdown">
+            <!-- <div class="dropdown lang-dropdown">
                 <button class="dropdown-toggle" id="langBtn" data-bs-toggle="dropdown">
                     <img id="langImg" src="../assets/images/Header/pak.png">
                     <span id="langText">اردو</span>
@@ -956,7 +957,7 @@ letter-spacing: 0%;
                     <li><a class="dropdown-item lang-option" href="#" data-img="../assets/images/Header/saudi.png" data-text="العربية"><img src="../assets/images/Header/saudi.png"> العربية</a></li>
                     <li><a class="dropdown-item lang-option" href="#" data-img="../assets/images/Header/fr.png" data-text="Français"><img src="../assets/images/Header/fr.png"> Français</a></li>
                 </ul>
-            </div>
+            </div> -->
 
             <label class="switch">
                 <input type="checkbox">
@@ -977,9 +978,9 @@ letter-spacing: 0%;
                         <input class="form-control form-scontrol-style" placeholder="Search">
                         <button><img src="../assets/images/Header/search-icon.png" alt="Search"></button>
                     </div> -->
-                    <div class="login-header-button d-flex justify-content-end ">
+                    <!-- <div class="login-header-button d-flex justify-content-end ">
                         <a href="">Login</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

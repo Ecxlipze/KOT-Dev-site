@@ -27,6 +27,9 @@
         </p>
 
         <a href="#" class="websculpture-btn">Get Started</a>
+           <div class="service-btn-add">
+        <a href="#" class="websculpture-btn-1">View All Services</a>
+       </div>
       </div>
     </div>
   </div>

@@ -213,7 +213,7 @@
         </div>
 
          <div class="set-agile-app-image">
-            <img src="../assets/images/Agile/grou-dm.png" alt="">
+            <img src="../assets/images/Agile/grou-dm.svg" alt="">
           </div>
         <!-- <div class="sets-agile-apps-wrapper">
 

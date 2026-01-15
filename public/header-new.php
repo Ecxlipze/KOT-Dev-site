@@ -185,7 +185,7 @@
     text-decoration: none;
     font-family: 'Montserrat-Medium';
 
-font-size: clamp(9px, 0.5vw, 14px);
+font-size: clamp(13px, 1.5vw, 18px);
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;

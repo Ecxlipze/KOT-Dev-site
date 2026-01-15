@@ -318,7 +318,7 @@
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script>
+  <!-- <script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const track = document.getElementById("careerTrack");
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let visible = getVisible();
   let index = visible;
 
-  // Clone slides
+
   for(let i = 0; i < visible; i++){
     track.appendChild(slides[i].cloneNode(true));
     track.insertBefore(
@@ -380,8 +380,115 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", () => location.reload());
 });
-</script>
+</script> -->
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.getElementById("careerTrack");
+  const nextBtn = document.getElementById("careerNext");
+  const prevBtn = document.getElementById("careerPrev");
+
+  if (!track || !nextBtn || !prevBtn) return;
+
+  function getVisible(){
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+  }
+
+  let visible = getVisible();
+  let index = visible;
+  let isMoving = false;
+
+  /* ---------- SETUP SLIDER ---------- */
+  function setupSlider(){
+    track.style.transition = "none";
+
+    const originalSlides = Array.from(track.children);
+    track.innerHTML = "";
+
+    // clone last
+    originalSlides.slice(-visible).forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+
+    // add originals
+    originalSlides.forEach(slide => {
+      track.appendChild(slide);
+    });
+
+    // clone first
+    originalSlides.slice(0, visible).forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+
+    index = visible;
+    updatePosition();
+  }
+
+  function updatePosition(){
+    const slideWidth = 100 / visible;
+    track.style.transform = `translateX(-${index * slideWidth}%)`;
+  }
+
+  function move(){
+    if (isMoving) return;
+    isMoving = true;
+
+    const slideWidth = 100 / visible;
+    track.style.transition = "transform 0.5s ease-in-out";
+    track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+    setTimeout(() => isMoving = false, 500);
+  }
+
+  /* ---------- NAVIGATION ---------- */
+  nextBtn.addEventListener("click", () => {
+    index++;
+    move();
+
+    const total = track.children.length;
+
+    if (index === total - visible) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = visible;
+        updatePosition();
+      }, 500);
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index--;
+    move();
+
+    if (index === 0) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = track.children.length - visible * 2;
+        updatePosition();
+      }, 500);
+    }
+  });
+
+  /* ---------- RESPONSIVE (NO RELOAD) ---------- */
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      const newVisible = getVisible();
+      if (newVisible !== visible) {
+        visible = newVisible;
+        setupSlider();
+      }
+    }, 250);
+  });
+
+  setupSlider();
+});
+</script>
 
 
 </body>
