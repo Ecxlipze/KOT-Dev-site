@@ -2362,20 +2362,20 @@ font-weight: 500;
 
 /* Desktop images */
 .impact-left {
-  background-image: url("../images/why-kot/border1.png");
+  background-image: url("../images/why-kot/border1d.png");
 }
 
 .impact-right {
-  background-image: url("../images/why-kot/border2.png");
+  background-image: url("../images/why-kot/border2d.png");
 }
 @media (max-width: 768px) {
 
   .impact-left {
-    background-image: url("../images/why-kot/border3.png");
+    background-image: url("../images/why-kot/border3d.png");
   }
 
   .impact-right {
-    background-image: url("../images/why-kot/border4.png");
+    background-image: url("../images/why-kot/border4d.png");
   }
 
 }
@@ -2730,6 +2730,11 @@ font-weight: 500;
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+   pointer-events: none;
 }
 
 
