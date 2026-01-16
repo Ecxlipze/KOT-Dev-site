@@ -172,6 +172,17 @@
             font-size:12px;
         }
 
+
+}
+.list-unstyled a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Montserrat-Medium';
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
         /* ================= TOGGLE ================= */
      .switch{
   width:38px;
