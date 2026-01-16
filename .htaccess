@@ -99,6 +99,9 @@ RewriteRule ^ebook-/?$ d1/ebook.php [L]
 RewriteRule ^episodes?$ v1/episodes.php [L]
 RewriteRule ^episodes-/?$ d1/episodes.php [L]
 
+RewriteRule ^graphoria?$ v1/graphoria.php [L]
+RewriteRule ^graphoria-/?$ d1/graphoria.php [L]
+
 RewriteRule ^event?$ v1/event.php [L]
 RewriteRule ^event-/?$ d1/event.php [L]
 
