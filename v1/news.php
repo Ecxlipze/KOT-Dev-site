@@ -27,10 +27,9 @@
 
 <section class="news-hero">
   <div class="container text-center">
-    <h1 class="news-hero-title">NEWS</h1>
+    <h1 class="news-hero-title">Latest Updates From KOT Enterprises</h1>
     <p class="news-hero-text">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+     Stay connected with the latest news, achievements, events, and innovation stories from KOT Enterprises. From new product releases to company milestones and industry insights, this is where our community stays updated.
     </p>
   </div>
 </section>

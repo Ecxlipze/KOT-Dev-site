@@ -522,7 +522,7 @@
         }
            .corporate-section-image img{
             width: 432px;
-            height: 192px;
+            height: auto;
            }
         .corporate-image-ul ul {
             list-style: none;
@@ -932,17 +932,17 @@
 <body>
 
 <!-- ================= DESKTOP HEADER ================= -->
-<div class="desktop-header-wrap">
+<div class="global-header desktop-header-wrap">
     <!-- TOP MARQUEE -->
     <div class="top-marquee">
         <div class="marquee-container">
             <div class="marquee-track" id="marqueeTrack">
                 <span>
-                    <img src="../assets/images/Header/marquee-logo.png" alt="">
+                    <img src="../assets/images/Header/margee.svg" alt="">
                     Empowering businesses to streamline operations and grow.
                 </span>
                 <span>
-                    <img src="../assets/images/Header/marquee-logo.png" alt="">
+                    <img src="../assets/images/Header/margee.svg" alt="">
                     Empowering businesses to streamline operations and grow.
                 </span>
             </div>
@@ -952,14 +952,14 @@
     <!-- TOP LINKS -->
     <div class="top-links-wrapper">
         <div class="top-links-right">
-            <a href="../v1/index.php">Home</a>
-            <a href="../v1/services.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Services</a>
-            <a href="../v1/career.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Career</a>
-            <a href="../v1/faq-page.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
-            <a href="../v1/contact.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
-            <a href="../v1/site-map.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+            <a href="/">Home</a>
+            <a href="/services/"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Services</a>
+            <a href="/career/"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Career</a>
+            <a href="/faq-page/"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
+            <a href="/contact/"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
+            <a href="/site-map/"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
             
-                        <a href="" class="login-header-button" >Login</a>
+                        <a href="https://kot-e.com/authentication/login" class="login-header-button" >Login</a>
                  
         </div>
 
@@ -977,12 +977,10 @@
                 </ul>
             </div> -->
 
-    <label class="switch">
-  <input type="checkbox" id="theme-toggle">
+           <label class="switch">
+  <input type="checkbox" id="theme-toggle" checked>
   <span class="slider"></span>
 </label>
-
-
         </div>
     </div>
 
@@ -991,7 +989,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 logo">
-                    <a href="../v1/index.php"><img src="../assets/images/Header/Logo (2).png" alt="Kot Enterprises"></a>
+                    <a href="/"><img src="../assets/images/Header/Logo-new.svg" alt="Kot Enterprises"></a>
                 </div>
                 <div class="col-md-6">
                     <!-- <div class="search-box">
@@ -1018,7 +1016,7 @@
 
             <!-- SERVICES -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="SERVICES">
-                <a class="kot-main-header-nav-bar-item" href="#">
+                <a class="kot-main-header-nav-bar-item" href="/services/">
                     SERVICES
                 </a>
             </div>
@@ -1032,28 +1030,28 @@
 
             <!-- SUPPORT -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="SUPPORT">
-                <a class="kot-main-header-nav-bar-item" href="../v1/support.php">
+                <a class="kot-main-header-nav-bar-item" href="/support/">
                     SUPPORT
                 </a>
             </div>
 
             <!-- CAREER -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="CAREER">
-                <a class="kot-main-header-nav-bar-item" href="../v1/career.php">
+                <a class="kot-main-header-nav-bar-item" href="/career/">
                     CAREER
                 </a>
             </div>
 
             <!-- CONTACT -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="CONTACT">
-                <a class="kot-main-header-nav-bar-item" href="../v1/contact.php">
+                <a class="kot-main-header-nav-bar-item" href="/contact/">
                     CONTACT
                 </a>
             </div>
             
             <!-- INSIGHTS -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="INSIGHTS"  >
-                <a class="kot-main-header-nav-bar-item" href="../v1/insights.php">
+                <a class="kot-main-header-nav-bar-item" href="/insights/">
                     INSIGHTS
                 </a>
             </div>
@@ -1073,7 +1071,7 @@
           <div class="row align-items-center">
             <div class="col-12 col-md-6">
               <div class="corporate-section-image">
-                <img src="../assets/images/Header/corporate.png" alt="corporate">
+                <a href="/contact/"><img src="../assets/images/Header/corporate.svg" alt="corporate"></a>
               </div>
             </div>
           </div>
@@ -1090,11 +1088,11 @@
               <ul class="list-unstyled">
                 <li class="mb-2">
                   <img src="../assets/images/Header/vec1.png" class="image-list me-2">
-                  <a href="../v1/why-kot.php">Why KOT</a>
+                  <a href="/why-kot/">Why KOT</a>
                 </li>
                 <li>
                   <img src="../assets/images/Header/vec1.png" class="image-list me-2">
-                  <a href="../v1/board-of-directors.php">Board of Directors</a>
+                  <a href="/board-of-directors/">Board of Directors</a>
                 </li>
               </ul>
             </div>
@@ -1130,17 +1128,18 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/agileappsservice.php">AGILEAPPS</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/digittrail.php">DIGITTRAIL</a></li>
-                <li><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/appsculpt.php">APP SCULPT</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/agile-apps/">AGILEAPPS</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/digittrail/">DIGITTRAIL</a></li>
+                <li class="mb-3" ><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/app-sculpt/">APP SCULPT</a></li>
+                <li  ><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/WebSculpture/">Web Sculptures</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/merchanity.php">MERCHANITY</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/flawless.php">FLAWLESS X</a></li>
-                <li><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/graphoria.php">GRAPHIORA</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/merchanity/">MERCHANITY</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/flawless/">FLAWLESS X</a></li>
+                <li><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/graphoria/">GRAPHIORA</a></li>
               </ul>
             </div>
           </div>
@@ -1162,7 +1161,7 @@
         <!-- LEFT -->
         <div class="col-12 col-md-6">
           <div class="corporate-section-image">
-            <img src="../assets/images/Header/consultancy.png" alt="consultancy">
+           <a href="/contact/"> <img src="../assets/images/Header/consultancy.svg" alt="consultancy"></a>
           </div>
         </div>
 
@@ -1175,14 +1174,14 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/audits.php">AUDITS</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/data-engineering.php">DATA ENGINEERING</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/audits/">AUDITS</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/data-engineering/">DATA ENGINEERING</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/gen-ai.php">GENERATIVE AI</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/gen-ai/">GENERATIVE AI</a></li>
               </ul>
             </div>
           </div>
@@ -1204,7 +1203,7 @@
         <!-- LEFT -->
         <div class="col-12 col-md-6">
           <div class="corporate-section-image">
-            <img src="../assets/images/Header/inshite.png" alt="insights">
+           <a href="/contact/"> <img src="../assets/images/Header/insight.svg" alt="insights"></a>
           </div>
         </div>
 
@@ -1217,33 +1216,33 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/certificate.php">Certificate Verification Center</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/event.php">Event Management Center</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/appreciation.php">Appreciation Board</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/policy.php">Policy Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/certificate/">Certificate Verification Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/event/">Event Management Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/appreciation/">Appreciation Board</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/policy/">Policy Center</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/case.php">Case Studies</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/ebook.php">Ebook / Whitepapers</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/case/">Case Studies</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/ebook/">Ebook / Whitepapers</a></li>
                   <li class="mb-3 d-flex gap-4">
     
     <!-- News -->
     <div class="d-flex align-items-center gap-2">
       <img src="../assets/images/Header/vec1.png" class="image-list">
-      <a href="../v1/news.php">News</a>
+      <a href="/news/">News</a>
     </div>
 
     <!-- Blog -->
     <div class="d-flex align-items-center gap-2">
       <img src="../assets/images/Header/vec1.png" class="image-list">
-      <a href="../v1/blogs.php">Blog</a>
+      <a href="/blogs/">Blog</a>
     </div>
 
   </li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../v1/announce.php">Announcements</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="/announce/">Announcements</a></li>
               </ul>
             </div>
           </div>
@@ -1279,7 +1278,7 @@
 <aside class="kot-header-mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="kot-header-mobile-menu-header d-flex justify-content-between align-items-center px-4 py-3">
         <div class="kot-header-logo-layer">
-            <a href="../v1/index.php">
+            <a href="/index/">
                 <img src="../assets/images/Header/Logo-mb.svg" alt="Kot Enterprises">
             </a>
         </div>
@@ -1295,7 +1294,7 @@
                 </label>
             </div>
             <div class="login-btn">
-                <a href="login.php" class="login-btn">Login</a>
+                <a href="https://kot-e.com/authentication/login" class="login-btn">Login</a>
             </div>
         </div>
         
@@ -1309,9 +1308,9 @@
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="../v1/why-kot.php">Why Kot Enterprises</a>
-                    <a href="../v1/board-of-directors.php">Board Of Director</a>
-                    <a href="../v1/career.php">Career</a>
+                    <a href="/why-kot.php">Why Kot Enterprises</a>
+                    <a href="/board-of-directors/">Board Of Director</a>
+                    <a href="/career/">Career</a>
                 </div>
             </div>
 
@@ -1324,17 +1323,17 @@
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="../v1/appsculpt.php">APP SCULPT</a>
-                    <a href="../v1/agileappsservice.php">AGILE APPS</a>
-                    <a href="../v1/digittrail.php">DIG-IT-TRAIL</a>
-                    <a href="../v1/merchanity.php">MERCHANITY</a>
-                    <a href="../v1/WebSculpture.php">WEB SCULPTURE</a>
-                    <a href="../v1/flawless.php">FLAWLESSX</a>
-                    <a href="../v1/graphoria.php">GRAPHIORA</a>
-                    <a href="../v1/venture.php">VENTURE XCELERATOR</a>
+                    <a href="/app-sculpt/">APP SCULPT</a>
+                    <a href="/agileappsservice/">AGILE APPS</a>
+                    <a href="/digittrail/">DIG-IT-TRAIL</a>
+                    <a href="/merchanity/">MERCHANITY</a>
+                    <a href="/WebSculpture/">WEB SCULPTURE</a>
+                    <a href="/flawless/">FLAWLESSX</a>
+                    <a href="/graphoria/">GRAPHIORA</a>
+                    <a href="/venture/">VENTURE XCELERATOR</a>
                 </div>
             </div>
-
+              
             <!-- CONSULTANCY -->
             <div class="kot-header-menu-accordion">
                 <button class="kot-header-menu-acc-btn" type="button">
@@ -1344,15 +1343,34 @@
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="../v1/audits.php">Audits</a>
-                    <a href="../v1/data-engineering.php">Data Engineering</a>
-                    <a href="../v1/gen-ai.php">Generative AI</a>
+                    <a href="/audits/">Audits</a>
+                    <a href="/data-engineering/">Data Engineering</a>
+                    <a href="/gen-ai/">Generative AI</a>
                 </div>
             </div>
-
-            <a href="../v1/support.php" class="kot-header-menu-item"><i class="bi "></i> Support</a>
-            <a href="../v1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career</a>
-            <a href="../v1/contact.php" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
+                <div class="kot-header-menu-accordion">
+                  <button class="kot-header-menu-acc-btn" type="button">
+                    <span class="d-flex align-items-center gap-2 justify-content-center w-100">
+                        <i class="bi "></i> Insight
+                    </span>
+                    <i class="bi bi-chevron-down kot-header-chev"></i>
+                   </button>
+                   <div class="kot-header-menu-acc-panel">
+                    <a href="/certificate/">Certificate Verification</a>
+                    <a href="/event/">Event Management</a>
+                    <a href="/news/">News</a>
+                    <a href="/appreciation/">Appreciation Board</a>
+                    
+                    <a href="/blogs/">Blogs</a>
+                    <a href="/announcement/">Announcement</a>
+                    <a href="/case/">Case Study</a>
+                     <a href="/ebook/">E-Book</a>
+                    <a href="/policy/">Policy Center</a>
+                </div>
+            </div>
+            <a href="/support/" class="kot-header-menu-item"><i class="bi "></i> Support</a>
+            <a href="/career/" class="kot-header-menu-item"><i class="bi "></i> Career</a>
+            <a href="/contact/" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
         </div>
     </div>
 </aside>
@@ -1362,7 +1380,7 @@
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
 <div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
-   <a href="../v1/index.php"> <div class="kot-header-mobile-logo-strip">
+   <a href="//"> <div class="kot-header-mobile-logo-strip">
         <!-- Logo can be added here -->
         
     </div> </a>
@@ -1376,7 +1394,7 @@
             </div>
 
             <div class="col">
-                <a href="../v1/index.php" class="d-flex flex-column align-items-center">
+                <a href="/index/" class="d-flex flex-column align-items-center">
                     <i class="bi bi-house-fill"></i>
                 </a>
             </div>

@@ -2759,6 +2759,7 @@ font-weight: 500;
 .sectionm-subtext {
   max-width: 600px;
   margin: 0.5rem auto 0;
+  color: #000000;
  
    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
 }

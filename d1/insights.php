@@ -25,6 +25,17 @@
 <body>
   <div id="global-header"></div>
 
+  <section class="news-hero">
+  <div class="container text-center">
+    <h1 class="news-hero-title">Insights — Ideas That Shape Tomorrow</h1>
+    <p class="news-hero-text">
+     Our insights combine industry knowledge, research, and practical experience. Explore deep-dive articles and expert opinions on technology, business innovation, AI, cloud engineering, data, and digital transformation.
+    </p>
+  </div>
+</section>
+
+
+
 <section class="ns-section ns-resources-section">
   <div class="container">
 

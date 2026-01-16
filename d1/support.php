@@ -22,22 +22,24 @@
     <div class="support-slider-track">
 
       <!-- Images (repeat once for smooth loop) -->
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/grafo-dm.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/merchantiy.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/wese-svg.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/appsec-dm.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/digitril.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/flawlessx.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/agile-dm.svg" alt=""></div>
     
 
       <!-- Duplicate for seamless marquee -->
       <!-- Images (repeat once for smooth loop) -->
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/grafo-dm.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/merchantiy.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/wese-svg.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/appsec-dm.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/digitril.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/flawlessx.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/agile-dm.svg" alt=""></div>
 
     </div>
   </div>

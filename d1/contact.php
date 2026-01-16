@@ -120,8 +120,7 @@
       <div class="col-lg-6">
         <div class="contact-card">
           <p class="mb-4">
-           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          </p>
+          At KOT Enterprises, we’re here to support your business with the right technology, guidance, and human-centered innovation. Whether you have a project idea, a question, or need support — our team is ready to assist you.</p>
 
           <div class="row text-center mb-4">
          <div class="col-6 mb-3 contact-item">

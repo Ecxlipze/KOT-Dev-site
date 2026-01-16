@@ -2,259 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audits - KOT</title>
-    <link rel="stylesheet" href="../assets/css/styles2.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/neww.css">
-    <link rel="stylesheet" href="../assets/css/responsive-dm.css">
-   
-    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appreciation Board</title>
+  <link rel="stylesheet" href="../assets/css/styles2.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <link rel="stylesheet" href="../assets/css/neww.css">
+  <link rel="stylesheet" href="../assets/css/responsive-dm.css">
+  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
 
 </head>
 
 <body>
-    <div id="global-header"></div>
+  <div id="global-header"></div>
 
-    <section class="solutions-wrapper" style="background: 
-  linear-gradient(rgba(114,110,110,0.4), rgba(114,110,110,0.4)),
-  url('../assets/images/auditslightmode/auditsbanner.jpg') center/cover no-repeat;
+  <section class="kot-blog-banner">
+    <div class="kot-blog-banner-inner">
+      <h1 class="kot-blog-title">Appreciation Board</h1>
+      <p class="kot-blog-subtitle">
+        Because excellence deserves to be remembered.
+      </p>
+    </div>
+  </section>
+  <section class="kot-blog-intro-section">
+    <div class="kot-blog-intro-card">
+      <p>
+        The KOT Appreciation Board is a living record of individuals, teams, and partners who have created meaningful
+        impact across our ecosystem. From innovation to leadership, from dedication to excellence, this space celebrates
+        the people who move KOT—and the future—forward.
+      </p>
+    </div>
+  </section>
 
-">
-        <!-- HERO SECTION -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <!-- Left Content -->
-                    <div class="col-lg-6 col-md-12">
-                        <h1 class="hero-title">
-                            Let's Find Out What’s Holding You Back
-                        </h1>
-
-                        <p class="hero-text" style="color: #ffffff; font-weight: 500; font-size: 22px;">
-                            At KOT Enterprises, our audit services provide you with clarity. We assess your operations,
-                            marketing, sales, and tech to show what’s working and what’s not. <br> <br> You’re investing in
-                            people, tools, and strategies. You’re growing, adapting, and pushing forward. But how do you
-                            know it’s all coming together?
-                        </p>
-
-                        <a href="contact.php" class="btn btn-primary hero-btn">
-                            BOOK YOUR CONSULTATION
-                        </a>
-                    </div>
-
-                    <!-- Right Image -->
-                    <div class="col-lg-6 col-md-12 text-lg-end text-center mt-4 mt-lg-0">
-                        <!-- <img
-          src="../assets/images/generativeailight/generative-Ai-1.jpg"
-          alt="AI Developer"
-          class="img-fluid hero-image"
-        /> -->
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </section>
-    <!-- CAPABILITIES SECTION -->
-
-
-    <section class="solutions-wrapper" style="padding: 0%;">
-
-        <!-- Sections will go here -->
-
-        <section class="support-section text-center mt-5">
-            <h2 class="section-title">Our Core Values</h2>
-
-            <div class="container"> 
-                <div class="row justify-content-center g-2 mt-4">
-
-                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                        <div class="support-card sup-9"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                        <div class="support-card sup-10"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                        <div class="support-card sup-11"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
-                        <div class="support-card sup-12"></div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        <section class="solutions-section text-center">
-            <h2 class="section-title">Who We Serve</h2>
-
-
-            <div class="container">
-                <div class="row justify-content-center g-5 mt-1">
-
-                    <div class="col-lg-3 col-md-6 col-8 kard">
-                        <div class="solution-card sol-10"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-8 kard">
-                        <div class="solution-card sol-11"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-8 kard">
-                        <div class="solution-card sol-12"></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-8 kard">
-                        <div class="solution-card sol-13"></div>
-                    </div>
-
-
-                </div>
-
-                <!-- <button class="btn btn-primary mt-5 hero-btn">LEARN MORE</button> -->
-            </div>
-        </section>
-
-        <section class="testimonial-section">
+ <section class="ns-section ns-heroes-section">
   <div class="container">
 
-    <!-- Section heading -->
-    <div class="testimonial-heading">
-      <p class="small-title">Our Clients</p>
-      <h2 class="main-title">TESTIMONIALS</h2>
+    <!-- Section Title -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2 class="ns-heroes-title">Our Heroes &amp; Heroines</h2>
+      </div>
     </div>
 
-    <!-- Testimonial Card -->
-    <div class="testimonial-card">
-
-      <div class="testimonial-left">
-        <h3 class="testimonial-title">What Our Client Say</h3>
-
-        <div class="profile-wrap">
-          <img src="../assets/images/auditslightmode/profile.png" alt="Client" class="profile-img">
-
-          <div class="profile-info">
-            <h4>Ayesha Malik</h4>
-            <p>Founder, InnovaCrafts</p>
-          </div>
+    <!-- Desktop / Large screens GRID -->
+    <div class="row g-4 d-none d-lg-flex">
+      <!-- Card -->
+      <div class="col-lg-3">
+        <div class="ns-hero-card">
+          <div class="ns-hero-img"></div>
+          <div class="ns-hero-info"></div>
         </div>
       </div>
 
-      <div class="testimonial-right">
-        <img src="../assets/images/auditslightmode/stars.png" alt="Rating" class="stars-img">
+      <!-- duplicate as needed -->
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
 
-        <p class="testimonial-text">
-          Working with KOT Enterprises has been a game changer for us. Their platform
-          didn’t just adapt to our needs it anticipated them. Our team is now more
-          productive, our customers are more engaged, and our processes have never
-          been smoother. It truly feels like the technology is working with us, not
-          just for us.
-        </p>
-
-        <p class="thanks-text">Thanks.</p>
-      </div>
-
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
     </div>
+
+    <!-- Mobile / Tablet SLIDER -->
+    <div class="ns-heroes-slider d-lg-none">
+      <div class="ns-slider-track">
+        <!-- slide -->
+        <div class="ns-slider-item">
+          <div class="ns-hero-card">
+            <div class="ns-hero-img"></div>
+            <div class="ns-hero-info"></div>
+          </div>
+        </div>
+
+        <!-- duplicate slides -->
+        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  
-        <section class="achieve-section text-center mt-5">
-           <div class="container" style="align-items: start; text-align: start;"> <h2 class="section-title">
-                Our Approach
-            </h2>
-            <p class="section-title"
-                style=" font-size: 22px; color: black; font-weight: 400;">We don’t
-                believe in one-size-fits-all audits. Every business is different, so we start by  understanding your 
-                unique goals, challenges,  and working environment.  Our team combines practical experience with proven
-                strategies to give you clear, useful insights.</p>
-           </div>
-<div class="container mt-5 mb-5" style="max-width: 1550px !important;">
-  <div class="marquee-wrapper">
-    <div class="marquee-track" id="marqueeTrack">
-      <div class="achieve-card ach-9"></div>
-      <div class="achieve-card ach-10"></div>
-      <div class="achieve-card ach-11"></div>
-      <div class="achieve-card ach-12"></div>
-    </div>
-  </div>
-</div>
 
-        </section>
+  <div id="global-footer"></div>
+  <button id="goTopBtn" title="Go to top">↑</button>
 
-      
+  <script>
+    const goTopBtn = document.getElementById("goTopBtn");
 
-    </section>
-    <div id="global-footer"></div>
-
-    <button id="goTopBtn" title="Go to top">↑</button>
-
-    <script>
-  const goTopBtn = document.getElementById("goTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      goTopBtn.classList.add("show");
-    } else {
-      goTopBtn.classList.remove("show");
-    }
-  });
-
-  goTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        goTopBtn.classList.add("show");
+      } else {
+        goTopBtn.classList.remove("show");
+      }
     });
-  });
-</script>
 
-<script>
-  fetch('../components/footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('global-footer').innerHTML = data;
+    goTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
-    </script>
-   <script>
+  </script>
+
+
+
+  <script>
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('global-footer').innerHTML = data;
+      });
+  </script>
+ <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
-    initHeader(); // run AFTER header is injected
-    });
-    function initHeader() {
 
-    if (window.__headerInitialized) return;
-    window.__headerInitialized = true;
-
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/audits-";
-        } 
-        });
-        }
-
-     /* ================= MOBILE MENU ================= */
+    // ================= MOBILE MENU FUNCTIONALITY =================
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -262,29 +141,27 @@
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-   function openMenu() {
-    menu?.classList.add("kot-header-open");
-    overlay?.classList.add("kot-header-show");
-    body.style.overflow = "hidden";
-    menu?.setAttribute("aria-hidden", "false");
-     }
+    function openMenu(){
+        menu.classList.add("kot-header-open");
+        overlay.classList.add("kot-header-show");
+        body.style.overflow = "hidden";
+        menu.setAttribute("aria-hidden", "false");
+    }
 
-         function closeMenu() {
-    menu?.classList.remove("kot-header-open");
-    overlay?.classList.remove("kot-header-show");
-    body.style.overflow = "";
-    menu?.setAttribute("aria-hidden", "true");
-     }
+    function closeMenu(){
+        menu.classList.remove("kot-header-open");
+        overlay.classList.remove("kot-header-show");
+        body.style.overflow = "";
+        menu.setAttribute("aria-hidden", "true");
+    }
 
-   openBtnTop?.addEventListener("click", openMenu);
+    openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn?.addEventListener("click", closeMenu);
-    overlay?.addEventListener("click", closeMenu);
+    closeBtn.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
-      closeMenu();
-    }
+        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -309,11 +186,11 @@
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-        const bufferZone = document.querySelector('.mega-menu-buffer');
-        const navBar = document.getElementById('nav');
+const bufferZone = document.querySelector('.mega-menu-buffer');
+const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -587,7 +464,7 @@
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    };
+    });
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -643,7 +520,6 @@
 
                 lastScroll = currentScroll;
             });
-            
         }
     
     }
@@ -652,22 +528,12 @@
 
 
 
-<script>
-  const track = document.getElementById("marqueeTrack");
 
-    // Duplicate cards so animation never ends
-    track.innerHTML += track.innerHTML;
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-</script>
-
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="../assets/js/script.js"></script>
-
+  <!-- Custom JS -->
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

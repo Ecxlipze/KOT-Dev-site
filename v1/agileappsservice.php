@@ -56,7 +56,7 @@
  <!-- End-EMPOWRING BUSINESS WITH SCALABLE SAAS SOLUTIONS -->
 <div class="container-fluid py-5 agile-apps-offer">
 
-    <h2 class="agile-apps-offer-title">WHAT WE OFFER</h2>
+    <h2 class="agile-apps-offer-title">What AgileApps Offers:</h2>
     <p class="agile-apps-offer-para" >AgileApps delivers end-to-end SaaS product development for businesses ready to transform their workflows with cloud-based, user-friendly solutions.</p>
     <!-- FIRST ROW -->
     <div class="row g-4 justify-content-center agile-apps-offer-first-row">

@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
   t.addEventListener("change", () => {
     if (!t.checked) {
       // Dark -> Light
-      window.location.href = "/appreciation-";
+      window.location.href = "/support-";
     }
   });
 });

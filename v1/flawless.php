@@ -14,12 +14,12 @@
       <img src="../assets/images/Flawless/flaw-logo.png" alt="">
       </div>
         <div class="engineering-the-future-heading ">
-            <h2>ENGINEERING THE FUTURE OF ERROR FREE SOFTWARE</h2>
+            <h2>Ensure Excellence, Every Time</h2>
         </div>
 
         <div class="engineering-the-future-paragraph">
             <p>
-                At FlawlessX, we believe that flawless software is not a luxury but a necessity. In today’s hyper-connected, digitally reliant world, software bugs can result in broken experiences, compromised data, and lost revenue. FlawlessX is KOT Enterprises’ dedicated Software Quality Assurance (SQA) and Software Quality Engineering & Control (SQEC) division. We ensure every product meets the highest benchmarks of reliability, performance, and security before it ever reaches the end user.
+               FlawlessX is KOT’s advanced software testing and quality assurance service. We focus on delivering bug-free, secure, and stable digital products, so your users always experience perfection.
             </p>
         </div>
 
@@ -80,7 +80,7 @@
 <!-- WHAT WE OFFER -->
  <div class="container-fluid mt-5 "  >
     <div class="what-we-offer-flawless">
-        <h2>WHAT WE OFFER</h2>
+        <h2>What FlawlessX Covers</h2>
         <p>FlawlessX is a precision-first SQA & testing service offering comprehensive quality control frameworks, automated testing pipelines, and manual testing expertise for mobile, web, and enterprise-grade platforms.</p>
     </div>
     <!-- flawless-cards -->
@@ -90,7 +90,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Automated Testing System</h2>
+            <h2>Manual and automated testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
@@ -103,7 +103,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center  ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Manual Test Engineering</h2>
+            <h2>Performance and load testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
@@ -116,7 +116,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Security & Compliance Auditing</h2>
+            <h2>Functional and regression testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
@@ -129,7 +129,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Bug Lifecycle Management</h2>
+            <h2>Security testing and vulnerability checks</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
@@ -142,7 +142,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>AI-Powered Testing Tools</h2>
+            <h2>UI/UX quality validation</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
@@ -155,7 +155,7 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Automated Testing System</h2>
+            <h2>Compliance and user-journey refinement</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
                 <a href="">READ MORE</a>
