@@ -173,53 +173,55 @@
         }
 
         /* ================= TOGGLE ================= */
-        .switch{
-            width:38px;
-            height:14px;
-            position:relative;
-            border: 0.9px solid #0A71B9;
-            opacity: 1;
-            border-radius: 20px;
-            border-width: 0.9px;
-        }
-        .switch input{display:none;}
-.list-unstyled a{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: 'Montserrat-Medium';
-font-size: clamp(13px, 1.5vw, 18px);
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
-
+     .switch{
+  width:38px;
+  height:14px;
+  position:relative;
+  display:inline-block; /* add */
+  border: 0.9px solid #0A71B9;
+  border-radius: 20px;
 }
-        .slider{
-            position:absolute;
-            inset:0;
-            background:#fff;
-            border-radius:20px;
-            cursor:pointer;
-            background-color: #000000;
-        }
-        .slider:before{
-            
-             content:"";
-    position:absolute;
-    width:12px;
-    height:12px;
-    left:3px;
-    /* top:3px; */
-    background:#FFFFFF;
-    border-radius:50%;
-    transition:.3s;
-        }
-        .switch input:checked + .slider{
-            background:#0A71B9;
-        }
-        .switch input:checked + .slider:before{
-            transform:translateX(22px);
-            background:#fff;
-        }
+
+.switch input{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  margin:0;
+  opacity:0;
+  cursor:pointer;
+  z-index:2; /* clickable layer */
+}
+
+.slider{
+  position:absolute;
+  inset:0;
+  background:#fff;
+  border-radius:20px;
+  cursor:pointer;
+  z-index:1;
+}
+
+.slider:before{
+  content:"";
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:3px;
+  top:1px;          /* add (better alignment) */
+  background:#0A71B9;
+  border-radius:50%;
+  transition:.3s;
+}
+
+.switch input:checked + .slider{
+  background:#0A71B9;
+}
+.switch input:checked + .slider:before{
+  transform:translateX(22px);
+  background:#fff;
+}
+
 
         /* ================= LOGO ================= */
         .header-main{padding:15px 0;}
@@ -937,11 +939,11 @@ letter-spacing: 0%;
     <div class="top-links-wrapper">
         <div class="top-links-right">
             <a href="../d1/index.php">Home</a>
-            <a href="../d1/services.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Services</a>
+            <a href="../d1/services.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Services</a>
             <a href="../d1/career.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Career</a>
-            <a href="../d1/faq-page.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
-            <a href="../d1/contact.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
-            <a href="../d1/site-map.html"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
+            <a href="../d1/faq-page.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> FAQ</a>
+            <a href="../d1/contact.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Contact</a>
+            <a href="../d1/site-map.php"> <span><img src="../assets/images/Header/Vector (1).png" alt=""></span> Site Map</a>
                 <a href="" class="login-header-button" >Login</a>
         </div>
 
@@ -959,10 +961,10 @@ letter-spacing: 0%;
                 </ul>
             </div> -->
 
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
+         <label class="switch">
+  <input type="checkbox" id="theme-toggle" checked>
+  <span class="slider"></span>
+</label>
         </div>
     </div>
 
@@ -1026,14 +1028,14 @@ letter-spacing: 0%;
 
             <!-- CONTACT -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="CONTACT">
-                <a class="kot-main-header-nav-bar-item" href="../d1/contact.html">
+                <a class="kot-main-header-nav-bar-item" href="../d1/contact.php">
                     CONTACT
                 </a>
             </div>
             
             <!-- INSIGHTS -->
             <div class="kot-main-header-nav-bar-item-wrapper" data-item="INSIGHTS"  >
-                <a class="kot-main-header-nav-bar-item" href="../d1/insights.html">
+                <a class="kot-main-header-nav-bar-item" href="../d1/insights.php">
                     INSIGHTS
                 </a>
             </div>
@@ -1070,11 +1072,11 @@ letter-spacing: 0%;
               <ul class="list-unstyled">
                 <li class="mb-2">
                   <img src="../assets/images/Header/vec1.png" class="image-list me-2">
-                  <a href="../d1/why-kot.html">Why KOT</a>
+                  <a href="../d1/why-kot.php">Why KOT</a>
                 </li>
                 <li>
                   <img src="../assets/images/Header/vec1.png" class="image-list me-2">
-                  <a href="../d1/board-of-directors.html">Board of Directors</a>
+                  <a href="../d1/board-of-directors.php">Board of Directors</a>
                 </li>
               </ul>
             </div>
@@ -1111,14 +1113,14 @@ letter-spacing: 0%;
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
                 <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/agileappsservice.php">AGILEAPPS</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/digittrail.html">DIGITTRAIL</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/digittrail.php">DIGITTRAIL</a></li>
                 <li><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/appsculpt.php">APP SCULPT</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/merchanity.html">MERCHANITY</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/merchanity.php">MERCHANITY</a></li>
                 <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/flawless.php">FLAWLESS X</a></li>
                 <li><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/graphoria.php">GRAPHIORA</a></li>
               </ul>
@@ -1155,14 +1157,14 @@ letter-spacing: 0%;
           <div class="row">
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/audits.html">AUDITS</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/data-engineering.html">DATA ENGINEERING</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/audits.php">AUDITS</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/data-engineering.php">DATA ENGINEERING</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/gen-ai.html">GENERATIVE AI</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/gen-ai.php">GENERATIVE AI</a></li>
               </ul>
             </div>
           </div>
@@ -1197,33 +1199,33 @@ letter-spacing: 0%;
           <div class="row">
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/certificate.html">Certificate Verification Center</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/event.html">Event Management Center</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/appreciation.html">Appreciation Board</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/policy.html">Policy Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/certificate.php">Certificate Verification Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/event.php">Event Management Center</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/appreciation.php">Appreciation Board</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/policy.php">Policy Center</a></li>
               </ul>
             </div>
 
             <div class="col-12 col-md-6">
               <ul class="list-unstyled">
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/case.html">Case Studies</a></li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/ebook.html">Ebook / Whitepapers</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/case.php">Case Studies</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/ebook.php">Ebook / Whitepapers</a></li>
                   <li class="mb-3 d-flex gap-4">
     
     <!-- News -->
     <div class="d-flex align-items-center gap-2">
       <img src="../assets/images/Header/vec1.png" class="image-list">
-      <a href="../d1/news.html">News</a>
+      <a href="../d1/news.php">News</a>
     </div>
 
     <!-- Blog -->
     <div class="d-flex align-items-center gap-2">
       <img src="../assets/images/Header/vec1.png" class="image-list">
-      <a href="../d1/blogs.html">Blog</a>
+      <a href="../d1/blogs.php">Blog</a>
     </div>
 
   </li>
-                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/announce.html">Announcements</a></li>
+                <li class="mb-3"><img src="../assets/images/Header/vec1.png" class="image-list me-2"><a href="../d1/announce.php">Announcements</a></li>
               </ul>
             </div>
           </div>
@@ -1287,8 +1289,8 @@ letter-spacing: 0%;
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="../d1/why-kot.html">Why Kot Enterprises</a>
-                    <a href="../d1/board-of-directors.html">Board Of Director</a>
+                    <a href="../d1/why-kot.php">Why Kot Enterprises</a>
+                    <a href="../d1/board-of-directors.php">Board Of Director</a>
                     <a href="../d1/career.php">Career</a>
                 </div>
             </div>
@@ -1304,12 +1306,12 @@ letter-spacing: 0%;
                 <div class="kot-header-menu-acc-panel">
                     <a href="../d1/appsculpt.php">APP SCULPT</a>
                     <a href="../d1/agileappsservice.php">AGILE APPS</a>
-                    <a href="../d1/digittrail.html">DIG-IT-TRAIL</a>
-                    <a href="../d1/merchanity.html">MERCHANITY</a>
+                    <a href="../d1/digittrail.php">DIG-IT-TRAIL</a>
+                    <a href="../d1/merchanity.php">MERCHANITY</a>
                     <a href="../d1/WebSculpture.php">WEB SCULPTURE</a>
                     <a href="../d1/flawless.php">FLAWLESSX</a>
                     <a href="../d1/graphoria.php">GRAPHIORA</a>
-                    <a href="../d1/venture.html">VENTURE XCELERATOR</a>
+                    <a href="../d1/venture.php">VENTURE XCELERATOR</a>
                 </div>
             </div>
 
@@ -1322,15 +1324,15 @@ letter-spacing: 0%;
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="../d1/audits.html">Audits</a>
-                    <a href="../d1/data-engineering.html">Data Engineering</a>
-                    <a href="../d1/gen-ai.html">Generative AI</a>
+                    <a href="../d1/audits.php">Audits</a>
+                    <a href="../d1/data-engineering.php">Data Engineering</a>
+                    <a href="../d1/gen-ai.php">Generative AI</a>
                 </div>
             </div>
 
             <a href="../d1/support.php" class="kot-header-menu-item"><i class="bi "></i> Support</a>
             <a href="../d1/career.php" class="kot-header-menu-item"><i class="bi "></i> Career</a>
-            <a href="../d1/contact.html" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
+            <a href="../d1/contact.php" class="kot-header-menu-item"><i class="bi "></i> Contact</a>
         </div>
     </div>
 </aside>

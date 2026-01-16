@@ -629,7 +629,24 @@ const navBar = document.getElementById('nav');
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
+
   <script src="../assets/js/script.js"></script>
+    <!--Toggle Button Script-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Dark page => ON by HTML (checked)
+
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+      // Dark -> Light
+      window.location.href = "/digittrail-";
+    }
+  });
+});
+</script>
 </body>
 
 </html>

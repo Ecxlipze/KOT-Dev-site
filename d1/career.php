@@ -427,6 +427,23 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+  <!--Toggle Button Script-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Dark page => ON by HTML (checked)
+
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+      // Dark -> Light
+      window.location.href = "/career";
+    }
+  });
+});
+</script>
+
 
 </body>
 </html>

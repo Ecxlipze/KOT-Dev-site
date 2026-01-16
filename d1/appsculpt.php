@@ -204,6 +204,23 @@ At App Sculpt, we don’t just build mobile applications we bring ideas to life.
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
+
+  <!--Toggle Button Script-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Dark page => ON by HTML (checked)
+
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+      // Dark -> Light
+      window.location.href = "/app-sculpt";
+    }
+  });
+});
+</script>
      
     </body>
     </html>

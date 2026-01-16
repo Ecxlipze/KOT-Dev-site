@@ -2,132 +2,90 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appreciation Board</title>
-  <link rel="stylesheet" href="../assets/css/styles2.css">
-  <link rel="stylesheet" href="../assets/css/header.css">
-  <link rel="stylesheet" href="../assets/css/neww.css">
-  <link rel="stylesheet" href="../assets/css/responsive-dm.css">
-  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="../assets/css/styles2.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/neww.css">
+    <link rel="stylesheet" href="../assets/css/responsive-dm.css">
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 
 </head>
 
 <body>
-  <div id="global-header"></div>
+    <div id="global-header"></div>
 
-  <section class="kot-blog-banner">
-    <div class="kot-blog-banner-inner">
-      <h1 class="kot-blog-title">Appreciation Board</h1>
-      <p class="kot-blog-subtitle">
-        Because excellence deserves to be remembered.
-      </p>
-    </div>
-  </section>
-  <section class="kot-blog-intro-section">
-    <div class="kot-blog-intro-card">
-      <p>
-        The KOT Appreciation Board is a living record of individuals, teams, and partners who have created meaningful
-        impact across our ecosystem. From innovation to leadership, from dedication to excellence, this space celebrates
-        the people who move KOT—and the future—forward.
-      </p>
-    </div>
-  </section>
-
- <section class="ns-section ns-heroes-section">
-  <div class="container">
-
-    <!-- Section Title -->
-    <div class="row mb-4">
-      <div class="col-12">
-        <h2 class="ns-heroes-title">Our Heroes &amp; Heroines</h2>
-      </div>
-    </div>
-
-    <!-- Desktop / Large screens GRID -->
-    <div class="row g-4 d-none d-lg-flex">
-      <!-- Card -->
-      <div class="col-lg-3">
-        <div class="ns-hero-card">
-          <div class="ns-hero-img"></div>
-          <div class="ns-hero-info"></div>
-        </div>
-      </div>
-
-      <!-- duplicate as needed -->
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-    </div>
-
-    <!-- Mobile / Tablet SLIDER -->
-    <div class="ns-heroes-slider d-lg-none">
-      <div class="ns-slider-track">
-        <!-- slide -->
-        <div class="ns-slider-item">
-          <div class="ns-hero-card">
-            <div class="ns-hero-img"></div>
-            <div class="ns-hero-info"></div>
-          </div>
-        </div>
-
-        <!-- duplicate slides -->
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      </div>
-    </div>
-
+    <!-- FAQ BANNER -->
+<section class="faq-banner">
+  <div class="faq-banner-content">
+    <h1>FREQUENTLY ASKED QUESTIONS</h1>
   </div>
 </section>
 
+<!-- FAQ SECTION -->
+<section class="faq-main-section">
+    <div class="faq-container" id="bp-embedded-webchat">
+        
+    </div>
+</section>
 
-  <div id="global-footer"></div>
-  <button id="goTopBtn" title="Go to top">↑</button>
 
-  <script>
-    const goTopBtn = document.getElementById("goTopBtn");
+    <div id="global-footer"></div>
+        <button id="goTopBtn" title="Go to top">↑</button>
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        goTopBtn.classList.add("show");
-      } else {
-        goTopBtn.classList.remove("show");
-      }
+    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script>
+    
+    <script>
+  const goTopBtn = document.getElementById("goTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      goTopBtn.classList.add("show");
+    } else {
+      goTopBtn.classList.remove("show");
+    }
+  });
+
+  goTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
+  });
+</script>
 
-    goTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
     });
-  </script>
+  });
+</script>
 
 
-
+<script>
+  fetch('../components/footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-footer').innerHTML = data;
+    });
+</script>
   <script>
-    fetch('../components/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('global-footer').innerHTML = data;
-      });
-  </script>
- <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -528,12 +486,13 @@ const navBar = document.getElementById('nav');
 
 
 
+    
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS -->
-  <script src="../assets/js/script.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

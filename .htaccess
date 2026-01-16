@@ -1,0 +1,152 @@
+# RewriteEngine On
+# Options -Indexes
+# DirectoryIndex disabled
+
+# # --------------------
+# # ROOT HANDLING
+# # --------------------
+# RewriteCond %{HTTP_COOKIE} theme=dark [NC]
+# RewriteRule ^$ /d1/index.php [L]
+
+# RewriteCond %{HTTP_COOKIE} theme=light [NC]
+# RewriteRule ^$ /v1/index.php [L]
+
+# # Default fallback
+# RewriteRule ^$ /v1/index.php [L]
+
+# # --------------------
+# # CLEAN SLUG HANDLING
+# # --------------------
+# RewriteCond %{HTTP_COOKIE} theme=dark [NC]
+# RewriteRule ^/?$ /d1/index.php [L]
+
+# RewriteCond %{HTTP_COOKIE} theme=light [NC]
+# RewriteRule ^-/?$ /v1/index.php [L]
+
+# # --------------------
+# # Other pages handling (e.g., About, Contact)
+# # --------------------
+# RewriteCond %{HTTP_COOKIE} theme=dark [NC]
+# RewriteRule ^audit/?$ /d1/audits.php [L]
+
+# RewriteCond %{HTTP_COOKIE} theme=light [NC]
+# RewriteRule ^audit/?$ /v1/audits.php [L]
+
+# # Add more page rules similarly
+# # --------------------
+
+# RewriteEngine On
+# Options -Indexes
+
+# # --------------------
+# # DARK MODE (public route "/-/")
+# # --------------------
+# RewriteRule ^-/?$ d1/index.php [L]
+
+# # --------------------
+# # LIGHT MODE (public route "/")
+# # --------------------
+# RewriteRule ^$ v1/index.php [L]
+
+RewriteEngine On
+Options -Indexes
+
+RewriteRule ^$ v1/index.php [L]
+RewriteRule ^-/?$ d1/index.php [L]
+
+RewriteRule ^agile-apps?$ v1/agileappsservice.php [L]
+RewriteRule ^agile-apps-/?$ d1/agileappsservice.php [L]
+
+RewriteRule ^announce?$ v1/announce.php [L]
+RewriteRule ^announce-/?$ d1/announce.php [L]
+
+RewriteRule ^appreciation?$ v1/appreciation.php [L]
+RewriteRule ^appreciation-/?$ d1/appreciation.php [L]
+
+RewriteRule ^app-sculpt?$ v1/appsculpt.php [L]
+RewriteRule ^app-sculpt-/?$ d1/appsculpt.php [L]
+
+RewriteRule ^audits?$ v1/audits.php [L]
+RewriteRule ^audits-/?$ d1/audits.php [L]
+
+RewriteRule ^blogs?$ v1/blogs.php [L]
+RewriteRule ^blogs-/?$ d1/blogs.php [L]
+
+RewriteRule ^board-of-directors?$ v1/board-of-directors.php [L]
+RewriteRule ^board-of-directors-/?$ d1/board-of-directors.php [L]
+
+RewriteRule ^career?$ v1/career.php [L]
+RewriteRule ^career-/?$ d1/career.php [L]
+
+RewriteRule ^case?$ v1/case.php [L]
+RewriteRule ^case-/?$ d1/case.php [L]
+
+RewriteRule ^certificate?$ v1/certificate.php [L]
+RewriteRule ^certificate-/?$ d1/certificate.php [L]
+
+RewriteRule ^contact?$ v1/contact.php [L]
+RewriteRule ^contact-/?$ d1/contact.php [L]
+
+RewriteRule ^data-engineering?$ v1/data-engineering.php [L]
+RewriteRule ^data-engineering-/?$ d1/data-engineering.php [L]
+
+RewriteRule ^digittrail?$ v1/digittrail.php [L]
+RewriteRule ^digittrail-/?$ d1/digittrail.php [L]
+
+RewriteRule ^ebook?$ v1/ebook.php [L]
+RewriteRule ^ebook-/?$ d1/ebook.php [L]
+
+RewriteRule ^episodes?$ v1/episodes.php [L]
+RewriteRule ^episodes-/?$ d1/episodes.php [L]
+
+RewriteRule ^event?$ v1/event.php [L]
+RewriteRule ^event-/?$ d1/event.php [L]
+
+RewriteRule ^faq-page?$ v1/faq-page.php [L]
+RewriteRule ^faq-page-/?$ d1/faq-page.php [L]
+
+RewriteRule ^flawless?$ v1/flawless.php [L]
+RewriteRule ^flawless-/?$ d1/flawless.php [L]
+
+RewriteRule ^gen-ai?$ v1/gen-ai.php [L]
+RewriteRule ^gen-ai-/?$ d1/gen-ai.php [L]
+
+RewriteRule ^merchanity?$ v1/merchanity.php [L]
+RewriteRule ^merchanity-/?$ d1/merchanity.php [L]
+
+RewriteRule ^insights?$ v1/insights.php [L]
+RewriteRule ^insights-/?$ d1/insights.php [L]
+
+RewriteRule ^digittrail?$ v1/digittrail.php [L]
+RewriteRule ^digittrail-/?$ d1/digittrail.php [L]
+
+RewriteRule ^news?$ v1/news.php [L]
+RewriteRule ^news-/?$ d1/news.php [L]
+
+RewriteRule ^new-year?$ v1/new-year.php [L]
+RewriteRule ^new-year-/?$ d1/new-year.php [L]
+
+RewriteRule ^policy?$ v1/policy.php [L]
+RewriteRule ^policy-/?$ d1/policy.php [L]
+
+RewriteRule ^services?$ v1/services.php [L]
+RewriteRule ^services-/?$ d1/services.php [L]
+
+RewriteRule ^site-map?$ v1/site-map.php [L]
+RewriteRule ^site-map-/?$ d1/site-map.php [L]
+
+RewriteRule ^support?$ v1/support.php [L]
+RewriteRule ^support.php-/?$ d1/support.php [L]
+
+RewriteRule ^venture?$ v1/venture.php [L]
+RewriteRule ^venture-/?$ d1/venture.php [L]
+
+RewriteRule ^WebSculpture?$ v1/WebSculpture.php [L]
+RewriteRule ^WebSculpture-/?$ d1/WebSculpture.php [L]
+
+RewriteRule ^why-kot?$ v1/why-kot.php [L]
+RewriteRule ^why-kot-/?$ d1/why-kot.php [L]
+
+
+
+

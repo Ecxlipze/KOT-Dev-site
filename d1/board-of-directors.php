@@ -586,6 +586,22 @@ const navBar = document.getElementById('nav');
             slider.scrollBy({ left: 300, behavior: 'smooth' });
         }
     </script>
+      <!--Toggle Button Script-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Dark page => ON by HTML (checked)
+
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+      // Dark -> Light
+      window.location.href = "/board-of-directors";
+    }
+  });
+});
+</script>
 </body>
 
 </html>
