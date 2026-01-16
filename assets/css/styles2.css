@@ -3215,10 +3215,15 @@ font-weight: 500;
 }
 
 .ns-resource-img{
-  background:#333;
+  /* background:#333; */
   border-radius:8px;
   height:180px;
+  
   margin-bottom:12px;
+  margin:  5% auto;
+}
+.ns-resource-img img {
+  padding: 10% auto;
 }
 
 .ns-resource-heading{

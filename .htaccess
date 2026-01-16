@@ -57,7 +57,7 @@ RewriteRule ^-/?$ d1/index.php [L]
 RewriteRule ^agile-apps/?$ v1/agileappsservice.php [L]
 RewriteRule ^agile-apps-/?$ d1/agileappsservice.php [L]
 
-RewriteRule ^announce?$ v1/announce.php [L]
+RewriteRule ^announce/?$ v1/announce.php [L]
 RewriteRule ^announce-/?$ d1/announce.php [L]
 
 RewriteRule ^appreciation/?$ v1/appreciation.php [L]
