@@ -1380,7 +1380,7 @@
 
 <!-- ================= MOBILE BOTTOM NAV ================= -->
 <div class="kot-header-mobile-bottom-nav fixed-bottom d-lg-none">
-   <a href="//"> <div class="kot-header-mobile-logo-strip">
+   <a href="/"> <div class="kot-header-mobile-logo-strip">
         <!-- Logo can be added here -->
         
     </div> </a>
@@ -1394,7 +1394,7 @@
             </div>
 
             <div class="col">
-                <a href="/index/" class="d-flex flex-column align-items-center">
+                <a href="/" class="d-flex flex-column align-items-center">
                     <i class="bi bi-house-fill"></i>
                 </a>
             </div>
