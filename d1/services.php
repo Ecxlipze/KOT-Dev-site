@@ -35,13 +35,13 @@
 
 <div class="kot-marquee-wrap">
   <div class="kot-marquee-track" id="kotMarqueeTrack">
-    <a href="agileappsservice.php"><img src="../assets/images/news/11.png"></a>
-    <a href="flawless.php"><img src="../assets/images/news/12.png"></a>
-    <a href="WebSculpture.php"><img src="../assets/images/news/13.png"></a>
-    <a href="digittrail.php"><img src="../assets/images/news/14.png"></a>
-    <a href="agileappsservice.php"><img src="../assets/images/news/15.png"></a>
-    <a href="merchanity.php"><img src="../assets/images/news/16.png"></a>
-    <a href="graphoria.php"><img src="../assets/images/news/17.png"></a>
+    <a href="/agile-apps/"><img src="../assets/images/news/11.png"></a>
+    <a href="/flawless/"><img src="../assets/images/news/12.png"></a>
+    <a href="/WebSculpture/"><img src="../assets/images/news/13.png"></a>
+    <a href="/digittrail/"><img src="../assets/images/news/14.png"></a>
+    <a href="/agile-apps/"><img src="../assets/images/news/15.png"></a>
+    <a href="/merchanity/"><img src="../assets/images/news/16.png"></a>
+    <a href="/graphoria/"><img src="../assets/images/news/17.png"></a>
   </div>
 </div>
 
@@ -52,37 +52,37 @@
     <div class="row g-4 justify-content-center">
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="agileappsservice.php" class="kot-service-card">
+        <a href="/agile-apps-" class="kot-service-card">
           <img src="../assets/images/news/1.png" alt="">
         </a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="digittrail.php" class="kot-service-card">
+        <a href="/digittrail-/" class="kot-service-card">
           <img src="../assets/images/news/2.png" alt="">
         </a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="appsculpt.php" class="kot-service-card">
+        <a href="/app-sculpt-/" class="kot-service-card">
           <img src="../assets/images/news/3.png" alt="">
         </a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="graphoria.php" class="kot-service-card">
+        <a href="/graphoria-/" class="kot-service-card">
           <img src="../assets/images/news/4.png" alt="">
         </a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="merchanity.php" class="kot-service-card">
+        <a href="/merchanity-/" class="kot-service-card">
           <img src="../assets/images/news/6.png" alt="">
         </a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-3">
-        <a href="WebSculpture.php" class="kot-service-card">
+        <a href="/WebSculpture-/" class="kot-service-card">
           <img src="../assets/images/news/5.png" alt="">
         </a>
       </div>

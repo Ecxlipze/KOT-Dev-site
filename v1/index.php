@@ -82,7 +82,7 @@
   </div>
     
   <div class="home-service-button">
-  <a href="#">
+  <a href="/services/">
     See All Services<i class="bi bi-arrow-right"></i>
   </a>
 </div>
@@ -91,7 +91,7 @@
   <!-- Row 1 : Left -->
   <div class="home-slider-row move-left mb-4">
     <div class="home-slider-heading">
-      <h2>What Our Client Say</h2>
+      <h2>What Our Clients Say</h2>
     </div>
     <div class="home-slider-track">
 
@@ -445,21 +445,25 @@
 
   </div>
 </div>
-
+<div class="new-addition-chatbot text-center ">
+  <h2 class="home-faq-title  mb-4">
+        Frequently asked questions
+      </h2>
+</div>
 <!-- faq-section-start -->
   <!-- faq-section-start -->
-<div class="container py-5 home-faq-wrapper overflow-hidden ">
+<!-- <div class="container py-5 home-faq-wrapper overflow-hidden ">
   <div class="row g-5 home-faq-row">
        <h2 class="home-faq-title home-faq-title-tablet mb-4">
         Frequently asked<br>questions
       </h2>
-    <!-- LEFT COLUMN -->
+    
     <div class="col-12 col-sm-12 col-md-8 col-lg-6 home-left-col">
       <h2 class="home-faq-title mb-4">
         Frequently asked<br>questions
       </h2>
-<div class="home-chat-card home-chat-card-mobile p-4">
-  <h4 class="fw-bold mb-3">
+     <div class="home-chat-card home-chat-card-mobile p-4">
+     <h4 class="fw-bold mb-3">
     Still have a questions?
     <small class="fw-normal">(Let's chat)</small>
   </h4>
@@ -475,16 +479,16 @@
     >
     <ul id="suggestions-list" class="suggestions-list"></ul>
     <button id="load-more-btn" class="load-more-btn" onclick="loadMoreQuestions()" style="display: none;">Load More</button>
-  </div>
+      </div>
 
   
-</div>
-
-
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="col-12 col-sm-12 col-md-4 col-lg-6 home-right-col">
+
+    </div> -->
+
+    
+    <!-- <div class="col-12 col-sm-12 col-md-4 col-lg-6 home-right-col">
       <div class="row g-2 home-faq-cards">
 
         <div class="col-4 col-sm-4 col-md-12 col-lg-12 home-faq-item">
@@ -524,9 +528,17 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
-  </div>
+  <!-- </div>
+</div> -->
+ <!-- FAQ SECTION -->
+  <div class="container">
+<section class="faq-main-section">
+    <div class="faq-container" id="bp-embedded-webchat">
+        
+    </div>
+</section>
 </div>
 </div>
 
@@ -534,8 +546,7 @@
             <button id="goTopBtn" title="Go to top">↑</button>
 
 
-    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script>
+   
        
     <script>
        
@@ -568,117 +579,25 @@
     });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script> -->
+ <!-- <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script> -->
+<!-- <script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script>
   <script>
-  const toggler = document.getElementById('navbarToggler');
-  const menu = document.getElementById('mainNavbar');
 
-  toggler.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
+</script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
 
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
 
-
-  // Define questions and answers
-const qaData = [
-  { question: "What is your name?", answer: "I am ChatBot, your virtual assistant." },
-  { question: "How are you?", answer: "I am doing great, thank you for asking!" },
-  { question: "What can you do?", answer: "I can help you with any questions or assist with tasks." },
-  { question: "What is the weather like?", answer: "I am not sure, but you can check a weather app!" },
-  { question: "Tell me a joke", answer: "Why don't skeletons fight each other? They don't have the guts!" },
-  { question: "What is your favorite color?", answer: "I like blue! It's calming and peaceful." },
-  { question: "Where do you live?", answer: "I live in the cloud, always ready to help!" },
-  { question: "What is your purpose?", answer: "My purpose is to assist and make life easier for you!" },
-  { question: "Can you help with math?", answer: "Sure! I can help solve math problems or explain concepts." },
-  { question: "How can I contact you?", answer: "You can contact me here anytime!" }
-  // Add more predefined Q&A as necessary
-];
-
-let currentQuestionsIndex = 0; // Keep track of which questions are displayed
-
-// Show suggestions based on input
-function showSuggestions() {
-  const input = document.getElementById('user-input').value;
-  const suggestionsList = document.getElementById('suggestions-list');
-  suggestionsList.innerHTML = ''; // Clear previous suggestions
-
-  if (input.length > 2) {
-    const filteredQuestions = qaData.filter(item =>
-      item.question.toLowerCase().includes(input.toLowerCase())
-    );
-
-    // Show only the first 5 questions
-    const displayedQuestions = filteredQuestions.slice(0, 5);
-
-    displayedQuestions.forEach(item => {
-      const suggestionItem = document.createElement('li');
-      suggestionItem.textContent = item.question;
-      suggestionItem.onclick = () => showAnswer(item.answer);
-      suggestionsList.appendChild(suggestionItem);
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
     });
-
-    // Show "Load More" if there are more than 5 suggestions
-    if (filteredQuestions.length > 5) {
-      document.getElementById('load-more-btn').style.display = 'block';
-    } else {
-      document.getElementById('load-more-btn').style.display = 'none';
-    }
-  }
-}
-
-// Show the chatbot's response
-function showAnswer(answer) {
-  const responseDiv = document.getElementById('chatbot-response');
-  responseDiv.classList.add('visible');
-  responseDiv.textContent = answer;
-  clearSuggestions();
-}
-
-// Clear suggestions when a question is clicked
-function clearSuggestions() {
-  const suggestionsList = document.getElementById('suggestions-list');
-  suggestionsList.innerHTML = '';
-}
-
-// Handle Enter key to show relevant questions
-function handleEnter(event) {
-  if (event.key === 'Enter') {
-    const input = document.getElementById('user-input').value.trim().toLowerCase();
-    const answerDiv = document.getElementById('chatbot-response');
-
-    // Check if the question is in the predefined list
-    const match = qaData.find(item => item.question.toLowerCase() === input);
-    if (match) {
-      answerDiv.textContent = match.answer;
-    } else {
-      answerDiv.textContent = "Sorry, I don't understand that. Can you ask something else?";
-    }
-
-    answerDiv.classList.add('visible');
-    showSuggestions(); // Reset to show suggestions again
-    document.getElementById('user-input').value = ''; // Clear input field
-  }
-}
-
-// Load more questions
-function loadMoreQuestions() {
-  const suggestionsList = document.getElementById('suggestions-list');
-  const displayedQuestions = qaData.slice(currentQuestionsIndex, currentQuestionsIndex + 5);
-  currentQuestionsIndex += 5;
-
-  displayedQuestions.forEach(item => {
-    const suggestionItem = document.createElement('li');
-    suggestionItem.textContent = item.question;
-    suggestionItem.onclick = () => showAnswer(item.answer);
-    suggestionsList.appendChild(suggestionItem);
   });
-
-  // Hide "Load More" if there are no more questions
-  if (currentQuestionsIndex >= qaData.length) {
-    document.getElementById('load-more-btn').style.display = 'none';
-  }
-}
-
 </script>
 <!--Toggle Button Script-->
 <script>

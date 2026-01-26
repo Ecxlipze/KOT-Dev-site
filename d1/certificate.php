@@ -1,3 +1,8 @@
+<?php
+include "../admin/db/db_connect.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,39 +49,45 @@
   </div>
 </section>
 <!-- Verification Card -->
+<!-- Verification Card -->
 <section class="kot-verify-section">
   <div class="container">
     <div class="kot-verify-card">
       <input
         type="text"
+        id="certificateId"
         class="kot-verify-input"
         placeholder="Enter Verification number"
       />
-      <button class="kot-verify-btn hero-btn">Verify Record</button>
+      <button id="verifyBtn" class="kot-verify-btn hero-btn">Verify Record</button>
+      <div id="liveMessage" style="margin-top:10px; color:red;"></div>
     </div>
   </div>
 </section>
-<!-- Certificate Details -->
+
 <section class="kot-certificate-section">
   <div class="container">
     <div class="kot-certificate-card">
-      <div class="kot-certificate-row">
-        <span>Type of Certificate:</span>
-        <span class="kot-line"></span>
-      </div>
+      <table class="kot-certificate-table">
+        <tr>
+          <td class="kot-label">Type of Certificate:</td>
+          <td class="kot-value kot-certificate-type"></td>
+        </tr>
 
-      <div class="kot-certificate-row">
-        <span>Presented to:</span>
-        <span class="kot-line"></span>
-      </div>
+        <tr>
+          <td class="kot-label">Presented to:</td>
+          <td class="kot-value kot-presented-to"></td>
+        </tr>
 
-      <div class="kot-certificate-row">
-        <span>Date of Achievement:</span>
-        <span class="kot-line"></span>
-      </div>
+        <tr>
+          <td class="kot-label">Date of Achievement:</td>
+          <td class="kot-value kot-date-achievement"></td>
+        </tr>
+      </table>
     </div>
   </div>
 </section>
+
 <!-- Verification Footer -->
        <section class="dt-visual-section">
   <picture class="dt-visual-wrapper" style="width: 90%; margin: auto; max-width: 1000px;">
@@ -144,6 +155,59 @@
     });
   </script>
 
+<script>
+const verifyBtn = document.getElementById("verifyBtn");
+const certificateIdInput = document.getElementById("certificateId");
+const liveMessage = document.getElementById("liveMessage");
+
+/* 🔹 LIVE INPUT VALIDATION (no special characters) */
+certificateIdInput.addEventListener("input", function () {
+    const cleanValue = this.value.replace(/[^a-zA-Z0-9-_]/g, "");
+
+    if (this.value !== cleanValue) {
+        liveMessage.innerText = "Special characters are not allowed!";
+    } else {
+        liveMessage.innerText = "";
+    }
+
+    this.value = cleanValue;
+});
+
+/* 🔹 VERIFY BUTTON CLICK */
+verifyBtn.addEventListener("click", function() {
+    const id = certificateIdInput.value.trim();
+
+    if (!id) {
+        liveMessage.innerText = "Please enter a certificate ID";
+        return;
+    }
+
+    fetch("/v1/subpages/ajax_fetch_certificate.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "id=" + encodeURIComponent(id)
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.error) {
+            liveMessage.innerText = data.error;
+            document.querySelector(".kot-certificate-type").innerText = "";
+            document.querySelector(".kot-presented-to").innerText = "";
+            document.querySelector(".kot-date-achievement").innerText = "";
+            return;
+        }
+
+        liveMessage.innerText = ""; // clear error
+        document.querySelector(".kot-certificate-type").innerText = data.certificate_type;
+        document.querySelector(".kot-presented-to").innerText = data.presented_to;
+        document.querySelector(".kot-date-achievement").innerText = data.achievement_date;
+    })
+    .catch(err => {
+        console.error(err);
+        liveMessage.innerText = "Server error. Try again later.";
+    });
+});
+</script>
 
 
   <script>

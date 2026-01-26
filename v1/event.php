@@ -1,3 +1,8 @@
+<?php
+include "../admin/db/db_connect.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,39 +47,53 @@
     </div>
   </section>
   <!-- Verification Card -->
-  <section class="kot-verify-section">
-    <div class="container">
-      <div class="kot-verify-card">
-        <input type="text" class="kot-verify-input" placeholder="Search Event" />
-        <button class="kot-verify-btn hero-btn">Event Record</button>
-      </div>
+  <!-- Verification Card -->
+ <section class="kot-verify-section">
+  <div class="container">
+    <div class="kot-verify-card">
+      <form id="eventForm" method="POST">
+        <input type="text" name="search" class="kot-verify-input" placeholder="Search Event" value="<?php echo isset($_POST['search']) ? htmlspecialchars($_POST['search']) : ''; ?>" />
+        <button type="submit" class="kot-verify-btn hero-btn">Event Record</button>
+      </form>
+        <div id="suggestions" class="list-group"></div>
+          <div id="liveMessage" style="margin-top:8px; color:red; font-size:14px;"></div>
+
     </div>
-  </section>
-  <!-- Certificate Details -->
+    
+  </div>
+</section>
+  
   <section class="kot-certificate-section">
-    <div class="container">
-      <div class="kot-certificate-card">
-        <div class="kot-certificate-row">
-          <span>Event Name:</span>
-          <span class="kot-line"></span>
-        </div>
+  <div class="container">
+    <div class="kot-certificate-card">
 
-        <div class="kot-certificate-row">
-          <span>Event Date:</span>
-          <span class="kot-line"></span>
-        </div>
+      <table class="kot-certificate-table">
+  <tr>
+    <td class="kot-label">Event Name:</td>
+    <td class="kot-value"></td>
+  </tr>
 
-        <div class="kot-certificate-row">
-          <span>Event Time:</span>
-          <span class="kot-line"></span>
-        </div>
-        <div class="kot-certificate-row">
-          <span>Event Venue:</span>
-          <span class="kot-line"></span>
-        </div>
-      </div>
+  <tr>
+    <td class="kot-label">Event Date:</td>
+    <td class="kot-value"></td>
+  </tr>
+
+  <tr>
+    <td class="kot-label">Event Time:</td>
+    <td class="kot-value"></td>
+  </tr>
+
+  <tr>
+    <td class="kot-label">Event Venue:</td>
+    <td class="kot-value"></td>
+  </tr>
+</table>
+
+
     </div>
-  </section>
+  </div>
+</section>
+
   <!-- Verification Footer -->
          <section class="dt-visual-section">
   <picture class="dt-visual-wrapper" style="width: 90%; margin: auto; max-width: 1000px;">
@@ -142,7 +161,98 @@
     });
   </script>
 
+<script>
+const form = document.getElementById("eventForm");
 
+form.addEventListener("submit", function (e) {
+    e.preventDefault(); // ⛔ page reload rok diya
+
+    const value = searchInput.value.trim();
+    if (value === "") {
+        alert("Please enter event name");
+        return;
+    }
+
+    fetchEvent(value); // AJAX call
+});
+</script>
+
+<script>
+const searchInput = document.querySelector('[name="search"]');
+const suggestionsBox = document.getElementById('suggestions');
+const liveMessage = document.getElementById("liveMessage");
+
+/* 🔹 BLOCK SPECIAL CHARACTERS */
+searchInput.addEventListener("input", function () {
+    const cleanValue = this.value.replace(/[^a-zA-Z0-9\s-]/g, "");
+
+    if (this.value !== cleanValue) {
+        liveMessage.innerText = "Special characters are not allowed!";
+    } else {
+        liveMessage.innerText = "";
+    }
+
+    this.value = cleanValue;
+});
+
+/* 🔹 SUGGESTIONS */
+searchInput.addEventListener('keyup', function () {
+    const value = this.value.trim();
+
+    if (value.length < 1) {
+        suggestionsBox.innerHTML = '';
+        return;
+    }
+
+    fetch("/v1/subpages/ajax_event_suggestions.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "query=" + encodeURIComponent(value)
+    })
+    .then(res => res.json())
+    .then(data => {
+        suggestionsBox.innerHTML = '';
+        data.forEach(item => {
+            const div = document.createElement("div");
+            div.classList.add("list-group-item", "list-group-item-action");
+            div.textContent = item;
+            div.onclick = () => {
+                searchInput.value = item;
+                suggestionsBox.innerHTML = '';
+                fetchEvent(item);
+            };
+            suggestionsBox.appendChild(div);
+        });
+    });
+});
+// Fetch event details
+function fetchEvent(value) {
+    fetch("/v1/subpages/ajax_search_event.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "search=" + encodeURIComponent(value)
+    })
+    .then(res => res.json())
+    .then(data => {
+        const msgBox = document.getElementById("liveMessage");
+
+        if (data.error) {
+            msgBox.innerText = "❌ No record found";
+            
+            // Clear table values
+            document.querySelectorAll(".kot-value").forEach(td => td.innerText = "");
+            return;
+        }
+
+        msgBox.innerText = ""; // clear error
+
+        document.querySelectorAll(".kot-value")[0].innerText = data.event_name;
+        document.querySelectorAll(".kot-value")[1].innerText = data.event_date;
+        document.querySelectorAll(".kot-value")[2].innerText = data.event_time;
+        document.querySelectorAll(".kot-value")[3].innerText = data.event_venue;
+    });
+}
+</script>
 
   <script>
     fetch('../components/footer.html')

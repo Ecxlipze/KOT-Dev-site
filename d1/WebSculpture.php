@@ -13,7 +13,7 @@
     <div class="row websculpture-hero-row align-items-center text-center">
       <div class="col-12 websculpture-hero-content" style="margin-top: 3%;" >
         <img
-          src="../assets/images/websculpture/WEBSCULPT-banaer-logo1.png"
+          src="../assets/images/websculpture/WEB-logo.svg"
           alt="Logo"
           class="websculpture-logo"
         />
@@ -26,9 +26,9 @@
           At KOT, we believe that website design is more than just lines of code; it’s about shaping ideas into digital experiences that inspire. Our clients come to us not with a checklist, but with a vision. They trust us to brin
         </p>
 
-        <a href="#" class="websculpture-btn">Get Started</a>
+        <a href="/contact-/" class="websculpture-btn">Contact Us</a>
        <div class="service-btn-add">
-        <a href="#" class="websculpture-btn-1">View All Services</a>
+        <a href="/services-/" class="websculpture-btn-1">View All Services</a>
        </div>
       </div>
        
@@ -154,6 +154,7 @@
             <div class="row justify-content-center ">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                     <div class="meet-our-first-developer">
+                      <img src="../assets/images/websculpture/rohan.jpeg" alt="" width="100%" height="592px" >
                    <div class="developer-overlay">
                         <a href="#" class="view-profile-link">View Profile</a>
                     </div>
@@ -162,6 +163,7 @@
                 <!-- 2nd-developer -->
                  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                     <div class="meet-our-second-developer">
+                             <img src="../assets/images/websculpture/Hira.jpeg" alt="" width="100%" height="592px" >
                         <div class="developer-overlay">
                         <a href="#" class="view-profile-link">View Profile</a>
                     </div>
@@ -170,6 +172,7 @@
                 <!-- 3rd developer -->
                  <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                     <div class="meet-our-third-developer">
+                       <img src="../assets/images/websculpture/malaika.png" alt="" width="100%" height="592px" >
                         <div class="developer-overlay">
                         <a href="#" class="view-profile-link">View Profile</a>
                     </div>
@@ -178,6 +181,7 @@
                 <!-- 4th-developer -->
                 <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                     <div class="meet-our-f-developer">
+                      <img src="../assets/images/websculpture/muqadas.jpeg" alt="" width="100%" height="592px" >
                         <div class="developer-overlay">
                         <a href="#" class="view-profile-link">View Profile</a>
                     </div>

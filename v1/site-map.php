@@ -41,37 +41,37 @@
         <ul class="sitemap-list">
 
           <li>
-            <a href="index.php">Home Page</a>
+            <a href="/">Home Page</a>
             <ul>
-              <li><a href="index.php">Overview</a></li>
-              <li><a href="index.php">What we Offer</a></li>
-              <li><a href="index.php">What Our Clients Say</a></li>
-              <li><a href="index.php">Stats</a></li>
-              <li><a href="blogs.php">Our Blogs</a></li>
-              <li><a href="faq-page.php">FAQ’s</a></li>
+              <li><a href="/">Overview</a></li>
+              <li><a href="/">What we Offer</a></li>
+              <li><a href="/">What Our Clients Say</a></li>
+              <li><a href="/">Stats</a></li>
+              <li><a href="/blogs/">Our Blogs</a></li>
+              <li><a href="/faq-page/">FAQ’s</a></li>
             </ul>
           </li>
 
           <li>
-            <a href="career.php">Career</a>
+            <a href="/career/">Career</a>
             <ul>
-              <li><a href="career.php">Internship</a></li>
-              <li><a href="career.php">Why Join KOT</a></li>
+              <li><a href="/career/">Internship</a></li>
+              <li><a href="/career/">Why Join KOT</a></li>
             </ul>
           </li>
 
           <li>
-            <a href="support.php">Support</a>
+            <a href="/support/">Support</a>
             <ul>
-              <li><a href="support.php">Need Help</a></li>
-              <li><a href="support.php">How we Help</a></li>
+              <li><a href="/support/">Need Help</a></li>
+              <li><a href="/support/">How we Help</a></li>
               <li>
-                <a href="support.php">Explore</a>
+                <a href="/support/">Explore</a>
                 <ul>
-                  <li><a href="support.php">Personal Support</a></li>
-                  <li><a href="support.php">Work Support</a></li>
-                  <li><a href="support.php">Education Support</a></li>
-                  <li><a href="support.php">Partner Support</a></li>
+                  <li><a href="/support/">Personal Support</a></li>
+                  <li><a href="/support/">Work Support</a></li>
+                  <li><a href="/support/">Education Support</a></li>
+                  <li><a href="/support/">Partner Support</a></li>
                 </ul>
               </li>
             </ul>

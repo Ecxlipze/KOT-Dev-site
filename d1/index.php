@@ -85,7 +85,7 @@
   </div>
     
   <div class="home-service-button">
-  <a href="#">
+  <a href="/services-/">
     See All Services<i class="bi bi-arrow-right"></i>
   </a>
 </div>
@@ -94,7 +94,7 @@
   <!-- Row 1 : Left -->
   <div class="home-slider-row move-left mb-4">
     <div class="home-slider-heading">
-      <h2>What Our Client Say</h2>
+      <h2>What Our Clients Say</h2>
     </div>
     <div class="home-slider-track">
 
@@ -330,7 +330,7 @@
     </div>
     
     <!-- Box 2 -->
-    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
+    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center border-addition ">
       <div class="result-box d-flex align-items-center">
         <img src="../assets/images/homepage/dashicons_awards-dm.png" alt="">
         <div class="result-text" style="margin-top: 10%;" >
@@ -451,12 +451,24 @@
 
 <!-- faq-section-start -->
   <!-- faq-section-start -->
-<div class="container py-5 home-faq-wrapper overflow-hidden ">
+   <div class="new-addition-chatbot text-center ">
+    <h2 class="home-faq-title  mb-4">
+        Frequently asked questions
+      </h2>
+   </div>
+    <div class="container">
+<section class="faq-main-section">
+    <div class="faq-container" id="bp-embedded-webchat">
+        
+    </div>
+</section>
+</div>
+<!-- <div class="container py-5 home-faq-wrapper overflow-hidden ">
   <div class="row g-5 home-faq-row">
        <h2 class="home-faq-title home-faq-title-tablet mb-4">
         Frequently asked<br>questions
       </h2>
-    <!-- LEFT COLUMN -->
+    
     <div class="col-12 col-sm-12 col-md-8 col-lg-6 home-left-col">
       <h2 class="home-faq-title mb-4">
         Frequently asked<br>questions
@@ -484,10 +496,10 @@
 </div>
 
 
-    </div>
+    </div> -->
 
     <!-- RIGHT COLUMN -->
-    <div class="col-12 col-sm-12 col-md-4 col-lg-6 home-right-col">
+    <!-- <div class="col-12 col-sm-12 col-md-4 col-lg-6 home-right-col">
       <div class="row g-2 home-faq-cards">
 
         <div class="col-4 col-sm-4 col-md-12 col-lg-12 home-faq-item">
@@ -530,7 +542,7 @@
     </div>
 
   </div>
-</div>
+</div> -->
 </div>
    <div id="global-footer"></div>
             <button id="goTopBtn" title="Go to top">↑</button>
@@ -563,17 +575,28 @@
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
+ <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script>
-  <script>
-  const toggler = document.getElementById('navbarToggler');
-const menu = document.getElementById('mainNavbar');
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
 
-toggler?.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
 
-// Define questions and answers
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-0rr+UB+GpY6R59+7ybpH1mh32E+mC6s7K20VHgFcyB8ooeeHhK9o3Z7cM7Xk3Eqn" crossorigin="anonymous"></script> -->
+ <!-- <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script> -->
+<!-- <script src="https://files.bpcontent.cloud/2026/01/13/07/20260113075304-XAN3NDV7.js" defer></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- <script>
+
 const qaData = [
   { question: "What is your name?", answer: "I am ChatBot, your virtual assistant." },
   { question: "How are you?", answer: "I am doing great, thank you for asking!" },
@@ -587,16 +610,16 @@ const qaData = [
   { question: "How can I contact you?", answer: "You can contact me here anytime!" }
 ];
 
-let currentQuestionsIndex = 0; // For Load More
+let currentQuestionsIndex = 0; 
 
-// Show suggestions
+
 function showSuggestions() {
   const input = document.getElementById('user-input').value.trim();
   const suggestionsList = document.getElementById('suggestions-list');
   const loadMoreBtn = document.getElementById('load-more-btn');
 
   suggestionsList.innerHTML = '';
-  currentQuestionsIndex = 0; // reset index on new input
+  currentQuestionsIndex = 0; 
 
   if (input.length > 2) {
     const filtered = qaData.filter(q => q.question.toLowerCase().includes(input.toLowerCase()));
@@ -608,7 +631,7 @@ function showSuggestions() {
       suggestionsList.appendChild(li);
     });
 
-    // Show load more button if filtered > 5
+    
     if (filtered.length > 5) {
       loadMoreBtn.style.display = 'block';
       currentQuestionsIndex = 5;
@@ -621,7 +644,7 @@ function showSuggestions() {
   }
 }
 
-// Show answer
+
 function showAnswer(answer) {
   const resp = document.getElementById('chatbot-response');
   resp.textContent = answer;
@@ -629,12 +652,12 @@ function showAnswer(answer) {
   clearSuggestions();
 }
 
-// Clear suggestions
+
 function clearSuggestions() {
   document.getElementById('suggestions-list').innerHTML = '';
 }
 
-// Handle Enter
+
 function handleEnter(event) {
   if (event.key === 'Enter') {
     const input = document.getElementById('user-input').value.trim().toLowerCase();
@@ -645,7 +668,7 @@ function handleEnter(event) {
   }
 }
 
-// Load more filtered questions
+
 function loadMoreQuestions() {
   const suggestionsList = document.getElementById('suggestions-list');
   const loadMoreBtn = document.getElementById('load-more-btn');
@@ -662,7 +685,7 @@ function loadMoreQuestions() {
   if (currentQuestionsIndex >= filtered.length) loadMoreBtn.style.display = 'none';
 }
 
-</script>
+</script> -->
 <!--Toggle Button Script-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {

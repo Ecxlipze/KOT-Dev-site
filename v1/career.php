@@ -45,9 +45,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -64,9 +64,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -83,9 +83,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -102,9 +102,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -122,9 +122,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -141,9 +141,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -161,9 +161,9 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -181,17 +181,17 @@
             <p>Send your Resume</p>
           </div>
           <div class="career-section-card-first-btn d-flex align-items-center ">
-            <a href="">Contact Us</a>
+            <a href="/contact/">Contact Us</a>
             <div class="contact-us-arrow">
-              <a href="">  <i class="bi bi-arrow-right"></i></a>
+              <a href="/contact/">  <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="career-section-btn-3  ">
+    <!-- <div class="career-section-btn-3  ">
             <a href="">Browse all Sectors</a>
-        </div>
+        </div> -->
   </div>
    <!-- section-3-end -->
   <!-- section-4-start -->

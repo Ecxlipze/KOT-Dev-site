@@ -147,7 +147,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@
                   <p>Billing Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@
                   <p>Community Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@
                   <p>Contact KOT Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -218,7 +218,7 @@
                   <p>Admin Self Help</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
                   <p>Support Plans</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -244,7 +244,7 @@
                   <p>Partner Network Search</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@
                   <p>Contact Sales</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@
                   <p>Community</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -289,7 +289,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -302,7 +302,7 @@
                   <p>Knowledge Center</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -315,7 +315,7 @@
                   <p>Start a Support Ticket</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -328,7 +328,7 @@
                   <p>Contact KOT Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@
                   <p>Community</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -360,7 +360,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>
@@ -373,7 +373,7 @@
                   <p>Billing Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact-/">Contact</a>
                 </div>
               </div>
             </div>

@@ -45,7 +45,7 @@
           </p>
 
        <div class="text-center mt-5">
-  <a href="contact.php" class="btn btn-primary hero-btn">
+  <a href="contact" class="btn btn-primary hero-btn">
     BOOK YOUR CONSULTATION
   </a>
 </div>
@@ -135,11 +135,11 @@
 
     </div>
 
-    <div class="mt-5 mb-2">
+    <!-- <div class="mt-5 mb-2">
       <a href="#" class="btn btn-primary hero-btn">
         LEARN MORE
       </a>
-    </div>
+    </div> -->
 
   </div>
 </section>
@@ -173,7 +173,7 @@
 
     </div>
 
-    <button class="btn btn-primary mt-5 mb-5 hero-btn">LEARN MORE</button>
+    <!-- <button class="btn btn-primary mt-5 mb-5 hero-btn">LEARN MORE</button> -->
   </div>
 </section>
 
@@ -258,7 +258,7 @@
 
 </div>
 
-    <button class="btn btn-primary mt-5 mb-3 hero-btn">LEARN MORE</button>
+    <!-- <button class="btn btn-primary mt-5 mb-3 hero-btn">LEARN MORE</button> -->
   </div>
 </section>
 
@@ -654,7 +654,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;

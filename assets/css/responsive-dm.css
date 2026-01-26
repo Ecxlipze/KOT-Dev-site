@@ -78,11 +78,14 @@ padding-top: 12% !important;
 }
 .empowering-btn-agile{
   margin-top: 0%;
+  border: none;
 }
 .result-text h3{
   font-size: 80px;
 }
-
+.adding-agile-logo-mobile img{
+  display: block;
+}
 .what-we-offer-card-title {
     font-family: 'Montserrat-Bold';
 font-size: 11px;
@@ -111,10 +114,63 @@ color: #FFFFFF;
   height: auto;
   padding-top: 5%;
 }
+    .graphoria-hero__content{
+      padding-left: 0%;
+        padding-bottom: clamp(0px, 0.022vw, 11px);
+    }
+.graphoria-hero__para p{
+  font-size: 6px !important;
+  width: 147px;
+  font-family: 'Montserrat-Regular' !important; 
+  line-height: 100%;
+  margin-bottom: 2px;
+}
+.graphoria-hero__content{
+  padding-left: 0%;
+}
+.graphoria-btn{
+      height: 16px;
+    padding: 5px 5px;
+    font-size: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.websculpture-btn-1{
+      
+    padding: 12px 32px;
+   
+   
+    color: #fff;
+    text-decoration: none;
+    
+    transition: 0.3s ease;
+    font-size: 11px;
+    font-family: 'Montserrat-Bold' !important;
+}
+.graphoria-our-small{
+  color: #FFFFFF;
+}
+ .graphoria-card{ width: 170px; border-radius: 14px; }
+  .graphoria-card__img{ height: auto; }
+  .graphoria-our-text-strip{
+    gap: 15px !important;
+  }
+  .graphoria-card__label{
+    font-size: 10px;
+    padding: 15px 12px 15px;
+  }
+.graphoria-hero__buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
 .websculpture-subtitle-2{
-    font-family: Montserrat !important; 
-font-weight: 700 !important;
-font-style: Bold !important;
+    font-family: 'Montserrat-Bold' !important; 
+
 font-size: 32px !important;
 leading-trim: NONE;
 line-height: 100%;
@@ -226,7 +282,7 @@ font-size: 16px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
-color: rgba(0, 0, 0, 1);
+color: rgba(255, 255, 255, 1);
 }
 .home-chat-card h4{
    font-family: 'Montserrat-Bold';
@@ -235,7 +291,7 @@ font-size: 16px;
 leading-trim: NONE;
 line-height: 112.00000000000001%;
 letter-spacing: 0%;
-color: rgba(0, 0, 0, 1);
+color: rgba(255, 255, 255, 1);
 }
     .home-card-heading{
       font-size: 9px !important;
@@ -342,6 +398,36 @@ color: #FFFFFF;
    }
    .how-we-help h2{
     font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Montserrat-Extra-Bold';
+font-weight: 900 !important;
+font-style: Black;
+font-size: 20px;
+
+letter-spacing: 0%;
+text-align: center;
+
+   }
+   .career-card{
+    padding-left: 0%;
+   }
+   .career-card h6{
+    font-family: 'Montserrat-Bold';
+
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(255, 255, 255, 1);
+   }
+   .career-card p{
+    font-family: 'Montserrat-Regular';
+
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
    }
     .new-globe-section-addtion{
            height: auto;
@@ -356,6 +442,11 @@ color: #FFFFFF;
     margin-left: 0% !important;
     margin-right: 0% !important;
    }
+   .career-card-image-mission{
+    padding-left: 5%;
+    padding-top: 20%;
+   }
+   
    .secton-3-intership-text{
     padding-top: 13%;
    }
@@ -482,6 +573,15 @@ text-align: center!important;
     }
 .explore-section {
   padding: 0px 0px;
+}
+.graphoria-heading-1{
+  margin-bottom: 0%;
+}
+.graphoria-heading-2{
+  margin-bottom: 0%;
+}
+.graphoria-heading-3{
+  margin-bottom: 0%;
 }
     .saas-left,
     .saas-right{
@@ -735,7 +835,7 @@ padding-left: 3%;
 padding-right: 3%;
 }
 .why-join-kot-text-heading h2{
-  font-family: 'Montserrat-Extra-BOLD';
+  font-family: 'Montserrat-Extra-Bold';
 font-weight: 900 !important;
 
 font-size: 40px;
@@ -743,7 +843,7 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-padding-top: 4%;
+padding-top: 16%;
 
 }
 .need-help-text-bg{
@@ -1136,7 +1236,7 @@ margin-top: 0%;
 }
   .graphoria-hero{
       margin-top: 0% !important;
-      background-size: inherit !important;
+      background-size: cover !important;
     }
 .app-sculpt-service-btn a{
   font-family: 'Montserrat-Bold';
@@ -1262,10 +1362,13 @@ font-size: clamp(22px, 1.8vw, 25px) !important;
 line-height: 100% !important;
 letter-spacing: 0% !important;
 text-align: center !important;
-color: rgba(0, 0, 0, 1) !important;
+color: rgba(255, 255, 255, 1) !important;
     padding: 8% 6% 4% !important;
   }
-
+.border-addition {
+  border-left:none !important;
+  border-right: none !important;
+}
   .engineering-the-future-paragraph p{
     font-family: 'Montserrat-Regular'!important;
 
@@ -1366,7 +1469,7 @@ margin-bottom: 0%;
     margin-top: -14%;
   }
   .dark-mode-changing-logo img{
-    width: 67px;
+    width: 30%;
   }
   .what-we-do-bg-img {
     height:90vh;
@@ -1406,7 +1509,12 @@ margin-bottom: 0%;
   gap: 15px;
 }
 }
-
+@media (max-width: 767px) and (orientation: landscape) {
+  .career-card-image-mission{
+    padding-left: 16%;
+    padding-top: 13%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .responsive-layout-cl{
   margin-top: -13% !important;
@@ -1565,7 +1673,9 @@ border-width: 1px !important;
 #global-footer{
   margin-top: 5% !important;
 }
-
+.adding-agile-logo-mobile img{
+  display: block;
+}
 .home-search-input{
           max-width: 374px !important;
         width: 100% !important;
@@ -1590,7 +1700,7 @@ color: #0A71B9 !important;
 
     }
    .home-faq-title{
-    display: none;
+    display: block;
    } 
    .kot-title{
    font-family: 'Montserrat-Extra-Bold';
@@ -1722,6 +1832,7 @@ height: 59px;
 
 border-radius: 15.73px;
 margin-top: 0%;
+
     }
     .empowering-btn-agile a{
       font-family: 'Montserrat-Bold';
@@ -1970,6 +2081,10 @@ padding-bottom: 3%;
 
   z-index: -1;
    }
+   .border-addition {
+  border-left:none !important;
+  border-right: none !important;
+}
 .mobile-tab-image{
 display: flex;
     justify-content: center;

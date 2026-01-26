@@ -124,11 +124,11 @@
 
         </div>
 
-        <div class="mt-5 mb-5">
+        <!-- <div class="mt-5 mb-5">
           <a href="#" class="btn btn-primary hero-btn">
             LEARN MORE
           </a>
-        </div>
+        </div> -->
 
       </div>
     </section>
@@ -161,12 +161,12 @@
 
         </div>
 
-        <button class="btn btn-primary mt-5 mb-5 hero-btn">LEARN MORE</button>
+        <!-- <button class="btn btn-primary mt-5 mb-5 hero-btn">LEARN MORE</button> -->
       </div>
     </section>
 
-    <section class="support-section text-center mt-5 mb-5 " style="background-color: rgba(0, 26, 45, 0.55);">
-      <h2 class="section-title mt-5 mb-5">Your Trusted Support Partner</h2>
+    <section class="support-section text-center mt-5" style="background-color: rgba(0, 26, 45, 0.55);">
+      <h2 class="section-title mt-5">Your Trusted Support Partner</h2>
 
       <div class="container">
         <div class="row justify-content-center g-2 mt-4 mb-5">
@@ -244,7 +244,7 @@
 
       </div>
 
-      <button class="btn btn-primary mt-5 mb-3 hero-btn">LEARN MORE</button>
+      <!-- <button class="btn btn-primary mt-5 mb-3 hero-btn">LEARN MORE</button> -->
       </div>
     </section>
 
@@ -286,8 +286,24 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
+    initHeader(); // run AFTER header is injected
+    });
+    function initHeader() {
 
-    // ================= MOBILE MENU FUNCTIONALITY =================
+    if (window.__headerInitialized) return;
+    window.__headerInitialized = true;
+
+     /* ================= THEME TOGGLE ================= */
+         const t = document.getElementById("theme-toggle");
+             if (t) {
+    t.addEventListener("change", () => {
+      if (!t.checked) {
+        window.location.href = "/gen-ai/";
+        } 
+        });
+        }
+
+     /* ================= MOBILE MENU ================= */
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -295,27 +311,29 @@
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-    function openMenu(){
-        menu.classList.add("kot-header-open");
-        overlay.classList.add("kot-header-show");
-        body.style.overflow = "hidden";
-        menu.setAttribute("aria-hidden", "false");
-    }
+   function openMenu() {
+    menu?.classList.add("kot-header-open");
+    overlay?.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu?.setAttribute("aria-hidden", "false");
+     }
 
-    function closeMenu(){
-        menu.classList.remove("kot-header-open");
-        overlay.classList.remove("kot-header-show");
-        body.style.overflow = "";
-        menu.setAttribute("aria-hidden", "true");
-    }
+         function closeMenu() {
+    menu?.classList.remove("kot-header-open");
+    overlay?.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu?.setAttribute("aria-hidden", "true");
+     }
 
-    openBtnTop?.addEventListener("click", openMenu);
+   openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
+      closeMenu();
+    }
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -340,11 +358,11 @@
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-const bufferZone = document.querySelector('.mega-menu-buffer');
-const navBar = document.getElementById('nav');
+        const bufferZone = document.querySelector('.mega-menu-buffer');
+        const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -618,7 +636,7 @@ const navBar = document.getElementById('nav');
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    });
+    };
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -674,12 +692,12 @@ const navBar = document.getElementById('nav');
 
                 lastScroll = currentScroll;
             });
+            
         }
     
     }
     
-  </script>
-
+</script>
 
   <script>
     const track = document.getElementById("marqueeTrack");
@@ -754,22 +772,7 @@ const navBar = document.getElementById('nav');
 
   </script>
 
-    <!--Toggle Button Script-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const t = document.getElementById("theme-toggle");
-  if (!t) return;
-
-  // Dark page => ON by HTML (checked)
-
-  t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/gen-ai";
-    }
-  });
-});
-</script>
+ 
 </body>
 
 </html>

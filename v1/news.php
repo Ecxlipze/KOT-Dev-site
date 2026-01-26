@@ -27,10 +27,9 @@
 
 <section class="news-hero">
   <div class="container text-center">
-    <h1 class="news-hero-title">Latest Updates From KOT Enterprises</h1>
-    <p class="news-hero-text">
-     Stay connected with the latest news, achievements, events, and innovation stories from KOT Enterprises. From new product releases to company milestones and industry insights, this is where our community stays updated.
-    </p>
+    <h1 class="news-hero-title">News</h1>
+    <!-- <p class="news-hero-text">
+    </p> -->
   </div>
 </section>
 
@@ -38,9 +37,10 @@
 <section class="latest-updates">
   <div class="container text-center">
 
-    <h2 class="sectionm-heading">Latest Updates</h2>
+    <h2 class="sectionm-heading">Latest Updates From KOT Enterprises</h2>
     <p class="sectionm-subtext">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+       Stay connected with the latest news, achievements, events, and innovation stories from KOT Enterprises. From new product releases to company milestones and industry insights, this is where our community stays updated.
+   
     </p>
 
     <div class="row g-4 mt-4">

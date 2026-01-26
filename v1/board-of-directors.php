@@ -32,7 +32,7 @@
         <p class="message-paragraph">
             At KOT Enterprises, we believe in building a technology driven future that is easily accessible globally. As your Board of Directors, we consider it both our main responsibility and a great privilege to guide this vision. Our commitment to our clients ensures that our mission, our company culture, and the services we offer continuously grow and adapt to meet the evolving needs of our customers and partners worldwide.
         </p>
-        <a href="appreciation.php" class="btn btn-primary hero-btn">
+        <a href="" class="btn btn-primary hero-btn">
           Meet the Team 
         </a>
     </div>
@@ -55,7 +55,7 @@
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/c1.png" 
+      src="../assets/images/board-of-director/c1.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -70,7 +70,7 @@
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/c2.png" 
+      src="../assets/images/board-of-director/c2.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -84,7 +84,7 @@
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/c3.png" 
+      src="../assets/images/board-of-director/c3.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -98,7 +98,7 @@
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/c4.png" 
+      src="../assets/images/board-of-director/c4.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >

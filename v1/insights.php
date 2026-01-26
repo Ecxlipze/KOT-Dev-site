@@ -52,7 +52,7 @@
           <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
           <h3 class="ns-resource-heading">Certificate Verification Center</h3>
           <p class="ns-resource-text">Where credentials become globally trusted.</p>
-          <a href="/certifcate/" class="ns-resource-link">Explore &rarr;</a>
+          <a href="/certificate/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
       <div class="col-lg-4">

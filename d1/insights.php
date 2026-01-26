@@ -48,100 +48,102 @@
       <!-- Example card -->
       <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
+          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
           <h3 class="ns-resource-heading">Certificate Verification Center</h3>
           <p class="ns-resource-text">Where credentials become globally trusted.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <a href="/certificate-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
-          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-          <p class="ns-resource-text">Where credentials become globally trusted.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""> </div>
+          <h3 class="ns-resource-heading">Appreciation Board</h3>
+          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
+          <a href="/appreciation-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
-          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-          <p class="ns-resource-text">Where credentials become globally trusted.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
+          <h3 class="ns-resource-heading">Event
+Management Center</h3>
+          <p class="ns-resource-text">Where ideas turn into experiences.</p>
+          <a href="/event-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
       
       <!-- Duplicate other cards similarly -->
       <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
-          <h3 class="ns-resource-heading">Appreciation Board</h3>
-          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""></div>
+          <h3 class="ns-resource-heading">News</h3>
+          <p class="ns-resource-text">Tracking the growth of a global digital enterprise.</p>
+          <a href="/news-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
            <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
+          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
           <h3 class="ns-resource-heading">Appreciation Board</h3>
           <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <a href="/appreciation-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
            <div class="col-lg-4">
         <div class="ns-resource-card">
-          <div class="ns-resource-img"></div>
-          <h3 class="ns-resource-heading">Appreciation Board</h3>
-          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
-          <a href="#" class="ns-resource-link">Explore &rarr;</a>
+          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
+          <h3 class="ns-resource-heading">Announcements</h3>
+          <p class="ns-resource-text">Official updates from inside the KOT ecosystem.</p>
+          <a href="/announce-/" class="ns-resource-link">Explore &rarr;</a>
         </div>
       </div>
      
       <!-- Add remaining cards (total 9) -->
     </div>
 
+
     <!-- Tablet/Mobile slider -->
     <div class="ns-resource-slider d-lg-none">
       <div class="ns-slider-track">
         <div class="ns-slider-item">
           <div class="ns-resource-card">
-            <div class="ns-resource-img"></div>
-            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-            <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
+            <h3 class="ns-resource-heading">News</h3>
+            <p class="ns-resource-text">Tracking the growth of a global digital enterprise.</p>
+            <a href="/news/" class="ns-resource-link">Explore &rarr;</a>
           </div>
         </div>
         <!-- duplicate for other cards -->
          <div class="ns-slider-item">
           <div class="ns-resource-card">
-            <div class="ns-resource-img"></div>
-            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-            <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
+            <h3 class="ns-resource-heading">Case Studies</h3>
+            <p class="ns-resource-text">Real problems. Real solutions. Real impact.</p>
+            <a href="/case/" class="ns-resource-link">Explore &rarr;</a>
           </div>
         </div>
         <div class="ns-slider-item">
           <div class="ns-resource-card">
-            <div class="ns-resource-img"></div>
-            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-            <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
+            <h3 class="ns-resource-heading">Ebook/ Whitepapers</h3>
+            <p class="ns-resource-text">Knowledge designed for builders of the future.</p>
+            <a href="/ebook/" class="ns-resource-link">Explore &rarr;</a>
           </div>
         </div>
         <div class="ns-slider-item">
           <div class="ns-resource-card">
-            <div class="ns-resource-img"></div>
-            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-            <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+            <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""></div>
+            <h3 class="ns-resource-heading">Blogsr</h3>
+            <p class="ns-resource-text">Ideas, insights, and innovation—straight from KOT.</p>
+            <a href="/blogs/" class="ns-resource-link">Explore &rarr;</a>
           </div>
         </div>
         <div class="ns-slider-item">
           <div class="ns-resource-card">
-            <div class="ns-resource-img"></div>
+            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
             <h3 class="ns-resource-heading">Certificate Verification Center</h3>
             <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="#" class="ns-resource-link">Explore &rarr;</a>
+            <a href="/certificate/" class="ns-resource-link">Explore &rarr;</a>
           </div>
         </div>
       </div>
@@ -150,62 +152,9 @@
     <!-- =====================
          Gallery
     ====================== -->
-    <div class="row mt-5">
-      <div class="col-12 d-flex justify-content-between align-items-center mb-3">
-        <h2 class="ns-gallery-title">Our Gallery</h2>
-        <a href="#" class="ns-gallery-link">See All</a>
-      </div>
-    </div>
-
-    <!-- Gallery slider (all screens) -->
-    <div class="ns-gallery-slider">
-      <div class="ns-slider-track">
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Our Events</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Office Environment</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Our Events</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Office Environment</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Our Events</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Office Environment</p>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-gallery-card">
-            <div class="ns-gallery-img"></div>
-            <p class="ns-gallery-caption">Activities</p>
-          </div>
-        </div>
-        <!-- Add more images as needed -->
-      </div>
-    </div>
-
+  
+  </div>
+</section>
   </div>
 </section>
 

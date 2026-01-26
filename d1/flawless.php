@@ -12,7 +12,7 @@
 
     <div class="container-fluid">
       <div class="bg-dark-logo d-flex justify-content-center "  >
-      <img src="../assets/images/Flawless/flawless.png" alt="">
+      <img src="../assets/images/Flawless/FlawlX-logo-dm.svg" alt="">
       </div>
         <div class="engineering-the-future-heading ">
             <h2>Ensure Excellence, Every Time</h2>
@@ -26,10 +26,10 @@
 
         <div class="new-btn-service-add d-flex justify-content-center ">
            <div class="engineering-the-future-btn">
-            <a href="">Contact Us</a>
+          <a href="/contact-/">Contact Us</a>
         </div>
          <div class="engineering-the-future-btn">
-            <a href="">View all Services</a>
+            <a href="/services-/">View all Services</a>
         </div>
          </div>
     </div>
@@ -75,7 +75,7 @@
 <!-- mobile-view-images -->
  <div class="container mt-5 ">
   <div class="mobile-view-flawlessx-bg">
-   <img src="../assets/images/Flawless/Stats.png" alt="">
+   <img src="../assets/images/Flawless/Stats.svg" alt="">
   </div>
  </div>
 <!-- WHAT WE OFFER -->
@@ -177,7 +177,7 @@
     <h2>CHALANGES WE SOLVE</h2>
   </div>
   <div class="chalanges-we-solve-image">
-    <img src="../assets/images/Flawless/image-glob-dm.png" alt="">
+    <img src="../assets/images/Flawless/image-globe-dm.svg" alt="">
   </div>
  </div>
  <!-- Quality-start -->

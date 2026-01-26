@@ -216,25 +216,25 @@ body {
     <div class="row">
         <!-- Card 1 -->
         <div class="col-12 col-md-6 col-lg-6 mb-1">
-            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc1.png');">
+            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc1.svg');">
             </div>
         </div>
 
         <!-- Card 2 -->
         <div class="col-12 col-md-6 col-lg-6 mb-1">
-            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc2.png');">
+            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc2.svg');">
             </div>
         </div>
 
         <!-- Card 3 -->
         <div class="col-12 col-md-6 col-lg-6 mb-1">
-            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc3.png');">
+            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc3.svg');">
             </div>
         </div>
 
         <!-- Card 4 -->
         <div class="col-12 col-md-6 col-lg-6 mb-1">
-            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc4.png');">
+            <div class="card card3" style="background-image: url('./../assets/images/vent-dark/venc4.svg');">
             </div>
         </div>
     </div>
@@ -254,7 +254,7 @@ body {
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
               <div class="card">
-                <img src="../assets/images/vent-dark/card1.png" class="card-img-top" alt="Founder-first">
+                <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Founder-first">
                 <div class="card-body">
                   <p class="card-text">Founder-first, personalized guidance</p>
                 </div>
@@ -268,7 +268,7 @@ body {
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
               <div class="card">
-                <img src="../assets/images/vent-dark/card2.png" class="card-img-top" alt="Strategy-led">
+                <img src="../assets/images/vent-dark/card2.svg" class="card-img-top" alt="Strategy-led">
                 <div class="card-body">
                   <p class="card-text">Strategy-led growth support</p>
                 </div>
@@ -282,7 +282,7 @@ body {
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
               <div class="card">
-                <img src="../assets/images/vent-dark/card3.png" class="card-img-top" alt="Access to networks">
+                <img src="../assets/images/vent-dark/card3.svg" class="card-img-top" alt="Access to networks">
                 <div class="card-body">
                   <p class="card-text">Access to trusted investor and partner networks</p>
                 </div>
@@ -296,7 +296,7 @@ body {
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
               <div class="card">
-                <img src="../assets/images/vent-dark/card1.png" class="card-img-top" alt="Powered by KOT">
+                <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Powered by KOT">
                 <div class="card-body">
                   <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p>
                 </div>
@@ -322,7 +322,7 @@ body {
     <div class="d-none d-md-flex justify-content-center flex-wrap gap-4">
       <div class="col-lg-3 col-md-5 card-slide">
         <div class="card card4">
-          <img src="../assets/images/vent-dark/card1.png" class="card-img-top" alt="Founder-first">
+          <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Founder-first">
           <!-- <div class="card-body">
             <p class="card-text">Founder-first, personalized guidance</p>
           </div> -->
@@ -330,7 +330,7 @@ body {
       </div>
       <div class="col-lg-3 col-md-5 card-slide">
         <div class="card card4">
-          <img src="../assets/images/vent-dark/card2.png" class="card-img-top" alt="Strategy-led">
+          <img src="../assets/images/vent-dark/card2.svg" class="card-img-top" alt="Strategy-led">
           <!-- <div class="card-body">
             <p class="card-text">Strategy-led growth support</p>
           </div> -->
@@ -338,7 +338,7 @@ body {
       </div>
       <div class="col-lg-3 col-md-5 card-slide">
         <div class="card card4">
-          <img src="../assets/images/vent-dark/card3.png" class="card-img-top" alt="Access to networks">
+          <img src="../assets/images/vent-dark/card3.svg" class="card-img-top" alt="Access to networks">
           <!-- <div class="card-body">
             <p class="card-text">Access to trusted investor and partner networks</p>
           </div> -->
@@ -346,7 +346,7 @@ body {
       </div>
       <div class="col-lg-3 col-md-5 card-slide">
         <div class="card card4">
-          <img src="../assets/images/vent-dark/card1.png" class="card-img-top" alt="Powered by KOT">
+          <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Powered by KOT">
           <!-- <div class="card-body">
             <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p>
           </div> -->
@@ -355,9 +355,9 @@ body {
     </div>
 
     <!-- Learn More Button -->
-    <div class="mt-4">
+    <!-- <div class="mt-4">
       <a href="#" class="btn btn-primary hero-btn" style="background-color:#009150 !important;">LEARN MORE</a>
-    </div>
+    </div> -->
 
   </div>
 </section>
@@ -371,37 +371,37 @@ body {
     <div class="row g-2 justify-content-center ">
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard1.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard1.svg');">
           <!-- <div class="isupport-text">Idea-stage innovators</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard2.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard2.svg');">
           <!-- <div class="support-text">Early-stage startups</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard3.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard3.svg');">
           <!-- <div class="support-text">Tech-driven MVPs</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard4.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard4.svg');">
           <!-- <div class="support-text">Social enterprises</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard5.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard5.svg');">
           <!-- <div class="support-text">First-time founders</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard6.png');">
+        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard6.svg');">
           <!-- <div class="support-text">Solo founders & growing teams</div> -->
         </div>
       </div>
@@ -419,7 +419,7 @@ body {
     <div class="row justify-content-center align-items-start g-4">
 
       <div class="col-lg-3 col-md-6 offset-lg-0">
-        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd1b.png');">
+        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd1b.svg');">
           <!-- <div class="approach-text">
             <h4>DISCOVER</h4>
             <p>We listen deeply to your story, vision, and challenges.</p>
@@ -428,7 +428,7 @@ body {
       </div>
 
       <div class="col-lg-3 col-md-6 offset-lg-0">
-        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd2b.png');">
+        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd2b.svg');">
           <!-- <div class="approach-text">
             <h4>DESIGN</h4>
             <p>We co-create strategy, systems, and momentum.</p>
@@ -437,7 +437,7 @@ body {
       </div>
 
       <div class="col-lg-3 col-md-6 offset-lg-0">
-        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd3b.png');">
+        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd3b.svg');">
           <!-- <div class="approach-text">
             <h4>ACCELERATE</h4>
             <p>We connect you to opportunities, capital, and networks.</p>
@@ -446,7 +446,7 @@ body {
       </div>
 
       <div class="col-lg-3 col-md-6 offset-lg-0">
-        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd4b.png');">
+        <div class="approach-card" style="background-image:url('../assets/images/vent-dark/acrd4b.svg');">
           <!-- <div class="approach-text">
             <h4>SUSTAIN</h4>
             <p>We help you grow with resilience, clarity, and purpose.</p>
@@ -465,13 +465,13 @@ body {
     <!-- Desktop -->
     <source
       media="(min-width: 1024px)"
-      srcset="../assets/images/vent-dark/bcard.png"
+      srcset="../assets/images/vent-dark/bcard.svg"
     />
 
     <!-- Tablet -->
     <source
       media="(min-width: 768px)"
-      srcset="../assets/images/vent-dark/bcard.png"
+      srcset="../assets/images/vent-dark/bcard.svg"
     />
 
     <!-- Mobile -->

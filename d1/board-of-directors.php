@@ -48,12 +48,12 @@
      <div class="col-lg-3 col-md-6 col-12 committed-card">
   <picture>
     <!-- Mobile image -->
-    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd1m.png">
+    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd1m.svg">
 
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/cd1.png" 
+      src="../assets/images/board-of-director/cd1.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -63,12 +63,12 @@
        <div class="col-lg-3 col-md-6 col-12 committed-card">
   <picture>
     <!-- Mobile image -->
-    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd2m.png">
+    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd2m.svg">
 
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/cd2.png" 
+      src="../assets/images/board-of-director/cd2.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -77,12 +77,12 @@
       <div class="col-lg-3 col-md-6 col-12 committed-card">
   <picture>
     <!-- Mobile image -->
-    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd3m.png">
+    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd3m.svg">
 
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/cd3.png" 
+      src="../assets/images/board-of-director/cd3.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >
@@ -91,12 +91,12 @@
       <div class="col-lg-3 col-md-6 col-12 committed-card">
   <picture>
     <!-- Mobile image -->
-    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd4m.png">
+    <source media="(max-width: 767px)" srcset="../assets/images/board-of-director/cd4m.svg">
 
   
     <!-- Desktop fallback -->
     <img 
-      src="../assets/images/board-of-director/cd4.png" 
+      src="../assets/images/board-of-director/cd4.svg" 
       alt="Commitment 1"
       class="img-fluid"
     >

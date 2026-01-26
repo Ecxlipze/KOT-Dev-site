@@ -26,7 +26,7 @@
      <div id="global-header"></div>
     <section class="solutions-wrapper" style="background: 
   linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url('../assets/images/auditslightmode/auditsbanner.jpg') center/cover no-repeat;
+  url('../assets/images/auditslightmode/auditsbanner.svg') center/cover no-repeat;
 
 ">
         <!-- HERO SECTION -->
@@ -35,25 +35,28 @@
                 <div class="row align-items-center">
 
                     <!-- Left Content -->
-                    <div class="col-lg-6 col-md-12">
+                    <div class="col-lg-12 col-md-12 text-center">
                         <h1 class="hero-title">
                             Let's Find Out What’s Holding You Back
                         </h1>
 
-                        <p class="hero-text" style="color: #ffffff; font-weight: 500; font-size: 22px;">
+                        <p class="hero-text" style="color: #ffffff; font-weight: 500; font-size: 26px;">
                             At KOT Enterprises, our audit services provide you with clarity. We assess your operations,
-                            marketing, sales, and tech to show what’s working and what’s not. <br><br> You’re investing in
+                            marketing, sales, and tech to show what’s working and what’s not. <br>
+                        </p>
+                        <p class="hero-text" style="color: #ffffff; font-weight: 500; font-size: 26px;">
+                             You’re investing in
                             people, tools, and strategies. You’re growing, adapting, and pushing forward. But how do you
                             know it’s all coming together?
                         </p>
 
-                        <a href="#" class="btn btn-primary hero-btn">
+                        <a href="contact-" class="btn btn-primary hero-btn">
                             BOOK YOUR CONSULTATION
                         </a>
                     </div>
 
                     <!-- Right Image -->
-                    <div class="col-lg-6 col-md-12 text-lg-end text-center mt-4 mt-lg-0">
+                    <!-- <div class="col-lg-6 col-md-12 text-lg-end text-center mt-4 mt-lg-0"> -->
                         <!-- <img
           src="../assets/images/generativeailight/generative-Ai-1.jpg"
           alt="AI Developer"

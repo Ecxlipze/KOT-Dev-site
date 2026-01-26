@@ -172,7 +172,7 @@ Here, your story matters. Your vision is heard. Your future is nurtured.
                             <a href="#" class="btn hero-btn btn-primary px-4" style="background-color: #ffffff !important; color: black;">
                                 DOWNLOAD CATLOGUE
                             </a>
-                            <a href="contact.php" class="btn hero-btn btn-primary px-3"  style="background-color: #0A71B9 !important; color: white;" >
+                            <a href="contact" class="btn hero-btn btn-primary px-3"  style="background-color: #0A71B9 !important; color: white;" >
                                 REQUEST CONSULTATION
                             </a>
                         </div>
@@ -192,7 +192,7 @@ Here, your story matters. Your vision is heard. Your future is nurtured.
 <section class="offer-section">
   <div class="container">
 
-    <h2 class="offer-heading text-center">WHAT WE OFFER</h2>
+    <h2 class="offer-heading text-left">WHAT WE OFFER</h2>
 
     <!-- ROW 1 : 3 cards -->
     <div class="row g-4 mb-4 justify-content-center">
@@ -293,7 +293,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
     <h2 class="purpose-title">OUR PURPOSE</h2>
     <p class="purpose-subtitle">CLARITY IN A WORLD FULL OF NOISE</p>
     <div class="purpose-image">
-      <img src="../assets/images/episodeslight/episodebanner.png" alt="Our Purpose Illustration">
+      <img src="../assets/images/episodeslight/episodebanner1.svg" alt="Our Purpose Illustration">
     </div>
   </div>
 </section>
@@ -348,35 +348,35 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
       <p class="mb-5 offer-heading" style="font-size: 22px; color: black; font-weight: 600;">Structured Support for Startups Ready to Rise</p>
       <div class="row g-4 mb-2 justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.png');">
+          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg');">
             <div class="card-body">
               <!-- <h5 class="card-title">Business model refinement</h5> -->
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc2.png');">
+          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc2.svg');">
             <div class="card-body">
               <!-- <h5 class="card-title">Mentorship & coaching</h5> -->
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc3.png');">
+          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc3.svg');">
             <div class="card-body">
               <!-- <h5 class="card-title">Market access</h5> -->
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc4.png');">
+          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc4.svg');">
             <div class="card-body">
               <!-- <h5 class="card-title">Pitch development</h5> -->
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.png');">
+          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg');">
             <div class="card-body">
               <!-- <h5 class="card-title">Business model refinement</h5> -->
             </div>
@@ -421,7 +421,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
       <!-- Phone -->
 <!-- Phone -->
 <div class="col-md-4 contact-item">
-  <img src="../assets/images/episodeslight/phone.png" alt="Phone" class="contact-icon" />
+  <img src="../assets/images/episodeslight/phone.svg" alt="Phone" class="contact-icon" />
   <h5>Phone Number</h5>
   <p>
     <a href="tel:+16317781880">+1 (631) 778-1880</a>
@@ -430,16 +430,16 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 
 <!-- Email -->
 <div class="col-md-4 contact-item">
-  <img src="../assets/images/episodeslight/email.png" alt="Email" class="contact-icon" />
+  <img src="../assets/images/episodeslight/email.svg" alt="Email" class="contact-icon" />
   <h5>Email Address</h5>
   <p>
-    <a href="mailto:hello@kotepisodes.com">hello@kotepisodes.com</a>
+    <a href="mailto:hello@kotepisodes.com">info@kotepisodes.com</a>
   </p>
 </div>
 
 <!-- Hours -->
 <div class="col-md-4 contact-item">
-  <img src="../assets/images/episodeslight/time.png" alt="Support Hours" class="contact-icon" />
+  <img src="../assets/images/episodeslight/time.svg" alt="Support Hours" class="contact-icon" />
   <h5>Support Hours</h5>
   <p>Monday–Friday<br />9:00 AM – 6:00 PM (PKT)</p>
 </div>

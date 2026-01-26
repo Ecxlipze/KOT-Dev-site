@@ -31,7 +31,7 @@
     <!-- Desktop -->
     <source
       media="(min-width: 1024px)"
-      srcset="../assets/images/digi-light/digi-desk2.png"
+      srcset="../assets/images/digi-light/digi-desk2.svg"
     />
 
     <!-- Tablet -->
@@ -42,7 +42,7 @@
 
     <!-- Mobile -->
     <img
-      src="../assets/images/digi-light/digi-mob2.png"
+      src="../assets/images/digi-light/digi-mob2.svg"
       alt="Strategic Visual Illustration"
       class="dt-visual-image"
     />
@@ -191,11 +191,11 @@
        <picture>
     <!-- Desktop -->
     <source media="(min-width: 768px)" 
-            srcset="../assets/images/digi-light/digi2dark.png">
+            srcset="../assets/images/digi-light/digi2dark.svg   ">
 
 
     <!-- Mobile -->
-    <img src="../assets/images/digi-light/digi2dark-mob.png"
+    <img src="../assets/images/digi-light/digi2dark-mob.svg"
          alt="DigitTrail graphic"
          class="img-fluid">
   </picture>

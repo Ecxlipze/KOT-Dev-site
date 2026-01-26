@@ -1,32 +1,35 @@
 
     <?php require '../public/header-new.php'; ?>
 <!-- EMPOWRING BUSINESS WITH SCALABLE SAAS SOLUTIONS -->
+  <div class="adding-agile-logo-mobile d-flex justify-content-center pt-2 ">
+        <img src="../assets/images/Agile/AGILEAPP-logo.svg" alt="" width="92px"  >
+    </div>
  <div class="container-fluid emporing-business " style="margin-top: 15%;" >
-    
+     
     <div class="mobile-heading-agile">
         
-        <h2>EMPOWRING BUSINESS WITH SCALABLE SAAS SOLUTIONS</h2>
+        <h2>EMPOWERING BUSINESS WITH SCALABLE SAAS SOLUTIONS</h2>
     </div>
 <div class="row justify-content-center ">
     <!-- ist-section-1 -->
      
     <div class=" col-6  col-sm-6 col-md-6 col-lg-6 ">
-        <div class="adding-agile-logo pt-2 ">
-        <img src="../assets/images/Agile/agile-logo.png" alt="">
+        <div class="adding-agile-logo py-2 ">
+        <img src="../assets/images/Agile/AGILEAPP-logo.svg" alt="">
     </div>
    <div class="empowering-agils-heading-btn">
     <div class="empowering-heading"> 
-        <h2>EMPOWRING BUSINESS WITH SCALABLE SAAS SOLUTIONS</h2>
+        <h2>EMPOWERING BUSINESS WITH SCALABLE SAAS SOLUTIONS</h2>
     </div>
     <div class="empowering-text-paragraph">
         <p>At KOT Enterprises, we envision a future where businesses are empowered through technology that adapts, scales, and evolves. AgileApps is more than just a software development division—it’s a catalyst for transformation. We deliver scalable SaaS solutions that align with your business goals, streamline operations, and enable long-term growth.</p>
     </div>
      <div class="new-btn-add d-flex  ">
          <div class="empowering-btn-agile">
-        <a href="">Contact Us</a>
+        <a href="/contact/">Contact Us</a>
     </div>
     <div class="empowering-btn-agile">
-        <a href="">View all Services</a>
+        <a href="/services/">View all Services</a>
     </div>
       </div>
 
@@ -64,7 +67,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>Custom SaaS Product Development</h5>
+                    <h5>End-to-end SaaS development</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
@@ -74,7 +77,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>Cloud-Based Web & Mobile Apps</h5>
+                    <h5>Cloud-native applications</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
@@ -84,7 +87,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>Agile Project Management & Iterative Releases</h5>
+                    <h5>Scalable architecture for high-growth companies</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
@@ -99,7 +102,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>Scalable Architecture & Microservices</h5>
+                    <h5>Low-maintenance, high-performance solutions</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
@@ -109,7 +112,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>User-Centric UI/UX Design (Figma, Flutter, Kotlin)</h5>
+                    <h5>Continuous updates and support</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
@@ -119,7 +122,7 @@
         <div class="col-12 col-md-12 col-lg-4 d-flex justify-content-center">
             <div class="agile-apps-offer-card">
                 <div>
-                    <h5>Customer Behavior Analytics & Insights</h5>
+                    <h5>User-friendly UI/UX engineered for efficiency</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
                 <a href="#" class="agile-apps-offer-read-more">READ MORE</a>

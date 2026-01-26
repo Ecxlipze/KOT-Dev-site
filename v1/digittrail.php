@@ -32,13 +32,13 @@
     <picture class="dt-visual-wrapper">
 
       <!-- Desktop -->
-      <source media="(min-width: 1024px)" srcset="../assets/images/digi-light/digi-desk.png" />
+      <source media="(min-width: 1024px)" srcset="../assets/images/digi-light/digi-desk.svg" />
 
       <!-- Tablet -->
-      <source media="(min-width: 768px)" srcset="../assets/images/digi-light/digi-tab.png" />
+      <source media="(min-width: 768px)" srcset="../assets/images/digi-light/digi-desk.svg" />
 
       <!-- Mobile -->
-      <img src="../assets/images/digi-light/digi-mob.png" alt="Strategic Visual Illustration" class="dt-visual-image" />
+      <img src="../assets/images/digi-light/digi-mob.svg" alt="Strategic Visual Illustration" class="dt-visual-image" />
 
     </picture>
   </section>
@@ -181,11 +181,11 @@
       <div class="digi-visual">
         <picture>
           <!-- Desktop -->
-          <source media="(min-width: 768px)" srcset="../assets/images/digi-light/digi2.png">
+          <source media="(min-width: 768px)" srcset="../assets/images/digi-light/digi2.svg">
 
 
           <!-- Mobile -->
-          <img src="../assets/images/digi-light/digi2-mob.png" alt="DigitTrail graphic" class="img-fluid">
+          <img src="../assets/images/digi-light/digi2-mob.svg" alt="DigitTrail graphic" class="img-fluid">
         </picture>
 
       </div>

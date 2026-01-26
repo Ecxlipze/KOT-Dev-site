@@ -1,7 +1,7 @@
 
     <?php require '../public/header-new.php'; ?>
  <!-- graphoria-section-start -->
-<div class="graphoria-hero">
+<div class="graphoria-hero" >
   <div class="container-fluid">
     
 
@@ -21,8 +21,8 @@
           </div>
 
           <div class="graphoria-hero__buttons">
-            <a class="graphoria-btn graphoria-btn--primary" href="">EXPLORE OUR WORK</a>
-            <a class="graphoria-btn graphoria-btn--secondary" href="">REQUEST CONSULTATION</a>
+            <a class="graphoria-btn graphoria-btn--primary" href="/contact/">Contact Us</a>
+            <a class="graphoria-btn graphoria-btn--secondary" href="/services/">View all Services</a>
           </div>
         
       </div>
@@ -187,7 +187,7 @@
 <div class="container-fluid p-0 responsive-layout-cl " style="margin-top: -6%;" >
   <div class="background-image">
 
-   <img src="../assets/images/Graphoria/grafo-text-image.jpg" alt="" width="100%" height="auto" >
+   <img src="../assets/images/Graphoria/gro-last-img.png" alt="" width="100%" height="auto" >
 
   </div>
 </div>

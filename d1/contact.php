@@ -90,19 +90,23 @@
 
             <form method="POST" action="successfully.php" id="contactForm">
   <div class="mb-4">
-    <label>Name</label>
-    <input type="text" name="name" class="form-control" placeholder="Enter your full name" style="border: 1px solid #ffffff; margin-top: 3px; color: white;">
-  </div>
+  <label>Name</label>
+  <input type="text" name="name" class="form-control" placeholder="Enter your full name" style="border: 1px solid #ffffff; margin-top: 3px; color: white;">
+  <small id="nameError" style="color:red; display:none; font-size:12px;">Only letters and spaces allowed</small>
+</div>
 
-  <div class="mb-4">
-    <label>Email Address</label>
-    <input type="email" name="email" class="form-control" placeholder="Enter your email address" style="border: 1px solid #ffffff; margin-top: 3px;">
-  </div>
+<div class="mb-4">
+  <label>Email Address</label>
+  <input type="email" name="email" class="form-control" placeholder="Enter your email address" style="border: 1px solid #ffffff; margin-top: 3px;">
+  <small id="emailError" style="color:red; display:none; font-size:12px;">Enter a valid email</small>
+</div>
 
-  <div class="mb-4">
-    <label>Subject</label>
-    <input type="text" name="subject" class="form-control" placeholder="Subject of your message" style="border: 1px solid #ffffff; margin-top: 3px;">
-  </div>
+<div class="mb-4">
+  <label>Subject</label>
+  <input type="text" name="subject" class="form-control" placeholder="Subject of your message" style="border: 1px solid #ffffff; margin-top: 3px;">
+  <small id="subjectError" style="color:red; display:none; font-size:12px;">Only letters and spaces allowed (max 50)</small>
+</div>
+
 
   <div class="mb-4">
     <label>Details</label>
@@ -135,7 +139,7 @@
   <img src="../assets/images/contact-dark/contact-2.png" class="icon-img" alt="Email">
   <h6>Email Address</h6>
   <p>
-    <a href="mailto:hello@kotenterprises-e.com">hello@kotenterprises-e.com</a>
+    <a href="mailto:hello@kotenterprises-e.com">info@kotenterprises-e.com</a>
   </p>
 </div>
 
@@ -159,10 +163,7 @@
 
           <!-- Map -->
           <div class="map-box">
-            <iframe 
-              src="https://www.google.com/maps?q=lahore&output=embed"
-              loading="lazy">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d867.8183492072155!2d74.35431769379382!3d31.511140042024724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190453adedfb17%3A0x57e0852bc0b25e7c!2sKickstart%20%7C%20Gulberg%2C%2058-A2!5e0!3m2!1sen!2s!4v1769067376199!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -173,9 +174,9 @@
 
 <section class="contact-cta text-center">
   <div class="container">
-    <h2 style="font-weight:700;">Contact Us That Tell’s Your Persona</h2>
+    <h2 style="font-weight:700;">Get Yourself published</h2>
     <a href="#" class="btn hero-btn mt-3" style="color: white;">
-      Get Started →
+      Subscribe to our newsletter →
     </a>
   </div>
 </section>
@@ -616,112 +617,136 @@ const navBar = document.getElementById('nav');
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="../assets/js/script.js"></script>
+  <!-- <script src="../assets/js/script.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
-// Select form and inputs
 const contactForm = document.getElementById('contactForm');
 const nameInput = contactForm.name;
 const emailInput = contactForm.email;
 const subjectInput = contactForm.subject;
 const messageInput = contactForm.message;
+
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const subjectError = document.getElementById('subjectError');
 const messageCount = document.getElementById('messageCount');
 
-// Regex patterns
-const namePattern = /^[A-Za-z\s]+$/;
-const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+// ===== Patterns =====
+const namePattern = /^[A-Za-z\s]*$/;                   // Only letters and spaces
+const subjectPattern = /^[A-Za-z\s]{0,50}$/;           // Only letters and spaces, max 50
+const messagePattern = /^[A-Za-z0-9\s]*$/;             // Letters, numbers, spaces, max 500
+const emailPattern = /^[a-zA-Z0-9._%+-]{1,60}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email max 60
 
-// Limit message to 500 characters
-messageInput.setAttribute("maxlength", "500");
-
-// Prevent invalid characters in name field (numbers/special chars)
-nameInput.addEventListener('input', function() {
-    this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+// ===== Live validation =====
+nameInput.addEventListener('input', () => {
+    if (!namePattern.test(nameInput.value)) {
+        nameError.style.display = "block";
+        nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
+    } else {
+        nameError.style.display = "none";
+    }
 });
 
-// Live character count for message
-messageInput.addEventListener('input', function() {
-    const len = this.value.length;
-    messageCount.textContent = `${len}/500`;
+emailInput.addEventListener('input', () => {
+    // Limit to 60 characters
+    if (emailInput.value.length > 60) {
+        emailInput.value = emailInput.value.substring(0, 60);
+    }
+
+    if (!emailPattern.test(emailInput.value) && emailInput.value.length > 0) {
+        emailError.style.display = "block";
+    } else {
+        emailError.style.display = "none";
+    }
 });
 
-// Form submission
+subjectInput.addEventListener('input', () => {
+    if (!subjectPattern.test(subjectInput.value)) {
+        subjectError.style.display = "block";
+        subjectInput.value = subjectInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
+    } else {
+        subjectError.style.display = "none";
+    }
+
+    // Limit subject to 50 characters
+    if (subjectInput.value.length > 50) {
+        subjectInput.value = subjectInput.value.substring(0, 50);
+    }
+});
+
+messageInput.addEventListener('input', () => {
+    // Remove any invalid characters immediately
+    messageInput.value = messageInput.value.replace(/[^A-Za-z0-9\s]/g,'');
+
+    // Limit to 500 characters
+    if (messageInput.value.length > 500) {
+        messageInput.value = messageInput.value.substring(0, 500);
+    }
+
+    messageCount.textContent = `${messageInput.value.length}/500`;
+});
+
+// ===== Form submission =====
 contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
 
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const subject = subjectInput.value.trim();
-    const message = messageInput.value.trim();
+    if (
+        nameInput.value.trim() === "" ||
+        emailInput.value.trim() === "" ||
+        subjectInput.value.trim() === "" ||
+        messageInput.value.trim() === ""
+    ) {
+        showToast("Please fill all fields correctly!", "error");
+        return;
+    }
 
-    // Name validation
-    if (!name) return showToast("Please enter your name!", "error");
+    if (!emailPattern.test(emailInput.value.trim())) {
+        showToast("Enter a valid email!", "error");
+        return;
+    }
 
-    // Email validation
-    if (!email) return showToast("Please enter your email!", "error");
-    if (!email.match(emailPattern)) return showToast("Please enter a valid email!", "error");
+    const formData = new FormData(contactForm);
 
-    // Subject validation
-    if (!subject) return showToast("Please enter a subject!", "error");
-
-    // Message validation
-    if (!message) return showToast("Please enter your message!", "error");
-
-    // Disable submit button while sending
-    const submitButton = this.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.innerText = "Sending...";
-
-    // AJAX form submission
-    const formData = new FormData(this);
-
-    fetch(this.action, {
+    fetch('/d1/successfully.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
-        showToast(data || "Message sent successfully!", "success");
-        this.reset();
-        messageCount.textContent = "0/500"; // reset counter
-        submitButton.disabled = false;
-        submitButton.innerText = "Submit";
+        showToast(data, "success");
+        contactForm.reset();
+        messageCount.textContent = "0/500";
     })
     .catch(error => {
-        showToast("Failed to send message!", "error");
+        showToast("Error sending form!", "error");
         console.error(error);
-        submitButton.disabled = false;
-        submitButton.innerText = "Submit";
     });
 });
 
-// Attractive toast function
-function showToast(message, type = "success") {
-    const bgColor = type === "success" 
-        ? "linear-gradient(to right, #00b09b, #96c93d)" 
+// ===== Toast function without X button =====
+function showToast(message, type="success") {
+    const bgColor = type === "success"
+        ? "linear-gradient(to right, #00b09b, #96c93d)"
         : "linear-gradient(to right, #ff6b6b, #ff4757)";
     const icon = type === "success" ? "✔️ " : "❌ ";
 
     Toastify({
         text: icon + message,
-        duration: 4000,
+        duration: 3000,        // visible time
         gravity: "top",
         position: "right",
-        stopOnFocus: true,
-        close: true,
+        close: false,          // ❌ no X button
         style: {
             background: bgColor,
             color: "#fff",
             fontWeight: "600",
             borderRadius: "8px",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
-            padding: "15px 25px",
-            fontSize: "14px",
-            letterSpacing: "0.5px"
+            padding: "10px 20px"
         }
     }).showToast();
 }
 </script>
+
 
   <!--Toggle Button Script-->
 <script>

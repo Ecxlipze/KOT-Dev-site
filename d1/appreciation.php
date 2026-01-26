@@ -1,3 +1,6 @@
+<?php
+include "../admin/db/db_connect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,8 +57,8 @@
     </div>
 
     <!-- Desktop / Large screens GRID -->
-    <div class="row g-4 d-none d-lg-flex">
-      <!-- Card -->
+    <!-- <div class="row g-4 d-none d-lg-flex">
+      
       <div class="col-lg-3">
         <div class="ns-hero-card">
           <div class="ns-hero-img"></div>
@@ -63,7 +66,7 @@
         </div>
       </div>
 
-      <!-- duplicate as needed -->
+      
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
@@ -72,25 +75,65 @@
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
       <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-    </div>
+    </div> -->
 
-    <!-- Mobile / Tablet SLIDER -->
-    <div class="ns-heroes-slider d-lg-none">
-      <div class="ns-slider-track">
-        <!-- slide -->
-        <div class="ns-slider-item">
-          <div class="ns-hero-card">
-            <div class="ns-hero-img"></div>
-            <div class="ns-hero-info"></div>
-          </div>
+          <div class="row g-4 d-none d-lg-flex">
+<?php
+$sql = "SELECT title, image 
+        FROM appreciation_board 
+        WHERE status = 1 
+        ORDER BY created_at ASC"; // ✅ ASC = pehle save hui image pehle aaye
+
+$result = mysqli_query($con, $sql);
+
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $title = htmlspecialchars($row['title']);
+        $imagePath = '../admin/uploads/' . htmlspecialchars($row['image']);
+
+        echo '
+        <div class="col-lg-3">
+            <div class="ns-hero-card">
+                <img src="'.$imagePath.'" class="ns-card-img"/>
+                <div class="ns-hero-info  "  >
+                    <h5 style="color:#000000" >'.$title.'</h5>
+                </div>
+            </div>
         </div>
+        ';
+    }
+} else {
+    echo "<p>No heroes found.</p>";
+}
+?>
+</div>
+    <!-- Mobile / Tablet SLIDER -->
+   <div class="ns-heroes-slider d-lg-none">
+  <div class="ns-slider-track">
+<?php
+$sql = "SELECT title, image FROM appreciation_board WHERE status = 1 ORDER BY created_at ASC"; // oldest first
+$result = mysqli_query($con, $sql);
 
-        <!-- duplicate slides -->
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-        <div class="ns-slider-item"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      </div>
-    </div>
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $title = htmlspecialchars($row['title']);
+        $imagePath = '../admin/uploads/' . htmlspecialchars($row['image']); // relative path like desktop
+
+        echo '
+        <div class="ns-slider-item">
+            <div class="ns-hero-card">
+                <img src="'.$imagePath.'" class="ns-card-img"/>
+                <div class="ns-hero-info">
+                    <h5 style="color:#000000" >'.$title.'</h5>
+                </div>
+            </div>
+        </div>
+        ';
+    }
+}
+?>
+  </div>
+</div>
 
   </div>
 </section>

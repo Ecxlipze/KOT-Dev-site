@@ -22,22 +22,23 @@
     <div class="support-slider-track">
 
       <!-- Images (repeat once for smooth loop) -->
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
-    
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/AGILEAPPS.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/flawless-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/DIGITTRAIL-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/APP-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANI-slider.svg" alt=""></div>
+    <div class="support-slider-item"><img src="../assets/images/SupportLightMode/GRAPHIORA-svg.svg" alt=""></div>
 
       <!-- Duplicate for seamless marquee -->
       <!-- Images (repeat once for smooth loop) -->
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode//GRAPHIORA BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANITY BLUE COLOR 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB SCULPTURES BLUE 1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-1.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-2.png" alt=""></div>
-      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/support-3.png" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/AGILEAPPS.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/flawless-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/WEB-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/DIGITTRAIL-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/APP-slider.svg" alt=""></div>
+      <div class="support-slider-item"><img src="../assets/images/SupportLightMode/MERCHANI-slider.svg" alt=""></div>
+    <div class="support-slider-item"><img src="../assets/images/SupportLightMode/GRAPHIORA-svg.svg" alt=""></div>
 
     </div>
   </div>
@@ -145,7 +146,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -158,7 +159,7 @@
                   <p>Billing Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+                  <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -171,7 +172,7 @@
                   <p>Community Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -184,7 +185,7 @@
                   <p>Contact KOT Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -203,7 +204,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -216,7 +217,7 @@
                   <p>Admin Self Help</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -229,7 +230,7 @@
                   <p>Support Plans</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -242,7 +243,7 @@
                   <p>Partner Network Search</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -255,7 +256,7 @@
                   <p>Contact Sales</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -268,7 +269,7 @@
                   <p>Community</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -287,7 +288,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -300,7 +301,7 @@
                   <p>Knowledge Center</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -313,7 +314,7 @@
                   <p>Start a Support Ticket</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -326,7 +327,7 @@
                   <p>Contact KOT Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -339,7 +340,7 @@
                   <p>Community</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -358,7 +359,7 @@
                   <p>Self Help Resources</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>
@@ -371,7 +372,7 @@
                   <p>Billing Support</p>
                 </div>
                 <div class="explore-card-btn">
-                  <a class="btn explore-btn" href="#">Contact</a>
+               <a class="btn explore-btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </div>

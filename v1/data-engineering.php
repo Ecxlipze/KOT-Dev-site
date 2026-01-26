@@ -28,7 +28,7 @@
 
    <section class="solutions-wrapper" style="background: 
   linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-  url('../assets/images/dataenglight/data-banner.jpg') center/cover no-repeat;
+  url('../assets/images/dataenglight/data-banner.svg') center/cover no-repeat;
 
 ">
     <!-- HERO SECTION -->
@@ -135,11 +135,11 @@
 
                 </div>
 
-                <div class="mt-5">
+                <!-- <div class="mt-5">
                     <a href="services.php" class="btn btn-primary hero-btn">
                         LEARN MORE
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </section>
@@ -202,7 +202,7 @@
                     </div>
 
                 </div>
-                 <button class="btn btn-primary mt-3 mb-5 hero-btn">LEARN MORE</button>
+                 <!-- <button class="btn btn-primary mt-3 mb-5 hero-btn">LEARN MORE</button> -->
             </div>
         </section>
         <section class="achieve-section text-center mt-5 mb-5">
@@ -227,8 +227,7 @@
         <section class="work-section text-center mt-5">
             <h2 class="section-title">We’re With You Every Step Of The Way</h2>
             <p class="section-title"
-                style="font-size: 20px; color: black; font-weight: 400; text-align: center; padding: 2%;">Low-quality
-                data slows
+                style="font-size: 20px; color: black; font-weight: 400; text-align: center; padding: 2%;">  
                 At KOT Enterprises, we don’t just move data, we build the systems that make it <br> work for you. Here’s what
                 sets our Data Engineering services apart:</p>
 
@@ -257,7 +256,7 @@
 
                 </div>
 
-                <button class="btn btn-primary mt-5 hero-btn">LEARN MORE</button>
+                <!-- <button class="btn btn-primary mt-5 hero-btn">LEARN MORE</button> -->
             </div>
         </section>
 
@@ -651,7 +650,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;

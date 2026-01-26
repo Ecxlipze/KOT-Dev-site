@@ -5,14 +5,12 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    // Secure input
     $name    = trim($_POST['name'] ?? '');
     $email   = trim($_POST['email'] ?? '');
     $subject = trim($_POST['subject'] ?? 'New Contact Message');
     $message = trim($_POST['message'] ?? '');
 
-    if (empty($name) || empty($email) || empty($message)) {
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         echo "Please fill all required fields.";
         exit;
     }
@@ -20,20 +18,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // SMTP Settings
+        // SMTP config
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'mail.kotenterprises.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'hammadsyed1999@gmail.com';
-        $mail->Password   = ''; 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
-        $mail->Timeout    = 60;
+        $mail->Username   = 'info@kotenterprises.com';
+        $mail->Password   = 'Hello@123123123';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+        $mail->Timeout    = 5;
 
-        // Email Settings
-        $mail->setFrom('hammadsyed1999@gmail.com', 'Website Contact Form');
+        // Email settings
+        $mail->setFrom('info@kotenterprises.com', 'Website Contact Form');
         $mail->addReplyTo($email, $name);
-        $mail->addAddress('hammadsyed1999@gmail.com', 'Admin');
+        $mail->addAddress('info@kotenterprises.com', 'Admin');
 
         $mail->isHTML(true);
         $mail->Subject = htmlspecialchars($subject);

@@ -11,7 +11,7 @@
 
     <div class="container-fluid">
       <div class="bg-dark-logo d-flex justify-content-center "  >
-      <img src="../assets/images/Flawless/flaw-logo.png" alt="">
+      <img src="../assets/images/Flawless/FlawlX-logo.svg" alt="">
       </div>
         <div class="engineering-the-future-heading ">
             <h2>Ensure Excellence, Every Time</h2>
@@ -25,10 +25,10 @@
 
         <div class="new-btn-service-add d-flex justify-content-center ">
            <div class="engineering-the-future-btn">
-            <a href="">Contact Us</a>
+          <a href="/contact/">Contact Us</a>
         </div>
          <div class="engineering-the-future-btn">
-            <a href="">View all Services</a>
+           <a href="/services/">View all Services</a>
         </div>
          </div>
     </div>

@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host       = 'mail.kotenterprises.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'info@kotenterprises.com';
-        $mail->Password   = 'E?1hi225h';
+        $mail->Password   = 'Hello@123123123';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 587;
+        $mail->Port       = 465;
         $mail->Timeout    = 5;
 
         // Email settings

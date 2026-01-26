@@ -7,8 +7,8 @@
 
   <!-- content -->
   <div class="container-fluid content">
-    <div class="dark-mode-changing-logo d-flex  justify-content-center py-4">
-         <img src="../assets/images/Appsculp/appsecp.png" alt="">
+    <div class="dark-mode-changing-logo d-flex  justify-content-center pt-4">
+         <img src="../assets/images/Appsculp/Appsecp-logo.svg" alt="">
       </div>
     <div class="app-sculpt-service-heading">
       <h2>App Sculpt Where Ideas Take Shape and Purpose Becomes Experience</h2>
@@ -23,10 +23,10 @@ At App Sculpt, we don’t just build mobile applications we bring ideas to life.
            
     <div class="new-btn-addition-fig d-flex justify-content-center " style="gap: 30px;" >
       <div class="app-sculpt-service-btn ">
-      <a href="#">Contact Us</a>
+      <a href="/contact/">Contact Us</a>
     </div>
     <div class="app-sculpt-service-btn">
-      <a href="#">View all Services</a>
+       <a href="/services/">View all Services</a>
     </div>
     </div>   
 
@@ -58,7 +58,7 @@ At App Sculpt, we don’t just build mobile applications we bring ideas to life.
       In today’s digital world, user experience defines success. At App Sculpt, we don’t just develop apps, we sculpt them into powerful tools that deliver performance, engagement, and connection. Backed by the innovation-first mindset of KOT Enterprises, App Sculpt brings ideas to life with visually striking, highly functional, and user-centric mobile and web applications.
     </p>
      <div class="app-sculpt-mobile-button">
-         <a href="#">
+         <a href="/contact/">
       Contact Us
     </a>
      </div>
@@ -119,9 +119,9 @@ At App Sculpt, we don’t just build mobile applications we bring ideas to life.
   </div>
 
   <!-- BUTTON -->
-  <div class="card-section-btn-app-sctupl">
+  <!-- <div class="card-section-btn-app-sctupl">
     <a href="">Learn More</a>
-  </div>
+  </div> -->
 
 </div>
 

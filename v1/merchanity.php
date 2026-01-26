@@ -32,7 +32,7 @@
   <div class="dt-ecom-content">
     <!-- Logo -->
     <img
-      src="../assets/images/merc-light/mlogo.png"
+      src="../assets/images/merc-light/mlogo.svg"
       alt="Company Logo"
       class="dt-ecom-logo"
     />
@@ -57,11 +57,11 @@
 
     <!-- Buttons -->
     <div class="dt-ecom-btn-group">
-      <a href="contact.php" class="dt-ecom-cta-btn hero-btn">
+      <a href="contact" class="dt-ecom-cta-btn hero-btn">
         Contact Us
       </a>
 
-      <a href="services.php" class="dt-ecom-cta-btn hero-btn">
+      <a href="services" class="dt-ecom-cta-btn hero-btn">
         Explore Services
       </a>
     </div>
@@ -86,35 +86,35 @@
     <div class="row justify-content-center g-4">
       <div class="col-lg-2 col-md-4 col-6">
         <div class="feature-card">
-          <img src="../assets/images/merc-light/icon1.png" alt="Custom E-commerce" class="img-fluid mb-2">
+          <img src="../assets/images/merc-light/icon1.svg" alt="Custom E-commerce" class="img-fluid mb-2">
           <p style="font-weight: 500;">Custom E-commerce platform Development</p>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-4 col-6">
         <div class="feature-card">
-          <img src="../assets/images/merc-light/icon2.png" alt="AI Personalization" class="img-fluid mb-2">
+          <img src="../assets/images/merc-light/icon2.svg" alt="AI Personalization" class="img-fluid mb-2">
           <p>AI Based <br> Personalization</p>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-4 col-6">
         <div class="feature-card">
-          <img src="../assets/images/merc-light/icon3.png" alt="Marketplace" class="img-fluid mb-2">
+          <img src="../assets/images/merc-light/icon3.svg" alt="Marketplace" class="img-fluid mb-2">
           <p>Integrated Market  <br>Place Solution</p>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-4 col-6">
         <div class="feature-card">
-          <img src="../assets/images/merc-light/icon4.png" alt="Mobile & Social" class="img-fluid mb-2">
+          <img src="../assets/images/merc-light/icon4.svg" alt="Mobile & Social" class="img-fluid mb-2">
           <p>Mobile First and Social commerce Enablement</p>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-4 col-6">
         <div class="feature-card">
-          <img src="../assets/images/merc-light/icon5.png" alt="Secure Payment" class="img-fluid mb-2">
+          <img src="../assets/images/merc-light/icon5.svg" alt="Secure Payment" class="img-fluid mb-2">
           <p>Secure Payment & Fulfillment Ecosystem</p>
         </div>
       </div>
@@ -131,14 +131,14 @@
   <picture>
     <!-- Desktop -->
     <source media="(min-width: 992px)" 
-            srcset="../assets/images/merc-light/pannel.png">
+            srcset="../assets/images/merc-light/pannel.svg">
 
     <!-- Tablet -->
     <source media="(min-width: 768px)" 
-            srcset="../assets/images/merc-light/pannel-tablet.png">
+            srcset="../assets/images/merc-light/pannel-tablet.svg">
 
     <!-- Mobile -->
-    <img src="../assets/images/merc-light/pannel-mobile.png"
+    <img src="../assets/images/merc-light/pannel-mobile.svg"
          alt="Strategic Advantages Illustration"
          class="img-fluid">
   </picture>

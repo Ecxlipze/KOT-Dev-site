@@ -134,7 +134,7 @@
   <img src="../assets/images/contact/contact-2.png" class="icon-img" alt="Email">
   <h6>Email Address</h6>
   <p>
-    <a href="mailto:hello@kotenterprises-e.com">hello@kotenterprises-e.com</a>
+    <a href="mailto:hello@kotenterprises-e.com">info@kotenterprises-e.com</a>
   </p>
 </div>
 
@@ -158,10 +158,8 @@
 
           <!-- Map -->
           <div class="map-box">
-            <iframe 
-              src="https://www.google.com/maps?q=lahore&output=embed"
-              loading="lazy">
-            </iframe>
+           
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d867.8183492072155!2d74.35431769379382!3d31.511140042024724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190453adedfb17%3A0x57e0852bc0b25e7c!2sKickstart%20%7C%20Gulberg%2C%2058-A2!5e0!3m2!1sen!2s!4v1769067376199!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -172,9 +170,9 @@
 
 <section class="contact-cta text-center">
   <div class="container">
-    <h2 style="font-weight:700;">Contact Us That Tell’s Your Persona</h2>
+    <h2 style="font-weight:700;">Get Yourself published</h2>
     <a href="#" class="btn hero-btn mt-3" style="color: white;">
-      Get Started →
+      Subscribe to our newsletter →
     </a>
   </div>
 </section>
@@ -646,22 +644,29 @@ const emailError = document.getElementById('emailError');
 const subjectError = document.getElementById('subjectError');
 const messageCount = document.getElementById('messageCount');
 
-const namePattern = /^[A-Za-z\s]*$/;
-const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-const subjectPattern = /^[A-Za-z\s]*$/;
+// ===== Patterns =====
+const namePattern = /^[A-Za-z\s]*$/;                   // Only letters and spaces
+const subjectPattern = /^[A-Za-z\s]{0,50}$/;           // Only letters and spaces, max 50
+const messagePattern = /^[A-Za-z0-9\s]*$/;             // Letters, numbers, spaces, max 500
+const emailPattern = /^[a-zA-Z0-9._%+-]{1,60}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email max 60
 
 // ===== Live validation =====
 nameInput.addEventListener('input', () => {
     if (!namePattern.test(nameInput.value)) {
         nameError.style.display = "block";
-        nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,'');
+        nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
     } else {
         nameError.style.display = "none";
     }
 });
 
 emailInput.addEventListener('input', () => {
-    if (!gmailPattern.test(emailInput.value) && emailInput.value.length > 0) {
+    // Limit to 60 characters
+    if (emailInput.value.length > 60) {
+        emailInput.value = emailInput.value.substring(0, 60);
+    }
+
+    if (!emailPattern.test(emailInput.value) && emailInput.value.length > 0) {
         emailError.style.display = "block";
     } else {
         emailError.style.display = "none";
@@ -671,16 +676,26 @@ emailInput.addEventListener('input', () => {
 subjectInput.addEventListener('input', () => {
     if (!subjectPattern.test(subjectInput.value)) {
         subjectError.style.display = "block";
-        subjectInput.value = subjectInput.value.replace(/[^A-Za-z\s]/g,'');
+        subjectInput.value = subjectInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
     } else {
         subjectError.style.display = "none";
+    }
+
+    // Limit subject to 50 characters
+    if (subjectInput.value.length > 50) {
+        subjectInput.value = subjectInput.value.substring(0, 50);
     }
 });
 
 messageInput.addEventListener('input', () => {
+    // Remove any invalid characters immediately
+    messageInput.value = messageInput.value.replace(/[^A-Za-z0-9\s]/g,'');
+
+    // Limit to 500 characters
     if (messageInput.value.length > 500) {
         messageInput.value = messageInput.value.substring(0, 500);
     }
+
     messageCount.textContent = `${messageInput.value.length}/500`;
 });
 
@@ -688,28 +703,29 @@ messageInput.addEventListener('input', () => {
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Validation before sending
-    if (nameInput.value.trim() === "" || emailInput.value.trim() === "" ||
-        subjectInput.value.trim() === "" || messageInput.value.trim() === "") {
+    if (
+        nameInput.value.trim() === "" ||
+        emailInput.value.trim() === "" ||
+        subjectInput.value.trim() === "" ||
+        messageInput.value.trim() === ""
+    ) {
         showToast("Please fill all fields correctly!", "error");
         return;
     }
 
-    if (!gmailPattern.test(emailInput.value.trim())) {
-        showToast("Enter a valid Gmail!", "error");
+    if (!emailPattern.test(emailInput.value.trim())) {
+        showToast("Enter a valid email!", "error");
         return;
     }
 
-    // ✅ Only send form via fetch, no “sending…” toast
     const formData = new FormData(contactForm);
 
-    fetch('successfully.php', {
+    fetch('/v1/successfully.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
-        // Show toast with PHP response
         showToast(data, "success");
         contactForm.reset();
         messageCount.textContent = "0/500";
@@ -720,7 +736,7 @@ contactForm.addEventListener('submit', function(e) {
     });
 });
 
-// ===== Toast function =====
+// ===== Toast function without X button =====
 function showToast(message, type="success") {
     const bgColor = type === "success"
         ? "linear-gradient(to right, #00b09b, #96c93d)"
@@ -729,10 +745,10 @@ function showToast(message, type="success") {
 
     Toastify({
         text: icon + message,
-        duration: 3000,
+        duration: 3000,        // visible time
         gravity: "top",
         position: "right",
-        close: true,
+        close: false,          // ❌ no X button
         style: {
             background: bgColor,
             color: "#fff",
@@ -743,6 +759,8 @@ function showToast(message, type="success") {
     }).showToast();
 }
 </script>
+
+
 
 </body>
 </html>

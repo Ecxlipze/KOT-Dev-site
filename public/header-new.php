@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kot Enterprises</title>
+    <title>KOT Enterprises</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/header.css">
@@ -978,7 +978,7 @@
             </div> -->
 
            <label class="switch">
-  <input type="checkbox" id="theme-toggle" checked>
+  <input type="checkbox" id="theme-toggle">
   <span class="slider"></span>
 </label>
         </div>
@@ -1278,7 +1278,7 @@
 <aside class="kot-header-mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="kot-header-mobile-menu-header d-flex justify-content-between align-items-center px-4 py-3">
         <div class="kot-header-logo-layer">
-            <a href="/index/">
+            <a href="/">
                 <img src="../assets/images/Header/Logo-mb.svg" alt="Kot Enterprises">
             </a>
         </div>
@@ -1308,9 +1308,9 @@
                     <i class="bi bi-chevron-down kot-header-chev"></i>
                 </button>
                 <div class="kot-header-menu-acc-panel">
-                    <a href="/why-kot.php">Why Kot Enterprises</a>
+                    <a href="/why-kot/">Why Kot Enterprises</a>
                     <a href="/board-of-directors/">Board Of Director</a>
-                    <a href="/career/">Career</a>
+                    <!-- <a href="/career/">Career</a> -->
                 </div>
             </div>
 
@@ -1324,7 +1324,7 @@
                 </button>
                 <div class="kot-header-menu-acc-panel">
                     <a href="/app-sculpt/">APP SCULPT</a>
-                    <a href="/agileappsservice/">AGILE APPS</a>
+                    <a href="/agile-apps/">AGILE APPS</a>
                     <a href="/digittrail/">DIG-IT-TRAIL</a>
                     <a href="/merchanity/">MERCHANITY</a>
                     <a href="/WebSculpture/">WEB SCULPTURE</a>
@@ -1362,7 +1362,7 @@
                     <a href="/appreciation/">Appreciation Board</a>
                     
                     <a href="/blogs/">Blogs</a>
-                    <a href="/announcement/">Announcement</a>
+                    <a href="/announce/">Announcement</a>
                     <a href="/case/">Case Study</a>
                      <a href="/ebook/">E-Book</a>
                     <a href="/policy/">Policy Center</a>
@@ -1448,7 +1448,7 @@
                 const otherAccordion = otherBtn.parentElement;
                 if (otherAccordion !== accordion) {
                     otherAccordion.classList.remove("kot-header-open");
-                }
+                } 
             });
         });
     });
