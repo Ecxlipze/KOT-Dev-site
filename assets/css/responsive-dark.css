@@ -30,7 +30,24 @@ letter-spacing: 0%;
 text-align: center;
 color: #FFFFFF;
 }
+.contact-card p{
+    font-family: 'Montserrat-Regular' !important;
 
+font-size: 11px !important;
+
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF !important;
+  }
+  .contact-item h6{
+    font-family: 'Montserrat-Bold' !important;
+
+font-size: 12px !important;
+
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF !important;
+  }
 .what-we-offer-card-wrapper{
     
     border-radius: 14px;
@@ -41,6 +58,9 @@ color: #FFFFFF;
     overflow: hidden;
     text-align: center;
 }
+/* .images-news{
+  height: 20vh;
+} */
 .what-we-offer-text h2{
     font-family: Montserrat !important;
 font-weight: 700 !important ;
@@ -542,6 +562,9 @@ width: 100%;
 
 
 }
+/* .images-news{
+  height: 20vh;
+} */
 .meet-our-developer-heading p{
     max-width: 601px;
     width: 100%;

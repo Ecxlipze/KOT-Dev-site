@@ -1,6 +1,7 @@
 <?php
 include "../db/db_connect.php";
 include "../authentication/auth.php";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Check required fields
@@ -24,9 +25,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Handle file upload
     $imageName = time() . "_" . $_FILES['news_image']['name'];
     $tmpName   = $_FILES['news_image']['tmp_name'];
-    move_uploaded_file($tmpName, "../uploads/" . $imageName);
 
-    // Insert query
+    // Desired fixed dimensions
+    $fixedWidth = 800;
+    $fixedHeight = 400;
+
+    // Get uploaded image dimensions
+    $imageInfo = getimagesize($tmpName);
+    if (!$imageInfo) {
+        echo "Invalid image file.";
+        exit;
+    }
+    $width = $imageInfo[0];
+    $height = $imageInfo[1];
+
+    // Check if dimensions match
+    if ($width != $fixedWidth || $height != $fixedHeight) {
+        echo "Error: Image must be exactly {$fixedWidth}px × {$fixedHeight}px.";
+        exit;
+    }
+
+    // Move file to uploads folder
+    if (!move_uploaded_file($tmpName, "../uploads/" . $imageName)) {
+        echo "Failed to upload image.";
+        exit;
+    }
+
+    // Insert into DB
     $query = "INSERT INTO news (title, description, image, status, type, video_url)
               VALUES ('$title', '$description', '$imageName', '$status', '$type', '$video')";
 
@@ -36,3 +61,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Database error: " . mysqli_error($con);
     }
 }
+?>

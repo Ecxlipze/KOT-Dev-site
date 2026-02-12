@@ -70,7 +70,7 @@
                     <h5>End-to-end SaaS development</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -80,7 +80,7 @@
                     <h5>Cloud-native applications</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -90,7 +90,7 @@
                     <h5>Scalable architecture for high-growth companies</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -105,7 +105,7 @@
                     <h5>Low-maintenance, high-performance solutions</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -115,7 +115,7 @@
                     <h5>Continuous updates and support</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                     <h5>User-friendly UI/UX engineered for efficiency</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 

@@ -1,3 +1,7 @@
+<?php
+include "../admin/db/db_connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,22 +47,37 @@
    
     </p>
 
-    <div class="row g-4 mt-4">
-      <div class="col-lg-6 col-md-6">
-        <div class="update-card"></div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="update-card"></div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="update-card"></div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="update-card"></div>
-      </div>
-    </div>
+   <div class="row g-4 mt-4">
 
-    <a href="services.php" class="btn hero-btn updates-btn mt-5">See All Services →</a>
+<?php
+$newsQuery = mysqli_query($con, "
+  SELECT id, image 
+  FROM news 
+  WHERE type='News' AND status=1 
+  ORDER BY id DESC 
+  LIMIT 4
+");
+
+while($row = mysqli_fetch_assoc($newsQuery)){
+?>
+  <div class="col-lg-6 col-md-6">
+    <a href="/newsdetail?id=<?= $row['id'] ?>" class="text-decoration-none">
+      <div class="update-card">
+        <img src="../admin/uploads/<?= $row['image'] ?>" class="images-news" 
+     style="width:85%; border-radius:30px; transition: transform 0.3s ease;" 
+     onmouseover="this.style.transform='scale(1.04)'" 
+     onmouseout="this.style.transform='scale(1)'">
+      
+      </div>
+      
+    </a>
+  </div>
+
+<?php } ?>
+
+</div>
+
+    <a href="/services" class="btn hero-btn updates-btn mt-5">See All Services →</a>
 
   </div>
 </section>
@@ -69,15 +88,32 @@
     <h2 class="sectionm-heading">Events & Highlights</h2>
 
     <div class="events-slider">
-      <div class="event-card"></div>
-      <div class="event-card"></div>
-      <div class="event-card"></div>
-      <div class="event-card"></div>
-       <div class="event-card"></div>
-      <div class="event-card"></div>
-      <div class="event-card"></div>
-      <div class="event-card"></div>
+
+<?php
+$eventQuery = mysqli_query($con, "
+  SELECT id, image 
+  FROM news 
+  WHERE type='Event' AND status=1 
+  ORDER BY id DESC
+");
+
+while($row = mysqli_fetch_assoc($eventQuery)){
+?>
+  <a href="/eventdetail?id=<?= $row['id'] ?>" class="text-decoration-none">
+    <div class="event-card">
+    
+     <img src="../admin/uploads/<?= $row['image'] ?>" 
+     class="images-news" 
+     style="width:85%; border-radius:30px; transition: transform 0.3s ease;" 
+     onmouseover="this.style.transform='scale(1.04)'" 
+     onmouseout="this.style.transform='scale(1)'">
+
     </div>
+  </a>
+  
+<?php } ?>
+
+</div>
 
   </div>
 </section>
@@ -88,18 +124,68 @@
     <h2 class="sectionm-heading">Videos</h2>
 
     <div class="videos-slider">
-      <div class="video-card"></div>
-      <div class="video-card"></div>
-      <div class="video-card"></div>
-       <div class="video-card"></div>
-      <div class="video-card"></div>
-      <div class="video-card"></div> <div class="video-card"></div>
-      <div class="video-card"></div>
-      <div class="video-card"></div>
+
+      <?php
+      $videoQuery = mysqli_query($con, "
+        SELECT title, video_url 
+        FROM news 
+        WHERE video_url IS NOT NULL AND video_url != '' 
+        ORDER BY id DESC
+      ");
+
+      while($row = mysqli_fetch_assoc($videoQuery)){
+        $videoUrl = $row['video_url'];
+        $title = htmlspecialchars($row['title']);
+
+        // Check if URL is YouTube
+        if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false) {
+          // Convert YouTube URL to embed URL
+          if (preg_match('/youtu\.be\/([^\?&]+)/', $videoUrl, $matches)) {
+            $videoId = $matches[1];
+          } elseif (preg_match('/v=([^\?&]+)/', $videoUrl, $matches)) {
+            $videoId = $matches[1];
+          }
+          $embedUrl = "https://www.youtube.com/embed/$videoId";
+          echo "<div class='video-card'>
+                  <div class='video-embed'>
+                    <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+                  </div>
+                 
+                </div>";
+        }
+        // Check if URL is Vimeo
+        elseif (strpos($videoUrl, 'vimeo.com') !== false) {
+          preg_match('/vimeo\.com\/(\d+)/', $videoUrl, $matches);
+          $videoId = $matches[1];
+          $embedUrl = "https://player.vimeo.com/video/$videoId";
+          echo "<div class='video-card'>
+                  <div class='video-embed'>
+                    <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+                  </div>
+               
+                </div>";
+        }
+        // Otherwise assume direct video file
+        else {
+          echo "<div class='video-card'>
+                  <div class='video-embed'>
+                    <video width='560' height='315' controls>
+                      <source src='".htmlspecialchars($videoUrl)."' type='video/mp4'>
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+               
+                </div>";
+        }
+      }
+      ?>
+
     </div>
 
   </div>
 </section>
+
+
 
 
     <div id="global-footer"></div>
@@ -132,7 +218,7 @@
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
- <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -143,16 +229,31 @@
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/news-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/news-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -490,7 +591,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;

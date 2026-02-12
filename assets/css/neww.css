@@ -763,14 +763,14 @@
             left: 50%;
             transform: translateX(-50%);
             background-image: url(../images/Header/Vector3.png);
-            height: 84px;
-            width: 84px;
+            height: 80px;
+            width: 80px;
             background-repeat: no-repeat;
             background-size: contain;
         }
 
         .kot-header-mobile-bottom-nav .kot-header-bottom-container {
-            padding-top: 15px;
+            padding-top: 15px !important;
             background-color: #0A71B9;
         }
 

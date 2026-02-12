@@ -1288,10 +1288,11 @@
     <div class="kot-header-mobile-menu-body">
         <div class="alternate-changing">
             <div class="kot-header-glow-toggle">
-                <label class="kot-header-toggle">
-                    <input type="checkbox" id="glowToggle">
-                    <span class="kot-header-slider"></span>
-                </label>
+        <label class="switch" for="theme-toggle">
+  <input type="checkbox" hidden>
+  <span class="slider"></span>
+</label>
+
             </div>
             <div class="login-btn">
                 <a href="https://kot-e.com/authentication/login" class="login-btn">Login</a>
@@ -1330,7 +1331,6 @@
                     <a href="/WebSculpture/">WEB SCULPTURE</a>
                     <a href="/flawless/">FLAWLESSX</a>
                     <a href="/graphoria/">GRAPHIORA</a>
-                    <a href="/venture/">VENTURE XCELERATOR</a>
                 </div>
             </div>
               
@@ -1741,21 +1741,24 @@
 
     // ================= MARQUEE ANIMATION =================
     const track = document.getElementById("marqueeTrack");
-    if (track) {
-        let pos = 0;
-        let speed = 0.5;
-        const singleWidth = track.scrollWidth / 2;
+if (track) {
+    let pos = 0;
+    let speed = 0.5;
 
-        function animate(){
-            pos -= speed;
-            if(pos <= -singleWidth){
-                pos = 0;
-            }
-            track.style.transform = `translateX(${pos}px)`;
-            requestAnimationFrame(animate);
+    // Duplicate content for seamless scroll
+    track.innerHTML += track.innerHTML;
+    const trackWidth = track.scrollWidth / 2; // original width
+
+    function animate() {
+        pos -= speed;
+        if (pos <= -trackWidth) {
+            pos = 0; // reset to start
         }
-        animate();
+        track.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(animate);
     }
+    animate();
+}
 
     // ================= LANGUAGE SELECTION =================
     document.querySelectorAll(".lang-option").forEach(option => {

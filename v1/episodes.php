@@ -69,11 +69,11 @@
 .content-box {
    padding: 35px;
     margin-left: 29%;
-    margin-top: -18%;
+    margin-top: -10%;
     border-radius: 12px;
      border: 1px solid rgb(0, 0, 0);
     background: #fff;
-   
+   width: calc(100vw * 2.1 / 3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .content-box p {
@@ -90,7 +90,7 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .hero-title {
         font-size: 2rem;
     }
@@ -119,6 +119,118 @@
             margin-left: 0%;
             margin-bottom: 20%;
     }
+} */
+    @media (min-width: 50px) and (max-width: 767px) and (orientation: landscape) {
+      .hero-bg{
+        min-height:70vh ;
+      }
+     
+    }
+    @media (min-width: 50px) and (max-width: 767px) {
+  .hero-title {
+      font-family: 'Montserrat-Extra-Bold' !important;
+
+
+font-size: 24px !important;
+
+
+letter-spacing: 0%;
+
+    }
+
+    .hero-subtitle {
+     font-family: 'Montserrat-Regular' !important;
+
+font-size: 15px !important;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
+    }
+        .hero-text {
+        
+        padding-top: 5% !important;
+    }
+      .content-box{
+      width: 106% !important;
+      margin-top: -10% !important;
+    }
+    .content-title{
+      font-size: 12px !important;
+    }
+    .content-box p{
+      font-size: 9px !important;
+    }
+    .hero-bg {
+      padding-top: 0% !important;
+    }
+    .epiosode-logo-add{
+      display: flex;
+      justify-content: center;
+      margin-top: -15% !important;
+    }
+     .epiosode-logo-add img{
+     width: 40% !important;
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+   .epiosode-logo-add{
+      margin-top: 0% !important;
+
+    }
+    .epiosode-logo-add img{
+      /* width: 80% !important; */
+     
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+     .hero-title {
+      font-family: 'Montserrat-Extra-Bold' ;
+
+
+font-size: 40px ;
+
+
+letter-spacing: 0%;
+
+    }
+
+    .hero-subtitle {
+     font-family: 'Montserrat-Regular' ;
+
+font-size: 24px ;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
+    }
+
+    .hero-content-box {
+        margin-top: -50px;
+    }
+.hero-bg {
+      padding-top: 0% !important;
+    }
+    .content-box {
+        padding: 25px;
+        margin-left: 0%;
+        width: 105%;
+        margin-top: -6%;
+    }
+    .content-box p {
+      font-size: 16px;
+    }
+
+    .content-title {
+        font-size: 1.1rem;
+    }
+    .hero-text {
+            margin-left: 0%;
+            margin-bottom: 20%;
+            padding-top: 5%;
+    }
+   
 }
   </style>
 
@@ -129,15 +241,22 @@
 <section class="hero-section position-relative">
 
     <!-- Background -->
-    <div class="hero-bg d-flex align-items-center" style="background-image: url('../assets/images/episodeslight/episodebanner.jpg');">
+    <div class="hero-bg d-flex align-items-center pt-5 " style="background-image: url('../assets/images/episodeslight/episodebanner.jpg'); ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12   ">
+              
+                <div class="col-md-9 col-lg-9 col-xl-9 d-none d-md-block">
+                  
                     <div class="hero-text text-white">
+                      
                         <h1 class="hero-title" style="color: #ffffff; margin-bottom: 0;">Episodes</h1>
                         <p class="hero-subtitle">Where Ideas Find Their Voice,<br> and Visionaries Find Their Way</p>
                     </div>
                 </div>
+
+                <div class="epiosode-logo-add col-sm-12 col-md-3 col-lg-3 col-xl-3 " style="margin-top:1%; z-index:999;">
+                          <img src="../assets/images/episodeslight/episode-logo.svg" alt="" style="width:100%;">
+                          </div>
             </div>
         </div>
     </div>
@@ -146,13 +265,12 @@
     <div class="hero-content-box">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                  
-                    <div class="content-box" style="color: #ffffff;   background: #098C52;  border: 1px solid rgb(255, 255, 255);">
-                        <!-- <h4 class="content-title">
-                            WHERE IDEAS FIND DIRECTION — AND FOUNDERS FIND CONFIDENCE
-                        </h4> -->
 
+                <div class="col-lg-12">
+                        
+                    <div class="content-box" style="color: #ffffff;   background: #098C52;  border: 1px solid rgb(255, 255, 255);">
+                       
+                      
                         <p style="font-size: 22px;">
                            Episodes is more than a platform — it is a movement built for dreamers, builders, and believers. We exist to transform conversations into clarity, ideas into action, and ambition into sustainable impact. From powerful accelerator programs to soul-stirring podcasts and live knowledge exchanges, Episodes brings together innovators, experts, and change-makers into one thriving ecosystem designed for growth. 
 Here, your story matters. Your vision is heard. Your future is nurtured.
@@ -162,20 +280,16 @@ Here, your story matters. Your vision is heard. Your future is nurtured.
                           Here, your story matters. Your vision is heard. Your future is nurtured.
                         </p>
 
-                        <!-- <p>
-                            From first concept to market impact, we walk with you at every step.
-                            Because startups don’t just need speed — they need clarity,
-                            confidence, and the right support system.
-                        </p> -->
+                       
 
-                        <div class="d-flex flex-wrap gap-3 mt-4">
+                        <!-- <div class="d-flex gap-3 mt-4">
                             <a href="#" class="btn hero-btn btn-primary px-4" style="background-color: #ffffff !important; color: black;">
                                 DOWNLOAD CATLOGUE
                             </a>
                             <a href="contact" class="btn hero-btn btn-primary px-3"  style="background-color: #0A71B9 !important; color: white;" >
                                 REQUEST CONSULTATION
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -346,37 +460,42 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
     <div class="container text-center">
       <h2 class="mb-2 offer-heading">ACCELERATOR PROGRAMS</h2>
       <p class="mb-5 offer-heading" style="font-size: 22px; color: black; font-weight: 600;">Structured Support for Startups Ready to Rise</p>
+      <div class="text-new-add text-start  d-none d-md-block " style="font-family: 'Montserrat-Extra-Bold';
+font-size: 40px; line-height: 100%; letter-spacing: 0%; color: #009150;
+" >
+        <h2  >What You’ll Gain:</h2>
+      </div>
       <div class="row g-4 mb-2 justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg');">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 ">
+          <div class=" card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg'); background-size: 100% 100%; ">
             <div class="card-body">
               <!-- <h5 class="card-title">Business model refinement</h5> -->
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc2.svg');">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 ">
+          <div class=" card-2" style="background-image: url('../assets/images/episodeslight/glowc2.svg'); background-size: 100% 100%; ">
             <div class="card-body">
               <!-- <h5 class="card-title">Mentorship & coaching</h5> -->
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc3.svg');">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 ">
+          <div class=" card-2" style="background-image: url('../assets/images/episodeslight/glowc3.svg'); background-size: 100% 100%; ">
             <div class="card-body">
               <!-- <h5 class="card-title">Market access</h5> -->
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc4.svg');">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 ">
+          <div class="card-2" style="background-image: url('../assets/images/episodeslight/glowc4.svg'); background-size: 100% 100%; ">
             <div class="card-body">
               <!-- <h5 class="card-title">Pitch development</h5> -->
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg');">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-0 m-0 ">
+          <div class=" card-2" style="background-image: url('../assets/images/episodeslight/glowc1.svg');  background-size: 100% 100%; ">
             <div class="card-body">
               <!-- <h5 class="card-title">Business model refinement</h5> -->
             </div>
@@ -389,7 +508,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 <section class="info-section bg-blue text-white">
   <div class="container text-center">
     <h2 class="section-title" style="color: white;">WEBINARS, BLOGS & PODCASTS</h2>
-    <p class="section-subtitle" style="font-size: 36px; font-weight: 400;">
+    <p class="section-subtitle" style="font-weight: 400;">
       Stories that spark action and inspire belief.
     </p>
   </div>
@@ -398,7 +517,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 <section class="info-section bg-green text-white">
   <div class="container text-center">
     <h2 class="section-title" style="color: white;">MENTORSHIP COMMUNITY</h2>
-    <p class="section-subtitle" style="font-size: 36px; font-weight: 400;">
+    <p class="section-subtitle" style=" ont-weight: 400;">
       Learn from those who've walked the road before you.
     </p>
   </div>
@@ -407,7 +526,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 <section class="info-section bg-white text-dark">
   <div class="container text-center">
     <h2 class="section-title text-green">EVENTS</h2>
-    <p class="section-subtitle" style="font-size: 36px; font-weight: 400;">
+    <p class="section-subtitle" style="font-weight: 400;">
       Where ideas meet opportunity and futures are formed.
     </p>
   </div>
@@ -433,7 +552,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
   <img src="../assets/images/episodeslight/email.svg" alt="Email" class="contact-icon" />
   <h5>Email Address</h5>
   <p>
-    <a href="mailto:hello@kotepisodes.com">info@kotepisodes.com</a>
+    <a href="mailto:info@kotepisodes.com">info@kotepisodes.com</a>
   </p>
 </div>
 
@@ -479,7 +598,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
- <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -490,16 +609,31 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/episodes-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/episodes-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -837,7 +971,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;

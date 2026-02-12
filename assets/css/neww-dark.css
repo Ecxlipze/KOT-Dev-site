@@ -774,7 +774,7 @@
         }
 
         .kot-header-mobile-bottom-nav .kot-header-bottom-container {
-            padding-top: 15px;
+            padding-top: 15px !important;
             background-color: #0A71B9;
         }
 

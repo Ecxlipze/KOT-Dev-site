@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
         ?>
         <div class="row">
           <div class="col-md-12 text-center mb-3">
-            <img src="uploads/<?= htmlspecialchars($row['image']); ?>" class="img-fluid rounded" style="max-height:300px;">
+            <img src="uploads/<?= htmlspecialchars($row['image']); ?>">
           </div>
 
           <div class="col-md-12">

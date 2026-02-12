@@ -71,7 +71,7 @@
                     <h5>End-to-end SaaS development</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -81,7 +81,7 @@
                     <h5>Cloud-native applications</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                     <h5>Scalable architecture for high-growth companies</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -106,7 +106,7 @@
                     <h5>Low-maintenance, high-performance solutions</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -116,7 +116,7 @@
                     <h5>Continuous updates and support</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -126,7 +126,7 @@
                     <h5>User-friendly UI/UX engineered for efficiency</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
-                <a href="#" class="agile-apps-offer-read-more">READ MORE</a>
+                <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
         </div>
 
@@ -289,7 +289,7 @@
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;

@@ -152,7 +152,7 @@ color: #FFFFFF;
   color: #FFFFFF;
 }
  .graphoria-card{ width: 170px; border-radius: 14px; }
-  .graphoria-card__img{ height: auto; }
+  .graphoria-card__img{ height: 25vh; }
   .graphoria-our-text-strip{
     gap: 15px !important;
   }
@@ -1513,6 +1513,9 @@ margin-bottom: 0%;
   .career-card-image-mission{
     padding-left: 16%;
     padding-top: 13%;
+  }
+  .graphoria-card__img{
+    height: 45vh;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {

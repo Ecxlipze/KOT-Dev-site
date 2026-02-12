@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         echo "Please fill all required fields.";
         exit;
-    }
+    } 
 
     $mail = new PHPMailer(true);
 

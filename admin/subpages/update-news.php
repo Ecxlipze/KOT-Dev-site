@@ -1,6 +1,7 @@
 <?php
 include "../db/db_connect.php";
 include "../authentication/auth.php";
+
 if($_SERVER['REQUEST_METHOD'] !== "POST") {
     echo "Invalid request"; 
     exit; 
@@ -22,14 +23,40 @@ $status = isset($_POST['status']) ? 1 : 0;
 $oldData = mysqli_fetch_assoc(mysqli_query($con,"SELECT image FROM news WHERE id=$id"));
 $imageName = $oldData['image'];
 
-/* new image upload */
+/* new image upload with fixed dimension check */
 if(!empty($_FILES['image']['name'])){
+    $tmpName = $_FILES['image']['tmp_name'];
+
+    // Desired fixed dimensions
+    $fixedWidth = 800;
+    $fixedHeight = 400;
+
+    // Check uploaded image dimensions
+    $imageInfo = getimagesize($tmpName);
+    if(!$imageInfo){
+        echo "Invalid image file.";
+        exit;
+    }
+    $width = $imageInfo[0];
+    $height = $imageInfo[1];
+
+    if($width != $fixedWidth || $height != $fixedHeight){
+        echo "Error: Image must be exactly {$fixedWidth}px × {$fixedHeight}px.";
+        exit;
+    }
+
+    // Delete old image
     if(!empty($imageName)){
         $oldPath="../uploads/".$imageName;
         if(file_exists($oldPath)) unlink($oldPath);
     }
+
+    // Move new image
     $imageName = time()."_".$_FILES['image']['name'];
-    move_uploaded_file($_FILES['image']['tmp_name'], "../uploads/".$imageName);
+    if(!move_uploaded_file($tmpName, "../uploads/".$imageName)){
+        echo "Failed to upload image.";
+        exit;
+    }
 }
 
 $query = "UPDATE news SET 
@@ -43,3 +70,4 @@ $query = "UPDATE news SET
 
 if(mysqli_query($con, $query)) echo "success";
 else echo "Update failed: " . mysqli_error($con);
+?>

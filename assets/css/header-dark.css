@@ -13,7 +13,7 @@
   margin-bottom: 30px;
 }
 .kot-footer-brand img {
-  content: url("../images/kotlogodark.png");
+  content: url("../images/Kotlogo-dm.svg");
 }
 
 .kot-footer-tagline {
@@ -69,6 +69,7 @@
     flex: 1;
     background-color: #1d1d1d;
     padding: 6px 18px;
+    color: #FFFFFF;
 }
 
 .kot-footer-form button {
@@ -80,6 +81,7 @@
   font-weight: 600;
   color: white;
   cursor: pointer;
+  font-size: clamp(11px, 0.5rem, 15px);
 }
 .kot-footer-link {
   margin-top: 10% !important;

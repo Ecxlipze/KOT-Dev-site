@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,96 @@
 
 
 </head>
+<style>
 
+@font-face { font-family: 'Montserrat-Light'; src: url('assets/Montserrat/static/Montserrat-Light.ttf') format('truetype'); font-weight: 300; } @font-face { font-family: 'Montserrat-Regular'; src: url('assets/Montserrat/static/Montserrat-Regular.ttf') format('truetype'); font-weight: 400; } @font-face { font-family: 'Montserrat-Medium'; src: url('assets/Montserrat/static/Montserrat-Medium.ttf') format('truetype'); font-weight: 500; } @font-face { font-family: 'Montserrat-Bold'; src: url('assets/Montserrat/static/Montserrat-Bold.ttf') format('truetype'); font-weight: 700; } @font-face { font-family: 'Montserrat-Extra-Bold'; src: url('assets/Montserrat/static//Montserrat-ExtraBold.ttf') format('truetype'); font-weight: 800; } @font-face { font-family: 'Montserrat-semi-Bold'; src: url('assets/Montserrat/static//Montserrat-SemiBold.ttf') format('truetype'); font-weight: 600; }
+/* TOP TEXT FONTS */
+.shs-title{
+  color:#4db5ff; font-family: 'Montserrat-Extra-Bold'; font-size: clamp(20px, 4vw, 32px); line-height: 100%; letter-spacing: 0%; margin-bottom:8px;
+}
+
+.shs-desc{
+ font-family: 'Montserrat-Medium'; font-size: clamp(14px, 2.5vw, 20px); line-height: 100%; letter-spacing: 0%; margin-bottom:12px; color:#000000;
+}
+
+/* SERVICE WRAPPER */
+.shs-service{
+  display:flex;
+  flex-direction: column;
+  height:100%;
+}
+
+/* HEADER (TITLE + DESC) */
+.shs-header{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 175px; /* keeps spacing for large screens */
+  gap: 4px;
+  
+}
+
+/* CARD OUTER */
+.shs-card{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  flex:1; /* fill remaining height */
+}
+
+/* CARD INNER */
+.shs-card-inner{
+  width:393px;
+  height:296px;
+  background:#D9D9D9;
+  border-radius:6px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+ 
+}
+
+/* IMAGE AREA */
+.shs-card-top{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5%;
+}
+
+.shs-card-top img{
+  width:100%;
+  height:auto;
+}
+
+/* BUTTON BAR */
+.shs-card-bottom{
+  padding:7%;
+  background:#014F85;
+  display:flex;
+  align-items:center;
+  
+  box-shadow: 0px 4px 8.8px 4px #000000A6;
+}
+
+.shs-card-bottom a{
+ color:#fff; font-family: 'Montserrat-Regular'; font-size: 24px; leading-trim: NONE; line-height: 100%; letter-spacing: 0%; text-decoration:none; display:flex; align-items:center; gap:8px;
+ 
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px){
+  .shs-card-inner{
+    width:100%;
+    /* height:auto; */
+  }
+  .shs-header{
+    /* min-height: auto; */
+    /* text-align: center; */
+  }
+}
+</style>
 <body>
   <div id="global-header"></div>
 
@@ -36,125 +125,210 @@
 </section>
 
 
-  
-<section class="ns-section ns-resources-section">
-  <div class="container">
+  <div class="container py-5">
+  <div class="row g-4">
 
-    <!-- =====================
-         Resources / Cards
-    ====================== -->
- 
-    <!-- Desktop grid -->
-    <div class="row g-4 d-none d-lg-flex">
-      <!-- Example card -->
-      <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-          <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-          <p class="ns-resource-text">Where credentials become globally trusted.</p>
-          <a href="/certificate/" class="ns-resource-link">Explore &rarr;</a>
+    <!-- CARD 1 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Certificate Verification Center</div>
+          <div class="shs-desc">Where credentials become globally trusted.</div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""> </div>
-          <h3 class="ns-resource-heading">Appreciation Board</h3>
-          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
-          <a href="/appreciation/" class="ns-resource-link">Explore &rarr;</a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-          <h3 class="ns-resource-heading">Event
-Management Center</h3>
-          <p class="ns-resource-text">Where ideas turn into experiences.</p>
-          <a href="/event/" class="ns-resource-link">Explore &rarr;</a>
-        </div>
-      </div>
-      
-      <!-- Duplicate other cards similarly -->
-      <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""></div>
-          <h3 class="ns-resource-heading">News</h3>
-          <p class="ns-resource-text">Tracking the growth of a global digital enterprise.</p>
-          <a href="/news/" class="ns-resource-link">Explore &rarr;</a>
-        </div>
-      </div>
-           <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-          <h3 class="ns-resource-heading">Appreciation Board</h3>
-          <p class="ns-resource-text">Because excellence deserves to be remembered.</p>
-          <a href="/appreciation/" class="ns-resource-link">Explore &rarr;</a>
-        </div>
-      </div>
-           <div class="col-lg-4">
-        <div class="ns-resource-card">
-          <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-          <h3 class="ns-resource-heading">Announcements</h3>
-          <p class="ns-resource-text">Official updates from inside the KOT ecosystem.</p>
-          <a href="/announce/" class="ns-resource-link">Explore &rarr;</a>
-        </div>
-      </div>
-     
-      <!-- Add remaining cards (total 9) -->
-    </div>
-
-    <!-- Tablet/Mobile slider -->
-    <div class="ns-resource-slider d-lg-none">
-      <div class="ns-slider-track">
-        <div class="ns-slider-item">
-          <div class="ns-resource-card">
-            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-            <h3 class="ns-resource-heading">News</h3>
-            <p class="ns-resource-text">Tracking the growth of a global digital enterprise.</p>
-            <a href="/news/" class="ns-resource-link">Explore &rarr;</a>
-          </div>
-        </div>
-        <!-- duplicate for other cards -->
-         <div class="ns-slider-item">
-          <div class="ns-resource-card">
-            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-            <h3 class="ns-resource-heading">Case Studies</h3>
-            <p class="ns-resource-text">Real problems. Real solutions. Real impact.</p>
-            <a href="/case/" class="ns-resource-link">Explore &rarr;</a>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-resource-card">
-            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-            <h3 class="ns-resource-heading">Ebook/ Whitepapers</h3>
-            <p class="ns-resource-text">Knowledge designed for builders of the future.</p>
-            <a href="/ebook/" class="ns-resource-link">Explore &rarr;</a>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-resource-card">
-            <div class="ns-resource-img"> <img src="../assets/images/kotlogo.png" alt=""></div>
-            <h3 class="ns-resource-heading">Blogsr</h3>
-            <p class="ns-resource-text">Ideas, insights, and innovation—straight from KOT.</p>
-            <a href="/blogs/" class="ns-resource-link">Explore &rarr;</a>
-          </div>
-        </div>
-        <div class="ns-slider-item">
-          <div class="ns-resource-card">
-            <div class="ns-resource-img">  <img src="../assets/images/kotlogo.png" alt=""></div>
-            <h3 class="ns-resource-heading">Certificate Verification Center</h3>
-            <p class="ns-resource-text">Where credentials become globally trusted.</p>
-            <a href="/certificate/" class="ns-resource-link">Explore &rarr;</a>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/certificate/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- =====================
-         Gallery
-    ====================== -->
-  
+    <!-- CARD 2 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Appreciation <br> Board</div>
+          <div class="shs-desc">Because excellence deserves to be remembered.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/appreciation/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Event <br> Management Center</div>
+          <div class="shs-desc">Where ideas turn into experiences.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/event/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Policy Center</div>
+          <div class="shs-desc">Official policies and guidelines across the KOT ecosystem.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/policy/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Announcements</div>
+          <div class="shs-desc">Official updates from inside the KOT ecosystem.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/announce/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">News</div>
+          <div class="shs-desc">Tracking the growth of a global digital enterprise.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/news/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Case Studies</div>
+          <div class="shs-desc">Real problems. Real solutions. Real impact.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/case/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Ebook/ Whitepapers</div>
+          <div class="shs-desc">Knowledge designed for builders of the future.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/ebook/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+      <div class="shs-service">
+        <div class="shs-header">
+          <div class="shs-title">Blogs</div>
+          <div class="shs-desc">Ideas, insights, and innovation straight from KOT.</div>
+        </div>
+        <div class="shs-card">
+          <div class="shs-card-inner">
+            <div class="shs-card-top">
+              <img src="../assets/images/Kotlogo.svg" alt="logo">
+            </div>
+            <div class="shs-card-bottom">
+              <a href="/blogs/">Explore
+                <img src="../assets/images/career/right-arrow.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-</section>
+</div>
+
 
   <div id="global-footer"></div>
   <button id="goTopBtn" title="Go to top">↑</button>
@@ -187,7 +361,7 @@ Management Center</h3>
         document.getElementById('global-footer').innerHTML = data;
       });
   </script>
- <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -198,16 +372,31 @@ Management Center</h3>
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/insights-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/insights-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -545,7 +734,7 @@ Management Center</h3>
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;
@@ -605,6 +794,15 @@ Management Center</h3>
     
   </script>
 
+
+
+<script>
+  const track = document.getElementById("marqueeTrack");
+
+    // Duplicate cards so animation never ends
+    track.innerHTML += track.innerHTML;
+
+</script>
 
 
   <!-- Bootstrap JS -->

@@ -72,6 +72,7 @@ body {
     margin-top: -18%;
     border: 1px solid white;
     border-radius: 12px;
+    width: calc(100vw * 1.99 / 3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .content-box p {
@@ -87,15 +88,73 @@ body {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
+@media (min-width: 50px) and (max-width: 767px) {
+  .hero-title {
+      font-family: 'Montserrat-Extra-Bold' !important;
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 2rem;
+
+font-size: 24px !important;
+
+
+letter-spacing: 0%;
+
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+     font-family: 'Montserrat-Regular' !important;
+
+font-size: 15px !important;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
+    }
+        .hero-text {
+        
+        padding-top: 5% !important;
+    }
+     .content-box{
+      width: 104% !important;
+    }
+    .content-title{
+      font-size: 12px !important;
+    }
+    .content-box p{
+      font-size: 9px !important;
+    }
+ 
+}
+@media (min-width:993px) and (max-width:1200px) {
+   .venture-logo-add{
+      margin-top: 0% !important;
+
+    }
+    .venture-logo-add img{
+      /* width: 80% !important; */
+      margin-left: 30% !important;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+     .hero-title {
+      font-family: 'Montserrat-Extra-Bold' ;
+
+
+font-size: 40px ;
+
+
+letter-spacing: 0%;
+
+    }
+
+    .hero-subtitle {
+     font-family: 'Montserrat-Regular' ;
+
+font-size: 24px ;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
     }
 
     .hero-content-box {
@@ -106,6 +165,7 @@ body {
         padding: 25px;
         margin-left: 0%;
         margin-top: -10%;
+        width: 100%;
     }
 
     .content-title {
@@ -126,12 +186,21 @@ body {
 
     <!-- Background -->
     <div class="hero-bg d-flex align-items-center">
+      <div class="venture-logo-add d-none d-lg-block" style="margin-top:-20%; z-index:999;">
+  <img src="../assets/images/vent-light/venture-logo-1.png" alt="" style="margin-left:80%; width:219px ; ">
+</div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12   ">
-                    <div class="hero-text text-white">
+                     <div class="row">
+                               <div class="venture-logo-add col-4 d-block d-lg-none" style="  z-index:999;">
+                          <img src="../assets/images/vent-light/venture-logo-1.png" alt="" style="margin-left:4%; width:90%;">
+                          </div>
+                     
+                    <div class="hero-text text-white col-8">
                         <h1 class="hero-title" style="color: #1DAE90; margin-bottom: 0%;">Venture Xcelerator</h1>
                         <p class="hero-subtitle">From Belief to Breakthrough</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -167,14 +236,14 @@ body {
                             confidence, and the right support system.
                         </p>
 
-                        <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="#" class="btn hero-btn btn-primary px-4">
+                        <!-- <div class="d-flex  gap-3 mt-4">
+                            <a href="/contact-/" class="btn hero-btn btn-primary px-4">
                                 REQUEST CONSULTATION
                             </a>
-                            <a href="#" class="btn hero-btn btn-primary px-3">
+                            <a href="/conatct-/" class="btn hero-btn btn-primary px-3">
                                 DOWNLOAD CATLOGUE
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -253,10 +322,10 @@ body {
         <div class="carousel-item active">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Founder-first">
                 <div class="card-body">
-                  <p class="card-text">Founder-first, personalized guidance</p>
+                  <!-- <p class="card-text">Founder-first, personalized guidance</p> -->
                 </div>
               </div>
             </div>
@@ -267,10 +336,10 @@ body {
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-dark/card2.svg" class="card-img-top" alt="Strategy-led">
                 <div class="card-body">
-                  <p class="card-text">Strategy-led growth support</p>
+                  <!-- <p class="card-text">Strategy-led growth support</p> -->
                 </div>
               </div>
             </div>
@@ -281,10 +350,10 @@ body {
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-dark/card3.svg" class="card-img-top" alt="Access to networks">
                 <div class="card-body">
-                  <p class="card-text">Access to trusted investor and partner networks</p>
+                  <!-- <p class="card-text">Access to trusted investor and partner networks</p> -->
                 </div>
               </div>
             </div>
@@ -295,10 +364,10 @@ body {
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Powered by KOT">
                 <div class="card-body">
-                  <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p>
+                  <!-- <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p> -->
                 </div>
               </div>
             </div>
@@ -370,38 +439,44 @@ body {
 
     <div class="row g-2 justify-content-center ">
 
-      <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard1.svg');">
+      <div class="col-lg-4 col-md-6 p-0 ">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard1.svg" alt="">
           <!-- <div class="isupport-text">Idea-stage innovators</div> -->
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard2.svg');">
+      <div class="col-lg-4 col-md-6 p-0 ">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard2.svg" alt="">
           <!-- <div class="support-text">Early-stage startups</div> -->
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard3.svg');">
+      <div class="col-lg-4 col-md-6 p-0">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard3.svg" alt="">
           <!-- <div class="support-text">Tech-driven MVPs</div> -->
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard4.svg');">
+      <div class="col-lg-4 col-md-6 p-0">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard4.svg" alt="">
           <!-- <div class="support-text">Social enterprises</div> -->
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard5.svg');">
+      <div class="col-lg-4 col-md-6 p-0 ">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard5.svg" alt="">
           <!-- <div class="support-text">First-time founders</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-dark/gcard6.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-dark/gcard6.svg" alt="">
           <!-- <div class="support-text">Solo founders & growing teams</div> -->
         </div>
       </div>
@@ -511,19 +586,51 @@ body {
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
- <script>
+ </script>
+   <script>
     fetch('../components/header-dark.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
+    initHeader(); // run AFTER header is injected
+    });
+    function initHeader() {
 
-    // ================= MOBILE MENU FUNCTIONALITY =================
+    if (window.__headerInitialized) return;
+    window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/venture";
+
+        });
+        
+
+     /* ================= MOBILE MENU ================= */
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -531,27 +638,29 @@ body {
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-    function openMenu(){
-        menu.classList.add("kot-header-open");
-        overlay.classList.add("kot-header-show");
-        body.style.overflow = "hidden";
-        menu.setAttribute("aria-hidden", "false");
-    }
+   function openMenu() {
+    menu?.classList.add("kot-header-open");
+    overlay?.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu?.setAttribute("aria-hidden", "false");
+     }
 
-    function closeMenu(){
-        menu.classList.remove("kot-header-open");
-        overlay.classList.remove("kot-header-show");
-        body.style.overflow = "";
-        menu.setAttribute("aria-hidden", "true");
-    }
+         function closeMenu() {
+    menu?.classList.remove("kot-header-open");
+    overlay?.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu?.setAttribute("aria-hidden", "true");
+     }
 
-    openBtnTop?.addEventListener("click", openMenu);
+   openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
+      closeMenu();
+    }
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -576,11 +685,11 @@ body {
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-const bufferZone = document.querySelector('.mega-menu-buffer');
-const navBar = document.getElementById('nav');
+        const bufferZone = document.querySelector('.mega-menu-buffer');
+        const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -854,7 +963,7 @@ const navBar = document.getElementById('nav');
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    });
+    };
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -910,11 +1019,13 @@ const navBar = document.getElementById('nav');
 
                 lastScroll = currentScroll;
             });
+            
         }
     
     }
     
   </script>
+
 
 
 

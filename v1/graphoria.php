@@ -246,13 +246,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/graphoria-";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/graphoria-";
+
   });
 });
 </script>

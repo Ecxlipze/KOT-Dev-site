@@ -85,6 +85,7 @@ $offset = ($page - 1) * $limit;
 <th>Title</th>
 <th>Author</th>
 <th>Description</th>
+<th>Image</th>
 <th>Status</th>
 <th>Date</th>
 <th>Action</th>
@@ -123,7 +124,13 @@ while ($row = mysqli_fetch_assoc($result)) {
   <td>
     <?= substr(strip_tags($row['description1']), 0, 80); ?>...
   </td>
-
+<td>
+  <?php if(!empty($row['blog_image'])) { ?>
+    <img src="uploads/<?= $row['blog_image']; ?>" alt="Blog Image" style="height:50px; width:auto; border-radius:4px;">
+  <?php } else { ?>
+    <span class="text-muted">No Image</span>
+  <?php } ?>
+</td>
   <td>
     <?php if ($row['blog_status'] == 1) { ?>
       <span class="fw-bold text-success">Published</span>
@@ -159,6 +166,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
   </tbody>
 </table>
+
 
                   </div>
 

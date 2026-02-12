@@ -7,12 +7,12 @@
       <h2>Welcome to KOT Support</h2>
     </div>
 
-    <div class="support-section-input position-relative mx-auto">
+    <!-- <div class="support-section-input position-relative mx-auto">
       <input type="text" class="form-control" placeholder="How can we help you?">
       <button class="btn support-arrow-btn" type="button">
         <i class="bi bi-arrow-right"></i>
       </button>
-    </div>
+    </div> -->
 
   </div>
 </div>
@@ -415,7 +415,7 @@
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;
@@ -452,18 +452,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
   <!--Toggle Button Script-->
+ <!--Toggle Button Script-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/support";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/support";
+
   });
 });
 </script>

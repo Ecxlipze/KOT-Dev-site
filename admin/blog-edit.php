@@ -117,6 +117,16 @@ $data = mysqli_fetch_assoc($result);
   <label class="form-label">Description 2</label>
   <textarea name="description2" class="form-control" rows="4"><?= $data['description2'] ?? '' ?></textarea>
 </div>
+ <div class="mb-3">
+  <label class="form-label">Blog Image</label>
+  <input type="file" name="blog_image" class="form-control">
+  <?php if(!empty($data['blog_image'])){ ?>
+    <img src="uploads/<?= $data['blog_image'] ?>" style="height:100px;margin-top:5px;">
+  <?php } ?>
+   <small class="text-muted">
+              Image size must be exactly <strong>800 × 400 px</strong>
+              </small>
+</div>
 
 <div class="form-check mb-3">
   <input type="checkbox" class="form-check-input" name="blog_status" value="1"
@@ -127,7 +137,6 @@ $data = mysqli_fetch_assoc($result);
 <button type="submit" class="btn btn-warning">Update Blog</button>
 
 </form>
-
           </div>
         </div>
 
@@ -179,6 +188,7 @@ $(document).ready(function () {
     const authorInput = $('input[name="blog_author"]');
     const desc1Input = $('textarea[name="description1"]');
     const desc2Input = $('textarea[name="description2"]');
+    const imageInput = $('input[name="blog_image"]');
 
     const noSpecialChars = /^[a-zA-Z0-9\s.,?!-]*$/;
 
@@ -205,11 +215,21 @@ $(document).ready(function () {
         });
     }
 
+    // Set limits
     liveValidate(titleInput, titleFeedback, 80);
     liveValidate(authorInput, authorFeedback, 50);
-    liveValidate(desc1Input, desc1Feedback, 500);
-    liveValidate(desc2Input, desc2Feedback, 500);
+    liveValidate(desc1Input, desc1Feedback, 80);   // Description 1 → 50 chars
+    liveValidate(desc2Input, desc2Feedback, 800);  // Description 2 → 800 chars
 
+    // Optional: show selected image name
+    imageInput.on('change', function () {
+        const fileName = $(this).val().split('\\').pop();
+        if(fileName) {
+            showToast(`Selected image: ${fileName}`, true);
+        }
+    });
+
+    // Form submit with AJAX + FormData for image
     $("#updateBlogForm").on("submit", function (e) {
         e.preventDefault();
 
@@ -221,12 +241,14 @@ $(document).ready(function () {
         if (!authorVal) return showToast("Author is required.", false);
         if (!desc1Val) return showToast("Description 1 is required.", false);
 
-        const formData = $(this).serialize();
+        const formData = new FormData(this);
 
         $.ajax({
             url: "subpages/update-blog.php",
             type: "POST",
             data: formData,
+            contentType: false,
+            processData: false,
             success: function (res) {
                 const toastEl = document.getElementById('liveToast');
                 const toastMsg = document.getElementById('toastMsg');
@@ -264,8 +286,6 @@ $(document).ready(function () {
     }
 });
 </script>
-
-
 
 
 

@@ -1,3 +1,15 @@
+<?php
+include "../admin/db/db_connect.php";
+
+// Fetch 3 latest published blogs
+$sql = "SELECT id, blog_title, description1, blog_image 
+        FROM blogs 
+        WHERE blog_status = 1 
+        ORDER BY created_at DESC 
+        LIMIT 3";
+$result = mysqli_query($con, $sql);
+?>
+
 <!-- Navbar -->
 <?php require '../public/header-new.php'; ?>
 
@@ -352,20 +364,33 @@
 </div>
 
 <!-- Blog Section -->
+<!-- Blog Section -->
 <div class="container-fluid my-5">
    <div class="blog-heading"><h2>Our Blogs</h2></div>
   <div class="row justify-content-center g-2">
-     
-    <!-- CARD 1 -->
+
+<?php
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $id    = (int)$row['id'];
+        $title = htmlspecialchars($row['blog_title']);
+        $desc1 = htmlspecialchars($row['description1']);
+        $image = "../admin/uploads/" . htmlspecialchars($row['blog_image']);
+?>
+
+    <!-- CARD -->
     <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
 
       <div class="blog-card-1-main">
         <div class="blog-card-image-1">
-          <img src="../assets/images/homepage/blog-1.png" alt="">
+          <a href="/blog/?id=<?= $id ?>">
+            <img src="<?= $image ?>" alt="<?= $title ?>" style="cursor:pointer; transition: transform 0.3s ease;"  onmouseover="this.style.transform='scale(1.04)'"
+  onmouseout="this.style.transform='scale(1)'">
+          </a>
         </div>
 
         <div class="blog-card-heading">
-          <h2>The Human Side of Smart Tech: Why Ethics Matter in Innovation</h2>
+          <h2><?= $title ?></h2>
         </div>
 
         <div class="blog-card-line">
@@ -374,75 +399,23 @@
 
         <div class="blog-card-paragraph">
           <p>
-           In a world driven by algorithms and automation, ethical innovation is no longer optional it's essential. At KOT Enterprises, we believe that technology should serve people, not replace them. This blog dives into how human-centered design.
+           <?= strlen($desc1) > 200 ? substr($desc1,0,200).'...' : $desc1 ?>
           </p>
         </div>
       </div>
 
       <div class="blog-outside-button">
-        <a href="#">Read More<i class="bi bi-arrow-right"></i></a>
+        <a href="/blog/?id=<?= $id ?>">Read More <i class="bi bi-arrow-right"></i></a>
       </div>
 
     </div>
 
-    <!-- CARD 2 -->
-    <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
-
-      <div class="blog-card-1-main">
-        <div class="blog-card-image-1">
-          <img src="../assets/images/homepage/blog2.png" alt="">
-        </div>
-
-        <div class="blog-card-heading">
-          <h2>Building Solutions That Evolve with You: Inside KOT’s Development Philosophy</h2>
-        </div>
-
-        <div class="blog-card-line">
-          <p></p>
-        </div>
-
-        <div class="blog-card-paragraph">
-          <p>
-            At KOT Enterprises, we don’t just create software we build adaptable ecosystems designed to grow with your business. This blog offers a behind-the-scenes look at our agile development process, where flexibility, user feedback, and scalability guide.
-          </p>
-        </div>
-      </div>
-
-      <div class="blog-outside-button">
-        <a href="#">Read More<i class="bi bi-arrow-right"></i></a>
-      </div>
-
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
-
-      <div class="blog-card-1-main">
-        <div class="blog-card-image-1">
-          <img src="../assets/images/homepage/blog-3.png" alt="">
-        </div>
-
-        <div class="blog-card-heading">
-          <h2>Ways Smart Tech is Revolutionizing Customer Experience</h2>
-        </div>
-
-        <div class="blog-card-line">
-          <p></p>
-        </div>
-
-        <div class="blog-card-paragraph">
-          <p>
-            Customers today expect more than just service they expect smart service. In this article, we explore how AI, automation, and intelligent platforms are transforming customer journeys. From personalized interactions to real-time support, discover five practical ways businesses.
-          </p>
-        </div>
-      </div>
-
-      <div class="blog-outside-button">
-        <a href="#">Read More <i class="bi bi-arrow-right"></i></a>
-      </div>
-
-    </div>
-
+<?php
+    }
+} else {
+    echo "<p>No blogs found.</p>";
+}
+?>
   </div>
 </div>
 <div class="new-addition-chatbot text-center ">

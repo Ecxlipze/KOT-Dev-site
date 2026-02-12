@@ -74,7 +74,7 @@
     border-radius: 12px;
      border: 1px solid rgb(0, 0, 0);
     background: #fff;
-   
+   width: calc(100vw * 2.1 / 3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .content-box p {
@@ -90,14 +90,72 @@
     text-transform: uppercase;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 2rem;
+@media (min-width: 50px) and (max-width: 767px) {
+  .hero-title {
+      font-family: 'Montserrat-Extra-Bold' !important;
+
+
+font-size: 24px !important;
+
+
+letter-spacing: 0%;
+
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+     font-family: 'Montserrat-Regular' !important;
+
+font-size: 15px !important;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
+    }
+        .hero-text {
+        
+        padding-top: 5% !important;
+    }
+      .content-box{
+      width: 104% !important;
+    }
+    .content-title{
+      font-size: 12px !important;
+    }
+    .content-box p{
+      font-size: 9px !important;
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+   .venture-logo-add{
+      margin-top: 0% !important;
+
+    }
+    .venture-logo-add img{
+      /* width: 80% !important; */
+      margin-left: 30% !important;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+     .hero-title {
+      font-family: 'Montserrat-Extra-Bold' ;
+
+
+font-size: 40px ;
+
+
+letter-spacing: 0%;
+
+    }
+
+    .hero-subtitle {
+     font-family: 'Montserrat-Regular' ;
+
+font-size: 24px ;
+
+line-height: 112.00000000000001%;
+letter-spacing: 0%;
+
     }
 
     .hero-content-box {
@@ -107,6 +165,7 @@
     .content-box {
         padding: 25px;
         margin-left: 0%;
+        width: 100%;
         margin-top: -10%;
     }
     .content-box p {
@@ -119,24 +178,38 @@
     .hero-text {
             margin-left: 0%;
             margin-bottom: 20%;
+            padding-top: 5%;
     }
+   
 }
         </style>
 
 </head>
 <body>
-    <div id="global-header"></div>
+    <div id="global-header"></div> 
 
 <section class="hero-section position-relative">
-
+     
     <!-- Background -->
     <div class="hero-bg d-flex align-items-center" style="background-image: url('../assets/images/vent-light/vent-banner.jpg');">
+
+      <div class="venture-logo-add d-none d-lg-block" style="margin-top:-20%; z-index:999;">
+  <img src="../assets/images/vent-light/venture-logo-1.png" alt="" style="margin-left:80%; width:219px ; ">
+</div>
+
         <div class="container">
             <div class="row">
+      
                 <div class="col-lg-12   ">
-                    <div class="hero-text text-white">
+                     <div class="row">
+                               <div class="venture-logo-add col-4 d-block d-lg-none" style="margin-top:2%; z-index:999;">
+                          <img src="../assets/images/vent-light/venture-logo-1.png" alt="" style="margin-left:4%; width:90%;">
+                          </div>
+                     
+                    <div class="hero-text text-white col-8">
                         <h1 class="hero-title" style="color: #1DAE90; margin-bottom: 0%;">Venture Xcelerator</h1>
                         <p class="hero-subtitle">From Belief to Breakthrough</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -172,14 +245,14 @@
                             confidence, and the right support system.
                         </p>
 
-                        <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="contact.php" class="btn hero-btn btn-primary px-4">
+                        <!-- <div class="d-flex gap-3 mt-4">
+                            <a href="/contact/" class="btn hero-btn btn-primary px-4">
                                 REQUEST CONSULTATION
                             </a>
-                            <a href="#" class="btn hero-btn btn-primary px-3">
+                            <a href="/contact/" class="btn hero-btn btn-primary px-3">
                                 DOWNLOAD CATLOGUE
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -258,10 +331,10 @@
         <div class="carousel-item active">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-light/card1.svg" class="card-img-top" alt="Founder-first">
                 <div class="card-body">
-                  <p class="card-text">Founder-first, personalized guidance</p>
+                  <!-- <p class="card-text">Founder-first, personalized guidance</p> -->
                 </div>
               </div>
             </div>
@@ -272,10 +345,10 @@
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-light/card2.svg" class="card-img-top" alt="Strategy-led">
                 <div class="card-body">
-                  <p class="card-text">Strategy-led growth support</p>
+                  <!-- <p class="card-text">Strategy-led growth support</p> -->
                 </div>
               </div>
             </div>
@@ -286,10 +359,10 @@
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-light/card3.svg" class="card-img-top" alt="Access to networks">
                 <div class="card-body">
-                  <p class="card-text">Access to trusted investor and partner networks</p>
+                  <!-- <p class="card-text">Access to trusted investor and partner networks</p> -->
                 </div>
               </div>
             </div>
@@ -300,10 +373,10 @@
         <div class="carousel-item">
           <div class="row justify-content-center">
             <div class="col-10 mx-2 card-slide">
-              <div class="card">
+              <div class="">
                 <img src="../assets/images/vent-light/card1.svg" class="card-img-top" alt="Powered by KOT">
                 <div class="card-body">
-                  <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p>
+                  <!-- <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p> -->
                 </div>
               </div>
             </div>
@@ -376,37 +449,43 @@
     <div class="row g-2 justify-content-center ">
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard1.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard1.svg" alt="">
           <!-- <div class="isupport-text">Idea-stage innovators</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard2.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard2.svg" alt="">
           <!-- <div class="support-text">Early-stage startups</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard3.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard3.svg" alt="">
           <!-- <div class="support-text">Tech-driven MVPs</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard4.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard4.svg" alt="">
           <!-- <div class="support-text">Social enterprises</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard5.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard5.svg" alt="">
           <!-- <div class="support-text">First-time founders</div> -->
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="isupport-card" style="background-image: url('../assets/images/vent-light/gcard6.svg');">
+        <div class="isupport-card" style="background-image: url('');">
+          <img src="../assets/images/vent-light/gcard6.svg" alt="">
           <!-- <div class="support-text">Solo founders & growing teams</div> -->
         </div>
       </div>
@@ -523,7 +602,7 @@
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
- <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -534,16 +613,31 @@
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/venture-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/venture-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -881,7 +975,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;
@@ -940,6 +1034,7 @@
     }
     
   </script>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

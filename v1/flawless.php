@@ -72,9 +72,9 @@
 </div>
 </div>
 <!-- mobile-view-images -->
- <div class="container mt-5 ">
+ <div class="container mt-4 ">
   <div class="mobile-view-flawlessx-bg">
-   <img src="../assets/images/Flawless/Stats.png" alt="">
+   <img src="../assets/images/Flawless/Stats-mobile.svg" alt="">
   </div>
  </div>
 <!-- WHAT WE OFFER -->
@@ -93,7 +93,7 @@
             <h2>Manual and automated testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -106,7 +106,7 @@
             <h2>Performance and load testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -119,7 +119,7 @@
             <h2>Functional and regression testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -132,7 +132,7 @@
             <h2>Security testing and vulnerability checks</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -145,7 +145,7 @@
             <h2>UI/UX quality validation</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -158,7 +158,7 @@
             <h2>Compliance and user-journey refinement</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -179,7 +179,7 @@
     <h2>CHALANGES WE SOLVE</h2>
   </div>
   <div class="chalanges-we-solve-image">
-    <img src="../assets/images/Flawless/image-glob.png" alt="">
+    <img src="../assets/images/Flawless/globe-image-light.svg" alt="">
   </div>
  </div>
  </div>
@@ -223,18 +223,44 @@
 </script>
 
   <!--Toggle Button Script-->
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+     
+      window.location.href = "/flawless-";
+    }
+  });
+});
+</script> -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/flawless-";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/flawless-/";
+
   });
 });
 </script>

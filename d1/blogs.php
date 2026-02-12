@@ -1,10 +1,35 @@
+<?php
+include "../admin/db/db_connect.php";
+
+/* Validate ID */
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+  echo "Invalid blog request";
+  exit;
+}
+
+$id = (int)$_GET['id'];
+
+/* Fetch blog */
+$sql = "SELECT * FROM blogs 
+        WHERE id = $id AND blog_status = 1 
+        LIMIT 1";
+
+$result = mysqli_query($con, $sql);
+
+if (mysqli_num_rows($result) === 0) {
+  echo "Blog not found";
+  exit;
+}
+
+$blog = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
+ <title><?= htmlspecialchars($blog['blog_title']) ?></title>
   <link rel="stylesheet" href="../assets/css/styles2-dark.css">
   <link rel="stylesheet" href="../assets/css/header-dark.css">
   <link rel="stylesheet" href="../assets/css/neww-dark.css">
@@ -34,53 +59,42 @@
   </div>
 </section>
 <section class="kot-blog-intro-section">
-  <div class="kot-blog-intro-card">
-    <p>
-      The KOT Blog is where our thinkers, engineers, strategists, and leaders
-      share perspectives on technology, business, and the evolving digital world.
-      From deep-dive analysis to practical guidance, this space reflects the
-      intellectual heartbeat of the KOT ecosystem.
-    </p>
+  <div class="kot-blog-intro-card text-center">
+
+    <img 
+      src="../admin/uploads/<?= htmlspecialchars($blog['blog_image']) ?>" 
+      alt="<?= htmlspecialchars($blog['blog_title']) ?>" 
+      class="" style="border-radius: 30px;"
+    
+    >
+
   </div>
 </section>
 
+<!-- BLOG CONTENT -->
 <section class="kot-blog-content">
+
   <h2 class="kot-blog-heading">
-    The Future of Digital Enterprises in 2026
+    <?= htmlspecialchars($blog['blog_title']) ?>
   </h2>
 
-  <p class="kot-blog-author">By KOT Enterprises</p>
-
-  <p>
-    The world is entering a new phase of digital evolution. Technology is no longer just a tool that supports business — it has become the foundation on which businesses are built. In 2026, every serious enterprise will either be a technology-powered organization or struggle to compete in a market driven by speed, data, and automation.
+  <p class="kot-blog-author">
+     <?= htmlspecialchars($blog['blog_author']) ?> 
   </p>
 
   <p>
-   This shift is not about adopting one new software or launching a mobile app. It is about a complete transformation of how companies operate, think, and grow.
+    <?= nl2br(htmlspecialchars($blog['description1'])) ?>
   </p>
 
-  <h3 class="kot-blog-subheading">
-    Digital is No Longer Optional
-  </h3>
+  <?php if (!empty($blog['description2'])): ?>
+    <p>
+      <?= nl2br(htmlspecialchars($blog['description2'])) ?>
+    </p>
+  <?php endif; ?>
 
-  <p>
-    For decades, companies treated technology as a support function — something that made operations more efficient. In 2026, digital systems are not just supporting businesses; they are defining them..
-  </p>
-
-  <p>
-  Modern enterprises now depend on:</p>
-  <ul class="kot-blog-list">
-    <li>Cloud-based platforms instead of physical infrastructure</li>
-    <li>Artificial intelligence instead of manual decision-making</li>
-    <li>Data instead of intuition</li>
-    <li>Automation instead of human-heavy operations</li>
-  </ul>
-
-  <p>
-    Organizations that fail to adopt these foundations are not simply slower —
-    they become irrelevant.
-  </p>
 </section>
+
+
 
 
   <div id="global-footer"></div>
@@ -108,19 +122,50 @@
 
 
   <script>
-    fetch('../components/footer.html')
+    fetch('../components/footer-dark.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-footer').innerHTML = data;
       });
   </script>
-  <script>
+<script>
     fetch('../components/header-dark.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
+    initHeader(); // run AFTER header is injected
+    });
+    function initHeader() {
 
-    // ================= MOBILE MENU FUNCTIONALITY =================
+    if (window.__headerInitialized) return;
+    window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload 
+    window.location.href = "/blogs";
+
+        });
+        
+
+     /* ================= MOBILE MENU ================= */
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -128,27 +173,29 @@
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-    function openMenu(){
-        menu.classList.add("kot-header-open");
-        overlay.classList.add("kot-header-show");
-        body.style.overflow = "hidden";
-        menu.setAttribute("aria-hidden", "false");
-    }
+   function openMenu() {
+    menu?.classList.add("kot-header-open");
+    overlay?.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu?.setAttribute("aria-hidden", "false");
+     }
 
-    function closeMenu(){
-        menu.classList.remove("kot-header-open");
-        overlay.classList.remove("kot-header-show");
-        body.style.overflow = "";
-        menu.setAttribute("aria-hidden", "true");
-    }
+         function closeMenu() {
+    menu?.classList.remove("kot-header-open");
+    overlay?.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu?.setAttribute("aria-hidden", "true");
+     }
 
-    openBtnTop?.addEventListener("click", openMenu);
+   openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
+      closeMenu();
+    }
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -173,11 +220,11 @@
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-const bufferZone = document.querySelector('.mega-menu-buffer');
-const navBar = document.getElementById('nav');
+        const bufferZone = document.querySelector('.mega-menu-buffer');
+        const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -451,7 +498,7 @@ const navBar = document.getElementById('nav');
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    });
+    };
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -507,13 +554,12 @@ const navBar = document.getElementById('nav');
 
                 lastScroll = currentScroll;
             });
+            
         }
     
     }
     
   </script>
-
-
 
 
 
@@ -523,22 +569,6 @@ const navBar = document.getElementById('nav');
   <!-- Custom JS -->
   <script src="../assets/js/script.js"></script>
 
-    <!--Toggle Button Script-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const t = document.getElementById("theme-toggle");
-  if (!t) return;
-
-  // Dark page => ON by HTML (checked)
-
-  t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/blogs";
-    }
-  });
-});
-</script>
 </body>
 
 </html>

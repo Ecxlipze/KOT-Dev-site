@@ -223,7 +223,23 @@ $('textarea[name="news_description"]').on('input', function() {
         showToast("Description cannot exceed 500 characters!");
     }
 });
+// Fixed dimension validation
+$('#news_image').on('change', function() {
+    const file = this.files[0];
+    if (!file) return;
 
+    const img = new Image();
+    img.onload = function() {
+        const requiredWidth = 800;  // Fixed width
+        const requiredHeight = 400; // Fixed height
+
+        if (this.width !== requiredWidth || this.height !== requiredHeight) {
+            showToast(`Image must be exactly ${requiredWidth}px × ${requiredHeight}px`);
+            $('#news_image').val(''); // Reset the input
+        }
+    };
+    img.src = URL.createObjectURL(file);
+});
 // Existing form submission logic (unchanged)
 $("#newsForm").on("submit", function(e) {
     e.preventDefault();

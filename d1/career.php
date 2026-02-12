@@ -11,7 +11,7 @@
             <h2>Build the Future. Grow with Us.</h2>
         </div>
         <div class="career-section-btn">
-            <a href="">Watch the Film</a>
+            <!-- <a href="">Watch the Film</a> -->
         </div>
     </div>
    </div>
@@ -310,7 +310,7 @@
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;
@@ -324,8 +324,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("careerTrack");
   const nextBtn = document.getElementById("careerNext");
   const prevBtn = document.getElementById("careerPrev");
+  const carousel = document.querySelector(".career-slider");
 
-  if (!track || !nextBtn || !prevBtn) return;
+  if (!track || !nextBtn || !prevBtn || !carousel) return;
 
   function getVisible(){
     if (window.innerWidth < 768) return 1;
@@ -336,6 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let visible = getVisible();
   let index = visible;
   let isMoving = false;
+  let autoSlideInterval;
 
   /* ---------- SETUP SLIDER ---------- */
   function setupSlider(){
@@ -376,7 +378,24 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transition = "transform 0.5s ease-in-out";
     track.style.transform = `translateX(-${index * slideWidth}%)`;
 
-    setTimeout(() => isMoving = false, 500);
+    setTimeout(() => {
+      isMoving = false;
+    }, 500);
+  }
+
+  /* ---------- AUTO SLIDE ---------- */
+  function startAutoSlide(){
+    stopAutoSlide();
+    autoSlideInterval = setInterval(() => {
+      nextBtn.click();
+    }, 3000); // ⏱ 3 seconds
+  }
+
+  function stopAutoSlide(){
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
   }
 
   /* ---------- NAVIGATION ---------- */
@@ -385,7 +404,6 @@ document.addEventListener("DOMContentLoaded", () => {
     move();
 
     const total = track.children.length;
-
     if (index === total - visible) {
       setTimeout(() => {
         track.style.transition = "none";
@@ -393,6 +411,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePosition();
       }, 500);
     }
+
+    startAutoSlide(); // reset timer
   });
 
   prevBtn.addEventListener("click", () => {
@@ -406,25 +426,35 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePosition();
       }, 500);
     }
+
+    startAutoSlide(); // reset timer
   });
 
-  /* ---------- RESPONSIVE (NO RELOAD) ---------- */
+  /* ---------- HOVER STOP / RESUME ---------- */
+  carousel.addEventListener("mouseenter", stopAutoSlide);
+  carousel.addEventListener("mouseleave", startAutoSlide);
+
+  /* ---------- RESPONSIVE ---------- */
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
-
     resizeTimer = setTimeout(() => {
       const newVisible = getVisible();
       if (newVisible !== visible) {
         visible = newVisible;
         setupSlider();
+        startAutoSlide();
       }
     }, 250);
   });
 
+  /* ---------- INIT ---------- */
   setupSlider();
+  startAutoSlide();
+
 });
 </script>
+
 
 
   <!--Toggle Button Script-->
@@ -433,17 +463,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/career";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/career";
+
   });
 });
 </script>
-
 
 </body>
 </html>

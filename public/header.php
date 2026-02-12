@@ -1137,10 +1137,11 @@ background-color: #0A71B9;
     <div class="kot-header-mobile-menu-body">
       <div class="alternate-changing">
    <div class="kot-header-glow-toggle">
-  <label class="kot-header-toggle">
-    <input type="checkbox" id="glowToggle">
-    <span class="kot-header-slider"></span>
-  </label>
+ <label class="switch" for="theme-toggle">
+  <input type="checkbox" hidden>
+  <span class="slider"></span>
+</label>
+
    
 </div>
 <div class="login-btn"><a href="login.php" class="login-btn">Login</a>

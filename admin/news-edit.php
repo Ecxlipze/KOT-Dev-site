@@ -124,7 +124,7 @@ $data = mysqli_fetch_assoc($result);
                   <div class="mb-3">
                     <label class="form-label">Current Image</label><br>
                     <?php if(!empty($data['image'])){ ?>
-                      <img src="uploads/<?= htmlspecialchars($data['image']); ?>" width="120" class="rounded">
+                      <img src="uploads/<?= htmlspecialchars($data['image']); ?>" width="120" id="news_image" class="rounded">
                     <?php } else { echo "<p>No image</p>"; } ?>
                   </div>
 
@@ -227,7 +227,23 @@ const descField = document.querySelector('textarea[name="description"]');
 
 titleField.addEventListener('input', (e) => blockSpecialChars(e));
 descField.addEventListener('input', (e) => blockSpecialChars(e, 500));
+// Fixed dimension validation
+$('#news_image').on('change', function() {
+    const file = this.files[0];
+    if (!file) return;
 
+    const img = new Image();
+    img.onload = function() {
+        const requiredWidth = 800;  // Fixed width
+        const requiredHeight = 400; // Fixed height
+
+        if (this.width !== requiredWidth || this.height !== requiredHeight) {
+            showToast(`Image must be exactly ${requiredWidth}px × ${requiredHeight}px`);
+            $('#news_image').val(''); // Reset the input
+        }
+    };
+    img.src = URL.createObjectURL(file);
+});
 // Existing AJAX submit
 $("#updateNewsForm").submit(function(e){
     e.preventDefault();

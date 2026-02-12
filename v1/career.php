@@ -10,9 +10,9 @@
         <div class="career-section-text py-4 ">
             <h2>Build the Future. Grow with Us.</h2>
         </div>
-        <div class="career-section-btn">
+        <!-- <div class="career-section-btn">
             <a href="">Watch the Film</a>
-        </div>
+        </div> -->
     </div>
    </div>
 
@@ -318,71 +318,8 @@
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <!-- <script>
-document.addEventListener("DOMContentLoaded", () => {
 
-  const track = document.getElementById("careerTrack");
-  const slides = document.querySelectorAll(".career-slide");
-  const nextBtn = document.getElementById("careerNext");
-  const prevBtn = document.getElementById("careerPrev");
-
-  function getVisible(){
-    if(window.innerWidth < 768) return 1;
-    if(window.innerWidth < 992) return 2;
-    return 3;
-  }
-
-  let visible = getVisible();
-  let index = visible;
-
-
-  for(let i = 0; i < visible; i++){
-    track.appendChild(slides[i].cloneNode(true));
-    track.insertBefore(
-      slides[slides.length - 1 - i].cloneNode(true),
-      track.firstChild
-    );
-  }
-
-  const allSlides = document.querySelectorAll(".career-slide");
-  const slideWidth = 100 / visible;
-
-  track.style.transform = `translateX(-${index * slideWidth}%)`;
-
-  function move(){
-    track.style.transition = "transform 0.5s ease-in-out";
-    track.style.transform = `translateX(-${index * slideWidth}%)`;
-  }
-
-  nextBtn.onclick = () => {
-    index++;
-    move();
-    if(index === allSlides.length - visible){
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = visible;
-        track.style.transform = `translateX(-${index * slideWidth}%)`;
-      }, 500);
-    }
-  };
-
-  prevBtn.onclick = () => {
-    index--;
-    move();
-    if(index === 0){
-      setTimeout(() => {
-        track.style.transition = "none";
-        index = allSlides.length - visible * 2;
-        track.style.transform = `translateX(-${index * slideWidth}%)`;
-      }, 500);
-    }
-  };
-
-  window.addEventListener("resize", () => location.reload());
-});
-</script> -->
-
-<script>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const track = document.getElementById("careerTrack");
@@ -400,6 +337,115 @@ document.addEventListener("DOMContentLoaded", () => {
   let visible = getVisible();
   let index = visible;
   let isMoving = false;
+
+  
+  function setupSlider(){
+    track.style.transition = "none";
+
+    const originalSlides = Array.from(track.children);
+    track.innerHTML = "";
+
+  
+    originalSlides.slice(-visible).forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+
+  
+    originalSlides.forEach(slide => {
+      track.appendChild(slide);
+    });
+
+    
+    originalSlides.slice(0, visible).forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+
+    index = visible;
+    updatePosition();
+  }
+
+  function updatePosition(){
+    const slideWidth = 100 / visible;
+    track.style.transform = `translateX(-${index * slideWidth}%)`;
+  }
+
+  function move(){
+    if (isMoving) return;
+    isMoving = true;
+
+    const slideWidth = 100 / visible;
+    track.style.transition = "transform 0.5s ease-in-out";
+    track.style.transform = `translateX(-${index * slideWidth}%)`;
+
+    setTimeout(() => isMoving = false, 500);
+  }
+
+  
+  nextBtn.addEventListener("click", () => {
+    index++;
+    move();
+
+    const total = track.children.length;
+
+    if (index === total - visible) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = visible;
+        updatePosition();
+      }, 500);
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index--;
+    move();
+
+    if (index === 0) {
+      setTimeout(() => {
+        track.style.transition = "none";
+        index = track.children.length - visible * 2;
+        updatePosition();
+      }, 500);
+    }
+  });
+
+ 
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      const newVisible = getVisible();
+      if (newVisible !== visible) {
+        visible = newVisible;
+        setupSlider();
+      }
+    }, 250);
+  });
+
+  setupSlider();
+});
+</script> -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.getElementById("careerTrack");
+  const nextBtn = document.getElementById("careerNext");
+  const prevBtn = document.getElementById("careerPrev");
+  const carousel = document.querySelector(".career-slider");
+
+  if (!track || !nextBtn || !prevBtn || !carousel) return;
+
+  function getVisible(){
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+  }
+
+  let visible = getVisible();
+  let index = visible;
+  let isMoving = false;
+  let autoSlideInterval;
 
   /* ---------- SETUP SLIDER ---------- */
   function setupSlider(){
@@ -440,7 +486,24 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transition = "transform 0.5s ease-in-out";
     track.style.transform = `translateX(-${index * slideWidth}%)`;
 
-    setTimeout(() => isMoving = false, 500);
+    setTimeout(() => {
+      isMoving = false;
+    }, 500);
+  }
+
+  /* ---------- AUTO SLIDE ---------- */
+  function startAutoSlide(){
+    stopAutoSlide();
+    autoSlideInterval = setInterval(() => {
+      nextBtn.click();
+    }, 3000); // ⏱ 3 seconds
+  }
+
+  function stopAutoSlide(){
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
   }
 
   /* ---------- NAVIGATION ---------- */
@@ -449,7 +512,6 @@ document.addEventListener("DOMContentLoaded", () => {
     move();
 
     const total = track.children.length;
-
     if (index === total - visible) {
       setTimeout(() => {
         track.style.transition = "none";
@@ -457,6 +519,8 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePosition();
       }, 500);
     }
+
+    startAutoSlide(); // reset timer
   });
 
   prevBtn.addEventListener("click", () => {
@@ -470,42 +534,63 @@ document.addEventListener("DOMContentLoaded", () => {
         updatePosition();
       }, 500);
     }
+
+    startAutoSlide(); // reset timer
   });
 
-  /* ---------- RESPONSIVE (NO RELOAD) ---------- */
+  /* ---------- HOVER STOP / RESUME ---------- */
+  carousel.addEventListener("mouseenter", stopAutoSlide);
+  carousel.addEventListener("mouseleave", startAutoSlide);
+
+  /* ---------- RESPONSIVE ---------- */
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
-
     resizeTimer = setTimeout(() => {
       const newVisible = getVisible();
       if (newVisible !== visible) {
         visible = newVisible;
         setupSlider();
+        startAutoSlide();
       }
     }, 250);
   });
 
+  /* ---------- INIT ---------- */
   setupSlider();
+  startAutoSlide();
+
 });
 </script>
 
-  <!--Toggle Button Script-->
+
+ <!--Toggle Button Script-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/career";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/career-";
+
   });
 });
 </script>
-
 </body>
 </html>

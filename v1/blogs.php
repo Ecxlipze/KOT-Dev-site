@@ -1,30 +1,51 @@
+<?php
+include "../admin/db/db_connect.php";
+
+/* Validate ID */
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+  echo "Invalid blog request";
+  exit;
+}
+
+$id = (int)$_GET['id'];
+
+/* Fetch blog */
+$sql = "SELECT * FROM blogs 
+        WHERE id = $id AND blog_status = 1 
+        LIMIT 1";
+
+$result = mysqli_query($con, $sql);
+
+if (mysqli_num_rows($result) === 0) {
+  echo "Blog not found";
+  exit;
+}
+
+$blog = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs</title>
+
+  <title><?= htmlspecialchars($blog['blog_title']) ?></title>
+
   <link rel="stylesheet" href="../assets/css/styles2.css">
   <link rel="stylesheet" href="../assets/css/header.css">
   <link rel="stylesheet" href="../assets/css/neww.css">
   <link rel="stylesheet" href="../assets/css/responsive-dm.css">
-  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../assets/images/cardslight/fav.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-
-
 </head>
 
 <body>
-  <div id="global-header"></div>
 
+<div id="global-header"></div>
+
+<!-- BLOG BANNER -->
 <section class="kot-blog-banner">
   <div class="kot-blog-banner-inner">
     <h1 class="kot-blog-title">Blogs</h1>
@@ -33,53 +54,42 @@
     </p>
   </div>
 </section>
+
+<!-- INTRO IMAGE -->
 <section class="kot-blog-intro-section">
-  <div class="kot-blog-intro-card">
-    <p>
-      The KOT Blog is where our thinkers, engineers, strategists, and leaders
-      share perspectives on technology, business, and the evolving digital world.
-      From deep-dive analysis to practical guidance, this space reflects the
-      intellectual heartbeat of the KOT ecosystem.
-    </p>
+  <div class="kot-blog-intro-card text-center">
+
+    <img 
+      src="../admin/uploads/<?= htmlspecialchars($blog['blog_image']) ?>" 
+      alt="<?= htmlspecialchars($blog['blog_title']) ?>" 
+      class="rounded" style="border-radius: 30px;"
+    
+    >
+
   </div>
 </section>
 
+<!-- BLOG CONTENT -->
 <section class="kot-blog-content">
+
   <h2 class="kot-blog-heading">
-    The Future of Digital Enterprises in 2026
+    <?= htmlspecialchars($blog['blog_title']) ?>
   </h2>
 
-  <p class="kot-blog-author">By KOT Enterprises</p>
-
-  <p>
-    The world is entering a new phase of digital evolution. Technology is no longer just a tool that supports business — it has become the foundation on which businesses are built. In 2026, every serious enterprise will either be a technology-powered organization or struggle to compete in a market driven by speed, data, and automation.
+  <p class="kot-blog-author">
+     <?= htmlspecialchars($blog['blog_author']) ?> 
   </p>
 
   <p>
-   This shift is not about adopting one new software or launching a mobile app. It is about a complete transformation of how companies operate, think, and grow.
+    <?= nl2br(htmlspecialchars($blog['description1'])) ?>
   </p>
 
-  <h3 class="kot-blog-subheading">
-    Digital is No Longer Optional
-  </h3>
+  <?php if (!empty($blog['description2'])): ?>
+    <p>
+      <?= nl2br(htmlspecialchars($blog['description2'])) ?>
+    </p>
+  <?php endif; ?>
 
-  <p>
-    For decades, companies treated technology as a support function — something that made operations more efficient. In 2026, digital systems are not just supporting businesses; they are defining them..
-  </p>
-
-  <p>
-  Modern enterprises now depend on:</p>
-  <ul class="kot-blog-list">
-    <li>Cloud-based platforms instead of physical infrastructure</li>
-    <li>Artificial intelligence instead of manual decision-making</li>
-    <li>Data instead of intuition</li>
-    <li>Automation instead of human-heavy operations</li>
-  </ul>
-
-  <p>
-    Organizations that fail to adopt these foundations are not simply slower —
-    they become irrelevant.
-  </p>
 </section>
 
 
@@ -114,7 +124,7 @@
         document.getElementById('global-footer').innerHTML = data;
       });
   </script>
-  <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -125,16 +135,31 @@
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/blogs-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/blogs-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -472,7 +497,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;
@@ -531,8 +556,6 @@
     }
     
   </script>
-
-
 
 
 

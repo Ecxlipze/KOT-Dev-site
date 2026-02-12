@@ -11,9 +11,16 @@ $row = mysqli_fetch_assoc($q);
 <p class="text-muted">By <?= htmlspecialchars($row['blog_author']); ?></p>
 <hr>
 
+<?php if(!empty($row['blog_image'])): ?>
+<div class="mb-3 text-center">
+    <img src="uploads/<?= htmlspecialchars($row['blog_image']); ?>" 
+         alt="Blog Image" style="max-width:50%; height:auto; border-radius:6px;">
+</div>
+<?php endif; ?>
+
 <p><?= nl2br($row['description1']); ?></p>
 
-<?php if (!empty($row['description2'])) { ?>
+<?php if (!empty($row['description2'])): ?>
 <hr>
 <p><?= nl2br($row['description2']); ?></p>
-<?php } ?>
+<?php endif; ?>

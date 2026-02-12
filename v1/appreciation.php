@@ -1,4 +1,4 @@
-
+ 
 <?php
 include "../admin/db/db_connect.php";
 ?>
@@ -59,26 +59,7 @@ include "../admin/db/db_connect.php";
       </div>
     </div>
 
-    <!-- Desktop / Large screens GRID -->
-    <!-- <div class="row g-4 d-none d-lg-flex">
-   
-      <div class="col-lg-3">
-        <div class="ns-hero-card">
-          <div class="ns-hero-img"></div>
-          <div class="ns-hero-info"></div>
-        </div>
-      </div>
-
-      
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-      <div class="col-lg-3"><div class="ns-hero-card"><div class="ns-hero-img"></div><div class="ns-hero-info"></div></div></div>
-    </div> -->
+    
       <div class="row g-4 d-none d-lg-flex">
 <?php
 $sql = "SELECT title, image 
@@ -97,8 +78,8 @@ if(mysqli_num_rows($result) > 0){
         <div class="col-lg-3">
             <div class="ns-hero-card">
                 <img src="'.$imagePath.'" class="ns-card-img"/>
-                <div class="ns-hero-info  "  >
-                    <h5 style="color:#FFFFFF" >'.$title.'</h5>
+                <div class="ns-hero-info text-center "  >
+                    <h5 style="color:#FFFFFF; font-size:15px" >'.$title.'</h5>
                 </div>
             </div>
         </div>
@@ -126,8 +107,8 @@ if(mysqli_num_rows($result) > 0){
         <div class="ns-slider-item">
             <div class="ns-hero-card">
                 <img src="'.$imagePath.'" class="ns-card-img"/>
-                <div class="ns-hero-info">
-                    <h5 style="color:#FFFFFF" >'.$title.'</h5>
+                <div class="ns-hero-info text-center ">
+                    <h5 style="color:#FFFFFF;font-size:15px" >'.$title.'</h5>
                 </div>
             </div>
         </div>
@@ -175,13 +156,44 @@ if(mysqli_num_rows($result) > 0){
         document.getElementById('global-footer').innerHTML = data;
       });
   </script>
- <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
+    initHeader(); // run AFTER header is injected
+    });
+    function initHeader() {
 
-    // ================= MOBILE MENU FUNCTIONALITY =================
+    if (window.__headerInitialized) return;
+    window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/appreciation-";
+
+        });
+        
+
+     /* ================= MOBILE MENU ================= */
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -189,27 +201,29 @@ if(mysqli_num_rows($result) > 0){
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-    function openMenu(){
-        menu.classList.add("kot-header-open");
-        overlay.classList.add("kot-header-show");
-        body.style.overflow = "hidden";
-        menu.setAttribute("aria-hidden", "false");
-    }
+   function openMenu() {
+    menu?.classList.add("kot-header-open");
+    overlay?.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu?.setAttribute("aria-hidden", "false");
+     }
 
-    function closeMenu(){
-        menu.classList.remove("kot-header-open");
-        overlay.classList.remove("kot-header-show");
-        body.style.overflow = "";
-        menu.setAttribute("aria-hidden", "true");
-    }
+         function closeMenu() {
+    menu?.classList.remove("kot-header-open");
+    overlay?.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu?.setAttribute("aria-hidden", "true");
+     }
 
-    openBtnTop?.addEventListener("click", openMenu);
+   openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
+      closeMenu();
+    }
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -234,11 +248,11 @@ if(mysqli_num_rows($result) > 0){
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-const bufferZone = document.querySelector('.mega-menu-buffer');
-const navBar = document.getElementById('nav');
+        const bufferZone = document.querySelector('.mega-menu-buffer');
+        const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -512,7 +526,7 @@ const navBar = document.getElementById('nav');
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    });
+    };
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -568,6 +582,7 @@ const navBar = document.getElementById('nav');
 
                 lastScroll = currentScroll;
             });
+            
         }
     
     }

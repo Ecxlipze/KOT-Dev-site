@@ -1,5 +1,15 @@
 
+<?php
+include "../admin/db/db_connect.php";
 
+// Fetch 3 latest published blogs
+$sql = "SELECT id, blog_title, description1, blog_image 
+        FROM blogs 
+        WHERE blog_status = 1 
+        ORDER BY created_at DESC 
+        LIMIT 3";
+$result = mysqli_query($con, $sql);
+?>
 <!-- Navbar -->
 <?php require '../public/header-dm-new.php'; ?>
 
@@ -355,11 +365,11 @@
 </div>
 
 <!-- Blog Section -->
-<div class="container-fluid my-5">
+<!-- <div class="container-fluid my-5">
    <div class="blog-heading"><h2>Our Blogs</h2></div>
   <div class="row justify-content-center g-2">
      
-    <!-- CARD 1 -->
+    
     <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
 
       <div class="blog-card-1-main">
@@ -388,7 +398,7 @@
 
     </div>
 
-    <!-- CARD 2 -->
+   
     <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
 
       <div class="blog-card-1-main">
@@ -417,7 +427,7 @@
 
     </div>
 
-    <!-- CARD 3 -->
+    
     <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
 
       <div class="blog-card-1-main">
@@ -447,8 +457,61 @@
     </div>
 
   </div>
-</div>
+</div> -->
+<!-- Blog Section -->
+<div class="container-fluid my-5">
+   <div class="blog-heading"><h2>Our Blogs</h2></div>
+  <div class="row justify-content-center g-2">
 
+<?php
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+        $id    = (int)$row['id'];
+        $title = htmlspecialchars($row['blog_title']);
+        $desc1 = htmlspecialchars($row['description1']);
+        $image = "../admin/uploads/" . htmlspecialchars($row['blog_image']);
+?>
+
+    <!-- CARD -->
+    <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center">
+
+      <div class="blog-card-1-main">
+        <div class="blog-card-image-1">
+          <a href="/blog-/?id=<?= $id ?>">
+            <img src="<?= $image ?>" alt="<?= $title ?>" style="cursor:pointer; transition: transform 0.3s ease;"  onmouseover="this.style.transform='scale(1.04)'"
+  onmouseout="this.style.transform='scale(1)'">
+          </a>
+        </div>
+
+        <div class="blog-card-heading">
+          <h2><?= $title ?></h2>
+        </div>
+
+        <div class="blog-card-line">
+          <p></p>
+        </div>
+
+        <div class="blog-card-paragraph">
+          <p>
+           <?= strlen($desc1) > 200 ? substr($desc1,0,200).'...' : $desc1 ?>
+          </p>
+        </div>
+      </div>
+
+      <div class="blog-outside-button">
+        <a href="/blog-/?id=<?= $id ?>">Read More <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+<?php
+    }
+} else {
+    echo "<p>No blogs found.</p>";
+}
+?>
+  </div>
+</div>
 <!-- faq-section-start -->
   <!-- faq-section-start -->
    <div class="new-addition-chatbot text-center ">
@@ -569,7 +632,7 @@
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;

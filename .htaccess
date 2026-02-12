@@ -69,8 +69,11 @@ RewriteRule ^app-sculpt-/?$ d1/appsculpt.php [L]
 RewriteRule ^audits/?$ v1/audits.php [L]
 RewriteRule ^audits-/?$ d1/audits.php [L]
 
-RewriteRule ^blogs/?$ v1/blogs.php [L]
-RewriteRule ^blogs-/?$ d1/blogs.php [L]
+RewriteRule ^blogs/?$ v1/blog.php [L]
+RewriteRule ^blogs-/?$ d1/blog.php [L]
+
+RewriteRule ^blog/?$ v1/blogs.php [L]
+RewriteRule ^blog-/?$ d1/blogs.php [L]
 
 RewriteRule ^board-of-directors/?$ v1/board-of-directors.php [L]
 RewriteRule ^board-of-directors-/?$ d1/board-of-directors.php [L]
@@ -105,6 +108,10 @@ RewriteRule ^graphoria-/?$ d1/graphoria.php [L]
 RewriteRule ^event/?$ v1/event.php [L]
 RewriteRule ^event-/?$ d1/event.php [L]
 
+RewriteRule ^eventdetail/?$ v1/event_detail_page.php [L]
+RewriteRule ^eventdetail-/?$ d1/event_detail_page.php [L]
+
+
 RewriteRule ^faq-page/?$ v1/faq-page.php [L]
 RewriteRule ^faq-page-/?$ d1/faq-page.php [L]
 
@@ -125,6 +132,9 @@ RewriteRule ^digittrail-/?$ d1/digittrail.php [L]
 
 RewriteRule ^news/?$ v1/news.php [L]
 RewriteRule ^news-/?$ d1/news.php [L]
+
+RewriteRule ^newsdetail/?$ v1/news_detail_page.php [L]
+RewriteRule ^newsdetail-/?$ d1/news_detail_page.php [L]
 
 RewriteRule ^new-year/?$ v1/new-year.php [L]
 RewriteRule ^new-year-/?$ d1/new-year.php [L]

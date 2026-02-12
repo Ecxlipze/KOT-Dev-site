@@ -109,8 +109,15 @@ include "db/db_connect.php";
                   <label class="form-label">Description 2</label>
                   <textarea name="description2" class="form-control" rows="3"></textarea>
                 </div>
+                       <!-- image -->
+                          <div class="col-12">
+              <label class="form-label">Blog Image</label>
+              <input type="file" name="blog_image" class="form-control" accept="image/*" required>
+                  <small class="text-muted">
+              Image size must be exactly <strong>800 × 400 px</strong>
+              </small>
 
-              
+            </div>
 
                 <!-- Publish -->
                 <div class="col-12">
@@ -182,6 +189,7 @@ $(document).ready(function () {
     const authorInput = $('input[name="blog_author"]');
     const desc1Input = $('textarea[name="description1"]');
     const desc2Input = $('textarea[name="description2"]');
+    const imageInput = $('input[name="blog_image"]');
 
     const noSpecialChars = /^[a-zA-Z0-9\s.,?!-]*$/;
 
@@ -190,6 +198,7 @@ $(document).ready(function () {
     const authorFeedback = $('<div style="color:red;margin-top:5px;"></div>').insertAfter(authorInput);
     const desc1Feedback = $('<div style="color:red;margin-top:5px;"></div>').insertAfter(desc1Input);
     const desc2Feedback = $('<div style="color:red;margin-top:5px;"></div>').insertAfter(desc2Input);
+    const imageFeedback = $('<div style="color:red;margin-top:5px;"></div>').insertAfter(imageInput);
 
     // Live validation
     function liveValidate(input, feedback, maxLen) {
@@ -208,10 +217,11 @@ $(document).ready(function () {
         });
     }
 
+    // Set limits: Title 80, Author 50, Description1 50, Description2 800
     liveValidate(titleInput, titleFeedback, 80);
     liveValidate(authorInput, authorFeedback, 50);
-    liveValidate(desc1Input, desc1Feedback, 500);
-    liveValidate(desc2Input, desc2Feedback, 500);
+    liveValidate(desc1Input, desc1Feedback, 80);  // Changed from 500 → 50
+    liveValidate(desc2Input, desc2Feedback, 800); // Changed from 500 → 800
 
     $("#blogForm").on("submit", function (e) {
         e.preventDefault();
@@ -219,17 +229,21 @@ $(document).ready(function () {
         const titleVal = titleInput.val().trim();
         const authorVal = authorInput.val().trim();
         const desc1Val = desc1Input.val().trim();
+        const imageVal = imageInput.val();
 
         if (!titleVal) return showToast("Title is required.", false);
         if (!authorVal) return showToast("Author is required.", false);
         if (!desc1Val) return showToast("Description 1 is required.", false);
+        if (!imageVal) return showToast("Image is required.", false);
 
-        const formData = $(this).serialize();
+        const formData = new FormData(this);
 
         $.ajax({
             url: "subpages/add-blog.php",
             type: "POST",
             data: formData,
+            contentType: false,
+            processData: false,
             success: function (response) {
                 if (response.trim() === "success") {
                     showToast("Blog added successfully!", true);
@@ -251,9 +265,8 @@ $(document).ready(function () {
         new bootstrap.Toast(document.getElementById('liveToast')).show();
     }
 });
+
 </script>
-
-
 
 </body>
 

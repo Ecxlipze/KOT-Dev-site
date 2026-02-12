@@ -2088,6 +2088,7 @@ display: block;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000000;
+  margin-top: 14%;
   /* filter: contrast(1.2) brightness(1.05) saturate(1.1); */
 }
 
@@ -2215,7 +2216,7 @@ display: block;
    display: block;
   width: 100%;
 max-width: 349px;
-height: auto;
+height: 287px;
 
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;

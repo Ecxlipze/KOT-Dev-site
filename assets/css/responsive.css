@@ -721,7 +721,7 @@ display: none;
     font-family: 'Montserrat-Bold' !important;
 }
      .graphoria-card{ width: 170px; border-radius: 14px; }
-  .graphoria-card__img{ height: auto; }
+  .graphoria-card__img{ height: 25vh; }
   .graphoria-our-text-strip{
     gap: 15px !important;
   }
@@ -1183,8 +1183,24 @@ margin-top: 0%;
       background-size: cover !important;
     }
     .career-card h6{
-      font-size: 22px;
+     
+      font-family: 'Montserrat-Bold';
+
+font-size: 22px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
     }
+    .career-card p{
+    font-family: 'Montserrat-Regular';
+
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #000000;
+   }
 .app-sculpt-service-btn a{
   font-family: 'Montserrat-Bold';
 
@@ -1452,8 +1468,21 @@ margin-bottom: 0%;
 .new-btn-addition-fig{
   gap: 13px !important;
 }
+.career-card-image-mission{
+    padding-left: 5%;
+    padding-top: 20%;
+  }
 }
+@media (max-width: 767px) and (orientation: landscape) {
+  .career-card-image-mission{
+    padding-left: 16%;
+    padding-top: 13%;
+  }
+  .graphoria-card__img{
+    height: 45vh;
+  }
 
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .responsive-layout-cl{
   margin-top: -13% !important;

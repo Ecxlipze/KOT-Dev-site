@@ -71,7 +71,7 @@
             <div class="offer-card-text">
               <h5 class="what-we-offer-card-title">Custom Website Development</h5>
               <div class="explore-btn-offer">
-                 <a href="#" class="what-we-explore-btn">Explore</a>
+                 <!-- <a href="#" class="what-we-explore-btn">Explore</a> -->
              </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
             <div class="offer-card-text">
               <h5 class="what-we-offer-card-title">Responsive UI/UX <br> Design </h5>     <!--<a href="">Explore</a> -->
               <div class="explore-btn-offer">
-                 <a href="#" class="what-we-explore-btn">Explore</a>
+                 <!-- <a href="#" class="what-we-explore-btn">Explore</a> -->
              </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
             <div class="offer-card-text">
               <h5 class="what-we-offer-card-title">Front-end & Back-end Development</h5>
               <div class="explore-btn-offer">
-                 <a href="#" class="what-we-explore-btn">Explore</a>
+                 <!-- <a href="#" class="what-we-explore-btn">Explore</a> -->
              </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <div class="offer-card-text">
               <h5 class="what-we-offer-card-title">CMS Integration (WordPress, Shopify)</h5>
               <div class="explore-btn-offer">
-                 <a href="#" class="what-we-explore-btn">Explore</a>
+                 <!-- <a href="#" class="what-we-explore-btn">Explore</a> -->
              </div>
             </div>
           </div>
@@ -128,7 +128,7 @@
               <h5 class="what-we-offer-card-title">Maintenance &  Optimization </h5>
               
              <div class="explore-btn-offer">
-                 <a href="#" class="what-we-explore-btn">Explore</a>
+                 <!-- <a href="#" class="what-we-explore-btn">Explore</a> -->
              </div>
             </div>
           </div>
@@ -226,22 +226,36 @@
     });
 </script>
 
-  <!--Toggle Button Script-->
+ <!-- Toggle Button Script -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/WebSculpture";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/WebSculpture-/";
+
   });
 });
 </script>
+
+
 <!-- WHAT WE OFFER SECTION END -->
 
  

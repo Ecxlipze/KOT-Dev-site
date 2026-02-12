@@ -66,6 +66,14 @@
 .contact-item:hover a {
   color: #ffffff; /* Bootstrap primary */
 }
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff; /* cursor white */
+  transition: background-color 9999s ease-in-out 0s;
+}
 
 </style>
 </head>
@@ -98,7 +106,7 @@
 <div class="mb-4">
   <label>Email Address</label>
   <input type="email" name="email" class="form-control" placeholder="Enter your email address" style="border: 1px solid #ffffff; margin-top: 3px;">
-  <small id="emailError" style="color:red; display:none; font-size:12px;">Enter a valid email</small>
+  <small id="emailError" style="color:red; display:none; font-size:12px;">Enter a valid Email address!</small>
 </div>
 
 <div class="mb-4">
@@ -110,7 +118,7 @@
 
   <div class="mb-4">
     <label>Details</label>
-    <textarea rows="5" name="message" class="form-control" placeholder="Write your message here (max 500 characters)" style="border: 1px solid #ffffff; margin-top: 3px; resize: none;"></textarea>
+    <textarea rows="5" name="message" class="form-control" placeholder="Write your message here (max 500 characters)" style="border: 1px solid #ffffff; margin-top: 3px; resize: none; background-color: #000000 !important; "></textarea>
    <small id="messageCount" style="float:right; font-size:12px; color:#ffffff;">0/500</small>
   </div>
 
@@ -139,7 +147,7 @@
   <img src="../assets/images/contact-dark/contact-2.png" class="icon-img" alt="Email">
   <h6>Email Address</h6>
   <p>
-    <a href="mailto:hello@kotenterprises-e.com">info@kotenterprises-e.com</a>
+    <a href="mailto:info@kotenterprises-e.com">info@kotenterprises-e.com</a>
   </p>
 </div>
 
@@ -172,14 +180,14 @@
   </div>
 </section>
 
-<section class="contact-cta text-center">
+<!-- <section class="contact-cta text-center">
   <div class="container">
     <h2 style="font-weight:700;">Get Yourself published</h2>
     <a href="#" class="btn hero-btn mt-3" style="color: white;">
       Subscribe to our newsletter →
     </a>
   </div>
-</section>
+</section> -->
     <div id="global-footer"></div>
            <!-- <button id="goTopBtn" title="Go to top">↑</button> -->
 
@@ -204,20 +212,43 @@
 
 
 <script>
-  fetch('../components/footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('global-footer').innerHTML = data;
-    });
-</script>
-
-  <script>
     fetch('../components/header-dark.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
+    initHeader(); // run AFTER header is injected
+    });
+    function initHeader() {
 
-    // ================= MOBILE MENU FUNCTIONALITY =================
+    if (window.__headerInitialized) return;
+    window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/contact";
+
+        });
+        
+
+     /* ================= MOBILE MENU ================= */
     const body = document.body;
     const menu = document.getElementById("mobileMenu");
     const overlay = document.getElementById("menuOverlay");
@@ -225,27 +256,29 @@
     const openBtnBottom = document.getElementById("openMenuBtnBottom");
     const closeBtn = document.getElementById("closeMenuBtn");
 
-    function openMenu(){
-        menu.classList.add("kot-header-open");
-        overlay.classList.add("kot-header-show");
-        body.style.overflow = "hidden";
-        menu.setAttribute("aria-hidden", "false");
-    }
+   function openMenu() {
+    menu?.classList.add("kot-header-open");
+    overlay?.classList.add("kot-header-show");
+    body.style.overflow = "hidden";
+    menu?.setAttribute("aria-hidden", "false");
+     }
 
-    function closeMenu(){
-        menu.classList.remove("kot-header-open");
-        overlay.classList.remove("kot-header-show");
-        body.style.overflow = "";
-        menu.setAttribute("aria-hidden", "true");
-    }
+         function closeMenu() {
+    menu?.classList.remove("kot-header-open");
+    overlay?.classList.remove("kot-header-show");
+    body.style.overflow = "";
+    menu?.setAttribute("aria-hidden", "true");
+     }
 
-    openBtnTop?.addEventListener("click", openMenu);
+   openBtnTop?.addEventListener("click", openMenu);
     openBtnBottom?.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu);
+    closeBtn?.addEventListener("click", closeMenu);
+    overlay?.addEventListener("click", closeMenu);
 
     document.addEventListener("keydown", (e) => {
-        if(e.key === "Escape" && menu.classList.contains("kot-header-open")) closeMenu();
+    if (e.key === "Escape" && menu?.classList.contains("kot-header-open")) {
+      closeMenu();
+    }
     });
 
     // MOBILE ACCORDION FUNCTIONALITY
@@ -270,11 +303,11 @@
         console.log(this.checked ? "Dark mode ON" : "Dark mode OFF");
     });
 
-// ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
+        // ================= SMOOTH DESKTOP MEGA MENU (BLINKING FIXED) =================
         const navItems = document.querySelectorAll('.kot-main-header-nav-bar-item-wrapper');
         const megaMenus = document.querySelectorAll('.kot-main-header-nav-bar-mega-menu');
-const bufferZone = document.querySelector('.mega-menu-buffer');
-const navBar = document.getElementById('nav');
+        const bufferZone = document.querySelector('.mega-menu-buffer');
+        const navBar = document.getElementById('nav');
  
         // Hide all mega menus initially
         megaMenus.forEach(menu => {
@@ -548,7 +581,7 @@ const navBar = document.getElementById('nav');
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
-    });
+    };
 
     // ================= MARQUEE ANIMATION =================
     const trackk = document.getElementById("marqueeTrack");
@@ -604,13 +637,12 @@ const navBar = document.getElementById('nav');
 
                 lastScroll = currentScroll;
             });
+            
         }
     
     }
     
   </script>
-
-
 
 
   <!-- Bootstrap JS -->
@@ -638,15 +670,23 @@ const messagePattern = /^[A-Za-z0-9\s]*$/;             // Letters, numbers, spac
 const emailPattern = /^[a-zA-Z0-9._%+-]{1,60}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email max 60
 
 // ===== Live validation =====
+// ===== NAME =====
 nameInput.addEventListener('input', () => {
+    // Remove invalid characters
+    nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,'');
+
+    // Limit to 60 characters
+    if (nameInput.value.length > 60) {
+        nameInput.value = nameInput.value.substring(0, 60);
+    }
+
+    // Show error if invalid
     if (!namePattern.test(nameInput.value)) {
         nameError.style.display = "block";
-        nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
     } else {
         nameError.style.display = "none";
     }
 });
-
 emailInput.addEventListener('input', () => {
     // Limit to 60 characters
     if (emailInput.value.length > 60) {
@@ -746,24 +786,14 @@ function showToast(message, type="success") {
     }).showToast();
 }
 </script>
-
-
-  <!--Toggle Button Script-->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const t = document.getElementById("theme-toggle");
-  if (!t) return;
-
-  // Dark page => ON by HTML (checked)
-
-  t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/contact.html";
-    }
-  });
-});
+  fetch('../components/footer-dark.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('global-footer').innerHTML = data;
+    });
 </script>
+
 
 </body>
 </html>

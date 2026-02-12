@@ -63,6 +63,14 @@
 .contact-item:hover a {
   color: #000000; /* Bootstrap primary */
 }
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important; /* WHITE bg */
+  -webkit-text-fill-color: #000000 !important;              /* BLACK text */
+  caret-color: #000000;                                     /* BLACK cursor */
+  transition: background-color 9999s ease-in-out 0s;
+}
 
 </style>
 <body>
@@ -94,7 +102,7 @@
   <div class="mb-4">
     <label>Email Address</label>
     <input type="email" name="email" class="form-control" style="border: 1px solid black; margin-top: 3px;">
-    <small class="text-danger" id="emailError" style="display:none;">Enter a valid Gmail address!</small>
+    <small class="text-danger" id="emailError" style="display:none;">Enter a valid Email address!</small>
   </div>
 
   <div class="mb-4">
@@ -134,7 +142,7 @@
   <img src="../assets/images/contact/contact-2.png" class="icon-img" alt="Email">
   <h6>Email Address</h6>
   <p>
-    <a href="mailto:hello@kotenterprises-e.com">info@kotenterprises-e.com</a>
+    <a href="mailto:info@kotenterprises-e.com">info@kotenterprises-e.com</a>
   </p>
 </div>
 
@@ -168,14 +176,14 @@
   </div>
 </section>
 
-<section class="contact-cta text-center">
+<!-- <section class="contact-cta text-center">
   <div class="container">
     <h2 style="font-weight:700;">Get Yourself published</h2>
     <a href="#" class="btn hero-btn mt-3" style="color: white;">
       Subscribe to our newsletter →
     </a>
   </div>
-</section>
+</section> -->
     <div id="global-footer"></div>
         <button id="goTopBtn" title="Go to top">↑</button>
 
@@ -206,7 +214,7 @@
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
-  <script>
+   <script>
     fetch('../components/header.html')
       .then(res => res.text())
       .then(data => {
@@ -217,16 +225,31 @@
 
     if (window.__headerInitialized) return;
     window.__headerInitialized = true;
+    
+      const t = document.getElementById("theme-toggle");
+  if (!t) return;
 
-     /* ================= THEME TOGGLE ================= */
-         const t = document.getElementById("theme-toggle");
-             if (t) {
-    t.addEventListener("change", () => {
-      if (!t.checked) {
-        window.location.href = "/contact-";
-        } 
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
+
+  t.addEventListener("change", () => {
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
+    }
+
+    // same page reload
+    window.location.href = "/contact-";
+
         });
-        }
+        
 
      /* ================= MOBILE MENU ================= */
     const body = document.body;
@@ -564,7 +587,7 @@
     };
 
     // ================= MARQUEE ANIMATION =================
-    const track = document.getElementById("marqueeTrack");
+    const trackk = document.getElementById("marqueeTrack");
     if (track) {
         let pos = 0;
         let speed = 0.5;
@@ -645,16 +668,25 @@ const subjectError = document.getElementById('subjectError');
 const messageCount = document.getElementById('messageCount');
 
 // ===== Patterns =====
-const namePattern = /^[A-Za-z\s]*$/;                   // Only letters and spaces
+const namePattern = /^[A-Za-z\s]{0,50}$/;                   // Only letters and spaces
 const subjectPattern = /^[A-Za-z\s]{0,50}$/;           // Only letters and spaces, max 50
 const messagePattern = /^[A-Za-z0-9\s]*$/;             // Letters, numbers, spaces, max 500
 const emailPattern = /^[a-zA-Z0-9._%+-]{1,60}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Valid email max 60
 
 // ===== Live validation =====
+// ===== NAME =====
 nameInput.addEventListener('input', () => {
+    // Remove invalid characters
+    nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,'');
+
+    // Limit to 60 characters
+    if (nameInput.value.length > 60) {
+        nameInput.value = nameInput.value.substring(0, 60);
+    }
+
+    // Show error if invalid
     if (!namePattern.test(nameInput.value)) {
         nameError.style.display = "block";
-        nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g,''); // remove invalid chars
     } else {
         nameError.style.display = "none";
     }

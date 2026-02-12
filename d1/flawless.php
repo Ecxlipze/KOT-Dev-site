@@ -94,7 +94,7 @@
             <h2>Manual and automated testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -107,7 +107,7 @@
             <h2>Performance and load testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -120,7 +120,7 @@
             <h2>Functional and regression testing</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -133,7 +133,7 @@
             <h2>Security testing and vulnerability checks</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -146,7 +146,7 @@
             <h2>UI/UX quality validation</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -159,7 +159,7 @@
             <h2>Compliance and user-journey refinement</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             <div class="card-flawless-btn">
-                <a href="">READ MORE</a>
+                <!-- <a href="">READ MORE</a> -->
             </div>
         </div>
        </div>
@@ -212,25 +212,52 @@
 
 
 <script>
-  fetch('../components/footer.html')
+  fetch('../components/footer-dark.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('global-footer').innerHTML = data;
     });
 </script>
   <!--Toggle Button Script-->
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("theme-toggle");
+  if (!t) return;
+
+  
+
+  t.addEventListener("change", () => {
+    if (!t.checked) {
+     
+      window.location.href = "/flawless";
+    }
+  });
+});
+</script> -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const t = document.getElementById("theme-toggle");
   if (!t) return;
 
-  // Dark page => ON by HTML (checked)
+  // Page load par theme read karo
+  const theme = localStorage.getItem("theme");
+
+  // 🔑 FORCE toggle state
+  t.checked = theme === "dark";
 
   t.addEventListener("change", () => {
-    if (!t.checked) {
-      // Dark -> Light
-      window.location.href = "/flawless";
+
+    if (t.checked) {
+      // Light → Dark
+      localStorage.setItem("theme", "dark");
+    } else {
+      // Dark → Light
+      localStorage.setItem("theme", "light");
     }
+
+    // same page reload
+    window.location.href = "/flawless";
+
   });
 });
 </script>
