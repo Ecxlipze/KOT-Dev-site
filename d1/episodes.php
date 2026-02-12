@@ -934,24 +934,64 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
                 item.style.setProperty('--hover-color', hoverColors[menuType]);
             }
         });
+
+        initMarquee();
     };
 
     // ================= MARQUEE ANIMATION =================
-    const trackk = document.getElementById("marqueeTrack");
-    if (track) {
-        let pos = 0;
-        let speed = 0.5;
-        const singleWidth = track.scrollWidth / 2;
+    function initMarquee() {
+        const track = document.getElementById("marqueeTrack");
+        if (!track) return;
+        
+        // Prevent multiple initialization
+        if (track.__marqueeInitialized) return;
+        track.__marqueeInitialized = true;
 
-        function animate(){
-            pos -= speed;
-            if(pos <= -singleWidth){
-                pos = 0;
+        // Disable CSS animation to avoid conflicts with JS animation
+        track.style.animation = 'none';
+
+        const startAnimation = () => {
+            const unitWidth = track.scrollWidth;
+            if (unitWidth <= 0) return; // Safety check
+            const originalHTML = track.innerHTML;
+
+            // Duplicate content to ensure enough coverage for seamless looping
+            track.innerHTML += originalHTML;
+            
+            // Ensure we have at least enough content to cover the screen width
+            while (track.scrollWidth < window.innerWidth + unitWidth) {
+                track.innerHTML += originalHTML;
             }
-            track.style.transform = `translateX(${pos}px)`;
-            requestAnimationFrame(animate);
+
+            let pos = 0;
+            let speed = 0.5;
+
+            function animate() {
+                pos -= speed;
+                if (pos <= -unitWidth) {
+                    pos = 0;
+                }
+                track.style.transform = `translateX(${pos}px)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
+        };
+
+        // Ensure images are loaded before calculating width
+        const images = Array.from(track.getElementsByTagName('img'));
+        if (images.length === 0 || images.every(img => img.complete)) {
+            startAnimation();
+        } else {
+            let loadedCount = 0;
+            images.forEach(img => {
+                const check = () => {
+                    loadedCount++;
+                    if (loadedCount === images.length) startAnimation();
+                };
+                img.addEventListener('load', check);
+                img.addEventListener('error', check);
+            });
         }
-        animate();
     }
 
     // ================= LANGUAGE SELECTION =================
@@ -1003,7 +1043,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
 
 </body>
 

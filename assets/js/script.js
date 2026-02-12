@@ -128,26 +128,65 @@ nav.addEventListener("mouseleave",()=>{
 });
 
 // marquee js
-const track = document.getElementById("marqueeTrack");
+function initMarquee() {
+  const track = document.getElementById("marqueeTrack");
+  if (!track) return;
+  
+  // Prevent multiple initialization
+  if (track.__marqueeInitialized) return;
+  track.__marqueeInitialized = true;
 
-let pos = 0;
-let speed = 0.5;
+  // Disable CSS animation to avoid conflicts with JS animation
+  track.style.animation = 'none';
 
-// exact width of ONE content copy
-const singleWidth = track.scrollWidth / 2;
+  const startAnimation = () => {
+    const unitWidth = track.scrollWidth;
+    if (unitWidth <= 0) return; // Safety check to prevent infinite loop
+    const originalHTML = track.innerHTML;
 
-function animate(){
-  pos -= speed;
+    // Duplicate content to ensure enough coverage for seamless looping
+    // We append the original content once; if it's still too small for the screen, we append more.
+    track.innerHTML += originalHTML;
+    
+    // Ensure we have at least enough content to cover the screen width plus a buffer
+    while (track.scrollWidth < window.innerWidth + unitWidth) {
+        track.innerHTML += originalHTML;
+    }
 
-  if(pos <= -singleWidth){
-    pos = 0; // 👈 exact reset point
+    let pos = 0;
+    let speed = 0.5;
+
+    function animate() {
+      pos -= speed;
+      // Reset when we have scrolled the width of the original content unit
+      if (pos <= -unitWidth) {
+        pos = 0;
+      }
+      track.style.transform = `translateX(${pos}px)`;
+      requestAnimationFrame(animate);
+    }
+    animate();
+  };
+
+  // Ensure images are loaded before calculating width
+  const images = Array.from(track.getElementsByTagName('img'));
+  if (images.length === 0 || images.every(img => img.complete)) {
+    startAnimation();
+  } else {
+    let loadedCount = 0;
+    images.forEach(img => {
+      img.addEventListener('load', () => {
+        loadedCount++;
+        if (loadedCount === images.length) startAnimation();
+      });
+      img.addEventListener('error', () => {
+        loadedCount++;
+        if (loadedCount === images.length) startAnimation();
+      });
+    });
   }
-
-  track.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animate);
 }
-
-animate();
+initMarquee();
 
 // language selection
 document.querySelectorAll(".lang-option").forEach(option => {
