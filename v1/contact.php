@@ -220,6 +220,7 @@
       .then(data => {
         document.getElementById('global-header').innerHTML = data;
     initHeader(); // run AFTER header is injected
+    initMarquee();
     });
     function initHeader() {
 
@@ -587,54 +588,76 @@
 
     // ================= MARQUEE ANIMATION =================
     function initMarquee() {
-        const track = document.getElementById("marqueeTrack");
-        if (!track) return;
-        
-        // Prevent multiple initialization
-        if (track.__marqueeInitialized) return;
-        track.__marqueeInitialized = true;
-
-        const startAnimation = () => {
-            const unitWidth = track.scrollWidth;
-            const originalHTML = track.innerHTML;
-
-            // Duplicate content to ensure enough coverage for seamless looping
-            track.innerHTML += originalHTML;
+        const startMarquee = (id) => {
+            const track = document.getElementById(id);
+            if (!track) return;
             
-            // Ensure we have at least enough content to cover the screen width
-            while (track.scrollWidth < window.innerWidth + unitWidth) {
+            // Prevent multiple initialization
+            if (track.__marqueeInitialized) return;
+            
+            // Check if visible/has width
+            const unitWidth = track.scrollWidth;
+            if (unitWidth <= 0) return; // If hidden, don't init yet, try again on resize
+
+            track.__marqueeInitialized = true;
+    
+            // Disable CSS animation to avoid conflicts with JS animation
+            track.style.animation = 'none';
+    
+            const startAnimation = () => {
+                const originalHTML = track.innerHTML;
+    
+                // Duplicate content to ensure enough coverage for seamless looping
                 track.innerHTML += originalHTML;
-            }
-
-            let pos = 0;
-            let speed = 0.5;
-
-            function animate() {
-                pos -= speed;
-                if (pos <= -unitWidth) {
-                    pos = 0;
+                
+                // Ensure we have at least enough content to cover the screen width
+                while (track.scrollWidth < window.innerWidth + unitWidth) {
+                    track.innerHTML += originalHTML;
                 }
-                track.style.transform = `translateX(${pos}px)`;
-                requestAnimationFrame(animate);
+    
+                let pos = 0;
+                let speed = 0.5;
+    
+                function animate() {
+                    pos -= speed;
+                    if (pos <= -unitWidth) {
+                        pos = 0;
+                    }
+                    track.style.transform = `translateX(${pos}px)`;
+                    requestAnimationFrame(animate);
+                }
+                animate();
+            };
+    
+            // Ensure images are loaded before calculating width
+            const images = Array.from(track.getElementsByTagName('img'));
+            if (images.length === 0 || images.every(img => img.complete)) {
+                startAnimation();
+            } else {
+                let loadedCount = 0;
+                images.forEach(img => {
+                    const check = () => {
+                        loadedCount++;
+                        if (loadedCount === images.length) startAnimation();
+                    };
+                    img.addEventListener('load', check);
+                    img.addEventListener('error', check);
+                });
             }
-            animate();
         };
 
-        // Ensure images are loaded before calculating width
-        const images = Array.from(track.getElementsByTagName('img'));
-        if (images.length === 0 || images.every(img => img.complete)) {
-            startAnimation();
-        } else {
-            let loadedCount = 0;
-            images.forEach(img => {
-                const check = () => {
-                    loadedCount++;
-                    if (loadedCount === images.length) startAnimation();
-                };
-                img.addEventListener('load', check);
-                img.addEventListener('error', check);
-            });
-        }
+        startMarquee('marqueeTrack');
+        startMarquee('marqueeTrackMobile');
+
+        // Retry on resize in case mobile/desktop switch changes visibility
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                startMarquee("marqueeTrack");
+                startMarquee("marqueeTrackMobile");
+            }, 200);
+        });
     }
 
     // ================= LANGUAGE SELECTION =================

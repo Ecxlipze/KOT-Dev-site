@@ -128,65 +128,82 @@ nav.addEventListener("mouseleave",()=>{
 });
 
 // marquee js
-function initMarquee() {
-  const track = document.getElementById("marqueeTrack");
-  if (!track) return;
-  
-  // Prevent multiple initialization
-  if (track.__marqueeInitialized) return;
-  track.__marqueeInitialized = true;
+    const startMarquee = (id) => {
+        const track = document.getElementById(id);
+        if (!track) return;
+        
+        // Prevent multiple initialization
+        if (track.__marqueeInitialized) return;
 
-  // Disable CSS animation to avoid conflicts with JS animation
-  track.style.animation = 'none';
+        // Check if visible/has width
+        const unitWidth = track.scrollWidth;
+        if (unitWidth <= 0) return; // If hidden, don't init yet, try again on resize
+        
+        track.__marqueeInitialized = true;
+      
+        // Disable CSS animation to avoid conflicts with JS animation
+        track.style.animation = 'none';
+      
+        const startAnimation = () => {
+          const originalHTML = track.innerHTML;
+      
+          // Duplicate content to ensure enough coverage for seamless looping
+          // We append the original content once; if it's still too small for the screen, we append more.
+          track.innerHTML += originalHTML;
+          
+          // Ensure we have at least enough content to cover the screen width plus a buffer
+          while (track.scrollWidth < window.innerWidth + unitWidth) {
+              track.innerHTML += originalHTML;
+          }
+      
+          let pos = 0;
+          let speed = 0.5;
+      
+          function animate() {
+            pos -= speed;
+            // Reset when we have scrolled the width of the original content unit
+            if (pos <= -unitWidth) {
+              pos = 0;
+            }
+            track.style.transform = `translateX(${pos}px)`;
+            requestAnimationFrame(animate);
+          }
+          animate();
+        };
+      
+        // Ensure images are loaded before calculating width
+        const images = Array.from(track.getElementsByTagName('img'));
+        if (images.length === 0 || images.every(img => img.complete)) {
+          startAnimation();
+        } else {
+          let loadedCount = 0;
+          images.forEach(img => {
+            img.addEventListener('load', () => {
+              loadedCount++;
+              if (loadedCount === images.length) startAnimation();
+            });
+            img.addEventListener('error', () => {
+              loadedCount++;
+              if (loadedCount === images.length) startAnimation();
+            });
+          });
+        }
+    };
 
-  const startAnimation = () => {
-    const unitWidth = track.scrollWidth;
-    if (unitWidth <= 0) return; // Safety check to prevent infinite loop
-    const originalHTML = track.innerHTML;
+    startMarquee("marqueeTrack");
+    startMarquee("marqueeTrackMobile");
 
-    // Duplicate content to ensure enough coverage for seamless looping
-    // We append the original content once; if it's still too small for the screen, we append more.
-    track.innerHTML += originalHTML;
-    
-    // Ensure we have at least enough content to cover the screen width plus a buffer
-    while (track.scrollWidth < window.innerWidth + unitWidth) {
-        track.innerHTML += originalHTML;
-    }
-
-    let pos = 0;
-    let speed = 0.5;
-
-    function animate() {
-      pos -= speed;
-      // Reset when we have scrolled the width of the original content unit
-      if (pos <= -unitWidth) {
-        pos = 0;
-      }
-      track.style.transform = `translateX(${pos}px)`;
-      requestAnimationFrame(animate);
-    }
-    animate();
-  };
-
-  // Ensure images are loaded before calculating width
-  const images = Array.from(track.getElementsByTagName('img'));
-  if (images.length === 0 || images.every(img => img.complete)) {
-    startAnimation();
-  } else {
-    let loadedCount = 0;
-    images.forEach(img => {
-      img.addEventListener('load', () => {
-        loadedCount++;
-        if (loadedCount === images.length) startAnimation();
-      });
-      img.addEventListener('error', () => {
-        loadedCount++;
-        if (loadedCount === images.length) startAnimation();
-      });
+    // Retry on resize in case mobile/desktop switch changes visibility
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            startMarquee("marqueeTrack");
+            startMarquee("marqueeTrackMobile");
+        }, 200);
     });
-  }
-}
-initMarquee();
+
+
 
 // language selection
 document.querySelectorAll(".lang-option").forEach(option => {
@@ -231,3 +248,53 @@ if (window.innerWidth >= 992) {
     lastScroll = currentScroll;
   });
 }
+
+/* ================= VIDEO SLIDER LOGIC ================= */
+const startVideoSlider = (selector) => {
+    const sliders = document.querySelectorAll(selector);
+    sliders.forEach(slider => {
+        if (!slider) return;
+        if (slider.__videoSliderInitialized) return;
+        slider.__videoSliderInitialized = true;
+
+        const originalContent = slider.innerHTML;
+
+        // Duplicate content to ensure smooth seamless looping
+        // We append enough copies to cover at least double the screen width
+        while (slider.scrollWidth < window.innerWidth * 3) {
+            slider.innerHTML += originalContent;
+        }
+
+        let pos = 0;
+        let isPaused = false;
+        const speed = 0.5; // Adjust speed as needed
+
+        // Auto-scroll function
+        function animate() {
+            if (!isPaused) {
+                pos -= speed;
+                // Reset position when first set of content is fully scrolled out
+                // We use roughly 1/3 of the scrollWidth if we tripled content, but better to check
+                // if we've scrolled past the width of the initial content block.
+                // Simplified: reset when we've scrolled a significant chunk.
+                if (Math.abs(pos) >= slider.scrollWidth / 2) {
+                    pos = 0;
+                }
+                slider.style.transform = `translateX(${pos}px)`;
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Pause on Hover (Desktop) & Touch (Mobile)
+        slider.addEventListener('mouseenter', () => isPaused = true);
+        slider.addEventListener('mouseleave', () => isPaused = false);
+        slider.addEventListener('touchstart', () => isPaused = true);
+        slider.addEventListener('touchend', () => isPaused = false);
+    });
+};
+
+// Initialize video slider
+document.addEventListener("DOMContentLoaded", () => {
+    startVideoSlider('.videos-slider');
+});

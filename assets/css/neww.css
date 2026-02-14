@@ -168,6 +168,17 @@
     letter-spacing: 0%;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
+        .kot-header-hero-subline{
+          font-family: 'Montserrat-Regular';
+font-size: 8px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #FFFFFF;
+overflow: hidden; /* Essential for marquee */
+    white-space: nowrap; /* Essential for marquee */
+        }
 
 .list-unstyled a:hover {
     color: #CCCCCC; /* slightly lighter on hover */
