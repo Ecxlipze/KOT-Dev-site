@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
   t.addEventListener("change", () => {
     if (!t.checked) {
       // Dark -> Light
-      window.location.href = "/blog";
+      window.location.href = "/blogs";
     }
   });
 });

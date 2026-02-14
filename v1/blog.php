@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // same page reload
-    window.location.href = "/blog-/";
+    window.location.href = "/blogs-/";
 
   });
 });

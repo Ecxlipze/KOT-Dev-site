@@ -84,7 +84,7 @@
             <a href="">Programs</a>
             <ul>
               <li><a href="/venture/">Venture Xceleration</a></li>
-              <li><a href="/episodes/">Episodes</a></li>
+              <li><a href="/episodes">Episodes</a></li>
             </ul>
           </li>
 

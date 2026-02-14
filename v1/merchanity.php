@@ -29,7 +29,7 @@
     </p>
 
     <!-- Buttons -->
-    <div class="dt-ecom-btn-group">
+    <!-- <div class="dt-ecom-btn-group">
       <a href="contact" class="dt-ecom-cta-btn hero-btn">
         Contact Us
       </a>
@@ -37,7 +37,7 @@
       <a href="services" class="dt-ecom-cta-btn hero-btn">
         Explore Services
       </a>
-    </div>
+    </div> -->
 
   </div>
 </section>

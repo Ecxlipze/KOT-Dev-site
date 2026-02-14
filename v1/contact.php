@@ -594,12 +594,8 @@
         if (track.__marqueeInitialized) return;
         track.__marqueeInitialized = true;
 
-        // Disable CSS animation to avoid conflicts with JS animation
-        track.style.animation = 'none';
-
         const startAnimation = () => {
             const unitWidth = track.scrollWidth;
-            if (unitWidth <= 0) return; // Safety check
             const originalHTML = track.innerHTML;
 
             // Duplicate content to ensure enough coverage for seamless looping

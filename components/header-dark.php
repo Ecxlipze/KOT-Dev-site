@@ -1070,7 +1070,7 @@
         <!-- LEFT -->
         <div class="col-12 col-md-6">
           <div class="row align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12">
               <div class="corporate-section-image">
                  <a href="/contact-/"><img src="../assets/images/Header/corporate.svg" alt="corporate"></a>
               </div>
