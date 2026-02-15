@@ -258,11 +258,16 @@ const startVideoSlider = (selector) => {
         slider.__videoSliderInitialized = true;
 
         const originalContent = slider.innerHTML;
+        
+        // Safety check: if no content, abort
+        if (!originalContent.trim()) return;
 
         // Duplicate content to ensure smooth seamless looping
-        // We append enough copies to cover at least double the screen width
-        while (slider.scrollWidth < window.innerWidth * 3) {
+        // Safety Break: max 20 clones to prevent browser crash if width is 0
+        let clones = 0;
+        while (slider.scrollWidth < window.innerWidth * 3 && clones < 20) {
             slider.innerHTML += originalContent;
+            clones++;
         }
 
         let pos = 0;
@@ -273,10 +278,10 @@ const startVideoSlider = (selector) => {
         function animate() {
             if (!isPaused) {
                 pos -= speed;
-                // Reset position when first set of content is fully scrolled out
-                // We use roughly 1/3 of the scrollWidth if we tripled content, but better to check
-                // if we've scrolled past the width of the initial content block.
-                // Simplified: reset when we've scrolled a significant chunk.
+                
+                // Use scrollWidth / (clones + 1) to estimate one "set" of content
+                // Or simply reset when we've moved a significant amount. 
+                // A safe reset point is half the total width (assuming we cloned enough).
                 if (Math.abs(pos) >= slider.scrollWidth / 2) {
                     pos = 0;
                 }
@@ -295,6 +300,6 @@ const startVideoSlider = (selector) => {
 };
 
 // Initialize video slider
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     startVideoSlider('.videos-slider');
 });

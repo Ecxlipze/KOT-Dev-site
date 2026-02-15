@@ -94,63 +94,65 @@ while($row = mysqli_fetch_assoc($eventQuery)){
 
     <h2 class="sectionm-heading">Videos</h2>
 
-    <div class="videos-slider">
+    <div class="videos-slider-wrapper">
+      <div class="videos-slider">
 
-      <?php
-      $videoQuery = mysqli_query($con, "
-        SELECT title, video_url 
-        FROM news 
-        WHERE video_url IS NOT NULL AND video_url != '' 
-        ORDER BY id DESC
-      ");
+        <?php
+        $videoQuery = mysqli_query($con, "
+          SELECT title, video_url 
+          FROM news 
+          WHERE video_url IS NOT NULL AND video_url != '' 
+          ORDER BY id DESC
+        ");
 
-      while($row = mysqli_fetch_assoc($videoQuery)){
-        $videoUrl = $row['video_url'];
-        $title = htmlspecialchars($row['title']);
+        while($row = mysqli_fetch_assoc($videoQuery)){
+          $videoUrl = $row['video_url'];
+          $title = htmlspecialchars($row['title']);
 
-        // Check if URL is YouTube
-        if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false) {
-          // Convert YouTube URL to embed URL
-          if (preg_match('/youtu\.be\/([^\?&]+)/', $videoUrl, $matches)) {
-            $videoId = $matches[1];
-          } elseif (preg_match('/v=([^\?&]+)/', $videoUrl, $matches)) {
-            $videoId = $matches[1];
+          // Check if URL is YouTube
+          if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false) {
+            // Convert YouTube URL to embed URL
+            if (preg_match('/youtu\.be\/([^\?&]+)/', $videoUrl, $matches)) {
+              $videoId = $matches[1];
+            } elseif (preg_match('/v=([^\?&]+)/', $videoUrl, $matches)) {
+              $videoId = $matches[1];
+            }
+            $embedUrl = "https://www.youtube.com/embed/$videoId";
+            echo "<div class='video-card'>
+                    <div class='video-embed'>
+                      <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+                    </div>
+                   
+                  </div>";
           }
-          $embedUrl = "https://www.youtube.com/embed/$videoId";
-          echo "<div class='video-card'>
-                  <div class='video-embed'>
-                    <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
-                  </div>
+          // Check if URL is Vimeo
+          elseif (strpos($videoUrl, 'vimeo.com') !== false) {
+            preg_match('/vimeo\.com\/(\d+)/', $videoUrl, $matches);
+            $videoId = $matches[1];
+            $embedUrl = "https://player.vimeo.com/video/$videoId";
+            echo "<div class='video-card'>
+                    <div class='video-embed'>
+                      <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+                    </div>
                  
-                </div>";
+                  </div>";
+          }
+          // Otherwise assume direct video file
+          else {
+            echo "<div class='video-card'>
+                    <div class='video-embed'>
+                      <video width='560' height='315' controls>
+                        <source src='".htmlspecialchars($videoUrl)."' type='video/mp4'>
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                 
+                  </div>";
+          }
         }
-        // Check if URL is Vimeo
-        elseif (strpos($videoUrl, 'vimeo.com') !== false) {
-          preg_match('/vimeo\.com\/(\d+)/', $videoUrl, $matches);
-          $videoId = $matches[1];
-          $embedUrl = "https://player.vimeo.com/video/$videoId";
-          echo "<div class='video-card'>
-                  <div class='video-embed'>
-                    <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
-                  </div>
-               
-                </div>";
-        }
-        // Otherwise assume direct video file
-        else {
-          echo "<div class='video-card'>
-                  <div class='video-embed'>
-                    <video width='560' height='315' controls>
-                      <source src='".htmlspecialchars($videoUrl)."' type='video/mp4'>
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-               
-                </div>";
-        }
-      }
-      ?>
+        ?>
 
+      </div>
     </div>
 
   </div>
