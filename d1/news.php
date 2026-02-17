@@ -214,6 +214,59 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- Custom JS -->
     <script src="../assets/js/script.js"></script>
 
+    <script>
+    /* ================= VIDEO SLIDER LOGIC ================= */
+    window.addEventListener("load", () => {
+      const startVideoSlider = (selector) => {
+          const sliders = document.querySelectorAll(selector);
+          sliders.forEach(slider => {
+              if (!slider) return;
+              if (slider.__videoSliderInitialized) return;
+              slider.__videoSliderInitialized = true;
+
+              const originalContent = slider.innerHTML;
+              
+              // Safety check: if no content, abort
+              if (!originalContent.trim()) return;
+
+              // Duplicate content to ensure smooth seamless looping
+              // Safety Break: max 20 clones to prevent browser crash if width is 0
+              let clones = 0;
+              while (slider.scrollWidth < window.innerWidth * 3 && clones < 20) {
+                  slider.innerHTML += originalContent;
+                  clones++;
+              }
+
+              let pos = 0;
+              let isPaused = false;
+              const speed = 0.5; // Adjust speed as needed
+
+              // Auto-scroll function
+              function animate() {
+                  if (!isPaused) {
+                      pos -= speed;
+                      
+                      if (Math.abs(pos) >= slider.scrollWidth / 2) {
+                          pos = 0;
+                      }
+                      slider.style.transform = `translateX(${pos}px)`;
+                  }
+                  requestAnimationFrame(animate);
+              }
+              animate();
+
+              // Pause on Hover (Desktop) & Touch (Mobile)
+              slider.addEventListener('mouseenter', () => isPaused = true);
+              slider.addEventListener('mouseleave', () => isPaused = false);
+              slider.addEventListener('touchstart', () => isPaused = true);
+              slider.addEventListener('touchend', () => isPaused = false);
+          });
+      };
+
+      startVideoSlider('.videos-slider');
+    });
+    </script>
+
 </body>
 
 </html>
