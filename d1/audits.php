@@ -47,7 +47,7 @@
     <!-- CAPABILITIES SECTION -->
 
 
-    <section class="solutions-wrapper" style="padding: 0%;">
+    <section class="solutions-wrapper-1" style="padding: 0%;">
 
         <!-- Sections will go here -->
 
@@ -141,11 +141,7 @@
             <div class="testimonial-right">
               <img src="../assets/images/auditslightmode/stars.png" class="stars-img">
               <p class="testimonial-text">
-                Working with KOT Enterprises has been a game changer for us. Their platform
-          didn’t just adapt to our needs it anticipated them. Our team is now more
-          productive, our customers are more engaged, and our processes have never
-          been smoother. It truly feels like the technology is working with us, not
-          just for us.
+                Working with KOT Enterprises has been a game changer for us. Their platform not only adapts to our needs but anticipates them. Our team is more productive, our customers are more engaged, and our processes are smoother than ever.
               </p>
               <p class="thanks-text">Thanks.</p>
             </div>
@@ -163,8 +159,8 @@
               <div class="profile-wrap">
                 <img src="../assets/images/auditslightmode/profile.png" class="profile-img">
                 <div class="profile-info">
-                  <h4>Ayesha Malik</h4>
-                  <p>Founder, InnovaCrafts</p>
+                  <h4>Hassan Raza</h4>
+                  <p>CEO, Nexa Digital Solutions</p>
                 </div>
               </div>
             </div>
@@ -172,11 +168,7 @@
             <div class="testimonial-right">
               <img src="../assets/images/auditslightmode/stars.png" class="stars-img">
               <p class="testimonial-text">
-               Working with KOT Enterprises has been a game changer for us. Their platform
-          didn’t just adapt to our needs it anticipated them. Our team is now more
-          productive, our customers are more engaged, and our processes have never
-          been smoother. It truly feels like the technology is working with us, not
-          just for us.
+               KOT Enterprises streamlined our operations beyond expectations. From automation to performance tracking, everything became structured and measurable, leading to a 30% improvement in workflow efficiency within months.
               </p>
               <p class="thanks-text">Thanks.</p>
             </div>
@@ -194,8 +186,8 @@
               <div class="profile-wrap">
                 <img src="../assets/images/auditslightmode/profile.png" class="profile-img">
                 <div class="profile-info">
-                  <h4>Ayesha Malik</h4>
-                  <p>Founder, InnovaCrafts</p>
+                  <h4>Sana Ahmed</h4>
+                  <p>Operations Director, BluePeak Logistic</p>
                 </div>
               </div>
             </div>
@@ -203,11 +195,8 @@
             <div class="testimonial-right">
               <img src="../assets/images/auditslightmode/stars.png" class="stars-img">
               <p class="testimonial-text">
-                 Working with KOT Enterprises has been a game changer for us. Their platform
-          didn’t just adapt to our needs it anticipated them. Our team is now more
-          productive, our customers are more engaged, and our processes have never
-          been smoother. It truly feels like the technology is working with us, not
-          just for us.
+                                  The consultancy and support team at KOT Enterprises is exceptional. They understood our operational gaps immediately and implemented practical, scalable solutions. The transformation in our reporting and coordination has been remarkable.
+
               </p>
               <p class="thanks-text">Thanks.</p>
             </div>

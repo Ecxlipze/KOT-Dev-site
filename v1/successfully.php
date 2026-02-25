@@ -20,18 +20,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         // SMTP config
         $mail->isSMTP();
-        $mail->Host       = 'mail.kotenterprises.com';
+        $mail->Host       = 'localhost';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@kotenterprises.com';
-        $mail->Password   = 'Hello@123123123';
+        $mail->Username   = 'no-reply@kotenterprises.com';
+        $mail->Password   = 'tLbb2207^';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
         $mail->Timeout    = 5;
 
         // Email settings
-        $mail->setFrom('info@kotenterprises.com', 'Website Contact Form');
+        $mail->setFrom('no-reply@kotenterprises.com', 'Website Contact Form');
         $mail->addReplyTo($email, $name);
-        $mail->addAddress('info@kotenterprises.com', 'Admin');
+        $mail->addAddress('no-reply@kotenterprises.com', 'Admin');
 
         $mail->isHTML(true);
         $mail->Subject = htmlspecialchars($subject);

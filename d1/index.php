@@ -138,14 +138,14 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (4).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Hassan Raza</h6>
+            <p>CEO, Nexa Digital Solutions</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+            KOT Enterprises helped us streamline operations in ways we didn’t think were possible. From automation to performance tracking, everything became structured and measurable. We’ve seen a 30% improvement in workflow efficiency within months.
             </p>
 
            
@@ -162,14 +162,14 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (4).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Sana Ahmed</h6>
+            <p>Operations Director, BluePeak Logistics</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+             The consultancy and support team at KOT Enterprises is exceptional. They understood our operational gaps immediately and implemented practical, scalable solutions. The transformation in our reporting and coordination has been remarkable.
             </p>
 
            
@@ -186,14 +186,14 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (5).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Bilal Khan</h6>
+            <p>Managing Partner, TechNova Systems</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+             What sets KOT apart is their strategic thinking. They don’t just deliver services they provide long-term value. Their technology integration improved our client management system and enhanced our overall service delivery.
             </p>
 
             
@@ -215,14 +215,14 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (4).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Maria Farooq</h6>
+            <p>Head of Strategy, Elevate Marketing Group</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+            KOT Enterprises brought clarity and structure to our digital transformation journey. Their team is responsive, knowledgeable, and proactive. We now have real-time insights that help us make faster and smarter business decisions.
             </p>
 
             
@@ -238,14 +238,15 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (5).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Tariq Al-Amin</h6>
+            <p>VP of Sales, Apex Global</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+             Our sales cycle was cut in half after adopting this platform. The lead management and reporting tools are strong, and CRM integrations were seamless. Although the team was hesitant at first, they fully embraced it within a month. Productivity has increased and team morale is higher than ever.
+
             </p>
 
 
@@ -259,14 +260,15 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (4).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Rachel O'Brien  </h6>
+            <p>Finance Director, Clearwater Partners</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+             Accuracy and reliability are essential in our industry, and this platform consistently delivers. We’ve automated over 80% of manual reporting, allowing our team to focus on strategic work. The audit trails and compliance features proved invaluable during our recent regulatory review truly an indispensable tool.
+
             </p>
 
             
@@ -281,14 +283,15 @@ $result = mysqli_query($con, $sql);
           <div class="home-avatar">
             <!-- <h5>What Our Client Say</h5> -->
             <img src="../assets/images/homepage/Mask group (4).png" alt="">
-            <h6>Ayesha Malik</h6>
-            <p>Founder, InnovaCrafts</p>
+            <h6>Priya Sharma  </h6>
+            <p>Marketing Manager, CloudBase Inc</p>
           </div>
 
           <div class="home-card-text">
             <div class="home-stars-1">★★★★★</div>
             <p>
-             Working with KOT Enterprises has been a game changer for us. Their platform didn’t just adapt to our needs it anticipated them. Our team is now more productive, our customers are more engaged, and our processes have never been smoother. It truly feels like the technology is working with us, not just for us.
+             The platform is incredibly intuitive, and the onboarding process was seamless. Within the first week, our team was fully up and running. What really impressed me was how quickly the system adapted to our specific workflow. We've been able to launch campaigns twice as fast as before. Highly recommend to any growing business.
+
             </p>
 
             

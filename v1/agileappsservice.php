@@ -22,7 +22,7 @@
         <h2>EMPOWERING BUSINESS WITH SCALABLE SAAS SOLUTIONS</h2>
     </div>
     <div class="empowering-text-paragraph">
-        <p>At KOT Enterprises, we envision a future where businesses are empowered through technology that adapts, scales, and evolves. AgileApps is more than just a software development division—it’s a catalyst for transformation. We deliver scalable SaaS solutions that align with your business goals, streamline operations, and enable long-term growth.</p>
+        <p>AgileApps empowers businesses with modern SaaS solutions designed for agility, scalability, and seamless digital transformation. We combine cloud-native architecture, intuitive design, and robust engineering to turn ideas into high-performing products.</p>
     </div>
      <div class="new-btn-add d-flex  ">
          <div class="empowering-btn-agile">
@@ -68,7 +68,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>End-to-end SaaS development</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>From product strategy and UI/UX design to development, deployment, and maintenance we deliver complete SaaS solutions tailored to your business goals. Our agile methodology ensures faster releases, continuous improvements, and market-ready platforms.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
@@ -78,7 +78,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Cloud-native applications</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>We build secure, resilient, and high-performance cloud-native applications using modern frameworks and microservices architecture. Our solutions are optimized for scalability, automation, and seamless integration across ecosystems.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
@@ -88,7 +88,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Scalable architecture for high-growth companies</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>Our systems are engineered to grow with your business. We design flexible, performance-driven architectures that handle increasing users, data, and transactions without compromising speed or reliability.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
@@ -103,7 +103,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Low-maintenance, high-performance solutions</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>We engineer solutions that are built to last minimizing operational overhead while maximizing performance, uptime, and business continuity.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
@@ -113,7 +113,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>Continuous updates and support</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>Our team provides ongoing updates and dedicated support to ensure your platform remains current, competitive, and performing at its best long after the initial launch.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>
@@ -123,7 +123,7 @@
             <div class="agile-apps-offer-card">
                 <div>
                     <h5>User-friendly UI/UX engineered for efficiency</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    <p>We create intuitive interfaces that put the user first. Our UI/UX designs are crafted to reduce friction, boost productivity, and deliver a seamless experience across all devices and platforms.</p>
                 </div>
                 <!-- <a href="#" class="agile-apps-offer-read-more">READ MORE</a> -->
             </div>

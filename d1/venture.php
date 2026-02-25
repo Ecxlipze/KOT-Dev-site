@@ -276,7 +276,7 @@ letter-spacing: 0%;
 
   </picture>
 </section>
-    <section class="solutions-wrapper">
+    <section class="solutions-wrapper-1">
 
  <section id="what-we-do" class="container text-center">
     <h2>WHAT WE DO</h2>
@@ -415,7 +415,7 @@ letter-spacing: 0%;
       </div>
       <div class="col-lg-3 col-md-5 card-slide">
         <div class="card card4">
-          <img src="../assets/images/vent-dark/card1.svg" class="card-img-top" alt="Powered by KOT">
+          <img src="../assets/images/vent-dark/venture-card-dk.svg" class="card-img-top" alt="Powered by KOT">
           <!-- <div class="card-body">
             <p class="card-text">A complete startup ecosystem powered by KOT Enterprises</p>
           </div> -->

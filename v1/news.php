@@ -5,8 +5,9 @@ include "../admin/db/db_connect.php";
 <section class="news-hero">
   <div class="container text-center">
     <h1 class="news-hero-title">News</h1>
-    <!-- <p class="news-hero-text">
-    </p> -->
+    <p class="news-hero-text">
+      Stay updated with the latest announcements, company milestones, industry insights, and technology advancements from KOT Enterprises. Discover how we are driving innovation and empowering businesses worldwide
+    </p>
   </div>
 </section>
 
@@ -91,14 +92,13 @@ while($row = mysqli_fetch_assoc($eventQuery)){
   </div>
 </section>
 
-<section class="videos-section">
-  <div class="container text-center">
+<!-- Videos Section -->
+<section class="videos-section" style="padding: clamp(30px,8vw,50px) 0;  ">
+  <div class="container" style="text-align:center;">
+    <h2 class="sectionm-heading" style="margin-bottom:30px;">Videos</h2>
 
-    <h2 class="sectionm-heading">Videos</h2>
-
-    <div class="videos-slider-wrapper">
-      <div class="videos-slider">
-
+    <div class="videos-viewport" id="videosViewport" style="overflow:hidden; position:relative; padding:10px 0; cursor:grab; user-select:none; touch-action:pan-y;">
+      <div class="videos-track" id="videosTrack" style="display:flex; gap:18px; will-change:transform; transform:translate3d(0,0,0);">
         <?php
         $videoQuery = mysqli_query($con, "
           SELECT title, video_url 
@@ -108,57 +108,64 @@ while($row = mysqli_fetch_assoc($eventQuery)){
         ");
 
         while($row = mysqli_fetch_assoc($videoQuery)){
-          $videoUrl = $row['video_url'];
-          $title = htmlspecialchars($row['title']);
+          $videoUrl = trim($row['video_url']);
+          $title = htmlspecialchars($row['title'] ?? '');
 
-          // Check if URL is YouTube
-          if (strpos($videoUrl, 'youtube.com') !== false || strpos($videoUrl, 'youtu.be') !== false) {
-            // Convert YouTube URL to embed URL
-            if (preg_match('/youtu\.be\/([^\?&]+)/', $videoUrl, $matches)) {
-              $videoId = $matches[1];
-            } elseif (preg_match('/v=([^\?&]+)/', $videoUrl, $matches)) {
-              $videoId = $matches[1];
+          // YouTube
+          if(strpos($videoUrl,'youtube.com')!==false || strpos($videoUrl,'youtu.be')!==false){
+            $videoId=null;
+            if(preg_match('~youtu\.be/([^\?&/]+)~',$videoUrl,$m)) $videoId=$m[1];
+            elseif(preg_match('~v=([^\?&/]+)~',$videoUrl,$m)) $videoId=$m[1];
+            elseif(preg_match('~youtube\.com/embed/([^\?&/]+)~',$videoUrl,$m)) $videoId=$m[1];
+            elseif(preg_match('~youtube\.com/shorts/([^\?&/]+)~',$videoUrl,$m)) $videoId=$m[1];
+
+            if($videoId){
+              $embedUrl="https://www.youtube.com/embed/$videoId?rel=0&modestbranding=1";
+              echo "<div class='video-card' style='flex:0 0 auto; width:calc((100% - 36px)/3); border-radius:16px; overflow:hidden;  border:1px solid rgba(255,255,255,0.08); position:relative;'>
+                      <div class='video-embed' style='position:relative; padding-bottom:56.25%; height:0; overflow:hidden; '>
+                        <iframe src='".htmlspecialchars($embedUrl, ENT_QUOTES)."' title='".htmlspecialchars($title, ENT_QUOTES)."' style='position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none;' allowfullscreen></iframe>
+                      </div>
+                    </div>";
             }
-            $embedUrl = "https://www.youtube.com/embed/$videoId";
-            echo "<div class='video-card'>
-                    <div class='video-embed'>
-                      <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+
+          }
+          // Vimeo
+          elseif(strpos($videoUrl,'vimeo.com')!==false){
+            if(preg_match('~vimeo\.com/(\d+)~',$videoUrl,$m)) $videoId=$m[1];
+            $embedUrl="https://player.vimeo.com/video/$videoId";
+            echo "<div class='video-card' style='flex:0 0 auto; width:calc((100% - 36px)/3); border-radius:16px; overflow:hidden;  border:1px solid rgba(255,255,255,0.08);  position:relative;'>
+                    <div class='video-embed' style='position:relative; padding-bottom:56.25%; height:0; overflow:hidden; '>
+                      <iframe src='".htmlspecialchars($embedUrl, ENT_QUOTES)."' title='".htmlspecialchars($title, ENT_QUOTES)."' style='position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none;' allowfullscreen></iframe>
                     </div>
-                   
                   </div>";
           }
-          // Check if URL is Vimeo
-          elseif (strpos($videoUrl, 'vimeo.com') !== false) {
-            preg_match('/vimeo\.com\/(\d+)/', $videoUrl, $matches);
-            $videoId = $matches[1];
-            $embedUrl = "https://player.vimeo.com/video/$videoId";
-            echo "<div class='video-card'>
-                    <div class='video-embed'>
-                      <iframe width='560' height='315' src='$embedUrl' frameborder='0' allowfullscreen></iframe>
+          // MP4
+          else{
+            echo "<div class='video-card' style='flex:0 0 auto; width:calc((100% - 36px)/3); border-radius:16px; overflow:hidden;  border:1px solid rgba(255,255,255,0.08);  position:relative;'>
+                    <div class='video-embed' style='position:relative; padding-bottom:56.25%; height:0; overflow:hidden; '>
+                      <video src='".htmlspecialchars($videoUrl, ENT_QUOTES)."' style='position:absolute; inset:0; width:100%; height:100%;' controls></video>
                     </div>
-                 
-                  </div>";
-          }
-          // Otherwise assume direct video file
-          else {
-            echo "<div class='video-card'>
-                    <div class='video-embed'>
-                      <video width='560' height='315' controls>
-                        <source src='".htmlspecialchars($videoUrl)."' type='video/mp4'>
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                 
                   </div>";
           }
         }
         ?>
-
       </div>
     </div>
-
   </div>
+   <style>
+    @media (max-width:991px){ .video-card{ flex:0 0 calc((100% - 18px)/2) !important; } }
+    @media (max-width:575px){ .video-card{ flex:0 0 100% !important; width:100% !important; } }
+  </style>
 </section>
+
+<!-- Video Overlay -->
+<div class="video-overlay" id="videoOverlay" style="position:fixed; inset:0; background:rgba(0,0,0,0.85); display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:0.3s; z-index:9999;">
+  <div class="video-overlay-content" style="position:relative; width:90%; max-width:900px;">
+    <span class="video-close" id="videoClose" style="position:absolute; top:-40px; right:0; font-size:35px; color:#fff; cursor:pointer;">&times;</span>
+    <div class="video-overlay-body" id="videoOverlayBody" style="position:relative; padding-bottom:56.25%; height:0;"></div>
+  </div>
+</div>
+
 
 
 
@@ -229,58 +236,192 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- Custom JS -->
     <script src="../assets/js/script.js"></script>
 
-    <script>
-    /* ================= VIDEO SLIDER LOGIC ================= */
-    window.addEventListener("load", () => {
-      const startVideoSlider = (selector) => {
-          const sliders = document.querySelectorAll(selector);
-          sliders.forEach(slider => {
-              if (!slider) return;
-              if (slider.__videoSliderInitialized) return;
-              slider.__videoSliderInitialized = true;
+   <script>
+window.addEventListener("load",()=>{
 
-              const originalContent = slider.innerHTML;
-              
-              // Safety check: if no content, abort
-              if (!originalContent.trim()) return;
+  const viewport = document.getElementById("videosViewport");
+  const track = document.getElementById("videosTrack");
+  const overlay = document.getElementById("videoOverlay");
+  const overlayBody = document.getElementById("videoOverlayBody");
+  const overlayClose = document.getElementById("videoClose");
+  if(!viewport || !track || !overlay || !overlayBody || !overlayClose) return;
 
-              // Duplicate content to ensure smooth seamless looping
-              // Safety Break: max 20 clones to prevent browser crash if width is 0
-              let clones = 0;
-              while (slider.scrollWidth < window.innerWidth * 3 && clones < 20) {
-                  slider.innerHTML += originalContent;
-                  clones++;
-              }
+  const originals = Array.from(track.children);
+  if(!originals.length) return;
 
-              let pos = 0;
-              let isPaused = false;
-              const speed = 0.5; // Adjust speed as needed
+  // ======= CLONE FOR INFINITE LOOP =======
+  let safety = 0;
+  while(track.scrollWidth <= viewport.clientWidth * 4 && safety < 50){
+    originals.forEach(n => track.appendChild(n.cloneNode(true)));
+    safety++;
+  }
 
-              // Auto-scroll function
-              function animate() {
-                  if (!isPaused) {
-                      pos -= speed;
-                      
-                      if (Math.abs(pos) >= slider.scrollWidth / 2) {
-                          pos = 0;
-                      }
-                      slider.style.transform = `translateX(${pos}px)`;
-                  }
-                  requestAnimationFrame(animate);
-              }
-              animate();
+  function getLoopLength(){ return track.scrollWidth / 2; }
+  let loopLen = getLoopLength();
 
-              // Pause on Hover (Desktop) & Touch (Mobile)
-              slider.addEventListener('mouseenter', () => isPaused = true);
-              slider.addEventListener('mouseleave', () => isPaused = false);
-              slider.addEventListener('touchstart', () => isPaused = true);
-              slider.addEventListener('touchend', () => isPaused = false);
-          });
-      };
+  // ======= SLIDER ANIMATION =======
+  let offset = 0;
+  let speed = 0.6;
+  let accel = 0.0003;
+  let maxSpeed = 1.2;
+  let paused = false;
+  let hoverPaused = false; // hover state
+  let overlayPaused = false; // overlay state
 
-      startVideoSlider('.videos-slider');
-    });
-    </script>
+  function normalize(){
+    if(offset <= -loopLen) offset = offset % loopLen;
+    if(offset >= 0) offset = -loopLen + (offset % loopLen);
+  }
+
+  function render(){ track.style.transform = `translate3d(${offset}px,0,0)`; }
+
+  function tick(){
+    if(!paused){
+      speed = Math.min(maxSpeed, speed + accel);
+      offset -= speed;
+      normalize();
+      render();
+    }
+    requestAnimationFrame(tick);
+  }
+
+  render();
+  tick();
+
+  // ======= PAUSE / RESUME FUNCTIONS =======
+  function pauseSlider(){ paused = true; }
+  function resumeSlider(){ if(!hoverPaused && !overlayPaused) paused = false; }
+
+  // ======= HOVER EVENTS =======
+  viewport.addEventListener("mouseenter",()=>{
+    hoverPaused = true;
+    pauseSlider();
+  });
+
+  viewport.addEventListener("mouseleave",()=>{
+    hoverPaused = false;
+    resumeSlider();
+  });
+
+  // ======= WHEEL CONTROL =======
+  viewport.addEventListener("wheel",(e)=>{
+    const delta = (Math.abs(e.deltaX) > Math.abs(e.deltaY)) ? e.deltaX : e.deltaY;
+    const mostlyVertical = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+    if(mostlyVertical && !e.shiftKey) return;
+
+    e.preventDefault();
+    pauseSlider();
+    offset -= delta;
+    normalize();
+    render();
+    clearTimeout(viewport.__resumeT);
+    viewport.__resumeT = setTimeout(resumeSlider, 500);
+  },{passive:false});
+
+  // ======= DRAG SUPPORT =======
+  let isDown = false, startX = 0, startOffset = 0;
+
+  viewport.addEventListener("mousedown",(e)=>{
+    if(e.target.closest(".video-card,.video-embed")) return;
+    isDown = true;
+    pauseSlider();
+    startX = e.clientX;
+    startOffset = offset;
+  });
+
+  window.addEventListener("mousemove",(e)=>{
+    if(!isDown) return;
+    offset = startOffset + (e.clientX - startX);
+    normalize();
+    render();
+  });
+
+  window.addEventListener("mouseup",()=>{
+    if(!isDown) return;
+    isDown = false;
+    resumeSlider();
+  });
+
+  // ======= TOUCH SUPPORT =======
+  viewport.addEventListener("touchstart",(e)=>{
+    if(!e.touches[0]) return;
+    isDown = true;
+    pauseSlider();
+    startX = e.touches[0].clientX;
+    startOffset = offset;
+  },{passive:true});
+
+  viewport.addEventListener("touchmove",(e)=>{
+    if(!isDown || !e.touches[0]) return;
+    offset = startOffset + (e.touches[0].clientX - startX);
+    normalize();
+    render();
+  },{passive:true});
+
+  viewport.addEventListener("touchend",()=>{
+    if(!isDown) return;
+    isDown = false;
+    resumeSlider();
+  },{passive:true});
+
+  // ======= RESIZE =======
+  window.addEventListener("resize",()=>{
+    setTimeout(()=>{
+      loopLen = getLoopLength();
+      normalize();
+      render();
+    },300);
+  });
+
+  // ======= VIDEO OVERLAY =======
+  track.addEventListener("click",(e)=>{
+    const card = e.target.closest(".video-card");
+    if(!card) return;
+
+    const iframe = card.querySelector("iframe");
+    const video = card.querySelector("video");
+    if(!iframe && !video) return;
+
+    overlayPaused = true; // overlay opened → pause slider
+    pauseSlider();
+    overlayBody.innerHTML = "";
+
+    if(iframe){
+      let src = iframe.src;
+      if(!src.includes("autoplay=1")){
+        src += (src.includes("?") ? "&" : "?") + "autoplay=1";
+      }
+      overlayBody.innerHTML = `
+        <iframe src="${src}"
+        style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>`;
+    } else if(video){
+      overlayBody.innerHTML = `
+        <video src="${video.src}"
+        style="position:absolute; inset:0; width:100%; height:100%;"
+        controls autoplay></video>`;
+    }
+
+    overlay.style.opacity = "1";
+    overlay.style.visibility = "visible";
+    overlay.classList.add("active");
+  });
+
+  function closeOverlay(){
+    overlay.style.opacity = "0";
+    overlay.style.visibility = "hidden";
+    overlayBody.innerHTML = "";
+    overlayPaused = false; // overlay closed → resume slider if hover not active
+    resumeSlider();
+  }
+
+  overlayClose.addEventListener("click", closeOverlay);
+  overlay.addEventListener("click",(e)=>{ if(e.target === overlay) closeOverlay(); });
+  document.addEventListener("keydown",(e)=>{ if(e.key === "Escape") closeOverlay(); });
+
+});
+</script>
 
 </body>
 

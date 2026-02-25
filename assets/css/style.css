@@ -2918,7 +2918,7 @@ font-family: 'Montserrat-Light';
 
 font-size: 17px;
 leading-trim: NONE;
-line-height: 100%;
+line-height: 1.2;
 letter-spacing: 0%;
 color: #000000;
 
@@ -3709,7 +3709,8 @@ leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 color: #000000;
-padding-right: 40%;
+/* padding-right: 40%; */
+padding-right: 15%;
 }
 .card-flawless-heading p{
   font-family: 'Montserrat-Regular';
@@ -3749,7 +3750,7 @@ color: rgba(1, 79, 133, 1);
   justify-content: center;
 }
 .chalanges-we-solve-image img{
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 /* quality-flawless */

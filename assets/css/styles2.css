@@ -549,7 +549,7 @@ color:#FFFFFF;
 
 .impact-card-title{
   font-family: var(--font-main);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+font-size: clamp(24px, 2vw, 36px);
   font-weight: 700;
   color: #1677c8;
   margin-bottom: 24px;
@@ -557,7 +557,7 @@ color:#FFFFFF;
 
 .impact-card-text{
   font-family: var(--font-main);
-  font-size: 1.05rem;
+  font-size: clamp(14px, 1vw, 18px);
   line-height: 1.7;
   color: #111;
 }
@@ -2990,14 +2990,14 @@ letter-spacing: 0%;
 } */
 
 
-/* .solutions-wrapper {
+.solutions-wrapper-1 {
   background: url('../images/main-bg-image/two-globe.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   
 
-} */
+}
 
 .solutions-wrapper {
   position: relative;
@@ -3021,9 +3021,9 @@ letter-spacing: 0%;
 
 
 @media (max-width: 767px) {
-  /* .solutions-wrapper {
+  .solutions-wrapper-1 {
      background: url('../images/main-bg-image/fourglobe.png');
-  } */
+  }
     .solutions-wrapper::before {
         content: "";
         position: absolute;

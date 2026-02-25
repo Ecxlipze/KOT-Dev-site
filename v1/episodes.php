@@ -68,12 +68,12 @@
 
 .content-box {
    padding: 35px;
-    margin-left: 29%;
+    margin-left: 19%;
     margin-top: -10%;
     border-radius: 12px;
      border: 1px solid rgb(0, 0, 0);
     background: #fff;
-   width: calc(100vw * 2.1 / 3);
+   width: calc(107vw * 2.1 / 3);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .content-box p {
@@ -301,7 +301,7 @@ Here, your story matters. Your vision is heard. Your future is nurtured.
   
 
 
-    <section class="solutions-wrapper">
+    <section class="solutions-wrapper-1">
 
 <section class="offer-section">
   <div class="container">
@@ -317,7 +317,7 @@ Here, your story matters. Your vision is heard. Your future is nurtured.
             <p>Learn From Those Who’ve
 Walked the Path
 Interactive sessions with industry leaders sharing real lessons, real failures, and real wins.</p>
-            <a href="#">READ MORE</a>
+            <!-- <a href="#">READ MORE</a> -->
           </div>
         </div>
       </div>
@@ -329,7 +329,7 @@ Interactive sessions with industry leaders sharing real lessons, real failures, 
             <p>Stories That Move Minds 
 and Shape Futures
 Founder journeys, growth lessons, and the human side of innovation designed to inspire action.</p>
-            <a href="#">READ MORE</a>
+            <!-- <a href="#">READ MORE</a> -->
           </div>
         </div>
       </div>
@@ -340,7 +340,7 @@ Founder journeys, growth lessons, and the human side of innovation designed to i
             <h3>Mentorship Community</h3>
             <p> Guidance That Changes Direction
 Connect with mentors who offer wisdom, perspective, and belief in your journey.</p>
-            <a href="#">READ MORE</a>
+            <!-- <a href="#">READ MORE</a> -->
           </div>
         </div>
       </div>
@@ -354,7 +354,7 @@ Connect with mentors who offer wisdom, perspective, and belief in your journey.<
             <h3>Accelerator  Programs</h3>
             <p>Turning Courageous Ideas into Thriving Ventures
 Every great startup begins with belief. Our accelerator programs are designed to guide you from</p>
-            <a href="#">READ MORE</a>
+            <!-- <a href="#">READ MORE</a> -->
           </div>
         </div>
       </div>
@@ -365,7 +365,7 @@ Every great startup begins with belief. Our accelerator programs are designed to
             <h3>Events & Registrations</h3>
             <p> Where Conversations Become Opportunities
 Summits, round tables, and meetups that spark collaboration and momentum.</p>
-            <a href="#">READ MORE</a>
+            <!-- <a href="#">READ MORE</a> -->
           </div>
         </div>
       </div>
@@ -415,7 +415,7 @@ Summits, round tables, and meetups that spark collaboration and momentum.</p>
 
     </section>
 
-        <section class="solutions-wrapper">
+        <section class="solutions-wrapper-1">
 
   <!-- Section: What Makes Episodes Different -->
   <section id="episodes-difference">

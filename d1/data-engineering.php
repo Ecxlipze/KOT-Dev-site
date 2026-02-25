@@ -44,7 +44,7 @@
     <!-- CAPABILITIES SECTION -->
 
 
-    <section class="solutions-wrapper">
+    <section class="solutions-wrapper-1">
 
         <!-- Sections will go here -->
 

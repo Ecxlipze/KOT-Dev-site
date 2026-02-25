@@ -91,8 +91,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Manual and automated testing</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-1.svg" alt="icon" width="" >
+            <h2>Automated Testing System</h2>
+          </div>
+            <p>We design robust automation frameworks that accelerate testing cycles, improve accuracy, and reduce manual effort. Our solutions ensure faster releases with consistent and reliable results.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -104,8 +107,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center  ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Performance and load testing</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-n7.svg" alt="icon" width="" >
+            <h2>Manual Test Engineering</h2>
+          </div>
+            <p>Our expert QA engineers perform detailed exploratory and functional testing to identify hidden issues, ensuring seamless user experiences and production-ready software.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -117,8 +123,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Functional and regression testing</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-3.svg" alt="icon" width="" >
+            <h2>Security & Compliance Auditing</h2>
+          </div>
+            <p>We conduct comprehensive security assessments and compliance audits to safeguard your systems against vulnerabilities while ensuring regulatory adherence.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -130,8 +139,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Security testing and vulnerability checks</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-4.svg" alt="icon" width="" >
+            <h2>Bug Lifecycle Management</h2>
+          </div>
+            <p>From identification to resolution, we streamline the entire defect management process to enhance collaboration, visibility, and faster issue resolution.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -143,8 +155,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>UI/UX quality validation</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-5.svg" alt="icon" width="" >
+            <h2>AI-Powered Testing Tools</h2>
+          </div>
+            <p>Leverage intelligent automation powered by AI to optimize test coverage, predict failures, and enhance overall testing efficiency.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -156,8 +171,11 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center ">
        <div class="card-flawless-1">
         <div class="card-flawless-heading">
-            <h2>Compliance and user-journey refinement</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            <div class="additional-icon-card-qa d-flex align-items-center" style="gap: 5px;" >
+            <img src="../assets/images/Flawless/flaw-6.svg" alt="icon" width="" >
+            <h2>Automated Testing System</h2>
+          </div>
+            <p>Enhance your existing automation infrastructure with performance tuning, framework restructuring, and advanced reporting for maximum ROI.</p>
             <div class="card-flawless-btn">
                 <!-- <a href="">READ MORE</a> -->
             </div>
@@ -174,7 +192,7 @@
 <!-- chalanges-we-solve -->
  <div class="container-fluid">
   <div class="chalenges-we-solve-text text-center pt-5">
-    <h2>CHALANGES WE SOLVE</h2>
+    <h2>CHALLAENGS WE SOLVE</h2>
   </div>
   <div class="chalanges-we-solve-image">
     <img src="../assets/images/Flawless/image-globe-dm.svg" alt="">

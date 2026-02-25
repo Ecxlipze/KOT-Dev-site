@@ -24,7 +24,7 @@
   </picture>
 </section>
 
-   <section class="solutions-wrapper" style="padding: 0%;">
+   <section class="solutions-wrapper-1" style=";">
 
     <section class="dgx-growth" >
         <div class="container text-center">
@@ -150,7 +150,7 @@
     <!-- Content -->
     <div class="digi-content">
       <h2>
-          Why  <br>Brands <br> Choose <br> <span style="color: #F59918;">DIGITTRAIL
+          Why Brands Choose <br> <span style="color: #F59918;">DIGITTRAIL
 </span>      
       </h2>
 

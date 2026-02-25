@@ -43,7 +43,7 @@
 </section>
 
 
-<section class="solutions-wrapper">
+<section class="solutions-wrapper-1">
 
 <section class="offer-ecommerce-section py-5">
   <div class="container text-center">

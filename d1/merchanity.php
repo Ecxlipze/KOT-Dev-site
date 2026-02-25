@@ -94,7 +94,7 @@
   </div>
 </section>
 
-    <section class="solutions-wrapper">
+    <section class="solutions-wrapper-1">
 
 <section class="strategic-advantages-section py-5 text-center">
   <div class="container">
