@@ -166,22 +166,65 @@
       });
   </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const track = document.getElementById("kotMarqueeTrack");
 
-  if (!track) return;
 
-  const trackWidth = track.scrollWidth;
-  const viewportWidth = window.innerWidth;
+  <script>
+    /* ================= ROBUST MARQUEE LOGIC ================= */
+    (function() {
+      const startMarquee = (id) => {
+          const track = document.getElementById(id);
+          if (!track) return;
+          if (track.__marqueeInitialized) return;
+          const unitWidth = track.scrollWidth;
+          if (unitWidth <= 0) return; 
+          
+          track.__marqueeInitialized = true;
+          track.style.animation = 'none';
+        
+          const startAnimation = () => {
+            const originalHTML = track.innerHTML;
+            track.innerHTML += originalHTML;
+            while (track.scrollWidth < window.innerWidth + unitWidth) {
+                track.innerHTML += originalHTML;
+            }
+        
+            let pos = 0;
+            let speed = 0.5;
+            function animate() {
+              pos -= speed;
+              if (pos <= -unitWidth) pos = 0;
+              track.style.transform = `translateX(${pos}px)`;
+              requestAnimationFrame(animate);
+            }
+            animate();
+          };
+        
+          const images = Array.from(track.getElementsByTagName('img'));
+          if (images.length === 0 || images.every(img => img.complete)) {
+            startAnimation();
+          } else {
+            let loadedCount = 0;
+            images.forEach(img => {
+              img.addEventListener('load', () => {
+                loadedCount++;
+                if (loadedCount === images.length) startAnimation();
+              });
+              img.addEventListener('error', () => {
+                loadedCount++;
+                if (loadedCount === images.length) startAnimation();
+              });
+            });
+          }
+      };
 
-  // Duplicate items until track is wider than viewport * 2
-  while (track.scrollWidth < viewportWidth * 2) {
-    track.innerHTML += track.innerHTML;
-  }
-});
-
-</script>
+      document.addEventListener("DOMContentLoaded", () => {
+          startMarquee("kotMarqueeTrack");
+      });
+      window.addEventListener("load", () => {
+          startMarquee("kotMarqueeTrack");
+      });
+    })();
+  </script>
 
 <!--Toggle Button Script-->
 <script>
@@ -204,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
-  <!-- <script src="../assets/js/script.js"></script> -->
+  <script src="../assets/js/script.js"></script>
 
 </body>
 
