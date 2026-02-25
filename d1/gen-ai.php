@@ -53,7 +53,7 @@
     <!-- Sections will go here -->
 
 
-    <section class="capabilities-section" style="background-color: rgba(0, 26, 45, 0.55);"
+    <section class="capabilities-section" style="background-color: rgba(0, 26, 45, 0.55); padding: 5% 0;"
 >
       <div class="container text-center">
 
@@ -122,31 +122,31 @@
       </div>
     </section>
 
-    <section class="solutions-section text-center">
+    <section class="solutions-section text-center" style="padding: 5% 0;">
       <h2 class="section-title">Solutions We Deliver</h2>
 
       <div class="container">
         <div class="row justify-content-center g-5 mt-4">
 
-          <div class="col-lg-2 col-md-4 col-8 ">
+          <div class="col-lg-3 col-md-6 col-8 ">
             <div class="solution-card sol-1" ></div>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-8 ">
+          <div class="col-lg-3 col-md-6 col-8 ">
             <div class="solution-card sol-2" ></div>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-8 ">
+          <div class="col-lg-3 col-md-6 col-8 ">
             <div class="solution-card sol-3"></div>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-8 ">
+          <div class="col-lg-3 col-md-6 col-8 ">
             <div class="solution-card sol-4"></div>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-8 ">
+          <!-- <div class="col-lg-2 col-md-4 col-8 ">
             <div class="solution-card sol-5"></div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -154,7 +154,7 @@
       </div>
     </section>
 
-    <section class="support-section text-center mt-5" style="background-color: rgba(0, 26, 45, 0.55);">
+    <section class="support-section text-center mt-5"style="padding: 5% 0; background-color: rgba(0, 26, 45, 0.55);">
       <h2 class="section-title mt-5">Your Trusted Support Partner</h2>
 
       <div class="container">
@@ -180,13 +180,13 @@
       </div>
     </section>
     <br>
-    <section class="achieve-section text-center mt-5 mb-5">
+    <section class="achieve-section text-center mt-5 mb-5" style="padding: 5% 0;">
       <h2 class="section-title mb-5">
         What You Can Achieve with<br>Generative AI
       </h2>
       <br>
 
-      <div class="container mt-5 mb-5" style="max-width: 1490px !important;">
+      <div class="container mt-5 mb-5">
         <div class="marquee-wrapper js-marquee">
           <div class="marquee-track js-marquee-track">
             <div class="achieve-card ach-1"></div>
@@ -200,7 +200,7 @@
     </section>
     <br>
 
-    <section class="work-section text-center mt-5" style="background-color: rgba(0, 26, 45, 0.55);">
+    <section class="work-section text-center mt-5" style="padding: 5% 0; background-color: rgba(0, 26, 45, 0.55);">
       <h2 class="section-title">How We Work</h2>
 
       <div class="container mt-5">
@@ -240,7 +240,68 @@
 
   </section>
 
-  <div id="global-footer"></div>
+  <div id="global-footer">
+      <!-- Your footer content goes here -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+  // DOM ready
+  $(function () {
+
+    toastr.options = {
+      closeButton: true,
+      progressBar: true,
+      timeOut: 2000
+    };
+
+    // ✅ Delegated submit (works even if footer/form is injected later)
+    $(document).on("submit", "#subscribeForm", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      console.log("✅ submit captured"); // test
+
+      const $form = $(this);
+      const $btn = $("#subscribeBtn");
+      const email = ($("#subscribeEmail").val() || "").trim();
+
+      if (!email) return toastr.error("Email required");
+      if (email.length > 60) return toastr.error("Max 60 characters allowed");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return toastr.error("Invalid email format");
+
+      $btn.prop("disabled", true).text("Please wait...");
+
+      $.ajax({
+        url: "/d1/subscribe.php",
+        type: "POST",
+        data: { email: email },
+        dataType: "json",
+        success: function (res) {
+          if (res && res.status === "success") {
+            toastr.success(res.message || "Subscribed!");
+            $form[0].reset();
+          } else {
+            toastr.error((res && res.message) ? res.message : "Subscription failed");
+          }
+        },
+        error: function (xhr) {
+          console.log("❌ AJAX error:", xhr.status, xhr.responseText);
+          toastr.error("Server error");
+        },
+        complete: function () {
+          $btn.prop("disabled", false).text("Subscribe");
+        }
+      });
+
+      return false; // extra safety
+    });
+
+    // ✅ quick test: page load pe toast (sirf check ke liye)
+    // toastr.info("Toastr loaded ✅");
+  });
+</script>
+  </div>
   <button id="goTopBtn" title="Go to top">↑</button>
 
   <script>

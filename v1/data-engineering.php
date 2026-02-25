@@ -183,7 +183,7 @@
                 Outcomes You’ll See
             </h2>
 
-          <div class="container mt-5 mb-5" style="max-width: 1490px !important;">
+          <div class="container mt-5 mb-5">
   <div class="marquee-wrapper js-marquee">
     <div class="marquee-track js-marquee-track">
       <div class="achieve-card ach-5"></div>
@@ -235,7 +235,68 @@
 
 
     </section>
-    <div id="global-footer"></div>
+    <div id="global-footer">
+         <!-- Your footer content goes here -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+  // DOM ready
+  $(function () {
+
+    toastr.options = {
+      closeButton: true,
+      progressBar: true,
+      timeOut: 2000
+    };
+
+    // ✅ Delegated submit (works even if footer/form is injected later)
+    $(document).on("submit", "#subscribeForm", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      console.log("✅ submit captured"); // test
+
+      const $form = $(this);
+      const $btn = $("#subscribeBtn");
+      const email = ($("#subscribeEmail").val() || "").trim();
+
+      if (!email) return toastr.error("Email required");
+      if (email.length > 60) return toastr.error("Max 60 characters allowed");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return toastr.error("Invalid email format");
+
+      $btn.prop("disabled", true).text("Please wait...");
+
+      $.ajax({
+        url: "/v1/subscribe.php",
+        type: "POST",
+        data: { email: email },
+        dataType: "json",
+        success: function (res) {
+          if (res && res.status === "success") {
+            toastr.success(res.message || "Subscribed!");
+            $form[0].reset();
+          } else {
+            toastr.error((res && res.message) ? res.message : "Subscription failed");
+          }
+        },
+        error: function (xhr) {
+          console.log("❌ AJAX error:", xhr.status, xhr.responseText);
+          toastr.error("Server error");
+        },
+        complete: function () {
+          $btn.prop("disabled", false).text("Subscribe");
+        }
+      });
+
+      return false; // extra safety
+    });
+
+    // ✅ quick test: page load pe toast (sirf check ke liye)
+    // toastr.info("Toastr loaded ✅");
+  });
+</script>
+    </div>
         <button id="goTopBtn" title="Go to top">↑</button>
 
     <script>

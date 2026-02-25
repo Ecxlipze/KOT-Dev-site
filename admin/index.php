@@ -193,19 +193,20 @@ function getTableCount($con, $tableName) {
                 </div>
                </div>
                <div class="col">
-                  <!-- <div class="card radius-10">
+                  <div class="card radius-10">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
                             <div>
-                                <p class="mb-0 text-secondary">Policy Center </p>
-                                <h4 class="my-1">$24K</h4>
-                                <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p>
+                                <p class="mb-0 text-secondary">Subscribers </p>
+                                <h4 class="my-1"><?php echo getTableCount($con, 'subscribers'); ?></h4>
+                                <p class="mb-0 font-13 text-success">
+                                <!-- <p class="mb-0 font-13 text-success"><i class="bi bi-caret-up-fill"></i> 4.6 from last week</p> -->
                             </div>
-                            <div class="widget-icon-large bg-gradient-success text-white ms-auto"><i class="bi bi-currency-exchange"></i>
-                            </div>
+                            <!-- <div class="widget-icon-large bg-gradient-success text-white ms-auto"><i class="bi bi-currency-exchange"></i>
+                            </div> -->
                         </div>
                     </div>
-                </div> -->
+                </div>
                </div>
                <div class="col">
                   <!-- <div class="card radius-10">

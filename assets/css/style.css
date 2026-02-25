@@ -722,7 +722,7 @@ color: #FFFFFF;
 
 .support-main-section {
   padding-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .support-section-heading h2 {
@@ -4121,7 +4121,7 @@ margin-bottom: 5%;
 /* max-width: 938px;
 aspect-ratio: 938 / 625; */
 height: auto; 
-width: 100%;
+width: 85%;
 opacity: 1;
 
 

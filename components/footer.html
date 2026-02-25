@@ -12,10 +12,17 @@
 
         <h5 class="kot-footer-title">SIGN UP FOR OUR NEWSLETTER</h5>
 
-        <form class="kot-footer-form">
-          <input type="email" placeholder="Email">
-          <button type="submit">Subscribe</button>
-        </form>
+        <form class="kot-footer-form" id="subscribeForm" novalidate>
+  <input
+    type="email"
+    name="email"
+    id="subscribeEmail"
+    placeholder="Email"
+    required
+    maxlength="60"
+  >
+  <button type="submit" id="subscribeBtn">Subscribe</button>
+</form>
       </div>
 
       <!-- Services -->

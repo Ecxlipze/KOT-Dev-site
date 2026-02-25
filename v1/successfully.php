@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         // SMTP config
         $mail->isSMTP();
-        $mail->Host       = 'localhost';
+        $mail->Host       = 'mail.kotenterprises.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'no-reply@kotenterprises.com';
         $mail->Password   = 'tLbb2207^';

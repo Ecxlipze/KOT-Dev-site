@@ -25,6 +25,20 @@
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi "></i>
                 </div>
+                <div class="menu-title">Subscribers</div>
+              </a>
+              <ul>
+               
+                <li> <a href="subscribers.php"><i class="bi bi-arrow-right-short"></i>Subscribers</a>
+                </li>
+               
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi "></i>
+                </div>
                 <div class="menu-title">New Year</div>
               </a>
               <ul>

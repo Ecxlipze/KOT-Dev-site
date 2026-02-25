@@ -375,11 +375,7 @@ line-height: 100%;
 letter-spacing: 0%;
 
   }
-   .contact-item a{
-    font-family: 'Montserrat-Bold' !important;
-        font-size: 14px !important;
-        color: #FFFFFF  !important;
-   }
+  
 }
 
 .contact-cta h2 {
@@ -741,8 +737,8 @@ font-weight: 500;
   width: 100%;
   /* background-size: 100% 100%; */
   background-repeat: no-repeat;
-      background-size: contain;
-    background-position: inherit;
+      background-size: 100% 100%;
+    background-position: center;
 
 }
 
